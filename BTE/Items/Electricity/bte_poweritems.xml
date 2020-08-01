@@ -1,0 +1,56 @@
+<Items>
+	<Item name="Power Distribution Unit" identifier="pdubox" category="Electrical" Tags="pdubox" description="A wall device that houses outlets for power distribution." scale="0.75">
+		<Sprite texture="Mods/BTE/Items/Electricity/bte_poweritems.png" depth="0.8" sourcerect="0,0,30,28" origin="0.5,0.5"/>
+		<BrokenSprite texture="Mods/BTE/Items/Electricity/bte_poweritems.png" sourcerect="30,0,30,28" depth="0.8" maxcondition="50" fadein="true"/>
+		<BrokenSprite texture="Mods/BTE/Items/Electricity/bte_poweritems.png" sourcerect="30,0,30,28" depth="0.8" maxcondition="0"/>
+		<Repairable selectkey="Action" header="electricalrepairsheader" deteriorationspeed="0.1" mindeteriorationdelay="120" maxdeteriorationdelay="1000" MinDeteriorationCondition="0" fixDurationHighSkill="5" fixDurationLowSkill="15" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+			<GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI"/>
+			<RequiredSkill identifier="electrical" level="50"/>
+			<RequiredItem identifier="screwdriver" type="Equipped"/>
+			<ParticleEmitter particle="fleshsmoke" particlespersecond="1" scalemin="0.5" scalemax="2" mincondition="0.0" maxcondition="35"/>
+		</Repairable>
+		<PowerTransfer canbeselected="true" msg="ItemMsgInteractSelect">
+			<GuiFrame relativesize="0.2,0.15" minsize="350,160" maxsize="420,190" anchor="Center" style="ItemUI"/>
+			<StatusEffect type="InWater" target="This" condition="-0.75">
+				<Conditional currPowerConsumption="lt -10"/>
+			</StatusEffect>
+			<StatusEffect type="OnFire" target="This" Condition="-0.5"/>
+		</PowerTransfer>
+		<ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+			<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel"/>
+			<RequiredSkill identifier="electrical" level="50"/>
+			<StatusEffect type="OnFailure" target="Character">
+				<Explosion range="100" force="3.0" flames="false" shockwave="false" underwaterbubble="false">
+					<Affliction identifier="burn" strength="15"/>
+					<Affliction identifier="stun" strength="10"/>
+				</Explosion>
+			</StatusEffect>
+			<RequiredItem identifier="screwdriver" type="Equipped"/>
+			<output name="power" displayname="connection.power"/>
+		</ConnectionPanel>
+	</Item>
+	<Item name="Circuit Breaker" identifier="breakercomponent" category="Electrical" Tags="breakercomponent" description="Designed to protect power grids if overloaded by recieving excess current or if affected by other electrical related issues." health="5" scale="0.75">
+		<Sprite texture="Mods/BTE/Items/Electricity/bte_poweritems.png" depth="0.8" sourcerect="0,28,30,28" origin="0.5,0.5"/>
+		<BrokenSprite texture="Mods/BTE/Items/Electricity/bte_poweritems.png" sourcerect="30,28,30,28" depth="0.8" maxcondition="0"/>
+		<Repairable selectkey="Action" name="Replace fuse" deteriorationspeed="0" mindeteriorationdelay="0" maxdeteriorationdelay="0" MinDeteriorationCondition="100" fixDurationHighSkill="2" fixDurationLowSkill="8" ShowRepairUIThreshold="1" msg="ItemMsgRepair" hudpriority="10">
+			<GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI"/>
+			<RequiredSkill identifier="electrical" level="5"/>
+			<ParticleEmitter particle="spark" particleamount="4" emitinterval="5" anglemax="360" velocitymin="5.0" velocitymax="250.0" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="1.0"/>
+		</Repairable>
+		<PowerTransfer canbeselected="true" OverloadVoltage="1.5" FireProbability="0.0">
+			<GuiFrame relativesize="0.2,0.15" minsize="350,160" maxsize="420,190" anchor="Center" style="ItemUI"/>
+			<StatusEffect type="InWater" target="This" condition="-0.5">
+				<Conditional currPowerConsumption="lt -10"/>
+			</StatusEffect>
+		</PowerTransfer>
+		<ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+			<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel"/>
+			<RequiredItem identifier="screwdriver" type="Equipped"/>
+			<StatusEffect type="OnBroken" target="This">
+				<sound file="Mods/BTE/Items/Electricity/BreakerSwitch.ogg" type="OnBroken" range="900"/>
+				<Explosion range="10" stun="0.1" force="1.0" flames="false" smoke="false" shockwave="false" underwaterbubble="false"/>
+			</StatusEffect>
+			<output name="power" displayname="connection.power"/>
+		</ConnectionPanel>
+	</Item>
+</Items>

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+<Item
+    name="Cigarette Pack" identifier="cigarettepack" category="Misc" Tags="smallitem,container"
+    description="A polycarbonate container designed with a flavor-protective foil, and sealed through a transparent airtight plastic film."
+	scale="0.5" impactsoundtag="impact_soft">
+    <Sprite texture="Other.png" sourcerect="78,2,20,40" depth="0.55"/>
+	<BrokenSprite texture="Other.png" sourcerect="100,2,20,40" depth="0.55" maxcondition="0" fadein="true"/>
+    <Body width="12" height="32" density="9.8"/>
+
+	<Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="2" aimpos="35,-10">
+	  <StatusEffect type="OnFire" target="This" Condition="-10"/>
+	  <StatusEffect type="OnFire" target="This">
+	    <Conditional Condition="lt 1"/>
+		<Remove/>
+	  </StatusEffect>
+	</Throwable>
+	
+	<ItemContainer capacity="12" canbeselected="true" hideitems="true">
+      <Containable identifier="cigarette"/>
+	  <Containable identifier="handrolled"/>
+    </ItemContainer>
+  </Item>
+  <Item name="Cigarette" aliases="Cig,Ciggy" identifier="cigarette" category="Misc" Tags="smallitem"
+		description="Quality tobacco in a thin polycarbonate film, ready for smoking."
+		scale="0.5" cargocontaineridentifier="cigarettepack">
+	<Sprite texture="Other.png" sourcerect="2,2,34,4" depth="0.55"/>
+	<BrokenSprite texture="Other.png" sourcerect="2,8,34,4" depth="0.55" maxcondition="99"/>
+	<BrokenSprite texture="Other.png" sourcerect="2,14,34,4" depth="0.55" maxcondition="40"/>
+    <BrokenSprite texture="Other.png" sourcerect="2,20,34,4" depth="0.55" maxcondition="0"/>
+    <Body width="28" height="2" density="9.9"/>
+	
+	<Price locationtype="Research" buyprice="60"/>
+    <Price locationtype="Military" buyprice="40"/>
+    <Price locationtype="City" buyprice="20"/>
+    <Price locationtype="Outpost" buyprice="80"/>
+
+    <Fabricate suitablefabricators="vendingmachine" requiredtime="5">
+      <RequiredItem identifier="stampe"/>
+    </Fabricate>
+	
+	<RepairTool structurefixamount="0" range="0" barrelpos="-5,0">
+      <ParticleEmitter particle="swirlysmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
+	  <sound file="Mods/BTE/Items/Medical/Cigarette.ogg" type="OnUse" range="300" loop="true"/>
+	  <StatusEffect type="OnUse" target="This,Hull" Condition="-2.0" oxygen="-950"/>
+    </RepairTool>
+	
+	<LightComponent LightColor="1.0,0.5,0.5,0.2" Flicker="0.4" range="50" IsOn="false">
+	  <StatusEffect type="OnUse" target="Character" duration="25" stackable="false">
+		<ReduceAffliction identifier="psychosis" amount="0.0006"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" IsOn="true"/>
+	  <StatusEffect type="OnActive" target="This,Hull" Condition="-1.0" oxygen="-50">
+        <ParticleEmitter particle="swirlysmoke" particlespersecond="1" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
+      </StatusEffect>
+	  <StatusEffect type="OnActive" target="This" IsOn="false">
+        <RequiredItem identifier="container,clothing" type="Container"/>
+      </StatusEffect>
+      <StatusEffect type="InWater" target="This" IsOn="false"/>
+	  <StatusEffect type="OnFire" target="This" Condition="-20" IsOn="true"/>
+	  <StatusEffect type="OnFire" target="This">
+	    <Conditional Condition="lt 1"/>
+		<Remove/>
+	  </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" IsOn="false"/>
+    </LightComponent>
+	
+	<Holdable slots="RightHand,LeftHand,Any" controlpose="true" aimpos="30,18" handle1="0,0" handle2="0,0"/>
+  </Item>
+  <Item name="Hand-rolled Cigarette" aliases="Roll,Rollie" identifier="handrolled" category="Misc" Tags="smallitem" scale="0.5"
+		description="Loose tobacco from questionable sources, rolled into a thin polycarbonate film for smoking.">
+	<Sprite texture="Other.png" sourcerect="2,26,34,4" depth="0.55"/>
+	<BrokenSprite texture="Other.png" sourcerect="2,24,34,4" depth="0.55" maxcondition="99"/>
+	<BrokenSprite texture="Other.png" sourcerect="2,38,34,4" depth="0.55" maxcondition="40"/>
+    <BrokenSprite texture="Other.png" sourcerect="2,44,34,4" depth="0.55" maxcondition="0"/>
+    <Body width="28" height="2" density="9.95"/>
+	
+	<RepairTool structurefixamount="0" range="0" barrelpos="-5,0">
+      <ParticleEmitter particle="swirlysmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
+	  <sound file="Mods/BTE/Items/Medical/Cigarette.ogg" type="OnUse" range="300" loop="true"/>
+	  <StatusEffect type="OnUse" target="This,Hull" Condition="-2.0" oxygen="-975"/>
+    </RepairTool>
+	
+	<LightComponent LightColor="1.0,0.5,0.5,0.2" Flicker="0.4" range="50" IsOn="false">
+	  <StatusEffect type="OnUse" target="Character" duration="20" stackable="false">
+		<ReduceAffliction identifier="psychosis" amount="0.0004"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" IsOn="true"/>
+	  <StatusEffect type="OnActive" target="This,Hull" Condition="-1.1" oxygen="-75">
+        <ParticleEmitter particle="swirlysmoke" particlespersecond="1" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
+      </StatusEffect>
+	  <StatusEffect type="OnActive" target="This" IsOn="false">
+        <RequiredItem identifier="container,clothing" type="Container"/>
+      </StatusEffect>
+      <StatusEffect type="InWater" target="This" IsOn="false"/>
+	  <StatusEffect type="OnFire" target="This" Condition="-20" IsOn="true"/>
+	  <StatusEffect type="OnFire" target="This">
+	    <Conditional Condition="lt 1"/>
+		<Remove/>
+	  </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" IsOn="false"/>
+    </LightComponent>
+	
+	<Holdable slots="RightHand,LeftHand,Any" controlpose="true" aimpos="30,18" handle1="-1,0" handle2="-1,0"/>
+  </Item>
+
+</Items>

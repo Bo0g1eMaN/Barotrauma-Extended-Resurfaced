@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+
+  <Item name="Cooking Station" identifier="oven" aliases="Electrical Oven" category="Machine"
+		description="An oven useful enough to cook a number of delicious food."
+		linkable="true" allowedlinks="fridge,locker">
+    <Sprite texture="Mods/BTE/Items/Fabricators/Fabricators.png" sourcerect="197,0,61,121" depth="0.8"/>
+	
+	<LightComponent lightcolor="1.0,0.28,0.0,0.4" range="10" isOn="true" powerconsumption="50" castshadows="false" allowingameediting="false">
+      <sprite texture="Mods/BTE/Items/Fabricators/FabricatorLights.png" sourcerect="197,0,61,121" alpha="1.0"/>
+    </LightComponent>
+
+    <Fabricator canbeselected="true" powerconsumption="200">
+      <GuiFrame relativesize="0.3,0.6" maxsize="600,1000" style="ItemUI" anchor="Center" absoluteoffset="5,0"/>
+
+      <sound file="Mods/BTE/Items/Fabricators/Cooking.ogg" type="OnActive" range="800" volumeproperty="Voltage" loop="true"/>
+      <poweronsound file="Mods/BTE/Items/Electricity/PowerOn.ogg" range="600" loop="false"/>
+	</Fabricator>
+
+    <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel"/>
+      <RequiredItem items="screwdriver" type="Equipped"/>
+      <input name="power_in" displayname="connection.powerin"/>
+    </ConnectionPanel>
+
+    <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.2" mindeteriorationdelay="60" maxdeteriorationdelay="840" fixDurationHighSkill="10" fixDurationLowSkill="30" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI"/>
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem identifier="wrench" type="Equipped" />
+	    <ParticleEmitter particle="spark" particleamount="10" emitinterval="5" anglemax="360" velocitymin="5.0" velocitymax="250.0" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="25.0"/>
+      <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="3" mincondition="0.0" maxcondition="0.0"/>
+    </Repairable>
+
+    <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="Input" allowuioverlap="true"/>
+    <ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="Output" allowuioverlap="true"/>
+  </Item>
+  
+  <Item name="Vending Machine" identifier="vendingmachine" category="Machine" Tags="vendingmachine,container"
+		description="A vending machine for snacks and other misc goods.">
+    <Sprite texture="Mods/BTE/Items/Fabricators/Fabricators.png" sourcerect="130,129,73,95" depth="0.8"/>
+	
+	<LightComponent lightcolor="1.0,0.28,0.0,0.4" range="400" isOn="true" powerconsumption="25">
+	  <sparksound file="Content/Items/Electricity/Zap1.ogg" range="500" loop="false"/>
+      <sparksound file="Content/Items/Electricity/Zap2.ogg" range="500" loop="false"/>
+      <sparksound file="Content/Items/Electricity/Zap3.ogg" range="500" loop="false"/>
+      <sparksound file="Content/Items/Electricity/Zap4.ogg" range="500" loop="false"/>
+      <LightTexture texture="Content/Lights/pointlight_bounce.png"/>
+      <sprite texture="Mods/BTE/Items/Fabricators/FabricatorLights.png" sourcerect="130,129,73,95" alpha="1.0"/>
+	  <StatusEffect type="Always" target="NearbyCharacters" range="250">
+		<Affliction identifier="hunger" strength="0.01"/>
+      </StatusEffect>
+    </LightComponent>
+
+    <Fabricator canbeselected="true" powerconsumption="100">
+      <GuiFrame relativesize="0.3,0.6" maxsize="600,1000" style="ItemUI" anchor="Center" absoluteoffset="5,0"/>
+
+      <sound file="Mods/BTE/Items/Fabricators/Vending.ogg" type="OnActive" range="600" volumeproperty="Voltage" loop="true"/>
+      <poweronsound file="Mods/BTE/Items/Electricity/PowerOn.ogg" range="600" loop="false"/>
+	</Fabricator>
+
+    <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel"/>
+      <RequiredItem items="screwdriver" type="Equipped"/>
+      <input name="power_in" displayname="connection.powerin"/>
+    </ConnectionPanel>
+
+    <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.2" mindeteriorationdelay="60" maxdeteriorationdelay="840" fixDurationHighSkill="10" fixDurationLowSkill="30" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI"/>
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem identifier="wrench" type="Equipped" />
+	    <ParticleEmitter particle="spark" particleamount="10" emitinterval="5" anglemax="360" velocitymin="5.0" velocitymax="250.0" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="25.0"/>
+      <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="3" mincondition="0.0" maxcondition="0.0"/>
+    </Repairable>
+
+    <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="Input" allowuioverlap="true"/>
+    <ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="Output" allowuioverlap="true"/>
+  </Item>
+
+</Items>

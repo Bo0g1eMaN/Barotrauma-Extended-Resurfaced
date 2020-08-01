@@ -1,0 +1,28 @@
+﻿<Items>
+  
+  <Item
+    name="Refill Dock"
+    identifier="o2refilldock"
+    category="Machine">
+
+    <Sprite texture="Mods/BTE/Items/OxygenGenerator/RefillDock.png" depth="0.8" sourcerect="0,0,71,94"/>
+	
+	<Powered powerconsumption="500" currpowerconsumption="500" isactive="true" canbeselected="true" msg="ItemMsgInteractSelect">
+      <poweronsound file="Content/Items/PowerOnLight1.ogg" range="1500" loop="false"/>
+	  <sound file="Content/Items/OxygenGenerator/OxygenGenerator.ogg" type="OnActive" range="500" volumeproperty="CurrFlow" volume="0.001f" loop="true"/>
+      <StatusEffect type="OnActive" target="Contained" targetidentifiers="oxygentank" Condition="4.0"/>
+    </Powered>
+
+    <ItemContainer capacity="1" hideitems="false" itempos="34,-59" canbeselected="true" msg="Insert oxygen tank to refill it">
+      <GuiFrame relativesize="0.2,0.3" anchor="Center" style="ItemUI"/>
+	  <Containable items="oxygentank,oxygenitetank"/>
+    </ItemContainer>
+
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel"/>
+      <RequiredItem items="screwdriver" type="Equipped"/>
+      <input name="power_in" displayname="connection.powerin"/>
+    </ConnectionPanel>
+  </Item>
+
+</Items>

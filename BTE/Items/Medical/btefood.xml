@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Moonshine name="Moonshine" identifier="moonshine" category="Misc" Tags="mediumitem,consumable"
+			 description="Homebrew alcohol. Drinking while on duty is not adviced."
+			 cargocontaineridentifier="chemicalcrate" useinhealthinterface="true" impactsoundtag="impact_glasshit" scale="0.18">
+    <Sprite texture="Mods/BTE/Items/Medical/Consumables.png" sourcerect="166,0,74,192" depth="0.6" origin="0.5,0.5"/>
+    <Body width="70" height="182" density="15"/>
+	
+    <Price locationtype="City" buyprice="20"/>
+    <Price locationtype="Outpost" buyprice="50"/>
+
+    <Deconstruct time="15">
+      <Item identifier="plastic" outcondition="0.3"/>
+	  <Item identifier="ethanol" outcondition="0.6"/>
+    </Deconstruct>
+
+    <Throwable slots="Any,RightHand,LeftHand" throwforce="3.0" canBeCombined="true">     
+      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+      <StatusEffect type="OnUse" target="Character" delay="10" duration="10">
+        <Affliction identifier="drunk" amount="1.0"/>
+		<Affliction identifier="psychosisresistance" amount="10" />
+		<ReduceAffliction identifier="internaldamage" amount="0.2"/>
+        <ReduceAffliction identifier="burn" amount="0.2"/>
+      </StatusEffect>
+    </Throwable>
+  </Moonshine>
+
+  <Whiskey name="Whiskey" identifier="whiskey" category="Misc" Tags="mediumitem,consumable"
+		   description="A liquor distilled from fermented wort. Drinking while on duty is not adviced."
+		   cargocontaineridentifier="chemicalcrate" useinhealthinterface="true" impactsoundtag="impact_glasshit" scale="0.18">
+    <Sprite texture="Mods/BTE/Items/Medical/Consumables.png" sourcerect="0,0,84,211" depth="0.6" origin="0.5,0.5"/>
+    <Body width="80" height="208" density="15"/>
+	
+	<Price locationtype="Research" buyprice="15"/>
+    <Price locationtype="Military" buyprice="15"/>
+    <Price locationtype="City" buyprice="20"/>
+    <Price locationtype="Outpost" buyprice="50"/>
+	
+	<Deconstruct time="15">
+      <Item identifier="plastic" outcondition="0.3"/>
+	  <Item identifier="ethanol" outcondition="0.8"/>
+    </Deconstruct>
+
+    <Throwable slots="Any,RightHand,LeftHand" throwforce="3.0" canBeCombined="true">     
+      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+      <StatusEffect type="OnUse" target="Character" delay="10" duration="10">
+        <Affliction identifier="drunk" amount="0.8"/>
+		<Affliction identifier="psychosisresistance" amount="10" />
+		<ReduceAffliction identifier="internaldamage" amount="0.2" />
+        <ReduceAffliction identifier="burn" amount="0.2"/>
+      </StatusEffect>
+    </Throwable>
+  </Whiskey>
+  
+  <Vodka name="Vodka" identifier="vodka" category="Misc" Tags="mediumitem,consumable"
+		 description="A bottle of a strong distilled beverage. Drinking while on duty is not adviced."
+		 cargocontaineridentifier="chemicalcrate" useinhealthinterface="true" impactsoundtag="impact_glasshit" scale="0.18">
+    <Sprite texture="Mods/BTE/Items/Medical/Consumables.png" sourcerect="88,0,74,224" depth="0.6" origin="0.5,0.5"/>
+    <Body width="71" height="221" density="15"/>
+	
+	<Price locationtype="Research" buyprice="15"/>
+    <Price locationtype="Military" buyprice="15"/>
+    <Price locationtype="City" buyprice="20"/>
+    <Price locationtype="Outpost" buyprice="50"/>
+	
+	<Deconstruct time="15">
+      <Item identifier="plastic" outcondition="0.3"/>
+	  <Item identifier="ethanol" outcondition="0.9"/>
+    </Deconstruct>
+
+    <Throwable slots="Any,RightHand,LeftHand" throwforce="3.0" canBeCombined="true">     
+      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+      <StatusEffect type="OnUse" target="Character" delay="10" duration="10">
+        <Affliction identifier="drunk" amount="0.9"/>
+		<Affliction identifier="psychosisresistance" amount="10"/>
+		<ReduceAffliction identifier="internaldamage" amount="0.2"/>
+        <ReduceAffliction identifier="burn" amount="0.2"/>
+		<ReduceAffliction identifier="radiationsickness" amount="0.2"/>
+      </StatusEffect>
+    </Throwable>
+  </Vodka>
+  
+  <Bloodlust name="Bloodlust" identifier="bloodlust" category="Misc" Tags="mediumitem,consumable"
+			 description="Homebrew alcohol. Drinking while on duty is not adviced."
+			 cargocontaineridentifier="chemicalcrate" useinhealthinterface="true" impactsoundtag="impact_glasshit" scale="0.2">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="448,768,64,64" />
+    <Sprite texture="Content/Items/Materials/CraftingElements2.png" sourcerect="238,0,76,144" depth="0.6" origin="0.5,0.5" />
+    <Body width="76" height="144" density="18" />
+	
+    <Price locationtype="Outpost" buyprice="50"/>
+	
+	<Deconstruct time="15">
+      <Item identifier="plastic" outcondition="0.3"/>
+	  <Item identifier="ethanol" outcondition="0.5"/>
+    </Deconstruct>
+
+    <Throwable slots="Any,RightHand,LeftHand" throwforce="3.0" canBeCombined="true">     
+      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+      <StatusEffect type="OnUse" target="Character" delay="10" duration="10">
+        <Affliction identifier="drunk" amount="1.0"/>
+		<Affliction identifier="psychosis" amount="1.0"/>
+		<ReduceAffliction identifier="bleeding" amount="0.2"/>
+		<ReduceAffliction identifier="damage" amount="0.1"/>
+		<ReduceAffliction identifier="internaldamage" amount="0.2"/>
+
+      </StatusEffect>
+    </Throwable>
+  </Bloodlust>
+  
+  <EnergyDrink name="Energy Drink" identifier="energydrink" category="Material" cargocontaineridentifier="chemicalcrate" Tags="smallitem,consumable"
+			   description="Pretty much the only energy drink brand in Europa. It doesn't seem to have an ingredients label anywhere."
+			   useinhealthinterface="true" scale="0.2" impactsoundtag="impact_sodacan">
+    <Sprite texture="Mods/BTE/Items/Medical/Consumables.png" sourcerect="0,238,63,150" depth="0.6" origin="0.5,0.5"/>
+    <Body width="58" height="145" density="9" friction="0.85"/>
+
+    <Deconstruct time="15">
+      <Item identifier="aluminium" outcondition="0.25"/>
+	  <Item identifier="stabilozine" outcondition="0.25"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="vendingmachine" requiredtime="5">
+      <RequiredItem identifier="stampc"/>
+    </Fabricate>
+	
+	<Throwable slots="Any,RightHand,LeftHand" throwforce="3.0" canBeCombined="true" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+      <StatusEffect type="OnUse" target="Character">
+		<Affliction identifier="haste" strength="10"/>
+      </StatusEffect>
+    </Throwable>
+  </EnergyDrink>
+  
+  <Item name="Protein Bar" identifier="proteinbar" aliases="MRE,ewbar,Crapbar,Shitbar" category="Misc" Tags="smallitem,food"
+		description="A synthetic mixture of carbohydrates, vitamins, amino acids and minerals. Everything the body needs in a jelly block. It tastes like synthetic crap, though."
+        scale="0.5" useinhealthinterface="true" impactsoundtag="impact_fleshhit">
+	<Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="362,110,48,24" depth="0.6"/>
+	<Body width="44" height="20" density="9.9"/>
+    
+	<Deconstruct time="15">
+	  <Item identifier="carbon" outcondition="0.4"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="vendingmachine" requiredtime="5">
+      <RequiredItem identifier="stampa"/>
+    </Fabricate>
+	
+	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
+	  <StatusEffect type="OnUse" target="This" Condition="-20" disabledeltatime="true">
+	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
+	  </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
+<ReduceAffliction identifier="internaldamage" amount="0.3"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  
+  <Item name="Chips" identifier="chips" category="Misc" Tags="smallitem,food"
+		description="A bag containing thin slices of deep fried potatoes commonly served as a snack."
+        scale="0.5" useinhealthinterface="true" impactsoundtag="impact_soft">
+	<Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="362,138,46,62" depth="0.6"/>
+	<Body width="36" height="54" density="9.95"/>
+    
+	<Deconstruct time="15">
+      <Item identifier="aluminium" outcondition="0.15"/>
+	  <Item identifier="carbon" outcondition="0.2"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="vendingmachine" requiredtime="5">
+      <RequiredItem identifier="stampb"/>
+    </Fabricate>
+	
+	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
+	  <StatusEffect type="OnUse" target="This" Condition="-20" disabledeltatime="true">
+	    <sound file="Mods/BTE/Items/Medical/ChipsEat.ogg" type="OnUse" range="750"/>
+	  </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
+   <ReduceAffliction identifier="internaldamage" amount="0.2"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  
+  <Item name="Chocolate" identifier="chocolate" category="Misc" Tags="smallitem,food"
+		description="A delicious bar of real chocolate."
+        scale="0.5" useinhealthinterface="true" impactsoundtag="impact_soft">
+	<Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="370,68,50,20" depth="0.6"/>
+	<Body width="42" height="12" density="10.6"/>
+    
+	<Deconstruct time="15">
+      <Item identifier="aluminium" outcondition="0.1"/>
+	  <Item identifier="carbon" outcondition="0.2"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="vendingmachine" requiredtime="5">
+      <RequiredItem identifier="stampd"/>
+    </Fabricate>
+	
+	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
+	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
+	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
+	  </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
+    <ReduceAffliction identifier="internaldamage" amount="0.2"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  
+  <Item name="Apple" identifier="apple" category="Misc" Tags="smallitem,food"
+		description="An Earth fruit grown in hydroponic farms."
+        scale="0.5" cargocontaineridentifier="plasticbag" useinhealthinterface="true" impactsoundtag="impact_soft">
+    <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="126,166,34,34" depth="0.6"/>
+    <Body radius="14" density="9.8" friction="0.95"/>
+	
+	<Price locationtype="Research" buyprice="10"/>
+    <Price locationtype="Military" buyprice="12"/>
+    <Price locationtype="City" buyprice="8"/>
+    <Price locationtype="Outpost" buyprice="6"/>
+	
+	<Deconstruct time="15">
+      <Item identifier="carbon" outcondition="0.25"/>
+    </Deconstruct>
+    
+	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
+      <StatusEffect type="Always" target="This" Condition="-0.007"/>
+	  <StatusEffect type="Always" target="This" Condition="0.007">
+        <RequiredItem identifier="fridge,foodcan" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
+	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
+	  </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
+<ReduceAffliction identifier="internaldamage" amount="0.2"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  
+  <Item name="Carrot" identifier="carrot" category="Misc" Tags="smallitem,food"
+		description="An Earth vegetable grown in hydroponic farms."
+        scale="0.5" cargocontaineridentifier="plasticbag" useinhealthinterface="true" impactsoundtag="impact_soft">
+    <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="172,0,60,20" depth="0.6"/>
+	<Body width="56" height="14" radius="14" density="9.9" friction="0.95"/>
+	
+	<Price locationtype="Research" buyprice="9"/>
+    <Price locationtype="Military" buyprice="11"/>
+    <Price locationtype="City" buyprice="7"/>
+    <Price locationtype="Outpost" buyprice="5"/>
+	
+	<Deconstruct time="15">
+	  <Item identifier="carbon" outcondition="0.23"/>
+    </Deconstruct>
+    
+	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
+      <StatusEffect type="Always" target="This" Condition="-0.008"/>
+	  <StatusEffect type="Always" target="This" Condition="0.008">
+        <RequiredItem identifier="fridge,foodcan" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
+	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
+	  </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
+<ReduceAffliction identifier="internaldamage" amount="0.2"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  
+  <Item name="Potato" identifier="potato" category="Misc" Tags="smallitem,food"
+		description="An Earth vegetable grown in hydroponic farms."
+        scale="0.5" cargocontaineridentifier="plasticbag" useinhealthinterface="true" impactsoundtag="impact_soft">
+    <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="192,26,40,20" depth="0.6"/>
+	<Body width="36" height="14" radius="14" density="12" friction="0.95"/>
+    
+	<Price locationtype="Research" buyprice="9"/>
+    <Price locationtype="Military" buyprice="11"/>
+    <Price locationtype="City" buyprice="7"/>
+    <Price locationtype="Outpost" buyprice="5"/>
+	
+	<Deconstruct time="15">
+      <Item identifier="carbon" outcondition="0.27"/>
+    </Deconstruct>
+	
+	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
+      <StatusEffect type="Always" target="This" Condition="-0.009"/>
+	  <StatusEffect type="Always" target="This" Condition="0.009">
+        <RequiredItem identifier="fridge,foodcan" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
+	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
+	  </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
+<ReduceAffliction identifier="internaldamage" amount="0.2"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  
+  <Item name="Baked Potato" identifier="bakedpotato" category="Misc" Tags="smallitem,food"
+		description="Usually cooked by someone either really hungry or with no actual cooking skills."
+        scale="0.5" useinhealthinterface="true" impactsoundtag="impact_soft">
+    <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="192,52,40,20" depth="0.6"/>
+	<Body width="36" height="14" radius="14" density="10.7" friction="0.95"/>
+	
+	<Deconstruct time="15">
+      <Item identifier="carbon" outcondition="0.26"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="oven" requiredtime="10">
+      <RequiredItem identifier="potato" mincondition="0.2" usecondition="false"/>
+    </Fabricate>
+    
+	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
+      <StatusEffect type="Always" target="This" Condition="-0.008"/>
+	  <StatusEffect type="Always" target="This" Condition="0.004">
+        <RequiredItem identifier="fridge" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
+	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
+	  </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
+<ReduceAffliction identifier="internaldamage" amount="0.2"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  
+  <Item name="Fries" identifier="fries" category="Misc" Tags="smallitem,food"
+		description="Crispy and delicious deep-fried potatoes. Usually part of a dish or eaten as a snack by themselves."
+        scale="0.5" useinhealthinterface="true" impactsoundtag="impact_soft">
+    <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="42,80,40,40" depth="0.6"/>
+	<Body width="32" height="36" radius="14" density="11" friction="0.95"/>
+	
+	<Deconstruct time="15">
+      <Item identifier="carbon" outcondition="0.52"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="oven" requiredtime="15">
+      <RequiredItem identifier="potato" count="2" mincondition="0.2" usecondition="false"/>
+    </Fabricate>
+    
+	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
+      <StatusEffect type="Always" target="This" Condition="-0.004"/>
+	  <StatusEffect type="Always" target="This" Condition="0.002">
+        <RequiredItem identifier="fridge" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
+	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
+	  </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
+<ReduceAffliction identifier="internaldamage" amount="0.3"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  
+  <Item name="Flour" identifier="flour" category="Misc" Tags="mediumitem"
+		description="Wheat flour. A decent cook can do wonders with this."
+        scale="0.5" impactsoundtag="impact_soft">
+    <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="260,126,60,74" depth="0.6"/>
+    <Body height="52" radius="14" density="9.5" friction="0.95"/>
+    
+	<Price locationtype="Research" buyprice="8"/>
+    <Price locationtype="Military" buyprice="10"/>
+    <Price locationtype="City" buyprice="6"/>
+    <Price locationtype="Outpost" buyprice="4"/>
+	
+	<Deconstruct time="15">
+      <Item identifier="carbon" outcondition="0.75"/>
+    </Deconstruct>
+	
+	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
+      <StatusEffect type="InWater" target="This" condition="-1.8"/>
+    </Holdable>
+  </Item>
+  
+  <Item name="Bread" identifier="bread" category="Misc" Tags="smallitem,food"
+		description="One of humanity's staple food in Earth. It's not as common here in Europa."
+        scale="0.5" useinhealthinterface="true" impactsoundtag="impact_soft">
+    <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="204,166,54,34" depth="0.6"/>
+    <Body width="46" height="22" radius="14" density="9.7" friction="0.95"/>
+	
+	<Deconstruct time="15">
+      <Item identifier="carbon" outcondition="0.24"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="oven" requiredtime="20">
+      <RequiredItem identifier="flour" mincondition="0.25" usecondition="true"/>
+    </Fabricate>
+    
+	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0" canBeCombined="true">
+      <StatusEffect type="Always" target="This" Condition="-0.001"/>
+	  <StatusEffect type="InWater" target="This" condition="-1.4"/>
+	  <StatusEffect type="Always" target="This" Condition="0.001">
+        <RequiredItem identifier="fridge" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
+	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
+	  </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
+<ReduceAffliction identifier="internaldamage" amount="0.3"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  
+  <Item name="Seared Crawler" identifier="searedcrawler" category="Misc" Tags="smallitem,food"
+        useinhealthinterface="true" scale="0.5" impactsoundtag="impact_fleshhit">
+    <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="130,42,40,40" depth="0.6"/>
+    <Body width="18" height="14" radius="14" density="13" friction="0.95"/>
+	
+	<Deconstruct time="15">
+      <Item identifier="carbon" outcondition="0.4"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="oven" requiredtime="20">
+      <RequiredItem identifier="crawlermeat1" mincondition="0.3" usecondition="false"/>
+    </Fabricate>
+	<Fabricate suitablefabricators="oven" requiredtime="20">
+      <RequiredItem identifier="crawlermeat2" mincondition="0.3" usecondition="false"/>
+    </Fabricate>
+    
+	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
+      <StatusEffect type="Always" target="This" Condition="-0.014"/>
+	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
+	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
+	  </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
+<ReduceAffliction identifier="internaldamage" amount="0.4"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  
+  <Item name="Seared Thresher" identifier="searedthresher" category="Misc" Tags="smallitem,food"
+        useinhealthinterface="true" scale="0.5" impactsoundtag="impact_fleshhit">
+    <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="44,42,38,36" depth="0.6"/>
+    <Body width="18" height="14" radius="14" density="14" friction="0.95"/>
+	
+	<Deconstruct time="15">
+      <Item identifier="carbon" outcondition="0.5"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="oven" requiredtime="20">
+      <RequiredItem identifier="threshermeat" mincondition="0.4" usecondition="false"/>
+    </Fabricate>
+    
+	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
+      <StatusEffect type="Always" target="This" Condition="-0.015"/>
+	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
+	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
+	  </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
+  <ReduceAffliction identifier="internaldamage" amount="0.6"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  
+  <Item name="Canned Meal" identifier="canmeallead" category="Misc" Tags="smallitem,food" cargocontaineridentifier="foodcanlead"
+        useinhealthinterface="true" scale="0.5" impactsoundtag="impact_fleshhit">
+    <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="130,42,40,40" depth="0.6"/>
+    <Body width="18" height="14" radius="14" density="13" friction="0.95"/>
+	
+    <Price locationtype="City" buyprice="4"/>
+    <Price locationtype="Outpost" buyprice="2"/>
+	
+	<Deconstruct time="15">
+      <Item identifier="carbon" outcondition="0.3"/>
+	  <Item identifier="lead" outcondition="0.1"/>
+    </Deconstruct>
+    
+	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
+	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
+	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
+	  </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
+  <ReduceAffliction identifier="internaldamage" amount="0.4"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+</Items>

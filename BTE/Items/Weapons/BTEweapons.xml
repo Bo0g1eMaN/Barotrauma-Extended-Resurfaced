@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+	  <Item name="Thermoblade" identifier="thermoblade" category="Equipment" Tags="smallitem,weapon" cargocontaineridentifier="metalcrate" scale="0.4" useinhealthinterface="true" impactsoundtag="impact_maghit">
+    <Price locationtype="Research" buyprice="80"/>
+    <Price locationtype="Military" buyprice="60"/>
+    
+	<Deconstruct time="10">
+      <Item identifier="divingknife"/>
+	  <Item identifier="incendium" outcondition="0.3"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="weapons" level="30"/>
+      <RequiredItem identifier="divingknife"/>
+	  <RequiredItem identifier="incendium" mincondition="0.3"/>
+    </Fabricate>
+    
+	<InventoryIcon texture="Mods/BTE/Items/InventoryIconAtlas.png" sourcerect="835,385,64,64"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="309,0,110,28" depth="0.55" origin="0.5,0.5"/>
+    <Body width="100" height="24" density="40"/>
+	<LightComponent LightColor="1.0,0.5,0.5,0.4" Flicker="0.4" range="50" powerconsumption="10" IsOn="true"/>
+	
+	<ItemComponent>
+      <StatusEffect type="OnUse" target="Limb">
+        <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" type="OnUse" range="500" selectionmode="Random"/>
+		<Sound file="Content/Sounds/Damage/LimbSlash2.ogg" type="OnUse" range="500"/>
+		<Sound file="Content/Sounds/Damage/LimbSlash3.ogg" type="OnUse" range="500"/>
+		<Sound file="Content/Sounds/Damage/LimbSlash4.ogg" type="OnUse" range="500"/>
+		<Sound file="Content/Sounds/Damage/LimbSlash5.ogg" type="OnUse" range="500"/>
+		<Sound file="Content/Sounds/Damage/LimbSlash6.ogg" type="OnUse" range="500"/>
+		<Sound file="Mods/BTE/Items/Weapons/Stabbing.ogg" type="OnUse" range="500"/>
+         <Affliction identifier="lacerations" strength="10" />
+        <Affliction identifier="bleeding" strength="10" />
+        <Affliction identifier="stun" strength="0.2" />
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained" Condition="-20" disabledeltatime="true">
+        <RequiredItem identifier="mobilebattery" type="Contained"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Limb">
+        <sound file="Mods/BTE/Items/Weapons/Burn.ogg" range="500"/>
+        <RequiredItem identifier="mobilebattery" type="Contained"/>
+        <Explosion range="100" force="0.1" shockwave="false" sparks="false" flames="false" smoke="false" underwaterbubble="false" camerashake="5.0"/>
+		<Affliction identifier="burn" strength="6"/>
+		<ReduceAffliction identifier="bleeding" strength="24"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Limb">
+        <RequiredItem identifier="hybridbatterycell" type="Contained"/>
+		<Affliction identifier="burn" strength="4"/>
+		<ReduceAffliction identifier="bleeding" strength="6"/>
+      </StatusEffect>
+    </ItemComponent>
+	
+	<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-5,-5" holdangle="30" reload="0.75" range="50" msg="ItemMsgPickUpSelect">
+      <Attack itemdamage="4" stun="0.2">
+         <Affliction identifier="lacerations" strength="10" />
+        <Affliction identifier="stun" strength="0.2" />
+		<Affliction identifier="bleeding" strength="6"/>
+		<Affliction identifier="bleeding" strength="4" probability="0.5"/>
+        <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" type="OnUse" range="500" selectionmode="Random"/>
+		<Sound file="Content/Sounds/Damage/LimbSlash2.ogg" type="OnUse" range="500"/>
+		<Sound file="Content/Sounds/Damage/LimbSlash3.ogg" type="OnUse" range="500"/>
+		<Sound file="Content/Sounds/Damage/LimbSlash4.ogg" type="OnUse" range="500"/>
+		<Sound file="Content/Sounds/Damage/LimbSlash5.ogg" type="OnUse" range="500"/>
+		<Sound file="Content/Sounds/Damage/LimbSlash6.ogg" type="OnUse" range="500"/>
+		<Sound file="Mods/BTE/Items/Weapons/Stabbing.ogg" type="OnUse" range="500"/>
+      </Attack>
+	  <StatusEffect type="OnUse" target="Contained" Condition="-20" disabledeltatime="true">
+        <RequiredItem identifier="mobilebattery" type="Contained"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Limb">
+        <sound file="Mods/BTE/Items/Weapons/Burn.ogg" range="500"/>
+        <RequiredItem identifier="mobilebattery" type="Contained"/>
+        <Explosion range="100" force="0.1" shockwave="false" sparks="false" flames="false" smoke="false" underwaterbubble="false" camerashake="5.0"/>
+	    <Affliction identifier="burn" strength="6"/>
+		<ReduceAffliction identifier="bleeding" strength="24"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Limb">
+        <RequiredItem identifier="hybridbatterycell" type="Contained"/>
+		<Affliction identifier="burn" strength="4"/>
+		<ReduceAffliction identifier="bleeding" strength="6"/>
+      </StatusEffect>
+    </MeleeWeapon>
+	
+	<ItemContainer capacity="1" hideitems="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31"/>
+      <Containable identifiers="mobilebattery">
+        <StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true"/>
+      </Containable>
+    </ItemContainer>
+  </Item>
+  
+	
+	 <Item name="Shotgun Slug Shell" identifier="shotgunslug" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.28" impactsoundtag="impact_metal_light">
+    <Price locationtype="Military" buyprice="15"/>
+    <InventoryIcon texture="Mods/BTE/Items/InventoryIconAtlas.png" sourcerect="768,960,64,64" origin="0.5,0.5"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="272,18,36,17" depth="0.55" origin="0.5,0.5"/>
+    <Body width="35" height="15" density="10"/>
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect"/>
+    <Projectile characterusable="false" hitscan="true" removeonhit="true">
+      <Attack structuredamage="35" itemdamage="70" stun="1.6" severlimbsprobability="0.3" targetforce="8">
+      <Affliction identifier="bleeding" strength="6" />
+        <Affliction identifier="gunshotwound" strength="35" />
+        <Affliction identifier="stun" strength="0.2" />
+      </Attack>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure"/>
+        <Conditional hastag="eq door"/>
+		<Conditional hastag="eq weapon"/>
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" targettype="UseTarget" targettags="explosiveitem" Condition="-500">
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1"/>
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="Shotgun Rubber-Slug Shell" identifier="shotgunrubberslug" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.28" impactsoundtag="impact_metal_light">
+    <Price locationtype="Military" buyprice="10"/>
+    <Price locationtype="City" buyprice="15"/>
+    <InventoryIcon texture="Mods/BTE/Items/InventoryIconAtlas.png" sourcerect="832,960,64,64" origin="0.5,0.5"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="272,0,36,17" depth="0.55" origin="0.5,0.5"/>
+    <Body width="35" height="15" density="8"/>
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect"/>
+    <Projectile characterusable="false" hitscan="true" removeonhit="true">
+      <Attack structuredamage="0.1" stun="2.6" targetforce="8">
+        <Affliction identifier="stun" strength="6"/>
+		<Affliction identifier="internaldamage" strength="4"/>
+      </Attack>
+    </Projectile>
+  </Item>
+	 
+  <Item name="Pistol Round" identifier="pistolround" hideinmenus="true" Scale="0.26">
+    <Sprite texture="Content/Items/Weapons/weapons.png" sourcerect="1,1,16,9" depth="0.55"/>
+    <Body width="8" height="3" density="40"/>
+    <Pickable slots="Any"/>
+    <Projectile characterusable="false" hitscan="true" removeonhit="true">
+      <Attack structuredamage="8" itemdamage="16" stun="0.25" targetforce="5">
+        <Affliction identifier="gunshotwound" strength="10"/>
+        <Affliction identifier="internaldamage" strength="4"/>
+      </Attack>
+	  <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure"/>
+        <Conditional hastag="eq door"/>
+		<Conditional hastag="eq weapon"/>
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" targettype="UseTarget" targettags="explosiveitem" Condition="-500">
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1"/>
+      </StatusEffect>
+    </Projectile>
+	
+  </Item>
+  <Item name="Pistol Magazine" identifier="pistolmag" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem" Scale="0.32">
+    <Price locationtype="Military" buyprice="15"/>
+    <Price locationtype="City" buyprice="20"/>
+    <Price locationtype="Outpost" buyprice="30"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="236,0,30,36" depth="0.55"/>
+    <Body width="10" height="16" density="40"/>
+    <Throwable canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3" msg="ItemMsgPickUpSelect"/>
+    <ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" 
+                   ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="2,121,53,22"/>
+      <StatusEffect type="OnUse" target="This" condition="-7.2" disabledeltatime="true">
+        <SpawnItem identifiers="pistolround" spawnposition="ThisInventory"/>
+      </StatusEffect>
+      <Containable identifiers="pistolround"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item name="Pistol" identifier="pistol" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,weapon" Scale="0.32" >
+    <Price locationtype="Military" buyprice="300"/>
+    <Price locationtype="City" buyprice="500"/>
+    <Deconstruct time="10">
+      <Item identifier="steel"/>
+      <Item identifier="plastic"/>
+    </Deconstruct>
+    <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="118,0,117,57" depth="0.55"/>
+    <Body width="28" height="20" density="50"/>
+    <Holdable slots="Any,RightHand,LeftHand" controlpose="true" aimpos="90,10" handle1="-11,-7"/>
+    <RangedWeapon barrelpos="14,6" spread="0" unskilledspread="3" drawhudwhenequipped="true" crosshairscale="0.2">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+	  <Sound file="Content/Items/Weapons/Revolver1.ogg" type="OnUse" range="3000" selectionmode="Random"/>
+      <Sound file="Content/Items/Weapons/Revolver2.ogg" type="OnUse" range="3000"/>
+      <Sound file="Content/Items/Weapons/Revolver3.ogg" type="OnUse" range="3000"/>
+      <StatusEffect type="OnUse">
+        <Explosion range="125" force="2.5" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="4.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained">
+        <RequiredItem identifiers="pistolmag" type="Contained"/>
+        <Use />
+      </StatusEffect>
+      <RequiredItems identifier="pistolmag" type="Contained" msg="ItemMsgAmmoRequired"/>
+      <RequiredSkill identifier="weapons" level="30"/>
+    </RangedWeapon>
+    <ItemContainer capacity="1" hideitems="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="2,121,53,22"/>
+      <Containable identifiers="pistolmag"/>
+    </ItemContainer>
+  </Item>											 
+  
+  <Item name="Revolver Bull Round" identifier="revolverround2" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" preferredcontainers="locker" Scale="0.32" tags="smallitem,revolverammo" impactsoundtag="impact_metal_light">
+    <Price locationtype="Military" buyprice="20"/>
+    <Price locationtype="City" buyprice="40"/>
+    <Price locationtype="Outpost" buyprice="40"/>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,384,64,64"/>
+    <Sprite texture="Content/Items/Weapons/weapons.png" sourcerect="1,1,16,9" depth="0.55"/>
+    <Body width="29" height="10" density="38"/>
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect"/>
+    <Projectile characterusable="false" hitscan="true" removeonhit="true">
+      <Attack structuredamage="30" itemdamage="60" stun="1.5" targetforce="50">
+        <Affliction identifier="bleeding" strength="20" />
+        <Affliction identifier="gunshotwound" strength="30" />
+        <Affliction identifier="stun" strength="0.4" />
+      </Attack>
+	  <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure"/>
+        <Conditional hastag="eq door"/>
+		<Conditional hastag="eq weapon"/>
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" targettype="UseTarget" targettags="explosiveitem" Condition="-500">
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1"/>
+      </StatusEffect>	  
+    </Projectile>
+  </Item>
+</Items>

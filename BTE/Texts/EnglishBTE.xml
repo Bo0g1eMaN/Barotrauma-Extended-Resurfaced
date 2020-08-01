@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  
+  <!-- Room names -->
+  <roomname.generatorroom>Generator room</roomname.generatorroom>
+  <roomname.engineroom1>Engine compartment A</roomname.engineroom1>
+  <roomname.engineroom2>Engine compartment B</roomname.engineroom2>
+  <roomname.lifesupport>Life support compartment</roomname.lifesupport>
+  <roomname.securityoffice>Security office</roomname.securityoffice>
+  <roomname.securitycctv>CCTV room</roomname.securitycctv>
+  <roomname.medicaloffice>Medical office</roomname.medicaloffice>
+  <roomname.laboratory>Laboratory</roomname.laboratory>
+  <roomname.exosuitroom>Exosuit compartment</roomname.exosuitroom>
+  <roomname.equipmentroom>Equipment compartment</roomname.equipmentroom>
+  <roomname.maintenancehatch>Maintenance hatch</roomname.maintenancehatch>
+  <roomname.canteen>Canteen</roomname.canteen>
+  <roomname.kitchen>Kitchen</roomname.kitchen>
+  <roomname.staircase>Access staircase</roomname.staircase>
+  <roomname.aftstaircase>Aft access staircase</roomname.aftstaircase>
+  <roomname.centralstaircase>Central access staircase</roomname.centralstaircase>
+  <roomname.forestaircase>Fore access staircase</roomname.forestaircase>
+  <roomname.railgun>Railgun compartment</roomname.railgun>
+  <roomname.coilgun>Coilgun compartment</roomname.coilgun>
+  <roomname.shuttle>Shuttle</roomname.shuttle>
+  <roomname.shuttlecockpit>Shuttle cockpit</roomname.shuttlecockpit>
+  <roomname.shuttlecontrol>Shuttle control</roomname.shuttlecontrol>
+  <roomname.shuttleutility>Shuttle utility compartment</roomname.shuttleutility>
+  <roomname.shuttlelifesupport>Shuttle life support compartment</roomname.shuttlelifesupport>
+  <roomname.shuttleengine>Shuttle engine compartment</roomname.shuttleengine>
+  <roomname.shuttleballast>Shuttle ballast</roomname.shuttleballast>
+  <roomname.shuttleairlock>Shuttle airlock</roomname.shuttleairlock>
+  <roomname.shuttledockingport>Shuttle docking port</roomname.shuttledockingport>
+  <roomname.outpost>Outpost</roomname.outpost>
+  <roomname.outpostlobby>Outpost lobby</roomname.outpostlobby>
+  <roomname.outpostairlock>Outpost airlock</roomname.outpostairlock>
+  <roomname.outpostdockingport>Outpost docking port</roomname.outpostdockingport>
+  <roomname.cabins>Cabins</roomname.cabins>
+  <roomname.privatequarters>Private quarters</roomname.privatequarters>
+  <roomname.commandquarters>Command quarters</roomname.commandquarters>
+  <roomname.securityquarters>Security quarters</roomname.securityquarters>
+  <roomname.prisonquarters>Prisoner quarters</roomname.prisonquarters>
+  <roomname.bilge>Bilge compartment</roomname.bilge>
+  <roomname.ducts>Ducts</roomname.ducts>
+  <roomname.upperducts>Upper ducts</roomname.upperducts>
+  <roomname.lowerducts>Lower Ducts</roomname.lowerducts>
+  <roomname.aftducts>Aft ducts</roomname.aftducts>
+  <roomname.foreducts>Fore ducts</roomname.foreducts>
+  
+  <!-- Characters -->
+  
+  <!-- Items -->
+  <entityname.plasticbag>Plastic Bag</entityname.plasticbag>
+  <entitydescription.plasticbag>It's commonly found inside cargo crates. Usually used to carry small items but sometimes used in other, questionable activities.</entitydescription.plasticbag>
+  
+  <entityname.revolverround2>Revolver Bull Round</entityname.revolverround2>
+  <entitydescription.revolverround2>Custom hand-loaded revolver ammunition. More stopping power but less penetration.</entitydescription.revolverround2>
+  
+  <entityname.flashbang>Flashbang Payload</entityname.flashbang>
+  <entitydescription.flashbang>A non-lethal explosive designed to disorient targets instead of killing them.</entitydescription.flashbang>
+  <entityname.breachbomb>Breach Payload</entityname.breachbomb>
+  <entitydescription.breachbomb>A high explosive charge with a small blast radius designed to punch a hole in hulls.</entitydescription.breachbomb>
+  <entityname.coldbomb>Cryo Payload</entityname.coldbomb>
+  <entitydescription.coldbomb>A non-lethal explosive based on liquid oxygenite.</entitydescription.coldbomb>
+  <entityname.shockcharge>Electrical Payload</entityname.shockcharge>
+  <entitydescription.shockcharge>An electronic device designed to release an electric discharge when triggered.</entitydescription.shockcharge>
+  <entityname.flakbomb>Flak Payload</entityname.flakbomb>
+  <entitydescription.flakbomb>A submarine anti-creature payload designed to deal damage to one or more targets with both explosive power and dispersed lethal fragments.</entitydescription.flakbomb>
+  <entityname.uraniumbomb>Uranium Warhead</entityname.uraniumbomb>
+  <entitydescription.uraniumbomb>One of the most powerful payloads available for submarine munition shells.</entitydescription.uraniumbomb>
+  <entityname.thoriumbomb>Thorium Warhead</entityname.thoriumbomb>
+  <entitydescription.thoriumbomb>One of the most powerful payloads available for submarine munition shells.</entitydescription.thoriumbomb>
+  <entityname.incendiumbomb>Incendium Warhead</entityname.incendiumbomb>
+  <entitydescription.incendiumbomb>One of the most powerful payloads available for submarine munition shells.</entitydescription.incendiumbomb>
+  <entityname.fulguriumbomb>Fulgurium Warhead</entityname.fulguriumbomb>
+  <entitydescription.fulguriumbomb>One of the most powerful payloads available for submarine munition shells.</entitydescription.fulguriumbomb>
+
+</infotexts>

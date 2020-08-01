@@ -1,0 +1,19 @@
+<Items>
+	<Item name="Small Lamp" identifier="lampsmall" category="Electrical" Tags="smallitem,light" scale="0.5">
+		<Upgrade gameversion="0.9000.0.0" scale="0.5" />
+		<Sprite texture="Mods/BTE/Items/Electricity/bte_lamps.png" sourcerect="0,0,23,23" depth="0.8" />
+		<LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800.0" powerconsumption="5">
+			<LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+			<!-- additive "top light" -->
+			<sprite texture="Mods/BTE/Items/Electricity/bte_lamps.png" sourcerect="23,0,23,23" alpha="1.0" />
+			<sound file="Mods/BTE/Items/Electricity/ElectricHum2.ogg" type="OnActive" range="250" volumeproperty="Voltage" loop="true" />
+		</LightComponent>
+		<ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+			<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+			<RequiredItem items="screwdriver" type="Equipped" />
+			<input name="power" displayname="connection.power" />
+			<input name="toggle" displayname="connection.togglestate" />
+			<input name="set_state" displayname="connection.setstate" />
+		</ConnectionPanel>
+	</Item>
+</Items>
