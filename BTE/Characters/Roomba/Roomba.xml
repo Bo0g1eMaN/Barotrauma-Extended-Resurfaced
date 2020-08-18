@@ -1,0 +1,32 @@
+﻿<Character speciesname="Roomba" group="human" humanoid="False" husk="False" needsair="False" canspeak="False" noise="25" blooddecal="" displayname="">
+  <ragdolls folder="Mods/Roomba/Roomba/Ragdolls/"/>
+  <animations folder="Mods/Roomba/Roomba/Animations/"/>
+  <health vitality="25" doesbleed="False" crushdepth="-Infinity" usehealthwindow="False" bleedingreduction="0" burnreduction="0" constanthealthregeneration="1" healthregenerationwheneating="0"/>
+  <ai combatstrength="25" sight="1" hearing="0" aggressionhurt="200" aggressiongreed="10" attackonlywhenprovoked="False" aggressiveboarding="True" avoidgunfire="True" fleehealththreshold="0">
+    <target tag="weaker" state="Attack" priority="100"/>
+    <target tag="stronger" state="Attack" priority="50"/>
+    <target tag="dead" state="Eat" priority="25"/>
+    <target tag="human" state="Eat" priority="0"/>
+    <SwarmBehavior mindistfromclosest="400" maxdistfromcenter="2000" cohesion="0.5"/>
+  </ai>
+  <sound file="Mods/Roomba/Roomba/Idle1.ogg" state="Idle" range="1000" volume="1" gender="None"/>
+  <sound file="Mods/Roomba/Roomba/Idle2.ogg" state="Idle" range="1000" volume="1" gender="None"/>
+  <sound file="Mods/Roomba/Roomba/Idle3.ogg" state="Idle" range="1000" volume="1" gender="None"/>
+  <sound file="Mods/Roomba/Roomba/Idle4.ogg" state="Idle" range="1000" volume="1" gender="None"/>
+  <sound file="Mods/Roomba/Roomba/Pain1.ogg" state="Damage" range="1500" volume="1" gender="None"/>
+  <sound file="Mods/Roomba/Roomba/Pain2.ogg" state="Damage" range="1500" volume="1" gender="None"/>
+  <sound file="Mods/Roomba/Roomba/Pain3.ogg" state="Damage" range="1500" volume="1" gender="None"/>
+  <sound file="Mods/Roomba/Roomba/Pain4.ogg" state="Damage" range="1500" volume="1" gender="None"/>
+  <sound file="Mods/Roomba/Roomba/Death.ogg" state="Die" range="2000" volume="1" gender="None"/>
+  <StatusEffect type="Always" target="This">
+    <Conditional IsDead="false"/>
+    <ReduceAffliction identifier="burn" strength="0.5"/>
+    <sound file="Mods/Roomba/Roomba/Move.ogg" type="OnActive" range="500" loop="true"/>
+  </StatusEffect>
+  <StatusEffect type="OnDeath" target="This">
+    <Explosion range="75" force="2" smoke="false" shockwave="false" underwaterbubble="false" camerashake="12">
+      <Affliction identifier="stun" strength="2"/>
+      <Affliction identifier="burn" strength="15"/>
+    </Explosion>
+  </StatusEffect>
+</Character>

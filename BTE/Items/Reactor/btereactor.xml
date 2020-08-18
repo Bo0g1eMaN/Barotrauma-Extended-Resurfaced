@@ -20,7 +20,7 @@
     </Fabricate>
     
 	<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="576,64,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Tools/tools_new.png" depth="0.55" sourcerect="371,3,19,68" />
+    <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="371,3,19,68" />
     <Body radius="6" width="20" height="70" density="10.2"/>
 	
 	<LightComponent range="50" lightcolor="0,0.5,0,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
@@ -48,7 +48,7 @@
     </Deconstruct>
 
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,64,64,64"/>
-    <Sprite texture="Content/Items/Tools/tools_new.png" depth="0.55" sourcerect="411,3,19,68" />
+    <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="411,3,19,68" />
     <Body radius="6" width="20" height="70" density="10.8"/>
 	
 	<LightComponent range="50" lightcolor="0,0.5,0,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
@@ -104,7 +104,7 @@
     </Deconstruct>
 
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,64,64,64"/>
-    <Sprite texture="Content/Items/Tools/tools_new.png" depth="0.55" sourcerect="411,3,19,68" />
+    <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="411,3,19,68" />
     <Body radius="6" width="20" height="70" density="10.8"/>
 
     <LightComponent range="50" lightcolor="0.8,0.6,0.4,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
@@ -159,7 +159,7 @@
     </Deconstruct>
 
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,64,64,64"/>
-    <Sprite texture="Content/Items/Tools/tools_new.png" depth="0.55" sourcerect="411,3,19,68" />
+    <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="411,3,19,68" />
     <Body radius="6" width="20" height="70" density="10.8"/>
 	
 	<LightComponent range="50" LightColor="0.9,0.3,0.0,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">

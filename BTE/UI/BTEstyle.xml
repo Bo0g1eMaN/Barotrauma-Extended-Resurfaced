@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
 <style>
   <!-- 
   General green highlight color used for elements that are highlighted from code 
@@ -1298,3 +1299,4 @@
     <Sprite texture="Mods/BTE/Items/Misc/drawUnknown.png" sourcerect="0,0,530,819" tile="false"/>
   </drawUnknown>
   </style>
+  </Override>

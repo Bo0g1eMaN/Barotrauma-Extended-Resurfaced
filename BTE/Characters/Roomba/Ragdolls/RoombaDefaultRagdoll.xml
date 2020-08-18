@@ -1,0 +1,36 @@
+﻿<Ragdoll type="Roomba" canentersubmarine="True" canwalk="True" spritesheetorientation="0" limbscale="0.2254" jointscale="0.2254" texturescale="1" colliderheightfromfloor="165" impacttolerance="50" draggable="True" texture="" mainlimb="Torso">
+  <collider radius="80" width="100" name="Main Collider" height="30"/>
+  <limb id="0" width="140" height="40" name="Limb 0" type="Torso" spriteorientation="0" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="0" stepoffset="0,0" radius="40" mass="60" density="30" pullpos="0,0" refjoint="1" ignorecollisions="False" notes="" healthindex="0" friction="0.3" restitution="1" angulardamping="7" mouthpos="0,0">
+    <sprite texture="Mods/Roomba/Roomba/Roomba.png" sourcerect="3,5,283,146" origin="0.5,0.5" depth="0"/>
+    <attack targettype="Any" priority="1" range="60" damagerange="60" duration="0.2" cooldown="6" secondarycooldown="4" afterattack="FallBack" itemdamage="8" force="1" torque="0" targetimpulse="14" targetforce="6" structuresoundtype="StructureSlash" context="Ground" hitdetectiontype="Distance" onlyhumans="False" targetimpulseworld="0,0" targetforceworld="0,0" applyforcesonlyonce="True" cooldownrandomfactor="0.25" reverse="False" targetlimbtype="None" severlimbsprobability="0" structuredamage="0" stun="0" applyforceonlimbs="">
+      <StatusEffect type="OnUse" target="This">
+        <Explosion range="50" force="1" smoke="false" shockwave="false" flames="false" underwaterbubble="false" camerashake="8">
+          <Affliction identifier="stun" strength="1"/>
+          <Affliction identifier="burn" strength="4"/>
+        </Explosion>
+      </StatusEffect>
+      <Affliction identifier="stun" strength="1"/>
+      <Affliction identifier="burn" strength="2"/>
+	  <Affliction identifier="burn" strength="2" probability="0.25"/>
+    </attack>
+    <damagemodifier armorsector="0,360" afflictiontypes="burn" damagemultiplier="0" damagesound="StructureBlunt" deflectprojectiles="True"/>
+  </limb>
+  <limb id="1" width="32" height="34" name="Mouth" type="Head" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="0" radius="30" mass="10" density="15" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" notes="" healthindex="0" friction="0.3" restitution="0.05">
+    <sprite texture="Mods/Roomba/Roomba/Roomba.png" sourcerect="287,23,32,34" origin="0.5,0.5" depth="0"/>
+    <damagemodifier armorsector="0,360" afflictiontypes="burn" damagemultiplier="0" damagesound="StructureBlunt" deflectprojectiles="True"/>
+  </limb>
+  <limb id="2" radius="10" width="32" height="34" name="Limb 2" type="LeftFoot" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="0" mass="10" density="10" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" notes="" healthindex="0" friction="0.3" restitution="0.05">
+    <sprite texture="Mods/Roomba/Roomba/Roomba.png" sourcerect="287,59,32,34" origin="0.5,0.0882353" depth="0"/>
+    <lightsource range="80" color="255,200,200,80">
+      <lighttexture texture="Content/Lights/lightcone.png" origin="0,0.5" size="1,1"/>
+    </lightsource>
+    <damagemodifier armorsector="0,360" afflictiontypes="burn" damagemultiplier="0" damagesound="StructureBlunt" deflectprojectiles="True"/>
+  </limb>
+  <limb id="3" radius="10" width="32" height="34" name="Limb 3" type="RightFoot" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="0" mass="10" density="10" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" notes="" healthindex="0" friction="0.3" restitution="0.05">
+    <sprite texture="Mods/Roomba/Roomba/Roomba.png" sourcerect="287,95,32,34" origin="0.5,0.0882353" depth="0"/>
+    <damagemodifier armorsector="0,360" afflictiontypes="burn" damagemultiplier="0" damagesound="StructureBlunt" deflectprojectiles="True"/>
+  </limb>
+  <joint limb1="0" limb2="1" limb1anchor="2.67,-2.44" limb2anchor="0.14,0.06" name="Joint 0 - 1" canbesevered="True" limitenabled="True" upperlimit="0" lowerlimit="0" stiffness="0.25"/>
+  <joint limb1="2" limb2="0" limb1anchor="-3.110568,-17.31598" limb2anchor="5.1,-30.62" name="Joint 2 - 0" canbesevered="False" limitenabled="True" upperlimit="-200" lowerlimit="-50" stiffness="0.6"/>
+  <joint limb1="3" limb2="0" limb1anchor="-3.4,-6.8" limb2anchor="0,-28.92" name="Joint 3 - 0" canbesevered="True" limitenabled="True" upperlimit="0" lowerlimit="0" stiffness="0.25"/>
+</Ragdoll>

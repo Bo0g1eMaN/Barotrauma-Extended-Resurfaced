@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
+	<Override>
   <Item name="" identifier="guitar" category="Misc" Tags="bigitem" scale="0.5" price="300" isshootable="true"
     description="An old acoustic guitar."
 	impactsoundtag="impact_guitarhit" >
@@ -53,6 +54,8 @@
       </StatusEffect>
     </Holdable>
   </Item>
+  </Override>
+  <Override>
   <Item name="" identifier="harmonica" category="Misc" Tags="smallitem" scale="0.5" description="" price="300" impactsoundtag="impact_metal_light" isshootable="true">
     <PreferredContainer primary="crewcab" spawnprobability="0.01"/>
     <Price baseprice="50" soldeverywhere="false">
@@ -74,7 +77,8 @@
 	  <sound file="Mods/BTE/Sounds/Tunes/harmonica_5.ogg" type="OnUse" range="600" loop="true"/>
     </Holdable>
   </Item>
-  
+  </Override>
+  <Override>
   <Item name="" identifier="accordion" category="Misc" Tags="smallitem" scale="0.5" description="" price="300" impactsoundtag="impact_metal_light" isshootable="true">
     <PreferredContainer primary="crewcab" spawnprobability="0.01"/>
     <Price baseprice="50" soldeverywhere="false">
@@ -92,7 +96,8 @@
       <sound file="Content/Items/Misc/AccordionLoop.ogg" type="OnUse" range="600" loop="true" />
     </Holdable>
   </Item>
-  
+  </Override>
+  <Override>
   <Item name="" identifier="captainspipe" category="Misc" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true">
     <PreferredContainer primary="crewcab" spawnprobability="0.01"/>
     <Price baseprice="1" soldeverywhere="false">
@@ -111,6 +116,8 @@
       </StatusEffect>
     </Holdable>
   </Item>
+  </Override>
+  <Override>
   <Item name="Bike horn" identifier="bikehorn" category="Equipment" tags="weapon,smallitem" scale="0.5" cargocontaineridentifier="metalcrate" description="HONK">
     <PreferredContainer primary="crewcab"/>
     <Price baseprice="1" soldeverywhere="false">
@@ -130,6 +137,7 @@
     <aitarget soundrange="1000" fadeouttime="5" />
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
+  </Override>
 
   <Item name="Bulletin Board" identifier="bulletinboard" Tags="cntnr" pickdistance="150">
     <Sprite texture="BulletinBoard.png" depth="0.85" sourcerect="0,0,148,109"/>

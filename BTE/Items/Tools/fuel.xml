@@ -14,7 +14,7 @@
       <RequiredItem identifier="aluminium"/>
     </Fabricate>
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,0,64,64" origin="0.5,0.5"/>
-    <Sprite texture="Content/Items/Tools/tools_new.png" sourcerect="356,223,39,110" depth="0.55" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="356,223,39,110" depth="0.55" origin="0.5,0.5"/>
     <Body width="38" height="109" density="5"/>
     <Holdable slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnFire" target="This" Condition="-100" disabledeltatime="true">
@@ -44,7 +44,7 @@
       <RequiredItem identifier="liquidoxygenite"/>
     </Fabricate>
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,896,65,66" origin="0.5,0.5"/>
-    <Sprite texture="Content/Items/Tools/tools_new.png" sourcerect="473,223,39,112" depth="0.55"/>
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="473,223,39,112" depth="0.55"/>
     <Body width="39" height="112" density="9.9"/>
     <Holdable slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnFire" target="This" Condition="-100" disabledeltatime="true">
@@ -75,7 +75,7 @@
         <RequiredItem identifier="ethanol" mincondition="0.8"/>
     </Fabricate>
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,0,64,64" origin="0.5,0.5"/>
-    <Sprite texture="Content/Items/Tools/tools_new.png" sourcerect="395,223,38,109" depth="0.55"/>
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="395,223,38,109" depth="0.55"/>
     <Body width="39" height="110" density="5"/>
     <Holdable slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnFire" target="This" Condition="-27"/>
@@ -131,7 +131,7 @@
       <RequiredItem identifier="incendium" mincondition="0.4"/>
     </Fabricate>
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="256,896,64,64" origin="0.5,0.5"/>
-    <Sprite texture="Content/Items/Tools/tools_new.png" sourcerect="433,223,39,110" depth="0.55" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="433,223,39,110" depth="0.55" origin="0.5,0.5"/>
     <Body width="39" height="110" density="5"/>
     <Holdable slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
 	  <StatusEffect type="OnFire" target="This" Condition="-43"/>

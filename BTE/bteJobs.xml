@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Jobs>
+	<Override>
   <Job identifier="captain"
        minnumber="1" maxnumber="1" minkarma="45" initialcount="1"
        uicolor="0.65,0.73,0.84"
@@ -151,7 +152,9 @@
       <Order identifier="steer"/>
     </AppropriateOrders>
   </Job>
+  </Override>
   
+  <Override>
   <Job identifier="engineer"    
        minkarma="30" initialcount="1"
        uicolor="0.88,0.72,0.43"
@@ -239,7 +242,8 @@
       <Order identifier="reportbrokendevices"/>
     </AppropriateOrders>
   </Job>
-
+  </Override>
+	<Override>
   <Job identifier="mechanic"
        minkarma="30" initialcount="1"
        uicolor="0.5,0.86,0.9"
@@ -321,7 +325,9 @@
       <Order identifier="reportbrokendevices"/>
     </AppropriateOrders>
   </Job>
+  </Override>
 
+	<Override>
   <Job identifier="securityofficer"
        maxnumber="2" minkarma="40"
        uicolor="0.57,0.48,0.43"
@@ -476,7 +482,9 @@
       <Order identifier="fightintruders"/>
     </AppropriateOrders>
   </Job>
+  </Override>
 
+	<Override>
   <Job identifier="medicaldoctor"
        maxnumber="2" minkarma="30"
        uicolor="0.81,0.31,0.19"
@@ -576,7 +584,8 @@
       <Order identifier="requestfirstaid"/>
     </AppropriateOrders>
   </Job>
-
+  </Override>
+	<Override>
   <Job identifier="assistant"
        allowalways="true" minkarma="0"
        vitalitymodifier="-10"
@@ -628,7 +637,9 @@
       <Order identifier="fixleaks" prioritymodifier="0.5"/>
     </AutonomousObjectives>
   </Job>
-
+  </Override>
+	
+	<Override>
   <Job identifier="watchman"
        onlyjobspecificdialog="false"
        minnumber="0" maxnumber="0" initialcount="0">
@@ -645,6 +656,7 @@
       </Item>
     </ItemSet>
   </Job>
+  </Override>
 
   <NoJob>
     <PortraitClothing>
