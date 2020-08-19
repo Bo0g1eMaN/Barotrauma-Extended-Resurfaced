@@ -35,7 +35,7 @@
     <ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="Output" allowuioverlap="true"/>
   </Item>
   
-  <Item name="Vending Machine" identifier="vendingmachine" category="Machine" Tags="vendingmachine,container"
+  <Item name="Ration Vending Machine" identifier="vendingmachine" category="Machine" Tags="vendingmachine,container"
 		description="A vending machine for snacks and other misc goods.">
     <Sprite texture="Mods/BTE/Items/Fabricators/Fabricators.png" sourcerect="130,129,73,95" depth="0.8"/>
 	
@@ -46,9 +46,11 @@
       <sparksound file="Content/Items/Electricity/Zap4.ogg" range="500" loop="false"/>
       <LightTexture texture="Content/Lights/pointlight_bounce.png"/>
       <sprite texture="Mods/BTE/Items/Fabricators/FabricatorLights.png" sourcerect="130,129,73,95" alpha="1.0"/>
+      <!-- hunger does not exist
 	  <StatusEffect type="Always" target="NearbyCharacters" range="250">
 		<Affliction identifier="hunger" strength="0.01"/>
       </StatusEffect>
+      -->
     </LightComponent>
 
     <Fabricator canbeselected="true" powerconsumption="100">
