@@ -8,3 +8,6 @@ It also fixes general bugs that were unaddressed in the aforementioned fork.
 # Installation
 To install, simply download the repository (clone, or use the button on the top right), remove the "BTE" folder from within and drag it into `Barotrauma/Mods`.
 The final directory will look like `Barotrauma/Mods/BTE/`.
+
+# On Issues
+As of 8-27-2020 this has been modified to fix console error outputs, hardly anything else. Expect visual glitches and overall jankiness
