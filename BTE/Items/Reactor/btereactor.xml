@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
- 	<!-- dupe
+  <!-- dupe
   <Item name="Uranium Fuel Rod" identifier="fuelrod" Tags="mediumitem,reactorfuel"
     cargocontaineridentifier="metalcrate" scale="0.5" health="200" impactsoundtag="impact_metal_light">
 
@@ -39,31 +39,25 @@
 	</Holdable>
   </Item>
   -->
-  <Item
-    name="Spent Uranium Rod" identifier="spentfuelrod" Tags="mediumitem,reactorfuel"
-	indestructible="true" scale="0.5" impactsoundtag="impact_metal_light">
-    
+  <Item name="Spent Uranium Rod" identifier="spentfuelrod" Tags="mediumitem,reactorfuel" indestructible="true" scale="0.5" impactsoundtag="impact_metal_light">
     <Deconstruct time="50">
-      <Item identifier="lead" outcondition="0.25"/>
+      <Item identifier="lead" outcondition="0.25" />
     </Deconstruct>
-
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,64,64,64"/>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,64,64,64" />
     <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="411,3,19,68" />
-    <Body radius="6" width="20" height="70" density="10.8"/>
-	
-	<LightComponent range="50" lightcolor="0,0.5,0,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
-	  <LightTexture texture="Content/Lights/pointlight_bright.png" origin="0.5,0.5"/>
-	  <StatusEffect type="Always" target="This" IsOn="true"/>
+    <Body radius="6" width="20" height="70" density="10.8" />
+    <LightComponent range="50" lightcolor="0,0.5,0,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
+      <LightTexture texture="Content/Lights/pointlight_bright.png" origin="0.5,0.5" />
+      <StatusEffect type="Always" target="This" IsOn="true" />
     </LightComponent>
-
     <Holdable handle1="0,0" slots="RightHand,LeftHand" msg="ItemMsgPickUpSelect">
-	  <StatusEffect type="NotInWater" target="NearbyCharacters" range="750">
-		<Affliction identifier="radiationsickness" strength="0.1"/>
+      <StatusEffect type="NotInWater" target="NearbyCharacters" range="750">
+        <Affliction identifier="radiationsickness" strength="0.1" />
       </StatusEffect>
-	  <StatusEffect type="InWater" target="NearbyCharacters" range="500">
-		<Affliction identifier="radiationsickness" strength="0.05"/>
+      <StatusEffect type="InWater" target="NearbyCharacters" range="500">
+        <Affliction identifier="radiationsickness" strength="0.05" />
       </StatusEffect>
-	</Holdable>
+    </Holdable>
   </Item>
   <!-- dupe
   <Item name="Thorium Fuel Rod" identifier="thoriumfuelrod" Tags="mediumitem,reactorfuel"
@@ -94,34 +88,26 @@
 	</Holdable>
   </Item>
   -->
-  
-  <Item
-    name="Spent Thorium Rod" identifier="spentthoriumfuelrod" Tags="mediumitem,reactorfuel"
-	indestructible="true" scale="0.5" impactsoundtag="impact_metal_light">
-    
+  <Item name="Spent Thorium Rod" identifier="spentthoriumfuelrod" Tags="mediumitem,reactorfuel" indestructible="true" scale="0.4" impactsoundtag="impact_metal_light">
     <Deconstruct time="50">
-      <Item identifier="lead" outcondition="0.25"/>
+      <Item identifier="lead" outcondition="0.25" />
     </Deconstruct>
-
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,64,64,64"/>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,64,64,64" />
     <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="411,3,19,68" />
-    <Body radius="6" width="20" height="70" density="10.8"/>
-
+    <Body radius="6" width="20" height="70" density="10.8" />
     <LightComponent range="50" lightcolor="0.8,0.6,0.4,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
-	  <LightTexture texture="Content/Lights/pointlight_bright.png" origin="0.5,0.5"/>
-	  <StatusEffect type="Always" target="This" IsOn="true"/>
+      <LightTexture texture="Content/Lights/pointlight_bright.png" origin="0.5,0.5" />
+      <StatusEffect type="Always" target="This" IsOn="true" />
     </LightComponent>
-	
-	<Holdable handle1="0,0" slots="RightHand,LeftHand" msg="ItemMsgPickUpSelect">
-	  <StatusEffect type="NotInWater" target="NearbyCharacters" range="500">
-		<Affliction identifier="radiationsickness" strength="0.08"/>
+    <Holdable handle1="0,0" slots="RightHand,LeftHand" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="NotInWater" target="NearbyCharacters" range="500">
+        <Affliction identifier="radiationsickness" strength="0.08" />
       </StatusEffect>
-	  <StatusEffect type="InWater" target="NearbyCharacters" range="500">
-		<Affliction identifier="radiationsickness" strength="0.04"/>
+      <StatusEffect type="InWater" target="NearbyCharacters" range="500">
+        <Affliction identifier="radiationsickness" strength="0.04" />
       </StatusEffect>
-	</Holdable>
+    </Holdable>
   </Item>
-  
   <!-- dupe
   <Item name="Incendium Fuel Rod" identifier="incendiumfuelrod" Tags="mediumitem,reactorfuel"
 		cargocontaineridentifier="metalcrate" health="100" scale="0.5" impactsoundtag="impact_metal_light">
@@ -150,31 +136,25 @@
 	</Holdable>
   </Item>
   -->
-  <Item
-    name="Spent Incendium Rod" identifier="spentincendiumfuelrod" Tags="mediumitem,reactorfuel"
-	indestructible="true" scale="0.5" impactsoundtag="impact_metal_light">
-    
+  <Item name="Spent Incendium Rod" identifier="spentincendiumfuelrod" Tags="mediumitem,reactorfuel" indestructible="true" scale="0.5" impactsoundtag="impact_metal_light">
     <Deconstruct time="50">
-      <Item identifier="lead" outcondition="0.25"/>
+      <Item identifier="lead" outcondition="0.25" />
     </Deconstruct>
-
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,64,64,64"/>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,64,64,64" />
     <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="411,3,19,68" />
-    <Body radius="6" width="20" height="70" density="10.8"/>
-	
-	<LightComponent range="50" LightColor="0.9,0.3,0.0,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
-	  <LightTexture texture="Content/Lights/pointlight_bright.png" origin="0.5,0.5"/>
-	  <StatusEffect type="Always" target="This" IsOn="true"/>
+    <Body radius="6" width="20" height="70" density="10.8" />
+    <LightComponent range="50" LightColor="0.9,0.3,0.0,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
+      <LightTexture texture="Content/Lights/pointlight_bright.png" origin="0.5,0.5" />
+      <StatusEffect type="Always" target="This" IsOn="true" />
     </LightComponent>
-
     <Holdable handle1="0,0" slots="RightHand,LeftHand" msg="ItemMsgPickUpSelect">
-	  <StatusEffect type="NotInWater" target="NearbyCharacters" range="1000">
-		<Affliction identifier="radiationsickness" strength="0.12"/>
+      <StatusEffect type="NotInWater" target="NearbyCharacters" range="1000">
+        <Affliction identifier="radiationsickness" strength="0.12" />
       </StatusEffect>
-	  <StatusEffect type="InWater" target="NearbyCharacters" range="750">
-		<Affliction identifier="radiationsickness" strength="0.08"/>
+      <StatusEffect type="InWater" target="NearbyCharacters" range="750">
+        <Affliction identifier="radiationsickness" strength="0.08" />
       </StatusEffect>
-	</Holdable>
+    </Holdable>
   </Item>
   <!-- dupe
   <Item name="Fulgurium Fuel Rod" identifier="fulguriumfuelrod" Tags="mediumitem,reactorfuel"
@@ -203,12 +183,10 @@
   </Item>
   -->
   <Item name="Diesel-Electric Generator" identifier="generator1" tags="generator" type="Reactor" linkable="true" category="Machine" scale="0.5">
-    <Sprite texture="dieselGen.png" sourcerect="0,0,528,288" depth="0.8"/>
-    <BrokenSprite texture="dieselGenBroken.png" sourcerect="0,0,528,288" depth="0.8" maxcondition="0"/>
-
-    <trigger/>
-	
-	<Reactor canbeselected="true" firedelay="10" FireTemp="4750" MeltdownDelay="10000" MeltDownTemp="5000" maxpoweroutput="4000" fuelconsumptionrate="0.2" vulnerabletoemp="false" msg="ItemMsgInteractSelect">
+    <Sprite texture="dieselGen.png" sourcerect="0,0,760,388" depth="0.8" origin="0.5,0.5" />
+    <BrokenSprite texture="dieselGenBroken.png" sourcerect="0,0,528,288" depth="0.8" maxcondition="0" />
+    <trigger />
+    <Reactor canbeselected="true" firedelay="10" FireTemp="4750" MeltdownDelay="10000" MeltDownTemp="5000" maxpoweroutput="4000" fuelconsumptionrate="0.2" vulnerabletoemp="false" msg="ItemMsgInteractSelect">
       <GuiFrame relativesize="0.5,0.45" minsize="700,350" maxsize="2688,1166" anchor="Center" relativeoffset="0.1,0" style="ItemUI" />
       <GraphLine texture="Content/Items/Reactor/graphLine.png">
         <Sprite name="ReactorGraphLine" texture="Content/Items/Reactor/graphLine.png" sourcerect="0,0,32,32" />
@@ -234,108 +212,90 @@
       <TempRangeIndicator>
         <Sprite name="TempRangeIndicator" texture="Content/UI/UIAtlasDevices.png" sourcerect="31,614,52,25" origin="0.5,0.5" size="0.6,0.6" />
       </TempRangeIndicator>
-      
-      <RequiredSkill identifier="mechanical" level="30"/>
-
-      <sound file="Mods/BTE/Items/Reactor/DieselGen.ogg" type="OnActive" range="3000" volumeproperty="Temperature" volume="0.02" loop="true"/>
-	  <StatusEffect type="OnFire" target="this" condition="-8.5"/>
-	  <StatusEffect type="OnBroken" target="This,Hull" FissionRate="0.0" oxygen="-60000" disabledeltatime="true">
-        <sound file="Mods/BTE/Items/Reactor/DieselGenGone.ogg" range="3000"/>
-	    <Explosion range="250" stun="0.05" force="5" shockwave="false" flames="false" sparks="false"/>
+      <RequiredSkill identifier="mechanical" level="30" />
+      <sound file="Mods/BTE/Items/Reactor/DieselGen.ogg" type="OnActive" range="3000" volumeproperty="Temperature" volume="0.02" loop="true" />
+      <StatusEffect type="OnFire" target="this" condition="-8.5" />
+      <StatusEffect type="OnBroken" target="This,Hull" FissionRate="0.0" oxygen="-60000" disabledeltatime="true">
+        <sound file="Mods/BTE/Items/Reactor/DieselGenGone.ogg" range="3000" />
+        <Explosion range="250" stun="0.05" force="5" shockwave="false" flames="false" sparks="false" />
       </StatusEffect>
     </Reactor>
-
     <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
-      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel"/>
-      <RequiredItem items="screwdriver" type="Equipped"/>
-      <output name="power_out" displayname="connection.powerout"/>
-      <output name="temperature_out" displayname="connection.temperatureout"/>
-      <input name="shutdown" displayname="connection.shutdown"/>
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <output name="power_out" displayname="connection.powerout" />
+      <output name="temperature_out" displayname="connection.temperatureout" />
+      <input name="shutdown" displayname="connection.shutdown" />
     </ConnectionPanel>
-    
     <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.1" mindeteriorationdelay="120" maxdeteriorationdelay="480" MinDeteriorationCondition="10" fixDurationHighSkill="5" fixDurationLowSkill="20" msg="ItemMsgRepairWrench" hudpriority="10">
       <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
-      <RequiredSkill identifier="mechanical" level="30"/>
-      <RequiredItem identifier="wrench" type="equipped"/>
-      <ParticleEmitter particle="spark" particleamount="10" emitinterval="5" anglemax="360" velocitymin="5.0" velocitymax="250" scalemin="0.5" scalemax="1" mincondition="15" maxcondition="35"/>
-      <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="3" mincondition="0.0" maxcondition="15"/>
-      <ParticleEmitter particle="spark" particleamount="5" emitinterval="5" anglemax="360" velocitymin="5.0" velocitymax="250" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15"/>
+      <RequiredSkill identifier="mechanical" level="30" />
+      <RequiredItem identifier="wrench" type="equipped" />
+      <ParticleEmitter particle="spark" particleamount="10" emitinterval="5" anglemax="360" velocitymin="5.0" velocitymax="250" scalemin="0.5" scalemax="1" mincondition="15" maxcondition="35" />
+      <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="3" mincondition="0.0" maxcondition="15" />
+      <ParticleEmitter particle="spark" particleamount="5" emitinterval="5" anglemax="360" velocitymin="5.0" velocitymax="250" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15" />
     </Repairable>
-	
-	<ItemContainer capacity="1" canbeselected="true">
-	  <Containable items="dieselcan">
-        <StatusEffect type="OnContaining" target="This" Temperature="0.3" AvailableFuel="50" disabledeltatime="true"/>
-		<StatusEffect type="OnContaining" target="This" Temperature="-8" duration="6">
-		  <Conditional Temperature="gt 65"/>
+    <ItemContainer capacity="1" canbeselected="true">
+      <Containable items="dieselcan">
+        <StatusEffect type="OnContaining" target="This" Temperature="0.3" AvailableFuel="50" disabledeltatime="true" />
+        <StatusEffect type="OnContaining" target="This" Temperature="-8" duration="6">
+          <Conditional Temperature="gt 65" />
         </StatusEffect>
       </Containable>
     </ItemContainer>
   </Item>
-  
-  <Item name="Diesel Can" identifier="dieselcan" Tags="mediumitem,reactorfuel,explosiveitem" health="50"
-	spritecolor="1.0,0.5,0.0,1.0" scale="0.5" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true"
-    cargocontaineridentifier="metalcrate" impacttolerance="4" impactsoundtag="impact_metalcan">
-	<Upgrade gameversion="0.9.6.0" scale="0.5"/>
-    
-    <Price locationtype="Military" buyprice="50"/>
-    <Price locationtype="Research" buyprice="50"/>
-    <Price locationtype="City" buyprice="80"/>
-    <Price locationtype="Outpost" buyprice="100"/>
-    
+  <Item name="Diesel Can" identifier="dieselcan" Tags="mediumitem,reactorfuel,explosiveitem" health="50" spritecolor="1.0,0.5,0.0,1.0" scale="0.4" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" cargocontaineridentifier="metalcrate" impacttolerance="4" impactsoundtag="impact_metalcan">
+    <Upgrade gameversion="0.9.6.0" scale="0.5" />
+    <Price locationtype="Military" buyprice="50" />
+    <Price locationtype="Research" buyprice="50" />
+    <Price locationtype="City" buyprice="80" />
+    <Price locationtype="Outpost" buyprice="100" />
     <Deconstruct time="10">
-      <Item identifier="plastic" outcondition="0.75"/>
-	  <RequiredItem identifier="ethanol" copycondition="true"/>
+      <Item identifier="plastic" outcondition="0.75" />
+      <RequiredItem identifier="ethanol" copycondition="true" />
     </Deconstruct>
-	<Fabricate suitablefabricators="fabricator" requiredtime="10">
-      <RequiredItem identifier="plastic" mincondition="0.75"/>
-      <RequiredItem identifier="ethanol"/>
-    </Fabricate>		
-
-    <Sprite texture="DieselCan.png" depth="0.55" sourcerect="0,0,64,90"/>
-
-    <Body width="60" height="86" density="11" friction="0.95"/>
-
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredItem identifier="plastic" mincondition="0.75" />
+      <RequiredItem identifier="ethanol" />
+    </Fabricate>
+    <Sprite texture="DieselCan.png" depth="0.55" sourcerect="0,0,100,146" origin="0.5,0.5" />
+    <Body width="60" height="86" density="11" friction="0.95" />
     <Throwable slots="RightHand,LeftHand" holdpos="0,0" handle1="-13,-2" handle2="-13,-2" throwforce="2.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTE/Sounds/Impact/DieselCanHit.ogg" range="750"/>
-	  </StatusEffect>
-	  <StatusEffect type="Always" target="This">
-        <RequiredItem identifier="generator1" type="Container"/>
-		<Conditional condition="lt 1"/>
-		<SpawnItem identifiers="emptycan" spawnposition="This"/>
-		<Remove/>
+      <StatusEffect type="OnImpact" target="This">
+        <sound file="Mods/BTE/Sounds/Impact/DieselCanHit.ogg" range="750" />
       </StatusEffect>
-	  <StatusEffect type="OnBroken" target="this">
-	    <sound file="Mods/BTE/Items/Weapons/ThermiteExplosion.ogg"/>
-		<Explosion range="250" stun="1" force="15">
+      <StatusEffect type="Always" target="This">
+        <RequiredItem identifier="generator1" type="Container" />
+        <Conditional condition="lt 1" />
+        <SpawnItem identifiers="emptycan" spawnposition="This" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="this">
+        <sound file="Mods/BTE/Items/Weapons/ThermiteExplosion.ogg" />
+        <Explosion range="250" stun="1" force="15">
           <Affliction identifier="burn" strength="25" />
         </Explosion>
-	    <Fire size="100"/>
-		<SpawnItem identifiers="emptycan" spawnposition="This"/>
-		<Remove/>
-	  </StatusEffect>
-	  <StatusEffect type="OnFire" target="this" condition="-100">
-	    <Fire size="100"/>
-	  </StatusEffect>
-	</Throwable>
+        <Fire size="100" />
+        <SpawnItem identifiers="emptycan" spawnposition="This" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="this" condition="-100">
+        <Fire size="100" />
+      </StatusEffect>
+    </Throwable>
   </Item>
-  
-  <Item name="Empty Can" identifier="emptycan" Tags="mediumitem" scale="0.5"
-	impacttolerance="4" impactsoundtag="impact_metalcan">
-    
+  <Item name="Empty Can" identifier="emptycan" Tags="mediumitem" scale="0.4" impacttolerance="4" impactsoundtag="impact_metalcan">
     <Deconstruct time="10">
-      <Item identifier="plastic" outcondition="0.75"/>
-    </Deconstruct>		
-
-    <Sprite texture="DieselCan.png" depth="0.55" sourcerect="0,0,64,90"/>
-    <Body width="60" height="86" density="10.9"/>
-
+      <Item identifier="plastic" outcondition="0.75" />
+    </Deconstruct>
+    <Sprite texture="DieselCan.png" depth="0.55" sourcerect="0,0,100,147" origin="0.5,0.5" />
+    <Body width="60" height="86" density="10.9" />
     <Throwable slots="RightHand,LeftHand" holdpos="0,0" handle1="-13,-2" handle2="-13,-2" throwforce="2.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTE/Sounds/Impact/MetalCanHitHard1.ogg" range="750" selectionmode="Random"/>
-		<sound file="Mods/BTE/Sounds/Impact/MetalCanHitHard2.ogg" range="750"/>
-		<sound file="Mods/BTE/Sounds/Impact/MetalCanHitHard3.ogg" range="750"/>
-	  </StatusEffect>
-	</Throwable>
+      <StatusEffect type="OnImpact" target="This">
+        <sound file="Mods/BTE/Sounds/Impact/MetalCanHitHard1.ogg" range="750" selectionmode="Random" />
+        <sound file="Mods/BTE/Sounds/Impact/MetalCanHitHard2.ogg" range="750" />
+        <sound file="Mods/BTE/Sounds/Impact/MetalCanHitHard3.ogg" range="750" />
+      </StatusEffect>
+    </Throwable>
   </Item>
 </Items>
