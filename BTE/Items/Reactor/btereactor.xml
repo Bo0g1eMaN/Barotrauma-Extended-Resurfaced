@@ -186,7 +186,7 @@
     <Sprite texture="dieselGen.png" sourcerect="0,0,760,388" depth="0.8" origin="0.5,0.5" />
     <BrokenSprite texture="dieselGenBroken.png" sourcerect="0,0,528,288" depth="0.8" maxcondition="0" />
     <trigger />
-    <Reactor canbeselected="true" firedelay="10" FireTemp="4750" MeltdownDelay="10000" MeltDownTemp="5000" maxpoweroutput="4000" fuelconsumptionrate="0.2" vulnerabletoemp="false" msg="ItemMsgInteractSelect">
+    <Reactor canbeselected="true" firedelay="10" FireTemp="4750" MeltdownDelay="90000" MeltDownTemp="5000" maxpoweroutput="8000" fuelconsumptionrate="0.2" vulnerabletoemp="false" msg="ItemMsgInteractSelect">
       <GuiFrame relativesize="0.5,0.45" minsize="700,350" maxsize="2688,1166" anchor="Center" relativeoffset="0.1,0" style="ItemUI" />
       <GraphLine texture="Content/Items/Reactor/graphLine.png">
         <Sprite name="ReactorGraphLine" texture="Content/Items/Reactor/graphLine.png" sourcerect="0,0,32,32" />
@@ -215,6 +215,9 @@
       <RequiredSkill identifier="mechanical" level="30" />
       <sound file="Mods/BTE/Items/Reactor/DieselGen.ogg" type="OnActive" range="3000" volumeproperty="Temperature" volume="0.02" loop="true" />
       <StatusEffect type="OnFire" target="this" condition="-8.5" />
+      <StatusEffect type="Always" target="This,Hull" IsOn="false" FissionRate="0.0" setvalue="true" >
+				<Conditional oxygen="lt 200" />
+      </StatusEffect>
       <StatusEffect type="OnBroken" target="This,Hull" FissionRate="0.0" oxygen="-60000" disabledeltatime="true">
         <sound file="Mods/BTE/Items/Reactor/DieselGenGone.ogg" range="3000" />
         <Explosion range="250" stun="0.05" force="5" shockwave="false" flames="false" sparks="false" />
@@ -237,14 +240,11 @@
     </Repairable>
     <ItemContainer capacity="1" canbeselected="true">
       <Containable items="dieselcan">
-        <StatusEffect type="OnContaining" target="This" Temperature="0.3" AvailableFuel="50" disabledeltatime="true" />
-        <StatusEffect type="OnContaining" target="This" Temperature="-8" duration="6">
-          <Conditional Temperature="gt 65" />
-        </StatusEffect>
+        <StatusEffect type="OnContaining" target="This" AvailableFuel="80" disabledeltatime="true" />
       </Containable>
     </ItemContainer>
   </Item>
-  <Item name="Diesel Can" identifier="dieselcan" Tags="mediumitem,reactorfuel,explosiveitem" health="50" spritecolor="1.0,0.5,0.0,1.0" scale="0.4" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" cargocontaineridentifier="metalcrate" impacttolerance="4" impactsoundtag="impact_metalcan">
+  <Item name="Diesel Can" identifier="dieselcan" description="A plastic canister containing diesel, which can be used in Diesel-Electric Generators provided oxygen." Tags="mediumitem,reactorfuel,explosiveitem" health="50" spritecolor="1.0,0.5,0.0,1.0" scale="0.4" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" cargocontaineridentifier="metalcrate" impacttolerance="4" impactsoundtag="impact_metalcan">
     <Upgrade gameversion="0.9.6.0" scale="0.5" />
     <Price locationtype="Military" buyprice="50" />
     <Price locationtype="Research" buyprice="50" />
@@ -259,7 +259,7 @@
       <RequiredItem identifier="ethanol" />
     </Fabricate>
     <Sprite texture="DieselCan.png" depth="0.55" sourcerect="0,0,100,146" origin="0.5,0.5" />
-    <Body width="60" height="86" density="11" friction="0.95" />
+    <Body width="95" height="140" density="11" friction="0.95" />
     <Throwable slots="RightHand,LeftHand" holdpos="0,0" handle1="-13,-2" handle2="-13,-2" throwforce="2.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnImpact" target="This">
         <sound file="Mods/BTE/Sounds/Impact/DieselCanHit.ogg" range="750" />
