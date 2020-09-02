@@ -12,7 +12,7 @@ Polygloom: Owner, creator, and executive developer.
 
 ÇhikoEduardo: Creator of BTE, head tech support, and head advisor.
 
-Lyfield: Lead developer, tech support and tester.
+Lyfield: Head administrator, and leading developer.
 
 Shadows_bane: Advisor, coder, and head playtester.
 
