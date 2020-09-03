@@ -12,7 +12,7 @@ Lyfield: Owner, creator, and executive developer.
 
 ÇhikoEduardo: Creator of BTE, head tech support, and head advisor.
 
-Polygloom: Developer, tech support, and playtester. 
+Polygloom: Developer, tech support, bureaucrat, and playtester. 
 
 # Installation
 To install, simply download the repository (clone, or use the button on the top right), remove the "BTE" folder from within and drag it into `Barotrauma/Mods`.
