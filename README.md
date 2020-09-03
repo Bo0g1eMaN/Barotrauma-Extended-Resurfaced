@@ -8,13 +8,11 @@ In addition, this is also a repo for which the people who are directly involved 
 The original fork by hubismal is here: https://github.com/hubismal/BTE-Revived-Nocore
 
 # BTE Revived Development Team
-Polygloom: Owner, creator, and executive developer.
+Lyfield: Owner, creator, and executive developer.
 
 ÇhikoEduardo: Creator of BTE, head tech support, and head advisor.
 
-Lyfield: Head administrator, and leading developer.
-
-Shadows_bane: Advisor, coder, and head playtester.
+Polygloom: Developer, tech support, and playtester. 
 
 # Installation
 To install, simply download the repository (clone, or use the button on the top right), remove the "BTE" folder from within and drag it into `Barotrauma/Mods`.
