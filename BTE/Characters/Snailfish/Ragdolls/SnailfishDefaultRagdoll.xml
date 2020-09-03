@@ -1,0 +1,15 @@
+﻿<Ragdoll type="Snailfish" texture="Mods\BTE\Characters\Snailfish\Snailfish.png" canentersubmarine="True" canwalk="False" spritesheetorientation="0" limbscale="1" jointscale="1" texturescale="1" colliderheightfromfloor="45" impacttolerance="50" draggable="True" mainlimb="Torso">
+  <collider radius="42" width="1" name="Main Collider" height="0" />
+  <limb id="0" name="Tail" type="Tail" height="85" width="85" notes="" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="0" radius="0" density="10" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" scale="1" attackforcemultiplier="1" minseverancedamage="1" healthindex="0" friction="0.3" restitution="0.05">
+    <sprite texture="" sourcerect="0,0,100,100" origin="0.5,0.5" depth="0" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" />
+  </limb>
+  <limb id="1" name="Head" type="Head" height="43.35" width="68.850006" notes="" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="0" radius="0" density="10" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="20,0" refjoint="-1" mouthpos="0,0" constanttorque="20" constantangle="0" scale="1" attackforcemultiplier="1" minseverancedamage="1" healthindex="0" friction="0.3" restitution="0.05">
+    <sprite texture="" sourcerect="160,23,81,51" origin="0.2595578,0.8931029" depth="0" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" />
+    <attack structuresoundtype="StructureBlunt" context="Any" targettype="Any" targetlimbtype="None" hitdetectiontype="Distance" afterattack="Pursue" afterattackdelay="0" reverse="False" retreat="False" range="40" damagerange="40" duration="0.55" cooldown="3" secondarycooldown="1" cooldownrandomfactor="0.1" structuredamage="3.5" itemdamage="0" stun="0" onlyhumans="False" applyforceonlimbs="0" force="3.2" rootforceworldstart="1,0" rootforceworldmiddle="5,0" rootforceworldend="7,0" roottransitioneasing="Linear" torque="1.2" applyforcesonlyonce="False" targetimpulse="1.6000003" targetimpulseworld="0,0" targetforce="3.199999" targetforceworld="0,0" severlimbsprobability="0" priority="0">
+      <affliction identifier="bitewounds" strength="3.8" probability="1" />
+      <affliction identifier="morbusinepoisoning" strength="0.4" probability="1" />
+      <affliction identifier="bleeding" strength="1.2" probability="1" />
+    </attack>
+  </limb>
+  <joint limb1="1" limb2="0" limb1anchor="3.7622328,6.3044696" limb2anchor="3,8" name="Joint 1 - 0" canbesevered="True" severanceprobabilitymodifier="0" breaksound="gore" limitenabled="True" upperlimit="0" lowerlimit="0" stiffness="0.25" scale="1" weldjoint="False" />
+</Ragdoll>
