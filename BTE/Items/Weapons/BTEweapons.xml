@@ -14,8 +14,8 @@
 	  <RequiredItem identifier="incendium" mincondition="0.3"/>
     </Fabricate>
     
-	<InventoryIcon texture="Mods/BTE/Items/InventoryIconAtlas.png" sourcerect="835,385,64,64"/>
-    <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="309,0,110,28" depth="0.55" origin="0.5,0.5"/>
+	<InventoryIcon texture="Mods/BTE/Items/InventoryIconAtlas.png" sourcerect="582,321,57,59"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/weapons_new.png" sourcerect="83,-10,126,46" depth="0.55" origin="0.5,0.5"/>
     <Body width="100" height="24" density="40"/>
 	<LightComponent LightColor="1.0,0.5,0.5,0.4" Flicker="0.4" range="50" powerconsumption="10" IsOn="true"/>
 	
@@ -152,7 +152,7 @@
     <Price locationtype="Military" buyprice="15"/>
     <Price locationtype="City" buyprice="20"/>
     <Price locationtype="Outpost" buyprice="30"/>
-    <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="236,0,30,36" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/weapons_new.png" sourcerect="199,-2,38,50" depth="0.55"/>
     <Body width="10" height="16" density="40"/>
     <Throwable canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3" msg="ItemMsgPickUpSelect"/>
     <ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" 
@@ -172,7 +172,7 @@
       <Item identifier="steel"/>
       <Item identifier="plastic"/>
     </Deconstruct>
-    <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="118,0,117,57" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/weapons_new.png" sourcerect="131,93,121,56" depth="0.55"/>
     <Body width="28" height="20" density="50"/>
     <Holdable slots="Any,RightHand,LeftHand" controlpose="true" aimpos="90,10" handle1="-11,-7"/>
     <RangedWeapon barrelpos="14,6" spread="0" unskilledspread="3" drawhudwhenequipped="true" crosshairscale="0.2">

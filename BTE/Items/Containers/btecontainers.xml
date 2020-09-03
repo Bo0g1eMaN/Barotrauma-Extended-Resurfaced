@@ -153,6 +153,7 @@
 			</StatusEffect>
 		</Throwable>
 	</Item>
+	<!--
 	<Item name="Roomba" identifier="roombabox" tags="crate" scale="0.2254" pickdistance="150" impacttolerance="5" impactsoundtag="impact_metal_heavy"
 		health="100" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true">
 		<Price locationtype="Military" buyprice="25"/>
@@ -183,6 +184,7 @@
 			<Remove />
 		</Throwable>
 	</Item>
+	-->
 	<Item name="Pet Crawler Cage" identifier="crawlerpetcage" tags="crate" scale="1.0" pickdistance="150" impactsoundtag="impact_metal_heavy"
 		health="250" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true">
 		<Price locationtype="Military" buyprice="250"/>

@@ -1,22 +1,21 @@
 <Items>
-	<Item name="Control Monitor" identifier="controlmonitor" category="Machine" tags=""
+	<Item name="Control Monitor" identifier="controlmonitor" requireaimtosecondaryuse="false" category="Machine" tags=""
 		description="A piece of hardware that can be connected to a camera, or to control weapons such as railguns or coilguns."
 		type="Controller" disableitemusagewhenselected="true">
 	<Sprite texture="Mods/BTE/Items/Electricity/bte_signalitems.png" depth="0.8" sourcerect="0,0,31,40"/>
 	
-	<Controller UserPos="-35,-50" direction="Right" canbeselected="true">
-		<limbposition limb="Head" position="-5,-62"/>
-		<limbposition limb="Torso" position="-5,-108"/>
+	<Controller UserPos="-35,-50" direction="Right" canbeselected="true" hidehud="false" >
 		<limbposition limb="LeftHand" position="5,-28"/>
 		<limbposition limb="RightHand" position="20,-32"/>
-	</Controller>
-	<CustomInterface canbeselected="true">
-		<GuiFrame relativesize="0.15,0.15" anchor="BottomLeft" relativeoffset="0.5,0" style="ItemUI"/>
+		<CustomInterface canbeselected="true">
+		<GuiFrame relativesize="0.25,0.25" anchor="BottomRight" relativeoffset="0,0" style="ItemUI"/>
 		<Button text="Signal out #1" connection="signal_out1"/>
 		<Button text="Signal out #2" connection="signal_out2"/>
 		<Button text="Signal out #3" connection="signal_out3"/>
 		<Button text="Signal out #4" connection="signal_out4"/>
 	</CustomInterface>
+	</Controller>
+	
 	<ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
 		<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel"/>
 		<RequiredItem identifier="screwdriver,Wire" type="Equipped"/>

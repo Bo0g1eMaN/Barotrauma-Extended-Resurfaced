@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+
+  
+  <Item name="Frying Pan" identifier="frying pan" category="Equipment" Tags="smallitem,tool,weaponofmassdestruction" cargocontaineridentifier="metalcrate" Scale="0.5" description="The best way to get farm-to-table" impactsoundtag="impact_metal_light">
+    <Price baseprice="150" >
+      <Price locationtype="outpost" multiplier="1" minavailable="10" />
+      <Price locationtype="city" multiplier="0.9" minavailable="15" />
+      <Price locationtype="research" multiplier="1.85" minavailable="10" />
+      <Price locationtype="military" multiplier="1.86" minavailable="10" />
+      <Price locationtype="mine" multiplier="1.32" minavailable="10" />
+    </Price>
+    <Deconstruct time="4">
+      <Item identifier="iron" />
+      <Item identifier="plastic" outcondition="0.2" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredItem identifier="iron" />
+      <RequiredItem identifier="plastic" mincondition="0.2" usecondition="true"/>
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="450,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="tools.png" sourcerect="212,128,102,30" depth="0.55" origin="0.5,0.5" />
+    <Body width="60" height="15" density="50" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-14,-3" holdangle="60" reload="1.29" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+      <Attack structuredamage="0.9" itemdamage="2" stun="1.24" targetimpulse="5">
+        <Affliction identifier="blunttrauma" strength="9" />
+        <Sound file="Mods/BTE/Items/Tools/FryingPan.ogg" range="2500" />
+      </Attack>
+    </MeleeWeapon>
+    <aitarget sightrange="500" soundrange="500" fadeouttime="1" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+  
+
+  
+</Items>
