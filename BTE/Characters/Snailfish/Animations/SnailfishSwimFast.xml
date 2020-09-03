@@ -15,9 +15,9 @@
   tailtorquemultiplier="1"
   foottorque="25"
   footangles=""
-  tailangle="NaN"
+  tailangle="101"
   steertorque="25"
   movementspeed="1"
   cyclespeed="1"
-  headangle="NaN"
+  headangle="48"
   torsoangle="NaN" />
