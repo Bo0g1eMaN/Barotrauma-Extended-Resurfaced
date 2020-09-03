@@ -1,4 +1,4 @@
-# BTE-Revived
+# BTE-Resurfaced
 Barotrauma Extended modified to not be a core package and thus highly resistant to future updates.
 
 This is a fork of hubismal's No Core modification of BTE-Revived by Lyfield for the game Barotrauma. 
@@ -7,7 +7,7 @@ It also fixes general bugs that were unaddressed in the aforementioned fork.
 In addition, this is also a repo for which the people who are directly involved in the development for Barotrauma Extended - Revived's Steam Workshop page.
 The original fork by hubismal is here: https://github.com/hubismal/BTE-Revived-Nocore
 
-# BTE Revived Development Team
+# BTE Resurfaced Development Team
 Lyfield: Owner, creator, and executive developer.
 
 ÇhikoEduardo: Creator of BTE, head tech support, and head advisor.
