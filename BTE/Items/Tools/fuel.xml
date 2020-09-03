@@ -2,21 +2,29 @@
 <Items>
 
 <Override>
-  <Item name="Oxygen Tank" identifier="oxygentank" category="Equipment,Misc" Tags="smallitem,oxygensource,fuelrod"
-		cargocontaineridentifier="metalcrate" scale="0.28" impactsoundtag="impact_metal_light">
-    <Price locationtype="Research" buyprice="75"/>
-    <Price locationtype="City" buyprice="75"/>
-    <Price locationtype="Military" buyprice="75"/>
-    <Price locationtype="Outpost" buyprice="70"/>
-    <Deconstruct time="10">
-      <Item identifier="aluminium"/>
+  <Item name="" identifier="oxygentank" category="Equipment,Misc" Tags="smallitem,oxygensource">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <Price baseprice="75" >
+      <Price locationtype="outpost" multiplier="1" minavailable="10"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="15" />
+      <Price locationtype="research" multiplier="1" minavailable="10" />
+      <Price locationtype="military" multiplier="1" minavailable="10" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="20" />
+    </Price>
+    <PreferredContainer primary="divingcab" minamount="1" maxamount="5" spawnprobability="1"/>
+    <PreferredContainer primary="oxygengenerator"/>
+    <PreferredContainer primary="divingsuit,divingmask,plasmacutter" spawnprobability="1.0"/>
+    <PreferredContainer primary="supplycab" minamount="1" maxamount="1" spawnprobability="0.5"/>
+    <PreferredContainer primary="outpostcrewcabinet" minamount="0" maxamount="3" spawnprobability="0.125"/>
+	<Deconstruct>
+	<Item identifier="aluminium" />
     </Deconstruct>
 	<Fabricate suitablefabricators="fabricator" displayname="OxygenTankEmpty" outcondition="0.0">
       <RequiredItem identifier="aluminium"/>
     </Fabricate>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,0,64,64" origin="0.5,0.5"/>
-    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="356,223,39,110" depth="0.55" origin="0.5,0.5"/>
-    <Body width="38" height="109" density="5"/>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="410,71,24,66" depth="0.55" origin="0.5,0.5" />
+<Body width="22" height="64" density="5" />
     <Holdable slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnFire" target="This" Condition="-100" disabledeltatime="true">
         <Conditional Condition="gt 25"/>
@@ -33,7 +41,7 @@
  
  <Override>
   <Item name="Oxygenite Tank" identifier="oxygenitetank" category="Equipment,Misc" Tags="smallitem,oxygensource"
-		health="200" scale="0.28" impactsoundtag="impact_metal_light">
+		health="200" scale="0.5" impactsoundtag="impact_metal_light">
     <Deconstruct time="10">
       <Item identifier="aluminium"/>
       <Item identifier="liquidoxygenite" mincondition="0.1"/>
@@ -45,8 +53,8 @@
       <RequiredItem identifier="liquidoxygenite"/>
       <RequiredItem identifier="liquidoxygenite"/>
     </Fabricate>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,896,65,66" origin="0.5,0.5"/>
-    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="473,223,39,112" depth="0.55"/>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="319,901,61,61" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="486,71,24,64" depth="0.55"/>
     <Body width="39" height="112" density="9.9"/>
     <Holdable slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnFire" target="This" Condition="-100" disabledeltatime="true">
@@ -62,7 +70,7 @@
   </Override>
  
  <Override>
-  <Item name="Welding Fuel Tank" identifier="weldingfueltank" category="Equipment" Tags="smallitem,weldingfuel" scale="0.3"
+  <Item name="Welding Fuel Tank" identifier="weldingfueltank" category="Equipment" Tags="smallitem,weldingfuel" scale="0.5"
 		cargocontaineridentifier="metalcrate" preferredcontainers="locker" impactsoundtag="impact_metal_light">
     <Price locationtype="City" buyprice="50"/>
     <Price locationtype="Research" buyprice="50"/>
@@ -78,7 +86,7 @@
         <RequiredItem identifier="ethanol" mincondition="0.8"/>
     </Fabricate>
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,0,64,64" origin="0.5,0.5"/>
-    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="395,223,38,109" depth="0.55"/>
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="436,71,22,66" depth="0.55"/>
     <Body width="39" height="110" density="5"/>
     <Holdable slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnFire" target="This" Condition="-27"/>
@@ -93,7 +101,7 @@
   </Item>
   </Override>
  
-  <Item name="Sulphurite Tank" identifier="sulphuritetank" category="Equipment" Tags="smallitem,weldingfuel,fuelrod" scale="0.3" health="150"
+  <Item name="Sulphurite Tank" identifier="sulphuritetank" category="Equipment" Tags="smallitem,weldingfuel" scale="0.5" health="150"
 		cargocontaineridentifier="metalcrate" preferredcontainers="locker" impactsoundtag="impact_metal_light">
     <Price locationtype="City" buyprice="75"/>
     <Price locationtype="Research" buyprice="75"/>
@@ -125,7 +133,7 @@
   </Item>
   
   <Override>
-  <Item name="Incendium Tank" identifier="incendiumfueltank" category="Equipment" Tags="smallitem,weldingfuel,fuelrod" scale="0.3" health="200"
+  <Item name="Incendium Tank" identifier="incendiumfueltank" category="Equipment" Tags="smallitem,weldingfuel" scale="0.5" health="200"
 		cargocontaineridentifier="metalcrate" preferredcontainers="locker" impactsoundtag="impact_metal_light">
     <Deconstruct time="10">
       <Item identifier="aluminium" outcondition="0.25"/>
@@ -135,8 +143,8 @@
       <RequiredItem identifier="aluminium" mincondition="0.25"/>
       <RequiredItem identifier="incendium" mincondition="0.4"/>
     </Fabricate>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="256,896,64,64" origin="0.5,0.5"/>
-    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="433,223,39,110" depth="0.55" origin="0.5,0.5"/>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="256,901,62,60" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="460,71,24,66" depth="0.55" origin="0.5,0.5"/>
     <Body width="39" height="110" density="5"/>
     <Holdable slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
 	  <StatusEffect type="OnFire" target="This" Condition="-43"/>
@@ -152,8 +160,8 @@
   </Item>
   </Override>
   
-  <Item name="Hydrogen Tank" identifier="hydrogentank" category="Equipment,Misc" Tags="smallitem,fuelrod"
-		cargocontaineridentifier="metalcrate" scale="0.28" impactsoundtag="impact_metal_light">
+  <Item name="Hydrogen Tank" identifier="hydrogentank" category="Equipment,Misc" Tags="smallitem"
+		cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
     <Price locationtype="Research" buyprice="75"/>
     <Price locationtype="City" buyprice="75"/>
     <Price locationtype="Military" buyprice="75"/>
