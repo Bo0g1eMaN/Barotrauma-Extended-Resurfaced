@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-	<!-- dupe
-  <Item name="Oxygen Tank" identifier="oxygentank" category="Equipment,Misc" Tags="smallitem,oxygensource"
+
+<Override>
+  <Item name="Oxygen Tank" identifier="oxygentank" category="Equipment,Misc" Tags="smallitem,oxygensource,fuelrod"
 		cargocontaineridentifier="metalcrate" scale="0.28" impactsoundtag="impact_metal_light">
     <Price locationtype="Research" buyprice="75"/>
     <Price locationtype="City" buyprice="75"/>
@@ -28,8 +29,9 @@
       <StatusEffect type="OnFire" target="This" Condition="-100" disabledeltatime="true"/>
     </Holdable>
   </Item>
-  -->
-  <!-- dupe
+  </Override>
+ 
+ <Override>
   <Item name="Oxygenite Tank" identifier="oxygenitetank" category="Equipment,Misc" Tags="smallitem,oxygensource"
 		health="200" scale="0.28" impactsoundtag="impact_metal_light">
     <Deconstruct time="10">
@@ -57,8 +59,9 @@
       </StatusEffect>
     </Holdable>
   </Item>
-  -->
-  <!-- dupe
+  </Override>
+ 
+ <Override>
   <Item name="Welding Fuel Tank" identifier="weldingfueltank" category="Equipment" Tags="smallitem,weldingfuel" scale="0.3"
 		cargocontaineridentifier="metalcrate" preferredcontainers="locker" impactsoundtag="impact_metal_light">
     <Price locationtype="City" buyprice="50"/>
@@ -88,8 +91,9 @@
       </StatusEffect>
     </Holdable>
   </Item>
-  -->
-  <Item name="Sulphurite Tank" identifier="sulphuritetank" category="Equipment" Tags="smallitem,weldingfuel" scale="0.3" health="150"
+  </Override>
+ 
+  <Item name="Sulphurite Tank" identifier="sulphuritetank" category="Equipment" Tags="smallitem,weldingfuel,fuelrod" scale="0.3" health="150"
 		cargocontaineridentifier="metalcrate" preferredcontainers="locker" impactsoundtag="impact_metal_light">
     <Price locationtype="City" buyprice="75"/>
     <Price locationtype="Research" buyprice="75"/>
@@ -119,8 +123,9 @@
 	  <StatusEffect type="OnBroken" target="Hull" oxygen="-15000"/>
     </Holdable>
   </Item>
-  <!-- dupe
-  <Item name="Incendium Tank" identifier="incendiumfueltank" category="Equipment" Tags="smallitem,weldingfuel" scale="0.3" health="200"
+  
+  <Override>
+  <Item name="Incendium Tank" identifier="incendiumfueltank" category="Equipment" Tags="smallitem,weldingfuel,fuelrod" scale="0.3" health="200"
 		cargocontaineridentifier="metalcrate" preferredcontainers="locker" impactsoundtag="impact_metal_light">
     <Deconstruct time="10">
       <Item identifier="aluminium" outcondition="0.25"/>
@@ -145,5 +150,34 @@
       </StatusEffect>
     </Holdable>
   </Item>
-  -->
+  </Override>
+  
+  <Item name="Hydrogen Tank" identifier="hydrogentank" category="Equipment,Misc" Tags="smallitem,fuelrod"
+		cargocontaineridentifier="metalcrate" scale="0.28" impactsoundtag="impact_metal_light">
+    <Price locationtype="Research" buyprice="75"/>
+    <Price locationtype="City" buyprice="75"/>
+    <Price locationtype="Military" buyprice="75"/>
+    <Price locationtype="Outpost" buyprice="70"/>
+    <Deconstruct time="10">
+      <Item identifier="aluminium"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="fabricator" outcondition="0.0">
+      <RequiredItem identifier="aluminium"/>
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,0,64,64" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="356,223,39,110" depth="0.55" origin="0.5,0.5"/>
+    <Body width="38" height="109" density="5"/>
+    <Holdable slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnFire" target="This" Condition="-100" disabledeltatime="true">
+        <Conditional Condition="gt 25"/>
+        <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="4000"/>
+        <Explosion range="250" structuredamage="3" stun="4" force="3">
+          <Affliction identifier="bleeding" strength="4"/>
+          <Affliction identifier="internaldamage" strength="8"/>
+        </Explosion>
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-100" disabledeltatime="true"/>
+    </Holdable>
+  </Item>
+  
 </Items>
