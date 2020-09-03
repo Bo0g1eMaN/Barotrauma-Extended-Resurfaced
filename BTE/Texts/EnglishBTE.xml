@@ -73,5 +73,17 @@
   <entitydescription.incendiumbomb>One of the most powerful payloads available for submarine munition shells.</entitydescription.incendiumbomb>
   <entityname.fulguriumbomb>Fulgurium Warhead</entityname.fulguriumbomb>
   <entitydescription.fulguriumbomb>One of the most powerful payloads available for submarine munition shells.</entitydescription.fulguriumbomb>
+  <entityname.oxygentank>Oxygen Tank</entityname.oxygentank>
+  <entitydescription.oxygentank>A tank of oxygen gas</entitydescription.oxygentank>
+  <entityname.oxygenitetank>Oxygenite Tank</entityname.oxygenitetank>
+  <entitydescription.oxygenitetank>A tank of liquid oxygenite</entitydescription.oxygenitetank>
+  <entityname.sulphuritetank>Sulphurite Tank</entityname.sulphuritetank>
+  <entitydescription.sulphuritetank>A tank of sulphurite fuel</entitydescription.sulphuritetank>
+  <entityname.weldingfueltank>Welding Fuel Tank</entityname.weldingfueltank>
+  <entitydescription.weldingfueltank>A tank of welding fuel</entitydescription.weldingfueltank>
+  <entityname.incendiumfueltank>Incendium Fuel Tank</entityname.incendiumfueltank>
+  <entitydescription.incendiumfueltank>A tank of incendium fuel</entitydescription.incendiumfueltank>
+  <entityname.hydrogentank>Hydrogen Tank</entityname.hydrogentank>
+  <entitydescription.hydrogentank>A tank of hydrogen gas</entitydescription.hydrogentank>
 
 </infotexts>
