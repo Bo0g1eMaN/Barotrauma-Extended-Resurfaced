@@ -105,6 +105,41 @@
     </Throwable>
   </Item>
   
+ <Item name="Snailfish Meat" identifier="snailfishmeat" category="Misc" Tags="smallitem,food"
+		description="Usually cooked by someone either really hungry or with no actual cooking skills."
+        scale="0.5" useinhealthinterface="true" impactsoundtag="impact_soft">
+    <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="194,80,45,55" depth="0.6"/>
+	<Body width="36" height="14" radius="14" density="10.7" friction="0.95"/>
+	
+	<Deconstruct time="15">
+      <Item identifier="carbon" outcondition="0.26"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="oven" requiredtime="10">
+      <RequiredItem identifier="potato" mincondition="0.2" usecondition="false"/>
+    </Fabricate>
+    
+	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
+      <StatusEffect type="Always" target="This" Condition="-0.008"/>
+	  <StatusEffect type="Always" target="This" Condition="0.004">
+        <RequiredItem identifier="fridge" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
+	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
+	  </StatusEffect>
+	  <RequiredSkill identifier="medical" level="35" />
+      <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
+<ReduceAffliction identifier="internaldamage" amount="0.3"/>
+      </StatusEffect>
+      <StatusEffect type="OnFailure" target="Character" delay="20" duration="20">
+<ReduceAffliction identifier="internaldamage" amount="0.3"/>
+	  <Affliction identifier="morbusinepoisoning" strength="0.4" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
   
   
 </Items>
