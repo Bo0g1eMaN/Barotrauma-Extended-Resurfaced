@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!-- HATS START -->
+  <Item name="" identifier="officersberet" aliases="officersberet" category="Equipment" tags="smallitem" cargocontaineridentifier="metalcrate" description="" scale="0.4">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <Price baseprice="75">
+      <Price locationtype="outpost" multiplier="1" minavailable="1"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" minavailable="1"/>
+      <Price locationtype="military" multiplier="1" minavailable="1"/>
+      <Price locationtype="mine" multiplier="1" minavailable="1"/>
+    </Price>
+    <Deconstruct time="10"/>
+    <Sprite name="Officer's Beret" texture="Mods/BTE/Items/Jobgear/officersberet.png" depth="0.6" sourcerect="316,120,74,53" origin="0.5,0.5" />
+    <Body width="75" height="50" density="30" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Officer's Beret Wearable" texture="Mods/BTE/Items/Jobgear/officersberet.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" sourcerect="316,120,74,53" origin="0.5,0.9" />
+    </Wearable>
+  </Item>
+  <!-- HATS END -->
+  <!-- UNIFORMS START -->
+  <Item name="" identifier="commandersjacket" aliases="commandersjacket" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.5" impactsoundtag="impact_soft">
+    <Price baseprice="150">
+      <Price locationtype="outpost" multiplier="1" minavailable="1"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" minavailable="1"/>
+      <Price locationtype="military" multiplier="1" minavailable="1"/>
+      <Price locationtype="mine" multiplier="1" minavailable="1"/>
+    </Price>
+    <Deconstruct time="10"/>
+    <InventoryIcon name="Commander's Jacket Icon" texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="0,27,128,101" origin="0.5,0.5" />
+    <Sprite name="Commander's Jacket" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="8,361,207,79" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Officer's Jacket 1 Torso" texture="officer_torso_[GENDER]_1.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer's Jacket 1 Right Lower Arm" texture="officer_torso_[GENDER]_1.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer's Jacket 1 Left Lower Arm" texture="officer_torso_[GENDER]_1.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer's Jacket 1 Right Upper Arm" texture="officer_torso_[GENDER]_1.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer's Jacket 1 Left Upper Arm" texture="officer_torso_[GENDER]_1.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer's Jacket 1 Waist" texture="officer_legs_[GENDER]_1.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer's Jacket 1 Right Thigh" texture="officer_legs_[GENDER]_1.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer's Jacket 1 Left Thigh" texture="officer_legs_[GENDER]_1.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer's Jacket 1 Right Leg" texture="officer_legs_[GENDER]_1.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer's Jacket 1 Left Leg" texture="officer_legs_[GENDER]_1.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer's Jacket 1 Left Shoe" texture="officer_legs_[GENDER]_1.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Officer's Jacket 1 Right Shoe" texture="officer_legs_[GENDER]_1.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <!--<damagemodifier armorsector="0.0,360.0" afflictionidentifiers="gunshotwound" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />-->
+    </Wearable>
+  </Item>
+  <!-- UNIFORMS END -->
+</Items>

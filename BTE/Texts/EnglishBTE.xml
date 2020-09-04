@@ -46,6 +46,28 @@
   <roomname.aftducts>Aft ducts</roomname.aftducts>
   <roomname.foreducts>Fore ducts</roomname.foreducts>
   
+  <!-- Skills -->
+  <skillname.cooking>Cooking</skillname.cooking>
+  <skillname.science>Science</skillname.science>
+  
+  <!-- Job -->
+<jobname.officer>Officer</jobname.officer>
+<jobdescription.officer>The officer is the second in command aboard the sub and normally pilots or takes charge of the crew during missions.</jobdescription.officer>
+<jobname.officer1>Crew Chief</jobname.officer1>
+<jobname.officer2>Enforcer</jobname.officer2>
+<jobname.officer3>XO</jobname.officer3>
+<jobdescription.officer1>Crew Chiefs make sure everything on the sub is running smoothly and efficiently.</jobdescription.officer1>
+<jobdescription.officer2>Enforcers are normally battle hardened security officer's promoted to make sure law and order is maintained no matter the cost.</jobdescription.officer2>
+<jobdescription.officer3>The Executive Officer otherwise known as the XO is a senior officer about to become a captain. They know how to command both a security or maintanence team effectively.</jobdescription.officer3>
+<jobname.scientist>Scientist</jobname.scientist>
+<jobdescription.scientist>Science personnel are responsible for researching the various wildlife and ecosystems of Europa along with making chemicals that are used for all sorts of problems.</jobdescription.scientist>
+<jobname.scientist1>Biochemist</jobname.scientist1>
+<jobname.scientist2>Xenobiologist</jobname.scientist2>
+<jobdescription.scientist1>Biochemists specialize in making the chemicals needed for onboard experiments and in a pinch make deadly neurotoxins that even the largest beast can't stand up to</jobdescription.scientist1>
+<jobdescription.scientist2>Xenobiologists study the Europan ecosystem and wildlife to gain a greater understanding of Humanities new home.</jobdescription.scientist2>
+<jobname.cook>Cook</jobname.cook>
+<jobdescription.cook>Cooks are responsible for keeping the crews bellies full and act as the janitor aboard the sub.</jobdescription.cook>
+  
   <!-- Characters -->
   
   <!-- Items -->
@@ -74,16 +96,16 @@
   <entityname.fulguriumbomb>Fulgurium Warhead</entityname.fulguriumbomb>
   <entitydescription.fulguriumbomb>One of the most powerful payloads available for submarine munition shells.</entitydescription.fulguriumbomb>
   <entityname.oxygentank>Oxygen Tank</entityname.oxygentank>
-  <entitydescription.oxygentank>A tank of oxygen gas</entitydescription.oxygentank>
   <entityname.oxygenitetank>Oxygenite Tank</entityname.oxygenitetank>
-  <entitydescription.oxygenitetank>A tank of liquid oxygenite</entitydescription.oxygenitetank>
   <entityname.sulphuritetank>Sulphurite Tank</entityname.sulphuritetank>
-  <entitydescription.sulphuritetank>A tank of sulphurite fuel</entitydescription.sulphuritetank>
-  <entityname.weldingfueltank>Welding Fuel Tank</entityname.weldingfueltank>
-  <entitydescription.weldingfueltank>A tank of welding fuel</entitydescription.weldingfueltank>
-  <entityname.incendiumfueltank>Incendium Fuel Tank</entityname.incendiumfueltank>
-  <entitydescription.incendiumfueltank>A tank of incendium fuel</entitydescription.incendiumfueltank>
+  <entityname.weldingtank>Welding Fuel Tank</entityname.weldingtank>
+  <entityname.incendiumtank>Incendium Fuel Tank</entityname.incendiumtank>
   <entityname.hydrogentank>Hydrogen Tank</entityname.hydrogentank>
-  <entitydescription.hydrogentank>A tank of hydrogen gas</entitydescription.hydrogentank>
+  <entityname.commandersjacket>Commander's Jacket</entityname.commandersjacket>
+  <entitydescription.commandersjacket>A jacket to show your status as a senior officer.</entitydescription.commandersjacket>
+  <entityname.officersberet>Officer's Beret</entityname.officersberet>
+  <entitydescription.officersberet>A token of the officer's questionable authority.</entitydescription.officersberet>
+  <entityname.fryingpan>Frying Pan</entityname.fryingpan>
+  <entitydescription.fryingpan>A iron Frying Pan used to cook food</entitydescription.fryingpan>
 
 </infotexts>

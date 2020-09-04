@@ -2,7 +2,7 @@
 <Items>
 
   
-  <Item name="Frying Pan" identifier="frying pan" category="Equipment" Tags="smallitem,tool,weaponofmassdestruction" cargocontaineridentifier="metalcrate" Scale="0.5" description="The best way to get farm-to-table" impactsoundtag="impact_metal_light">
+  <Item name="Frying Pan" identifier="fryingpan" category="Equipment" Tags="smallitem,tool,weaponofmassdestruction" cargocontaineridentifier="metalcrate" Scale="0.5" description="The best way to get farm-to-table" impactsoundtag="impact_metal_light">
     <Price baseprice="150" >
       <Price locationtype="outpost" multiplier="1" minavailable="10" />
       <Price locationtype="city" multiplier="0.9" minavailable="15" />
