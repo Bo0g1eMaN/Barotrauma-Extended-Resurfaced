@@ -107,5 +107,7 @@
   <entitydescription.officersberet>A token of the officer's questionable authority.</entitydescription.officersberet>
   <entityname.fryingpan>Frying Pan</entityname.fryingpan>
   <entitydescription.fryingpan>A iron Frying Pan used to cook food</entitydescription.fryingpan>
+  <entityname.hydrogengenerator>Hydrogen Generator</entityname.hydrogengenerator>
+  <entitydescription.hydrogengenerator>A generator that produces hydrogen gas</entitydescription.hydrogengenerator>
 
 </infotexts>
