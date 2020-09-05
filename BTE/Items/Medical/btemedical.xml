@@ -104,4 +104,116 @@
 	<Holdable slots="RightHand,LeftHand,Any" controlpose="true" aimpos="30,18" handle1="-1,0" handle2="-1,0"/>
   </Item>
 
+	  <Item name="Defibrillator" identifier="defib" category="Equipment" Tags="mediumitem,medical" cargocontaineridentifier="metalcrate" scale="0.4" useinhealthinterface="false" impactsoundtag="impact_maghit">
+    <Price locationtype="Research" buyprice="80"/>
+    <Price locationtype="Military" buyprice="60"/>
+    
+		<InventoryIcon texture="Mods/BTE/Items/Medical/Useables.png" sourcerect="408,361,83,63" />
+    <Sprite texture="Mods/BTE/Items/Medical/Useables.png" sourcerect="408,361,83,63" depth="0.55"/> origin="0.5,0.5"/>
+	    <Body width="100" height="24" density="40"/>
+    	<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="45,10" handle1="-5,0" handle2="-5,0" holdangle="10" reload="1.0" range="50" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnFailure" target="Contained" Condition="-20.0" disabledeltatime="true" />
+      <StatusEffect type="OnUse" target="Contained" Condition="-15.0" disabledeltatime="true" />
+      <RequiredSkill identifier="medical" level="35" />
+	  
+      <StatusEffect tags="medical" type="OnUse" target="Character" duration="15.0">
+<Sound file="Mods/BTE/Items/Medical/DefibUse.ogg" range="765" />
+        <ReduceAffliction identifier="stun" amount="5.64" />
+        <ReduceAffliction identifier="oxygenlow" amount="0.09" />
+		         <RequiredItem items="batterycell" type="Contained" />
+      </StatusEffect>
+	  
+      <StatusEffect tags="medical" type="OnUse" target="Character">
+ r      <Explosion range="55" structuredamage="0" force="0.01" camerashake="0.5" flash="false" shockwave="false" flames="false" smoke="false" sparks="true" underwaterbubble="false"/>
+        <Affliction identifier="stun" amount="10" />
+<Affliction identifier="haste" amount="3" />
+				           <RequiredItem items="batterycell" type="Contained" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Character" duration="14.0">
+        <Sound file="Mods/BTE/Items/Medical/DefibUse.ogg" range="785" />
+
+        <Affliction identifier="burn" amount="0.08" />
+        <ReduceAffliction identifier="oxygenlow" amount="0.08" />
+        <ReduceAffliction identifier="stun" amount="4" />
+		             <RequiredItem items="batterycell" type="Contained" />  
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Character">
+       <Explosion range="55" structuredamage="0" force="0.01" camerashake="0.5" flash="false" shockwave="false" flames="false" smoke="false" sparks="true" underwaterbubble="false"/>
+        <Affliction identifier="stun" amount="10" />
+		        <Affliction identifier="haste" amount="2" />
+        <RequiredItem items="batterycell" type="Contained" />
+      </StatusEffect>
+
+		      <StatusEffect tags="medical" type="OnFailure" target="Limb">
+<Sound file="Mods/BTE/Items/Medical/RubberHit.ogg" range="156" />
+				<Affliction identifier="blunttrauma" amount="1" />
+
+
+      </StatusEffect>
+	  
+	  		      <StatusEffect tags="medical" type="OnUse" target="Limb">
+<Sound file="Mods/BTE/Items/Medical/RubberHit.ogg" range="155" />
+				<Affliction identifier="blunttrauma" amount="1" />
+
+
+      </StatusEffect>
+	  
+	  
+
+
+    </MeleeWeapon>
+
+
+
+   
+
+
+
+
+
+
+	   
+		      
+
+
+	  
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+    
+	
+
+
+
+
+		        
+
+
+
+
+	
+	
+	<ItemContainer capacity="1" hideitems="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31"/>
+      <Containable identifiers="mobilebattery">
+        <StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true"/>
+      </Containable>
+    </ItemContainer>
+
+  </Item>
+
+
+
 </Items>
