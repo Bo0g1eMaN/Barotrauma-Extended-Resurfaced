@@ -16,6 +16,7 @@
   <Item file="Mods/BTE/Items/Reactor/btereactor.xml" />
   <Item file="Mods/BTE/Items/Pump/btepump.xml" />
   <Item file="Mods/BTE/Items/OxygenGenerator/bteoxygengenerator.xml" />
+  <Item file="Mods/BTE/Items/OxygenGenerator/btehydrogengenerator.xml" />
   <Item file="Mods/BTE/Items/Misc/btemisc.xml" />
   <Item file="Mods/BTE/Items/Medical/btefood.xml" />
   <Item file="Mods/BTE/Items/Medical/btemedical.xml" />
