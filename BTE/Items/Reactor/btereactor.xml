@@ -85,15 +85,12 @@
     <ItemContainer capacity="4" canbeselected="true" hideitems="False" hudpos="0.5,0.15" itempos="207,-270" iteminterval="42,0" slotsperrow="1" uilabel="FuelRods">
       <Containable items="hydrogentank">
         <StatusEffect type="OnContaining" target="This" AvailableFuel="20.0" disabledeltatime="true" />
-		<StatusEffect type="OnContaining" target="contained" condition="-.01" disabledeltatime="true" />
       </Containable>
       <Containable items="incendiumfueltank">
         <StatusEffect type="OnContaining" target="This" AvailableFuel="40.0" disabledeltatime="true" />
-		<StatusEffect type="OnContaining" target="contained" condition="-.01" disabledeltatime="true" />
       </Containable>
       <Containable items="oxygentank">
         <StatusEffect type="OnContaining" target="This" AvailableFuel="30.0" disabledeltatime="true" />
-		<StatusEffect type="OnContaining" target="contained" condition="-.01" disabledeltatime="true" />
       </Containable>
     </ItemContainer>
     <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.125" mindeteriorationdelay="120" maxdeteriorationdelay="720" MinDeteriorationCondition="10" minsabotagecondition="10" RepairThreshold="50" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">

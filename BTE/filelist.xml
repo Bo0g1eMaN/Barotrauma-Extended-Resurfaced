@@ -10,6 +10,7 @@
   <Afflictions file="Mods/BTE/bteafflictions.xml" />
  <!-- <Structure file="Mods/BTE/Map/BTEStructurePrefabs.xml" /> -->
   <!-- <Item file="Mods/BTE/Items/Weapons/BTEexplosives.xml" /> -->
+  <Item file="Mods/BTE/Items/BTEidcard.xml" />
   <Item file="Mods/BTE/Items/Weapons/BTErailgun.xml" />
   <Item file="Mods/BTE/Items/Weapons/BTEweapons.xml" />
   <Item file="Mods/BTE/Items/Tools/fuel.xml" />
