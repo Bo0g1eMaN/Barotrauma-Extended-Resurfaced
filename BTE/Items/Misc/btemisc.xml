@@ -174,6 +174,35 @@
     <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0" msg="ItemMsgPickUpSelect"/>
 	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
   </Item>
+
+  <Item name="Classified Protocol A" identifier="huskprotocola" category="Misc" tags="smallitem,docs" scale="0.5"
+		description="This document is missing letters and words. It seems important.">
+	<Sprite texture="Mods/BTE/Items/Misc/docOutbreakA.png" sourcerect="583,0,52,73" depth="0.81"/>
+    <Body width="42" height="63" density="10.02"/>
+	<Deconstruct time="10">
+      <Item identifier="paperboat"/>
+    </Deconstruct>
+	<ItemComponent canbeselected="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.3,0.8" minsize="392,624" maxsize="581,819" absoluteoffset="0,40" anchor="TopCenter" style="huskpl1"/>
+    </ItemComponent>
+    <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0" msg="ItemMsgPickUpSelect"/>
+	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
+  </Item>
+
+  <Item name="Classified Protocol B" identifier="huskprotocolb" category="Misc" tags="smallitem,docs" scale="0.5"
+		description="This transparent sheet has some letters and loose words in it. It seems important.">
+	<Sprite texture="Mods/BTE/Items/Misc/docOutbreakB.png" sourcerect="583,0,52,73" depth="0.81"/>
+    <Body width="42" height="63" density="10.02"/>
+	<Deconstruct time="10">
+      <Item identifier="paperboat"/>
+    </Deconstruct>
+	<ItemComponent canbeselected="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.3,0.8" minsize="392,624" maxsize="581,819" absoluteoffset="0,40" anchor="TopCenter" style="huskpl2"/>
+    </ItemComponent>
+    <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0" msg="ItemMsgPickUpSelect"/>
+	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
+  </Item>
+
   
   <Item name="Top Secret Cover" identifier="docSecretB" category="Misc" tags="smallitem,docs" scale="0.5"
 		description="This is a cover sheet for classified information.">

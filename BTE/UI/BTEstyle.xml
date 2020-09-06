@@ -1221,8 +1221,24 @@
     color="255,255,255,255"
     hovercolor="255,255,255,255"
     selectedcolor="255,255,255,255">
-    <Sprite texture="Mods/BTE/Items/Misc/docSecretA.png" sourcerect="0,0,581,819" tile="false"/>
+    <Sprite texture="Mods/BTE/Items/Misc/docOutbreakA.png" sourcerect="0,0,581,819" tile="false"/>
   </docSecretA>
+
+ <huskpl1
+    color="255,255,255,255"
+    hovercolor="255,255,255,255"
+    selectedcolor="255,255,255,255">
+    <Sprite texture="Mods/BTE/Items/Misc/docOutbreakA.png" sourcerect="0,0,581,819" tile="false"/>
+  </huskpl1>
+
+ <huskpl2
+    color="0,0,0,1"
+    hovercolor="0,0,0,1"
+    selectedcolor="0,0,0,1">
+    <Sprite texture="Mods/BTE/Items/Misc/docOutbreakB.png" sourcerect="0,0,581,819" tile="false"/>
+  </huskpl2>
+
+
   <docSecretB
     color="255,255,255,255"
     hovercolor="255,255,255,255"
