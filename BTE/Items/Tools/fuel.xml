@@ -160,7 +160,7 @@
   </Item>
   </Override>
   
-  <Item name="Hydrogen Tank" identifier="hydrogentank" category="Equipment,Misc" Tags="smallitem"
+  <Item name="Hydrogen Tank" identifier="hydrogentank" category="Equipment,Misc" Tags="smallitem,reactorfuel"
 		cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
     <Price locationtype="Research" buyprice="75"/>
     <Price locationtype="City" buyprice="75"/>
