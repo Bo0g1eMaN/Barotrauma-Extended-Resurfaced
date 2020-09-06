@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+<Item name="" identifier="caliche" category="Material" Tags="smallitem,ore" canbepicked="true" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="locker"/>
+    <PreferredContainer primary="mineralcontainer" spawnprobability="0.1"/>
+    <Price baseprice="250" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.1" sold="false"/>
+      <Price locationtype="city" multiplier="1.25" sold="false"/>
+      <Price locationtype="research" multiplier="1" sold="false"/>
+      <Price locationtype="military" multiplier="1" sold="false"/>
+      <Price locationtype="mine" multiplier="0.75" sold="false"/>
+    </Price>
+    <Deconstruct time="5">
+      <Item identifier="iodine" />
+      <Item identifier="iodine" />
+    </Deconstruct>
+    <!-- TODO: sprite and inventory icon -->
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="705,515,60,60" origin="0.5,0.5" />
+    <ContainedSprite texture="Content/Items/Materials/MineralEnvironment.png" usewhenattached="true" depth="0.2" sourcerect="786,296,227,139" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Materials/Minerals.png" depth="0.55" sourcerect="394,133,118,123" origin="0.5,0.5" />
+    <Body radius="40" width="20" density="50" />
+    <LevelResource deattachduration="10">
+      <Commonness commonness="6" />
+      <RequiredItem items="cuttingequipment" type="Equipped" />
+    </LevelResource>
+    <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgUsePlasmaCutter" handle1="0,0" pickingtime="5.0" attachable="true" reattachable="false" />
+  </Item>
+</Items>
