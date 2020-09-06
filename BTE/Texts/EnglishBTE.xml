@@ -109,5 +109,13 @@
   <entitydescription.fryingpan>A iron Frying Pan used to cook food</entitydescription.fryingpan>
   <entityname.hydrogengenerator>Hydrogen Generator</entityname.hydrogengenerator>
   <entitydescription.hydrogengenerator>A generator that produces hydrogen gas</entitydescription.hydrogengenerator>
+  <entityname.nuclearwaste>Nuclear Waste</entityname.nuclearwaste>
+  <entitydescription.nuclearwaste>Waste from iniside the core of a nuclear reactor</entitydescription.nuclearwaste>
+  <entityname.iodine>Iodine</entityname.iodine>
+  <entitydescription.iodine>A mineral used to mainly produce iodine pills for treating radiation poisoning.</entitydescription.iodine>
+  <entityname.caliche>Caliche</entityname.caliche>
+  <entitydescription.caliche>Caliche is a mineral that contains large amounts of iodine</entitydescription.caliche>
+  <entityname.iodinepills>Iodine Pills</entityname.iodinepills>
+  <entitydescription.iodinepills>These pills can prevent some effects of radiation exposure.</entitydescription.iodinepills>
 
 </infotexts>
