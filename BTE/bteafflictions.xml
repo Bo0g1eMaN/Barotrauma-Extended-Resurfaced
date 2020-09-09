@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Afflictions>
+<Override>
+<Affliction
+    name="Radiation sickness"
+    identifier="radiationsickness"
+    description="Burns and sores can be seen on patient's skin. They seem to be spreading."
+    type="poison"
+    causeofdeathdescription="Died of radiation sickness."
+    selfcauseofdeathdescription="You have died of radiation sickness."
+    limbspecific="false"
+    indicatorlimb="Torso"
+    showiconthreshold="25"
+    karmachangeonapplied="-1"
+    maxstrength="100">
+    <!-- Radiation sickness does nothing to the player below 50 strength, however it quickly becomes lethal at anything past 50. -->
+    <Effect minstrength="0" maxstrength="50">
+      <StatusEffect target="Character">
+      </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="50" maxstrength="75"
+      minchromaticaberration="0.0"
+      maxchromaticaberration="1.0">
+      <StatusEffect target="Character">
+        <Affliction identifier="burn" amount="0.1" />
+      </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="75" maxstrength="100"
+      minchromaticaberration="1.0"
+      maxchromaticaberration="5.0">
+      <StatusEffect target="Character">
+        <Affliction identifier="burn" amount="0.25" />
+      </StatusEffect>
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,768,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+  </Override>
+  
+  <Affliction
+    name="Internal Radiation Poisoning"
+    identifier="internalradiationpoisoning"
+    description="An injection sight can be seen on the patient's body with all the signs of severe radiation sickness."
+    type="poison"
+    causeofdeathdescription="Died of internal radiation poisoning."
+    selfcauseofdeathdescription="You have died of internal radiation poisoning."
+    limbspecific="false"
+    indicatorlimb="Torso"
+    showiconthreshold="25"
+    karmachangeonapplied="-1"
+    maxstrength="100">
+    <!-- Internal Radiation Poisoning does nothing to the player below 25 strength, however it quickly becomes lethal at anything past 40. The difference between Radiation Sickness and this affliction is the method of delivery. This can only be applied with radiotoxin injections -->
+    <Effect minstrength="0" maxstrength="25"
+	strengthchange="1">
+      <StatusEffect target="Character">
+      </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="25" maxstrength="40"
+      minchromaticaberration="0.0"
+      maxchromaticaberration="1.0"
+	  strengthchange="2">
+      <StatusEffect target="Character">
+        <Affliction identifier="burn" amount="0.1" />
+      </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="40" maxstrength="100"
+      minchromaticaberration="1.0"
+      maxchromaticaberration="5.0"
+	  strengthchange="2">
+      <StatusEffect target="Character">
+        <Affliction identifier="burn" amount="0.25" />
+      </StatusEffect>
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,768,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+  </Afflictions>

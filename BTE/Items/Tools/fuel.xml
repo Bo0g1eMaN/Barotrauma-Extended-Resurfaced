@@ -160,7 +160,7 @@
   </Item>
   </Override>
   
-  <Item name="Hydrogen Tank" identifier="hydrogentank" category="Equipment,Misc" Tags="smallitem"
+  <Item name="Hydrogen Tank" identifier="hydrogentank" category="Equipment,Misc" Tags="smallitem,reactorfuel"
 		cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
     <Price locationtype="Research" buyprice="75"/>
     <Price locationtype="City" buyprice="75"/>
@@ -172,9 +172,9 @@
 	<Fabricate suitablefabricators="fabricator" outcondition="0.0">
       <RequiredItem identifier="aluminium"/>
     </Fabricate>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,0,64,64" origin="0.5,0.5"/>
-    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="356,223,39,110" depth="0.55" origin="0.5,0.5"/>
-    <Body width="38" height="109" density="5"/>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="410,71,24,66" depth="0.55" origin="0.5,0.5" />
+<Body width="22" height="64" density="5" />
     <Holdable slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnFire" target="This" Condition="-100" disabledeltatime="true">
         <Conditional Condition="gt 25"/>

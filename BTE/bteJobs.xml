@@ -22,7 +22,7 @@
 	  <Skill identifier="cooking" level="12.5,15"/>
     </Skills>
     <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
+      <Item identifier="idcard_captain" equip="true" showpreview="false"/>
       <Item identifier="captainscap1" equip="true"/>
       <Item identifier="captainsuniform1" equip="true" outfit="true"/>
       <Item identifier="headset" equip="true" showpreview="false">
@@ -64,7 +64,7 @@
       </PreviewSprites>
     </ItemSet>
     <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
+      <Item identifier="idcard_captain" equip="true" showpreview="false"/>
       <Item identifier="captainscap2" equip="true"/>
       <Item identifier="captainsuniform2" equip="true" outfit="true"/>
       <Item identifier="headset" equip="true" showpreview="false">
@@ -106,7 +106,7 @@
       </PreviewSprites>
     </ItemSet>
     <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
+      <Item identifier="idcard_captain" equip="true" showpreview="false"/>
       <Item identifier="captainscap3" equip="true"/>
       <Item identifier="captainsuniform3" equip="true" outfit="true"/>
       <Item identifier="headset" equip="true" showpreview="false">
@@ -177,7 +177,7 @@
 	  <Skill identifier="cooking" level="12.5,15"/>
     </Skills>
     <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
+      <Item identifier="idcard_officer" equip="true" showpreview="false"/>
       <Item identifier="officersberet" equip="true"/>
       <Item identifier="crewchiefclothes" equip="true" outfit="true"/>
       <Item identifier="headset" equip="true" showpreview="false">
@@ -215,7 +215,7 @@
       </PreviewSprites>
     </ItemSet>
     <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
+      <Item identifier="idcard_officer" equip="true" showpreview="false"/>
       <Item identifier="officersberet" equip="true"/>
       <Item identifier="securityuniform1" equip="true" outfit="true"/>
       <Item identifier="headset" equip="true" showpreview="false">
@@ -258,7 +258,7 @@
       </PreviewSprites>
     </ItemSet>
     <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
+      <Item identifier="idcard_officer" equip="true" showpreview="false"/>
       <Item identifier="officersberet" equip="true"/>
       <Item identifier="commandersjacket" equip="true" outfit="true"/>
       <Item identifier="headset" equip="true" showpreview="false">
@@ -330,7 +330,7 @@
 	  <Skill identifier="cooking" level="12.5,15"/>
     </Skills>
     <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
+      <Item identifier="idcard_engineer" equip="true" showpreview="false"/>
       <Item identifier="toolbox">
         <Item identifier="wrench"/>
         <Item identifier="screwdriver"/>
@@ -346,8 +346,7 @@
       </PreviewSprites>
     </ItemSet>
     <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
-    <Item identifier="idcard" equip="true"/>
+		<Item identifier="idcard_engineer" equip="true" showpreview="false"/>
 	  <Item identifier="wallet">
         <Item identifier="stampa"/>
 		<Item identifier="stampb"/>
@@ -421,7 +420,7 @@
 	  <Skill identifier="cooking" level="12.5,15"/>
     </Skills>
     <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
+      <Item identifier="idcard_mechanic" equip="true" showpreview="false"/>
       <Item identifier="toolbox">
         <Item identifier="wrench"/>   
         <Item identifier="weldingtool">
@@ -443,7 +442,7 @@
       </PreviewSprites>
     </ItemSet>
     <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
+      <Item identifier="idcard_mechanic" equip="true" showpreview="false"/>
       <Item identifier="toolbox">
         <Item identifier="wrench"/>
         <Item identifier="screwdriver"/>
@@ -508,7 +507,7 @@
     </Skills>
     <ItemSet>
       <Item identifier="securityuniform1" equip="true" outfit="true"/>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
+      <Item identifier="idcard_securityofficer" equip="true" showpreview="false"/>
 	  <Item identifier="wallet">
         <Item identifier="stampa"/>
 		<Item identifier="stampa"/>
@@ -547,8 +546,8 @@
     </ItemSet>
     <ItemSet>
       <Item identifier="securityuniform2" equip="true" outfit="true"/>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
-			  <Item identifier="wallet">
+      <Item identifier="idcard_securityofficer" equip="true" showpreview="false"/>
+		<Item identifier="wallet">
         <Item identifier="stampa"/>
 		<Item identifier="stampa"/>
 		<Item identifier="stampa"/>
@@ -585,7 +584,7 @@
     </ItemSet>
     <ItemSet>
       <Item identifier="securityuniform3" equip="true" outfit="true"/>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
+      <Item identifier="idcard_securityofficer" equip="true" showpreview="false"/>
 		  <Item identifier="wallet">
         <Item identifier="stampa"/>
 		<Item identifier="stampa"/>
@@ -666,7 +665,7 @@
 	  <Skill identifier="cooking" level="12.5,15"/>
     </Skills>
     <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
+      <Item identifier="idcard_medicaldoctor" equip="true" showpreview="false"/>
       <Item identifier="doctorsuniform1" equip="true" outfit="true">
         <Item identifier="antibloodloss2"/>
       </Item>
@@ -712,7 +711,7 @@
 		<Item identifier="docMed"/>
 		<Item identifier="docbasic"/>
 	  </Item>				 
-      <Item identifier="idcard" equip="true" showpreview="false"/>
+      <Item identifier="idcard_medicaldoctor" equip="true" showpreview="false"/>
       <Item identifier="doctorsuniform2" equip="true" outfit="true">
         <Item identifier="antibloodloss1"/>
         <Item identifier="antibloodloss2"/>
@@ -750,7 +749,7 @@
   
   <Job identifier="scientist"
        maxnumber="2" minkarma="30" initialcount="1"
-       uicolor="0.81,0.31,0.19"
+       uicolor="0.57,0.13,0.30"
        vitalitymodifier="0"
        pricemultiplier="1.15">
     <Jobicon>
@@ -769,7 +768,7 @@
 	  <Skill identifier="cooking" level="5,10"/>
     </Skills>
     <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
+      <Item identifier="idcard_scientist" equip="true" showpreview="false"/>
       <Item identifier="researcherclothes" equip="true" outfit="true">
       </Item>
       <Item identifier="headset" equip="true" showpreview="false">
@@ -799,7 +798,7 @@
       </PreviewSprites>
     </ItemSet>
     <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
+      <Item identifier="idcard_scientist" equip="true" showpreview="false"/>
       <Item identifier="researcherclothes" equip="true" outfit="true">
       </Item>
       <Item identifier="headset" equip="true" showpreview="false">
@@ -849,13 +848,14 @@
   
   <Job identifier="cook"
        allowalways="true" minkarma="0" initialcount="1"
+	   uicolor="0.42,0.22,0.50"
        vitalitymodifier="-10"
-       pricemultiplier="0.8">
+       pricemultiplier="0.81">
     <Jobicon>
-      <sprite texture="Mods/BTE/UI/jobs.png" sourcerect="350,0,128,128" origin="0.5,0.5"/>
+      <sprite texture="Mods/BTE/UI/jobs.png" sourcerect="340,0,128,128" origin="0.5,0.5"/>
     </Jobicon>
     <JobiconSmall>
-      <sprite texture="Mods/BTE/UI/jobs.png" sourcerect="350,0,128,128" origin="0.5,0.5"/>
+      <sprite texture="Mods/BTE/UI/jobs.png" sourcerect="340,0,128,128" origin="0.5,0.5"/>
     </JobiconSmall>
     <Skills>
       <Skill identifier="weapons" level="15,25"/>
@@ -867,7 +867,7 @@
 	  <Skill identifier="cooking" level="40,50"/>
     </Skills>
     <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
+      <Item identifier="idcard_cook" equip="true" showpreview="false"/>
       <Item identifier="commonerclothes1" equip="true" outfit="true"/>
       <Item identifier="fryingpan"/>
       <Item identifier="headset" equip="true" showpreview="false">
@@ -902,8 +902,9 @@
   </Job>
   
 	<Override>
-  <Job identifier="assistant"
+	<Job identifier="assistant"
        allowalways="true" minkarma="0"
+	   uicolor="0.81,0.63,0.53"
        vitalitymodifier="-10"
        pricemultiplier="0.8">
     <Jobicon>
@@ -922,7 +923,7 @@
 	  <Skill identifier="cooking" level="12.5,15"/>
     </Skills>
     <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
+      <Item identifier="assistant_idcard" equip="true" showpreview="false"/>
 		  <Item identifier="wallet">
         <Item identifier="stampa"/>
 		<Item identifier="stampb"/>
@@ -963,7 +964,7 @@
        minnumber="0" maxnumber="0" initialcount="0">
     <ItemSet>
       <Item identifier="watchmanclothes" equip="true"/>
-      <Item identifier="idcard" equip="true" showpreview="false"/>
+      <Item identifier="idcard_watchman" equip="true" showpreview="false"/>
       <Item identifier="revolver" equip="false">
         <Item identifier="revolverround"/>
         <Item identifier="revolverround"/>
