@@ -114,9 +114,7 @@
 	<Deconstruct time="15">
       <Item identifier="carbon" outcondition="0.26"/>
     </Deconstruct>
-	<Fabricate suitablefabricators="oven" requiredtime="10">
-      <RequiredItem identifier="potato" mincondition="0.2" usecondition="false"/>
-    </Fabricate>
+
     
 	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
       <StatusEffect type="Always" target="This" Condition="-0.008"/>
