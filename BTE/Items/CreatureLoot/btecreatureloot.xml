@@ -110,7 +110,7 @@
 	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
-	  </StatusEffect>
+
       <StatusEffect type="OnUse" target="Character" delay="20" duration="10">
   <ReduceAffliction identifier="internaldamage" amount="0.1"/>
 
