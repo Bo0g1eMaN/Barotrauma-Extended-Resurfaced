@@ -21,6 +21,9 @@
 	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="3" duration="5">
+  <ReduceAffliction identifier="internaldamage" amount="0.1"/>
+      </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
       </StatusEffect>
@@ -46,6 +49,42 @@
 	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="3" duration="5">
+  <ReduceAffliction identifier="internaldamage" amount="0.1"/>
+
+
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="15" duration="7">
+
+<Affliction identifier="organdamage" strength="0.4" />
+<Affliction identifier="invertcontrols" strength="0.4" />
+
+      </StatusEffect>
+
+      <StatusEffect type="OnUse" target="Character" delay="22" duration="3">
+
+<Affliction identifier="oxygenlow" strength="0.4" />
+
+      </StatusEffect>
+
+      <StatusEffect type="OnUse" target="Character" delay="35" duration="8">
+
+<Affliction identifier="oxygenlow" strength="0.4" />
+<Affliction identifier="stun" strength="0.43" />
+
+      </StatusEffect>
+
+
+      <StatusEffect type="OnUse" target="Character" delay="60" duration="7">
+
+<Affliction identifier="drunk" strength="0.4" />
+
+
+      </StatusEffect>
+
+
+
+
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
       </StatusEffect>
@@ -71,6 +110,12 @@
 	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
+	  </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20" duration="10">
+  <ReduceAffliction identifier="internaldamage" amount="0.1"/>
+
+
+      </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
       </StatusEffect>
@@ -104,8 +149,7 @@
       </StatusEffect>
     </Throwable>
   </Item>
-  
- <Item name="Snailfish Meat" identifier="snailfishmeat" category="Misc" Tags="smallitem,food"
+   <Item name="Snailfish Meat" identifier="snailfishmeat" category="Misc" Tags="smallitem,food"
 		description="Usually cooked by someone either really hungry or with no actual cooking skills."
         scale="0.5" useinhealthinterface="true" impactsoundtag="impact_soft">
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="194,80,45,55" depth="0.6"/>
@@ -122,15 +166,15 @@
       <StatusEffect type="Always" target="This" Condition="-0.008"/>
 	  <StatusEffect type="Always" target="This" Condition="0.004">
         <RequiredItem identifier="fridge" type="Container"/>
-      </StatusEffect>
+      </Statu-sEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
 	  <RequiredSkill identifier="medical" level="35" />
-      <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
+      <StatusEffect type="OnUse" target="Character" delay="12" duration="20">
 <ReduceAffliction identifier="internaldamage" amount="0.3"/>
       </StatusEffect>
-      <StatusEffect type="OnFailure" target="Character" delay="20" duration="20">
+      <StatusEffect type="OnFailure" target="Character" delay="12" duration="20">
 <ReduceAffliction identifier="internaldamage" amount="0.3"/>
 	  <Affliction identifier="morbusinepoisoning" strength="0.4" />
       </StatusEffect>
@@ -139,7 +183,6 @@
       </StatusEffect>
     </Holdable>
   </Item>
-
   
   
 </Items>
