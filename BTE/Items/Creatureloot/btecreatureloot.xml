@@ -166,7 +166,7 @@
       <StatusEffect type="Always" target="This" Condition="-0.008"/>
 	  <StatusEffect type="Always" target="This" Condition="0.004">
         <RequiredItem identifier="fridge" type="Container"/>
-      </Statu-sEffect>
+      </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
