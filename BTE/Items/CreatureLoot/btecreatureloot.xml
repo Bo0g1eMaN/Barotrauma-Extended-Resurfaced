@@ -100,7 +100,7 @@
 
 
 
-      </StatusEffect>
+
 	       </Button>
     </CustomInterface>
       <StatusEffect type="OnBroken" target="This">
