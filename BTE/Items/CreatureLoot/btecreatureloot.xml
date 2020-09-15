@@ -4,7 +4,7 @@
   <Item name="Crawler Meat" identifier="crawlermeat1" category="Material"
         cargocontaineridentifier="chemicalcrate" impactsoundtag="impact_fleshhit"
         description="A chunk of raw crawler meat. It stinks like this so better find an oven." 
-        Tags="smallitem,food" useinhealthinterface="true" scale="0.5">
+        Tags="smallitem,food" useinhealthinterface="false" scale="0.5">
 	
 	<Price locationtype="Research" buyprice="12" />
     <Price locationtype="City" buyprice="12" />
@@ -18,12 +18,17 @@
 	  <StatusEffect type="Always" target="This" Condition="0.017">
         <RequiredItem identifier="foodcan" type="Container"/>
       </StatusEffect>
+	  	  	  	      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.08,0.1" anchor="BottomCenter" absoluteoffset="0,140" style="ItemUI"/>
+          <Button text="Eat">
 	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="3" duration="5">
   <ReduceAffliction identifier="internaldamage" amount="0.1"/>
       </StatusEffect>
+	       </Button>
+    </CustomInterface>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
       </StatusEffect>
@@ -33,7 +38,7 @@
   <Item name="Crawler Meat" identifier="crawlermeat2" category="Material"
         cargocontaineridentifier="chemicalcrate" impactsoundtag="impact_fleshhit"
         description="A chunk of raw crawler meat. It stinks like this so better find an oven." 
-        Tags="smallitem,food" useinhealthinterface="true" scale="0.5">
+        Tags="smallitem,food" useinhealthinterface="false" scale="0.5">
 
     <Price locationtype="Military" buyprice="12" />
     <Price locationtype="Outpost" buyprice="12" />
@@ -46,6 +51,9 @@
 	  <StatusEffect type="Always" target="This" Condition="0.017">
         <RequiredItem identifier="foodcan" type="Container"/>
       </StatusEffect>
+	  	  	  	      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.08,0.1" anchor="BottomCenter" absoluteoffset="0,140" style="ItemUI"/>
+          <Button text="Eat">
 	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
@@ -81,10 +89,20 @@
 
 
       </StatusEffect>
+	  
+	        <StatusEffect type="OnUse" target="Character" delay="67" duration="25">
+
+  <ReduceAffliction identifier="invertcontrols" amount="7"/>
+
+
+      </StatusEffect>
+	  
 
 
 
-
+      </StatusEffect>
+	       </Button>
+    </CustomInterface>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
       </StatusEffect>
@@ -94,7 +112,7 @@
   <Item name="Thresher Meat" identifier="threshermeat" category="Material"
         cargocontaineridentifier="chemicalcrate" impactsoundtag="impact_fleshhit"
         description="A chunk of raw tiger thresher meat. It's best not to eat it raw." 
-        Tags="smallitem,food" useinhealthinterface="true" scale="0.5">
+        Tags="smallitem,food" useinhealthinterface="false" scale="0.5">
 
     <Price locationtype="Research" buyprice="22"/>
     <Price locationtype="Military" buyprice="24"/>
@@ -107,6 +125,9 @@
 	  <StatusEffect type="Always" target="This" Condition="0.018">
         <RequiredItem identifier="foodcan" type="Container"/>
       </StatusEffect>
+	  	  	  	  	      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.08,0.1" anchor="BottomCenter" absoluteoffset="0,140" style="ItemUI"/>
+          <Button text="Eat">
 	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
@@ -116,6 +137,8 @@
 
 
       </StatusEffect>
+	       </Button>
+    </CustomInterface>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
       </StatusEffect>
@@ -150,23 +173,25 @@
     </Throwable>
   </Item>
    <Item name="Snailfish Meat" identifier="snailfishmeat" category="Misc" Tags="smallitem,food"
-		description="Usually cooked by someone either really hungry or with no actual cooking skills."
-        scale="0.5" useinhealthinterface="true" impactsoundtag="impact_soft">
+		description="Snailfish meat is known for being quite rare and delicious, though eaten raw is going to upset more than your tummy"
+        scale="0.5" useinhealthinterface="false" impactsoundtag="impact_soft">
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="194,80,45,55" depth="0.6"/>
 	<Body width="36" height="14" radius="14" density="10.7" friction="0.95"/>
 	
 	<Deconstruct time="15">
       <Item identifier="carbon" outcondition="0.26"/>
     </Deconstruct>
-	<Fabricate suitablefabricators="oven" requiredtime="10">
-      <RequiredItem identifier="potato" mincondition="0.2" usecondition="false"/>
-    </Fabricate>
+
     
 	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
       <StatusEffect type="Always" target="This" Condition="-0.008"/>
 	  <StatusEffect type="Always" target="This" Condition="0.004">
         <RequiredItem identifier="fridge" type="Container"/>
       </StatusEffect>
+	  	  	  	  	      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.08,0.1" anchor="BottomCenter" absoluteoffset="0,140" style="ItemUI"/>
+          <Button text="Eat">
+		  
 	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
@@ -178,6 +203,8 @@
 <ReduceAffliction identifier="internaldamage" amount="0.3"/>
 	  <Affliction identifier="morbusinepoisoning" strength="0.4" />
       </StatusEffect>
+	       </Button>
+    </CustomInterface>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
       </StatusEffect>
