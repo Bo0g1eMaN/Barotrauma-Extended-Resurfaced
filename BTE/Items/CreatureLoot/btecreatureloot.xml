@@ -161,7 +161,7 @@
    <Item name="Snailfish Meat" identifier="snailfishmeat" category="Misc" Tags="smallitem,food"
 		description="Snailfish meat is known for being quite rare and delicious, though eaten raw is going to upset more than your tummy"
         scale="0.5" useinhealthinterface="true" impactsoundtag="impact_soft">
-    <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="194,80,45,55" depth="0.6"/>
+    <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="192,80,45,55" depth="0.6"/>
 	<Body width="36" height="14" radius="14" density="10.7" friction="0.95"/>
 	
 	<Deconstruct time="15">
