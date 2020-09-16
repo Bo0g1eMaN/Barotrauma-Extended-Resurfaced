@@ -124,7 +124,7 @@
   <ReduceAffliction identifier="internaldamage" amount="0.1"/>
 
 
-
+      </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
       </StatusEffect>
