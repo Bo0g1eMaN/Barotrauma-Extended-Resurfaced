@@ -923,7 +923,7 @@ Another note if you are changing seared crawler meat please do be alerted that s
     <Item name="Fried Thresher" identifier="friedthresher" category="Misc" Tags="smallitem,food"
 description="Normally paired with fries, this has been claimed to be a sacred meal by the cult of the husks as husk eggs reproduce in fried thresher much faster than normal"
         useinhealthinterface="true" scale="0.5" impactsoundtag="impact_fleshhit">
-    <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="3,81,43,37" depth="0.6"/>
+    <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="85,0,43,37" depth="0.6"/>
     <Body width="18" height="14" radius="14" density="14" friction="0.95"/>
 	
 	<Deconstruct time="15">
