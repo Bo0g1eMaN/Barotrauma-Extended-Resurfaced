@@ -52,10 +52,13 @@ Another note if you are changing seared crawler meat please do be alerted that s
     <Sprite texture="Mods/BTE/Items/Medical/Consumables.png" sourcerect="0,0,84,211" depth="0.6" origin="0.5,0.5"/>
     <Body width="80" height="208" density="15"/>
 	
-	<Price locationtype="Research" buyprice="15"/>
-    <Price locationtype="Military" buyprice="15"/>
-    <Price locationtype="City" buyprice="20"/>
-    <Price locationtype="Outpost" buyprice="50"/>
+<Price baseprice="25" >
+      <Price locationtype="outpost" multiplier="1" minavailable="4" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="1.25" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="8" />
+    </Price>
 	
 	<Deconstruct time="15">
       <Item identifier="plastic" outcondition="0.3"/>
@@ -82,11 +85,13 @@ Another note if you are changing seared crawler meat please do be alerted that s
     <Sprite texture="Mods/BTE/Items/Medical/Consumables.png" sourcerect="88,0,74,224" depth="0.6" origin="0.5,0.5"/>
     <Body width="71" height="221" density="15"/>
 	
-	<Price locationtype="Research" buyprice="15"/>
-    <Price locationtype="Military" buyprice="15"/>
-    <Price locationtype="City" buyprice="20"/>
-    <Price locationtype="Outpost" buyprice="50"/>
-	
+<Price baseprice="30" >
+      <Price locationtype="outpost" multiplier="1" minavailable="4" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="1.25" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="8" />
+    </Price>
 	<Deconstruct time="15">
       <Item identifier="plastic" outcondition="0.3"/>
 	  <Item identifier="ethanol" outcondition="0.9"/>
@@ -266,10 +271,13 @@ Another note if you are changing seared crawler meat please do be alerted that s
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="126,166,34,34" depth="0.6"/>
     <Body radius="14" density="9.8" friction="0.95"/>
 	
-	<Price locationtype="Research" buyprice="10"/>
-    <Price locationtype="Military" buyprice="12"/>
-    <Price locationtype="City" buyprice="8"/>
-    <Price locationtype="Outpost" buyprice="6"/>
+<Price baseprice="8" >
+      <Price locationtype="outpost" multiplier="1" minavailable="4" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="1.25" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="8" />
+    </Price>
 	
 	<Deconstruct time="15">
       <Item identifier="carbon" outcondition="0.25"/>
@@ -299,10 +307,13 @@ Another note if you are changing seared crawler meat please do be alerted that s
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="172,0,60,20" depth="0.6"/>
 	<Body width="56" height="14" radius="14" density="9.9" friction="0.95"/>
 	
-	<Price locationtype="Research" buyprice="9"/>
-    <Price locationtype="Military" buyprice="11"/>
-    <Price locationtype="City" buyprice="7"/>
-    <Price locationtype="Outpost" buyprice="5"/>
+<Price baseprice="8" >
+      <Price locationtype="outpost" multiplier="1" minavailable="4" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="1.25" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="8" />
+    </Price>
 	
 	<Deconstruct time="15">
 	  <Item identifier="carbon" outcondition="0.23"/>
@@ -334,10 +345,13 @@ Another note if you are changing seared crawler meat please do be alerted that s
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="192,26,40,20" depth="0.6"/>
 	<Body width="36" height="14" radius="14" density="12" friction="0.95"/>
     
-	<Price locationtype="Research" buyprice="9"/>
-    <Price locationtype="Military" buyprice="11"/>
-    <Price locationtype="City" buyprice="7"/>
-    <Price locationtype="Outpost" buyprice="5"/>
+<Price baseprice="3" >
+      <Price locationtype="outpost" multiplier="1" minavailable="4" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="1.25" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="8" />
+    </Price>
 	
 	<Deconstruct time="15">
       <Item identifier="carbon" outcondition="0.27"/>
@@ -441,10 +455,13 @@ Another note if you are changing seared crawler meat please do be alerted that s
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="320,107,36,48" depth="0.6"/>
     <Body height="52" radius="14" density="9.5" friction="0.95"/>
     
-	<Price locationtype="Research" buyprice="8"/>
-    <Price locationtype="Military" buyprice="15"/>
-    <Price locationtype="City" buyprice="6"/>
-    <Price locationtype="Outpost" buyprice="10"/>
+<Price baseprice="1" >
+      <Price locationtype="outpost" multiplier="1" minavailable="4" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="1.25" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="8" />
+    </Price>
 	
 	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0" canBeCombined="true">
 
@@ -475,10 +492,13 @@ Another note if you are changing seared crawler meat please do be alerted that s
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="320,155,39,45" depth="0.6"/>
     <Body height="52" radius="14" density="9.5" friction="0.95"/>
     
-	<Price locationtype="Research" buyprice="8"/>
-    <Price locationtype="Military" buyprice="15"/>
-    <Price locationtype="City" buyprice="6"/>
-    <Price locationtype="Outpost" buyprice="10"/>
+<Price baseprice="1" >
+      <Price locationtype="outpost" multiplier="1" minavailable="4" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="1.25" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="8" />
+    </Price>
 	
 	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0" canBeCombined="true">
 
@@ -508,10 +528,13 @@ Another note if you are changing seared crawler meat please do be alerted that s
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="260,126,60,74" depth="0.6"/>
     <Body height="52" radius="14" density="9.5" friction="0.95"/>
     
-	<Price locationtype="Research" buyprice="8"/>
-    <Price locationtype="Military" buyprice="10"/>
-    <Price locationtype="City" buyprice="6"/>
-    <Price locationtype="Outpost" buyprice="4"/>
+<Price baseprice="3" >
+      <Price locationtype="outpost" multiplier="1" minavailable="4" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="1.25" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="8" />
+    </Price>
 	
 	<Deconstruct time="15">
       <Item identifier="carbon" outcondition="0.75"/>
@@ -964,8 +987,13 @@ description="Normally paired with fries, this has been claimed to be a sacred me
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="130,42,40,40" depth="0.6"/>
     <Body width="18" height="14" radius="14" density="13" friction="0.95"/>
 	
-    <Price locationtype="City" buyprice="4"/>
-    <Price locationtype="Outpost" buyprice="2"/>
+<Price baseprice="2" >
+      <Price locationtype="outpost" multiplier="1" minavailable="4" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="1.25" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="8" />
+    </Price>
 	
 	<Deconstruct time="15">
       <Item identifier="carbon" outcondition="0.3"/>

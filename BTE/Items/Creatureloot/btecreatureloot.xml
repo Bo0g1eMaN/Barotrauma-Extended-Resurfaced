@@ -6,9 +6,13 @@
         description="A chunk of raw crawler meat. It stinks like this so better find an oven." 
         Tags="smallitem,food" useinhealthinterface="true" scale="0.5">
 	
-	<Price locationtype="Research" buyprice="12" />
-    <Price locationtype="City" buyprice="12" />
-    <Price locationtype="Mine" buyprice="19" />
+<Price baseprice="12" >
+      <Price locationtype="outpost" multiplier="1" minavailable="4" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="1.25" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="8" />
+    </Price>
 
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="128,0,38,36" depth="0.6" origin="0.5,0.5"/>
     <Body width="18" height="16" radius="16" density="13"/>
@@ -104,8 +108,13 @@
         description="A chunk of raw tiger thresher meat. It's best not to eat it raw." 
         Tags="smallitem,food" useinhealthinterface="true" scale="0.5">
 
-    <Price locationtype="Research" buyprice="22"/>
-    <Price locationtype="Military" buyprice="24"/>
+<Price baseprice="25" >
+      <Price locationtype="outpost" multiplier="1" minavailable="1" />
+      <Price locationtype="city" multiplier="0.9" minavailable="2" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="1.25" minavailable="3" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="1" />
+    </Price>
 
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="44,0,38,36" depth="0.6" origin="0.5,0.5"/>
     <Body width="18" height="16" radius="16" density="15"/>
