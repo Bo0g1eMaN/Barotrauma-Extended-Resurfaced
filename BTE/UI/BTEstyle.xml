@@ -915,6 +915,14 @@
       <Sprite name="CharacterHealthBarSlider" texture="Content/UI/InventoryUIAtlas.png" tile="false" sourcerect="406,381,8,8" origin="0.5,0.5" />
     </Slider>
   </CharacterHealthBarSlider>
+ <CharacterHealthBar color="255,255,255,255">
+    <GUIFrame color="255,255,255,255">
+      <Sprite name="CharacterHealthBarBG" texture="Content/UI/InventoryUIAtlas.png" tile="false" sourcerect="288,366,107,67" slice="329,384,390,413" origin="0.5,0.5" />
+    </GUIFrame>
+    <Slider color="255,255,255,255">
+      <Sprite name="CharacterHealthBarSlider" texture="Content/UI/InventoryUIAtlas.png" tile="false" sourcerect="288,434,107,68" slice="330,453,390,481"  origin="0.5,0.5" />
+    </Slider>
+  </CharacterHealthBar>
   <CharacterHealthBarBG color="255,255,255,255">
     <Sprite name="CharacterHealthBarBG" texture="Content/UI/InventoryUIAtlas.png" tile="false" sourcerect="265,373,131,65" slice="329,384,389,444" origin="0.5,0.5" />
   </CharacterHealthBarBG>
@@ -1221,8 +1229,24 @@
     color="255,255,255,255"
     hovercolor="255,255,255,255"
     selectedcolor="255,255,255,255">
-    <Sprite texture="Mods/BTE/Items/Misc/docSecretA.png" sourcerect="0,0,581,819" tile="false"/>
+    <Sprite texture="Mods/BTE/Items/Misc/docOutbreakA.png" sourcerect="0,0,581,819" tile="false"/>
   </docSecretA>
+
+ <huskpl1
+    color="255,255,255,255"
+    hovercolor="255,255,255,255"
+    selectedcolor="255,255,255,255">
+    <Sprite texture="Mods/BTE/Items/Misc/docOutbreakA.png" sourcerect="0,0,581,819" tile="false"/>
+  </huskpl1>
+
+ <huskpl2
+    color="0,0,0,1"
+    hovercolor="0,0,0,1"
+    selectedcolor="0,0,0,1">
+    <Sprite texture="Mods/BTE/Items/Misc/docOutbreakB.png" sourcerect="0,0,581,819" tile="false"/>
+  </huskpl2>
+
+
   <docSecretB
     color="255,255,255,255"
     hovercolor="255,255,255,255"
