@@ -6,9 +6,13 @@
         description="A chunk of raw crawler meat. It stinks like this so better find an oven." 
         Tags="smallitem,food" useinhealthinterface="true" scale="0.5">
 	
-	<Price locationtype="Research" buyprice="12" />
-    <Price locationtype="City" buyprice="12" />
-    <Price locationtype="Mine" buyprice="19" />
+<Price baseprice="12" >
+      <Price locationtype="outpost" multiplier="1" minavailable="4" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="1.25" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="8" />
+    </Price>
 
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="128,0,38,36" depth="0.6" origin="0.5,0.5"/>
     <Body width="18" height="16" radius="16" density="13"/>
@@ -18,9 +22,13 @@
 	  <StatusEffect type="Always" target="This" Condition="0.017">
         <RequiredItem identifier="foodcan" type="Container"/>
       </StatusEffect>
+	
 	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="3" duration="5">
+  <ReduceAffliction identifier="internaldamage" amount="0.1"/>
+      </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
       </StatusEffect>
@@ -43,9 +51,52 @@
 	  <StatusEffect type="Always" target="This" Condition="0.017">
         <RequiredItem identifier="foodcan" type="Container"/>
       </StatusEffect>
+	  	  	  	  
 	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="3" duration="5">
+  <ReduceAffliction identifier="internaldamage" amount="0.1"/>
+
+
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="15" duration="7">
+
+<Affliction identifier="organdamage" strength="0.4" />
+<Affliction identifier="invertcontrols" strength="0.4" />
+
+      </StatusEffect>
+
+      <StatusEffect type="OnUse" target="Character" delay="22" duration="3">
+
+<Affliction identifier="oxygenlow" strength="0.4" />
+
+      </StatusEffect>
+
+      <StatusEffect type="OnUse" target="Character" delay="35" duration="8">
+
+<Affliction identifier="oxygenlow" strength="0.4" />
+<Affliction identifier="stun" strength="0.43" />
+
+      </StatusEffect>
+
+
+      <StatusEffect type="OnUse" target="Character" delay="60" duration="7">
+
+<Affliction identifier="drunk" strength="0.4" />
+
+
+      </StatusEffect>
+	  
+	        <StatusEffect type="OnUse" target="Character" delay="67" duration="25">
+
+  <ReduceAffliction identifier="invertcontrols" amount="7"/>
+
+
+      </StatusEffect>
+	  
+
+
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
       </StatusEffect>
@@ -57,8 +108,13 @@
         description="A chunk of raw tiger thresher meat. It's best not to eat it raw." 
         Tags="smallitem,food" useinhealthinterface="true" scale="0.5">
 
-    <Price locationtype="Research" buyprice="22"/>
-    <Price locationtype="Military" buyprice="24"/>
+<Price baseprice="25" >
+      <Price locationtype="outpost" multiplier="1" minavailable="1" />
+      <Price locationtype="city" multiplier="0.9" minavailable="2" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="1.25" minavailable="3" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="1" />
+    </Price>
 
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="44,0,38,36" depth="0.6" origin="0.5,0.5"/>
     <Body width="18" height="16" radius="16" density="15"/>
@@ -68,9 +124,16 @@
 	  <StatusEffect type="Always" target="This" Condition="0.018">
         <RequiredItem identifier="foodcan" type="Container"/>
       </StatusEffect>
+
 	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
+
+      <StatusEffect type="OnUse" target="Character" delay="20" duration="10">
+  <ReduceAffliction identifier="internaldamage" amount="0.1"/>
+
+
+      </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
       </StatusEffect>
@@ -104,42 +167,41 @@
       </StatusEffect>
     </Throwable>
   </Item>
-  
- <Item name="Snailfish Meat" identifier="snailfishmeat" category="Misc" Tags="smallitem,food"
-		description="Usually cooked by someone either really hungry or with no actual cooking skills."
+   <Item name="Snailfish Meat" identifier="snailfishmeat" category="Misc" Tags="smallitem,food"
+		description="Snailfish meat is known for being quite rare and delicious, though eaten raw is going to upset more than your tummy"
         scale="0.5" useinhealthinterface="true" impactsoundtag="impact_soft">
-    <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="194,80,45,55" depth="0.6"/>
+    <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="192,80,45,55" depth="0.6"/>
 	<Body width="36" height="14" radius="14" density="10.7" friction="0.95"/>
 	
 	<Deconstruct time="15">
       <Item identifier="carbon" outcondition="0.26"/>
     </Deconstruct>
-	<Fabricate suitablefabricators="oven" requiredtime="10">
-      <RequiredItem identifier="potato" mincondition="0.2" usecondition="false"/>
-    </Fabricate>
+
     
 	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
       <StatusEffect type="Always" target="This" Condition="-0.008"/>
 	  <StatusEffect type="Always" target="This" Condition="0.004">
         <RequiredItem identifier="fridge" type="Container"/>
       </StatusEffect>
+
+		  
 	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
 	  <RequiredSkill identifier="medical" level="35" />
-      <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
+      <StatusEffect type="OnUse" target="Character" delay="12" duration="20">
 <ReduceAffliction identifier="internaldamage" amount="0.3"/>
       </StatusEffect>
-      <StatusEffect type="OnFailure" target="Character" delay="20" duration="20">
+      <StatusEffect type="OnFailure" target="Character" delay="12" duration="20">
 <ReduceAffliction identifier="internaldamage" amount="0.3"/>
 	  <Affliction identifier="morbusinepoisoning" strength="0.4" />
       </StatusEffect>
+
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
       </StatusEffect>
     </Holdable>
   </Item>
-
   
   
 </Items>
