@@ -213,7 +213,65 @@
     </ItemContainer>
 
   </Item>
-
+<Override>
+<!-- Name: Bandage -->
+  <!-- Description: Basic bandages, useful in the treatment of bleeding wounds and burns. -->
+  <!-- *************************************************************************************************************************************************************************** -->
+<Item name="Bandage" identifier="antibleeding1" aliases="Bandage" category="Equipment" Tags="smallitem,medical" useinhealthinterface="true" cargocontaineridentifier="chemicalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <PreferredContainer primary="medcab" minamount="3" maxamount="4" spawnprobability="1" />
+    <PreferredContainer primary="supplycab" minamount="1" maxamount="1" spawnprobability="0.5" />
+    <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="2" spawnprobability="0.5" />
+    <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25" />
+    <Price baseprice="40" >
+      <Price locationtype="outpost" multiplier="1" minavailable="10" />
+      <Price locationtype="city" multiplier="0.9" minavailable="15" />
+      <Price locationtype="research" multiplier="0.9" minavailable="10" />
+      <Price locationtype="military" multiplier="1" minavailable="15" />
+      <Price locationtype="mine" multiplier="0.75" minavailable="10" />
+    </Price>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="60">
+      <RequiredSkill identifier="medical" level="5" />
+      <RequiredItem identifier="organicfiber" />
+    </Fabricate>
+    <Fabricate suitablefabricators="medicalfabricator,constructionkit" requiredtime="5">
+      <RequiredSkill identifier="medical" level="5" />
+      <RequiredItem identifier="bandage" mincondition="0.0" usecondition="false" />
+<RequiredItem identifier="ethanol" mincondition="0.25" usecondition="true" />
+    </Fabricate>
+    <Fabricate suitablefabricators="medicalfabricator,constructionkit" requiredtime="5">
+      <RequiredSkill identifier="medical" level="5" />
+      <RequiredItem identifier="bandage" mincondition="0.0" usecondition="false" />
+<RequiredItem identifier="vodka" mincondition="0.30" usecondition="true" />
+    </Fabricate>
+    <Deconstruct time="21">
+      <Item identifier="organicfiber" copycondition="true" mincondition="0.1" />
+    </Deconstruct>
+    <SuitableTreatment identifier="bleeding" suitability="9" />
+    <SuitableTreatment identifier="burn" suitability="15" />
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+    <Sprite texture="Medicines.png" sourcerect="310,33,26,42" depth="0.6" origin="0.5,0.5" />
+    <Body width="25" height="40" density="20" />
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0" msg="ItemMsgPickUpSelect">
+      <RequiredSkill identifier="medical" level="25" />
+      <StatusEffect type="OnUse" target="This" Condition="-33.4" disabledeltatime="true" />
+      <StatusEffect type="OnFailure" target="This" Condition="-53.4" disabledeltatime="true" />
+      <StatusEffect tags="medical" type="OnUse" target="This, Limb" duration="1.0">
+        <Sound file="Content/Items/Medical/Bandage1.ogg" type="OnUse" range="500" />
+        <Sound file="Content/Items/Medical/Bandage2.ogg" type="OnUse" range="500" />
+        <ReduceAffliction identifier="bleeding" amount="9" />
+        <ReduceAffliction identifier="burn" amount="15" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Limb, This" duration="1">
+        <Sound file="Content/Items/Medical/Bandage2.ogg" type="OnUse" range="500" />
+        <Sound file="Content/Items/Medical/Bandage1.ogg" type="OnUse" range="500" />
+        <ReduceAffliction identifier="bleeding" amount="6" />
+        <ReduceAffliction identifier="burn" amount="10" />
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+</Override>
+    
 
 
 </Items>
