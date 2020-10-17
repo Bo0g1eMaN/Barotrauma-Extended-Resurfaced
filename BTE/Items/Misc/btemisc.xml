@@ -449,7 +449,7 @@
 <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0" msg="ItemMsgPickUpSelect"/>
   </Item>
   
-  <Item name="Food Information And Health Safety" identifier="docCook2" category="Misc" tags="smallitem,docs" scale="0.5"
+  <Item name="Heath and Safety/Cooking Hazards" aliases="Credits to Vantamantacontracontomantex" identifier="docCook2" category="Misc" tags="smallitem,docs" scale="0.5"
 		description="A piece of paper from a Cook Book.">
 	<Sprite texture="Mods/BTE/Items/Misc/Cookbook.png" sourcerect="532,0,52,73" depth="0.81"/>
     <Body width="42" height="63" density="10.02"/>
