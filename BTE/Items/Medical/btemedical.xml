@@ -75,6 +75,18 @@
     <BrokenSprite texture="Other.png" sourcerect="2,44,34,4" depth="0.55" maxcondition="0"/>
     <Body width="28" height="2" density="9.95"/>
 	
+    <Fabricate suitablefabricators="constructionkit" requiredtime="10">
+      <RequiredItem identifier="cigarette" mincondition="0" usecondition="false" />
+      <RequiredItem identifier="cigarette" mincondition="0" usecondition="false" />
+      <RequiredItem identifier="cigarette" mincondition="0" usecondition="false" />
+    </Fabricate>
+
+    <Fabricate suitablefabricators="constructionkit" requiredtime="12">
+      <RequiredItem identifier="handrolled" mincondition="0" usecondition="false" />
+      <RequiredItem identifier="handrolled" mincondition="0" usecondition="false" />
+      <RequiredItem identifier="handrolled" mincondition="0" usecondition="false" />
+    </Fabricate>
+
 	<RepairTool structurefixamount="0" range="0" barrelpos="-5,0">
       <ParticleEmitter particle="swirlysmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
 	  <sound file="Mods/BTE/Items/Medical/Cigarette.ogg" type="OnUse" range="300" loop="true"/>
