@@ -15,6 +15,7 @@
   <Item file="Mods/BTE/Items/Tools/BTEtools.xml" />
   <Item file="Mods/BTE/Items/Reactor/btereactor.xml" />
   <Item file="Mods/BTE/Items/Pump/btepump.xml" />
+  <Text file="Mods/BTE/Texts/EnglishBTE.xml" />
   <Item file="Mods/BTE/Items/OxygenGenerator/bteoxygengenerator.xml" />
   <Item file="Mods/BTE/Items/OxygenGenerator/btehydrogengenerator.xml" />
   <Item file="Mods/BTE/Items/Misc/btemisc.xml" />
@@ -35,6 +36,8 @@
   <!-- <Character file="Mods/BTE/Characters/Scorpion/Scorpion.xml" />
   <Character file="Mods/BTE/Characters/Scorpion/scorpion2.xml" /> -->
   <Character file="Mods/BTE/Characters/Teleglitch/Teleglitch.xml" />
+  <Character file="Mods/BTE/Characters/Snailfish/Snailfish.xml" />
+<Character file="Mods/BTE/Characters/Teleglitch/Teleglitch.xml" />
   
   
 	

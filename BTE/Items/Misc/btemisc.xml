@@ -636,6 +636,44 @@
 	<Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="1" aimpos="35,-10"/>
   </Item>
 
+  <Override>
+  <Item name="" identifier="duffelbag" category="Equipment" tags="mobilecontainer,despawncontainer" fireproof="true" description="" impactsoundtag="impact_soft" scale="0.4">
+    <Deconstruct time="5"/>
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="6,240,219,109" origin="0.5,0.56" depth="0.56" />
+    <Body width="120" radius="45" density="20" friction="1.0" restitution="0.01" />
+    
+    <ItemContainer capacity="20" keepopenwhenequipped="false" movableframe="true">
+      <Containable items="smallitem" />
+    </ItemContainer>
+<Holdable slots="RightHand,LeftHand" holdpos="0,-80" handle1="0,50" handle2="0,50" aimable="false" msg="ItemMsgPickUpSelect" >
+      <StatusEffect type="Always" target="This" condition="-1.0">
+<Conditional Condition="eq 100" />
+      <SpawnItem identifiers="bodybag" spawnposition="This" />
+      </StatusEffect>
+</Holdable>
+  </Item>
+  </Override>
+
+  <Item name="Body Bag" identifier="bodybag" category="Equipment" tags="mobilecontainer,despawncontainer" fireproof="true" description="Contains the remains of a dead crewmate, and your hopes and dreams" impactsoundtag="impact_soft" scale="0.2">
+    <Deconstruct time="5"/>
+    <Sprite texture="bteconstructionkit.png" sourcerect="1,431,109,87" origin="0.5,0.56" depth="0.56" />
+    <Body width="60" radius="22.5" density="10" friction="1.0" restitution="0.01" />
+    
+    <ItemContainer capacity="6" keepopenwhenequipped="false" movableframe="true">
+      <Containable items="smallitem" />
+    </ItemContainer>
+<Holdable slots="RightHand,LeftHand" holdpos="0,-80" handle1="0,50" handle2="0,50" aimable="false" msg="ItemMsgPickUpSelect" >
+      <StatusEffect type="Always" target="This" condition="-1.0">
+<Conditional Condition="eq 100" />
+      <SpawnItem identifiers="skull" spawnposition="ThisInventory" />
+<SpawnItem identifiers="alienblood" spawnposition="ThisInventory"/>
+      <SpawnItem identifiers="humanflesh" spawnposition="ThisInventory" />
+      <SpawnItem identifiers="humanflesh" spawnposition="ThisInventory" />
+      </StatusEffect>
+</Holdable>
+  </Item>
+
+
   <Item name="Shiv" identifier="shiv" category="Equipment" Tags="smallitem,weapon" cargocontaineridentifier="metalcrate" scale="0.2" impactsoundtag="impact_metal_light"  description="Used to butter bread if your knife breaks">
  
 
@@ -838,7 +876,7 @@
 
   <Item name="Hogtie Set" identifier="hogtieset" alias="naughtynaughty" category="Misc" tags="smallitem,cntnr" equipconfirmationtext="handcuffequipconfirmation">
 	<Deconstruct time="5">
-	  <Item identifier="plastic" outcondition="0.9"/>
+	  <Item identifier="plasticbag" />
 <Item identifier="Copper Coil" copycondition="true"/>
 <Item identifier="Copper Coil" copycondition="true"/>
     </Deconstruct>
@@ -876,7 +914,7 @@
 <Item identifier="fpgacircuit" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator,constructionkit" requiredtime="20">
-      <RequiredSkill identifier="engineering" level="25" />
+      <RequiredSkill identifier="electrical" level="25" />
       <RequiredItem identifier="plastic" />
 <RequiredItem identifier="fpgacircuit" />
       <RequiredItem identifier="rubber" />
@@ -922,6 +960,136 @@
       <Containable items="oxygensource,weldingfuel" />
     </ItemContainer>
   </Item>
+<Override>
+<Item name="" identifier="assistantclothes" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.125"/>
+    <Price baseprice="150">
+      <Price locationtype="outpost" multiplier="1" minavailable="1"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" minavailable="1"/>
+      <Price locationtype="military" multiplier="1" minavailable="1"/>
+      <Price locationtype="mine" multiplier="1" minavailable="1"/>
+    </Price>
+    <Deconstruct time="10"/>
+    <InventoryIcon name="Assistant Clothes Icon" texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="383,274,128,110" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="664,375,212,64" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Assistant Torso" texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Upper Arm" texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Upper Arm" texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Lower Arm" texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Lower Arm" texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Waist" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Thigh" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Thigh" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Leg" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Leg" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Shoe" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Shoe" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <ItemContainer capacity="3" hideitems="true">
+<Containable items="smallitems" />
+<Containable items="explosive" />
+    </ItemContainer>
+  </Item>
+</Override>
 
+<Item name="Assistants Clothes" identifier="deadmansswitch" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Deconstruct time="10">
+      <Item identifier="assistantclothes" />
+<Item identifier="fpgacircuit" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="constructionkit" displayname="deadmansswitch" requiredtime="20">
+      <RequiredSkill identifier="electrical" level="25" />
+      <RequiredItem identifier="assistantclothes" />
+<RequiredItem identifier="fpgacircuit" />
+    </Fabricate>
+    <InventoryIcon name="Assistant Clothes Icon" texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="383,274,128,110" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="664,375,212,64" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Assistant Torso" texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Upper Arm" texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Upper Arm" texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Lower Arm" texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Lower Arm" texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Waist" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Thigh" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Thigh" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Leg" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Leg" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Shoe" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Shoe" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+	<LightComponent LightColor="0.0,0.0,0.0,0.1" range="1" IsOn="false">
+      <StatusEffect type="OnActive" target="Contained">
+		<RequiredItem name="explosive" type="Contained"/>
+		<Use/>
+      </StatusEffect>
+	  <StatusEffect type="OnActive" target="This" Condition="-100">
+		<RequiredItem name="explosive" type="Contained"/>
+      </StatusEffect>
+    </LightComponent>
+	
+	<ItemComponent characterusable="false">
+      <StatusEffect type="OnWearing" target="This,Character" IsOn="true">
+        <Conditional IsDead="true"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="This,Character" IsOn="false">
+        <Conditional IsDead="false"/>
+      </StatusEffect>
+    </ItemComponent>
+    </Wearable>
+    <ItemContainer capacity="3" hideitems="true">
+<Containable items="smallitems" />
+<Containable items="explosive" />
+    </ItemContainer>
+  </Item>
 
+ <Item name="Hot Can" identifier="hotcan" category="Misc" tags="mediumitem,container,foodcan" impacttolerance="3" impactsoundtag="impact_foodcan" scale="0.5"
+		description="A scuffed bomb igniter (or a make shift flare) made by mildly upset crewmates, be careful with this or you might blow yourself up.">
+    <Sprite texture="bteconstructionkit.png" sourcerect="7,260,54,70" depth="0.55"/>
+	<BrokenSprite texture="bteconstructionkit.png" sourcerect="7,327,54,59" depth="0.55" maxcondition="0" fadein="true"/>
+
+    <Body width="26" height="38" density="15" friction="0.85"/>
+		<Deconstruct time="15">      
+      <Item identifier="tin" outcondition="0.45"/>
+	  <Item identifier="coppercoil" outcondition="0.0"/>
+	  <Item identifier="flashpowder" outcondition="0.25"/>
+	  <Item identifier="fpgacircuit"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="constructionkit" requiredtime="25">
+	<Requiredskill identifier="Weapons" level="25"/>
+           <RequiredItem identifier="foodcan"/>
+	  <RequiredItem identifier="coppercoil" mincondition="0.0" usecondition="false"/>
+	  <RequiredItem identifier="flashpowder" mincondition="0.25" usecondition="true"/>
+	  <RequiredItem identifier="fpgacircuit"/>
+    </Fabricate>
+	
+	<ItemComponent>
+      <StatusEffect type="OnImpact" target="This,Contained" delay="1" IsOn="true">
+		<Use/>
+	  </StatusEffect>
+    </ItemComponent>
+	
+	<LightComponent LightColor="1.0,0.9,0.7,1.0" Flicker="0.5" range="100" IsOn="false">
+      <StatusEffect type="OnActive" target="This,Contained" Condition="-1.0">
+        <ParticleEmitter particle="bubbles" particlespersecond="30"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" IsOn="false"/>
+      <sound file="Mods/BTE/Items/Tools/flare.ogg" type="OnActive" range="800" loop="true"/>
+    </LightComponent>
+	
+	<ItemContainer capacity="1" hideitems="true">
+	  <Containable identifier="smallitem"/>
+    </ItemContainer>
+
+    <Throwable slots="RightHand,LeftHand,Any" handle1="0,0" throwforce="3" msg="ItemMsgPickUpSelect"/>
+  </Item>
+  
 </Items>

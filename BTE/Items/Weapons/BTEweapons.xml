@@ -14,8 +14,8 @@
 	  <RequiredItem identifier="incendium" mincondition="0.3"/>
     </Fabricate>
     
-	<InventoryIcon texture="Mods/BTE/Items/InventoryIconAtlas.png" sourcerect="582,321,57,59"/>
-    <Sprite texture="Mods/BTE/Items/Weapons/weapons_new.png" sourcerect="83,-10,126,46" depth="0.55" origin="0.5,0.5"/>
+	<InventoryIcon texture="Mods/BTE/Items/InventoryIconAtlas.png" sourcerect="835,385,64,64"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="309,0,110,28" depth="0.55" origin="0.5,0.5"/>
     <Body width="100" height="24" density="40"/>
 	<LightComponent LightColor="1.0,0.5,0.5,0.4" Flicker="0.4" range="50" powerconsumption="10" IsOn="true"/>
 	
@@ -89,16 +89,28 @@
   </Item>
   
 	
-	 <Item name="Shotgun Slug Shell" identifier="shotgunslug" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.28" impactsoundtag="impact_metal_light">
-    <Price locationtype="Military" buyprice="15"/>
-    <InventoryIcon texture="Mods/BTE/Items/InventoryIconAtlas.png" sourcerect="768,960,64,64" origin="0.5,0.5"/>
+	 <Item name="Shotgun Slug Shell" identifier="shotgunslug" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.28" impactsoundtag="impact_metal_light" description="Leaves a massive bullet hole with one big pellet but at the cost of bleeding">
+    <Price baseprice="50" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.5" sold="false"/>
+      <Price locationtype="city" multiplier="1.25" minavailable="4" />
+      <Price locationtype="research" multiplier="1.25" sold="false"/>
+      <Price locationtype="military" multiplier="0.9" minavailable="12" />
+      <Price locationtype="mine" multiplier="1.25" sold="false"/>
+    </Price>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="832,960,64,64" origin="0.5,0.5"/>
     <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="272,18,36,17" depth="0.55" origin="0.5,0.5"/>
+	<Fabricate suitablefabricators="constructionkit" requiredtime="30">
+      <RequiredSkill identifier="weapons" level="50"/>
+      <RequiredItem identifier="flashpowder" mincondition="0.75" usecondition="true"/>
+	  <RequiredItem identifier="steel" mincondition="0.5" usecondition="true"/>
+    </Fabricate>
     <Body width="35" height="15" density="10"/>
     <Pickable slots="Any" msg="ItemMsgPickUpSelect"/>
     <Projectile characterusable="false" hitscan="true" removeonhit="true">
-      <Attack structuredamage="35" itemdamage="70" stun="1.6" severlimbsprobability="0.3" targetforce="8">
-      <Affliction identifier="bleeding" strength="6" />
-        <Affliction identifier="gunshotwound" strength="35" />
+      <Attack structuredamage="35" itemdamage="70" stun="1.6" severlimbsprobability="0.8" targetforce="8">
+      <Affliction identifier="bleeding" strength="2" />
+        <Affliction identifier="gunshotwound" strength="75" />
+		<Affliction identifier="internaldamage" strength="5" />
         <Affliction identifier="stun" strength="0.2" />
       </Attack>
       <StatusEffect type="OnImpact" target="UseTarget">
@@ -112,17 +124,29 @@
       </StatusEffect>
     </Projectile>
   </Item>
-  <Item name="Shotgun Rubber-Slug Shell" identifier="shotgunrubberslug" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.28" impactsoundtag="impact_metal_light">
-    <Price locationtype="Military" buyprice="10"/>
-    <Price locationtype="City" buyprice="15"/>
+  <Item name="Shotgun Rubber-Slug Shell" identifier="shotgunrubberslug" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.28" impactsoundtag="impact_metal_light" description="Used for croud control or as a cheap alternative to actual rounds">
+    <Price baseprice="25" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.5" minavailable="0"/>
+      <Price locationtype="city" multiplier="1.25" minavailable="4" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1"/>
+      <Price locationtype="military" multiplier="0.9" minavailable="12" />
+      <Price locationtype="mine" multiplier="1.25" sold="false"/>
+    </Price>
     <InventoryIcon texture="Mods/BTE/Items/InventoryIconAtlas.png" sourcerect="832,960,64,64" origin="0.5,0.5"/>
     <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="272,0,36,17" depth="0.55" origin="0.5,0.5"/>
+	<Fabricate suitablefabricators="constructionkit" requiredtime="28">
+      <RequiredSkill identifier="weapons" level="45"/>
+<RequiredSkill identifier="medical" level="15"/>
+      <RequiredItem identifier="flashpowder" mincondition="0.75" usecondition="true"/>
+	  <RequiredItem identifier="rubber" mincondition="0.5" usecondition="true"/>
+    </Fabricate>
     <Body width="35" height="15" density="8"/>
     <Pickable slots="Any" msg="ItemMsgPickUpSelect"/>
     <Projectile characterusable="false" hitscan="true" removeonhit="true">
       <Attack structuredamage="0.1" stun="2.6" targetforce="8">
         <Affliction identifier="stun" strength="6"/>
-		<Affliction identifier="internaldamage" strength="4"/>
+<Affliction identifier="lacerations" strength="0.132"/>
+<Affliction identifier="internaldamage" strength="4"/>
       </Attack>
     </Projectile>
   </Item>
@@ -134,6 +158,7 @@
     <Projectile characterusable="false" hitscan="true" removeonhit="true">
       <Attack structuredamage="8" itemdamage="16" stun="0.25" targetforce="5">
         <Affliction identifier="gunshotwound" strength="10"/>
+<Affliction identifier="bleeding" strength="1.87"/>
         <Affliction identifier="internaldamage" strength="4"/>
       </Attack>
 	  <StatusEffect type="OnImpact" target="UseTarget">
@@ -152,7 +177,7 @@
     <Price locationtype="Military" buyprice="15"/>
     <Price locationtype="City" buyprice="20"/>
     <Price locationtype="Outpost" buyprice="30"/>
-    <Sprite texture="Mods/BTE/Items/Weapons/weapons_new.png" sourcerect="199,-2,38,50" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="236,0,30,36" depth="0.55"/>
     <Body width="10" height="16" density="40"/>
     <Throwable canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3" msg="ItemMsgPickUpSelect"/>
     <ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" 
@@ -172,7 +197,7 @@
       <Item identifier="steel"/>
       <Item identifier="plastic"/>
     </Deconstruct>
-    <Sprite texture="Mods/BTE/Items/Weapons/weapons_new.png" sourcerect="131,93,121,56" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="118,0,117,57" depth="0.55"/>
     <Body width="28" height="20" density="50"/>
     <Holdable slots="Any,RightHand,LeftHand" controlpose="true" aimpos="90,10" handle1="-11,-7"/>
     <RangedWeapon barrelpos="14,6" spread="0" unskilledspread="3" drawhudwhenequipped="true" crosshairscale="0.2">
@@ -197,19 +222,71 @@
     </ItemContainer>
   </Item>											 
   
-  <Item name="Revolver Bull Round" identifier="revolverround2" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" preferredcontainers="locker" Scale="0.32" tags="smallitem,revolverammo" impactsoundtag="impact_metal_light">
-    <Price locationtype="Military" buyprice="20"/>
-    <Price locationtype="City" buyprice="40"/>
-    <Price locationtype="Outpost" buyprice="40"/>
+<Override>
+<Item name="" identifier="revolverround" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,revolverammo" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="revolver" minamount="6" maxamount="6" spawnprobability="1"/>
+    <PreferredContainer primary="secarmcab" minamount="0" maxamount="10" spawnprobability="0.25"/>
+    <PreferredContainer primary="wrecksecarmcab" minamount="0" maxamount="3" spawnprobability="0.25"/>
+    <Price baseprice="30" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.5" minavailable="6" />
+      <Price locationtype="city" multiplier="1.25" minavailable="12" />
+      <Price locationtype="research" multiplier="1.25" minavailable="6" />
+      <Price locationtype="military" multiplier="0.9" minavailable="24" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="12" />
+    </Price>
+<Fabricate suitablefabricators="constructionkit" requiredtime="20">
+<RequiredSkill identifier="weapons" level="40"/>
+      <RequiredItem identifier="flashpowder" mincondition="0.50" usecondition="true"/>
+	  <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,384,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="191,290,21,7" depth="0.55" origin="0.5,0.5" />
+    <Body width="29" height="10" density="40" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Projectile characterusable="false" hitscan="true" removeonhit="true">
+      <Attack structuredamage="5" targetforce="10" itemdamage="20" severlimbsprobability="0.1">
+        <Affliction identifier="bleeding" strength="40" />
+        <Affliction identifier="gunshotwound" strength="30" />
+        <Affliction identifier="stun" strength="0.4" />
+      </Attack>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure"/>
+        <Conditional hastag="eq door"/>
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+      </StatusEffect>
+    </Projectile>
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+</Override>
+
+  <Item name="Revolver Bull Round" description="Gives a bigger bullet hole but at the cost of bleeding identifier" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" preferredcontainers="locker" Scale="0.32" tags="smallitem,revolverammo,revolverround" identifier="revolverround2" impactsoundtag="impact_metal_light">
+    <Price baseprice="25" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.5" minavailable="6" />
+      <Price locationtype="city" multiplier="1.25" minavailable="12" />
+      <Price locationtype="research" multiplier="1.25" minavailable="6" />
+      <Price locationtype="military" multiplier="0.9" minavailable="24" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="12" />
+    </Price>
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,384,64,64"/>
     <Sprite texture="Content/Items/Weapons/weapons.png" sourcerect="1,1,16,9" depth="0.55"/>
     <Body width="29" height="10" density="38"/>
     <Pickable slots="Any" msg="ItemMsgPickUpSelect"/>
+<Fabricate suitablefabricators="constructionkit" requiredtime="18">
+<RequiredSkill identifier="weapons" level="40"/>
+      <RequiredItem identifier="flashpowder" mincondition="0.65" usecondition="true"/>
+	  <RequiredItem identifier="steel" mincondition="0.15" usecondition="true"/>
+    </Fabricate>
+<Fabricate suitablefabricators="constructionkit" requiredtime="25">
+<RequiredSkill identifier="weapons" level="41"/>
+      <RequiredItem identifier="flashpowder" mincondition="0.65" usecondition="true"/>
+	  <RequiredItem identifier="steel" mincondition="0.10" usecondition="true"/>
+<RequiredItem identifier="rubber" mincondition="0.05" usecondition="true"/>
+    </Fabricate>
     <Projectile characterusable="false" hitscan="true" removeonhit="true">
       <Attack structuredamage="30" itemdamage="60" stun="1.5" targetforce="50">
-        <Affliction identifier="bleeding" strength="20" />
-        <Affliction identifier="gunshotwound" strength="30" />
-        <Affliction identifier="stun" strength="0.4" />
+        <Affliction identifier="bleeding" strength="10" />
+        <Affliction identifier="gunshotwound" strength="45" />
+        <Affliction identifier="stun" strength="0.6" />
       </Attack>
 	  <StatusEffect type="OnImpact" target="UseTarget">
         <Conditional entitytype="eq Structure"/>
@@ -222,4 +299,82 @@
       </StatusEffect>	  
     </Projectile>
   </Item>
+<Override>
+ <Item name="Riot Shotgun" identifier="shotgun" category="Equipment" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun" Scale="0.28" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="secarmcab" minamount="0" maxamount="2" spawnprobability="1"/>
+    <PreferredContainer primary="wrecksecarmcab" minamount="0" maxamount="2" spawnprobability="0.33"/>
+    <Price baseprice="500" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.5" sold="false"/>
+      <Price locationtype="city" multiplier="1.25" minavailable="1" />
+      <Price locationtype="research" multiplier="1.25" sold="false"/>
+      <Price locationtype="military" multiplier="0.9" minavailable="3" />
+      <Price locationtype="mine" multiplier="1.25" sold="false"/>
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="steel" />
+      <Item identifier="titaniumaluminiumalloy" />
+    </Deconstruct>
+    <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="0,189,274,92" depth="0.55" origin="0.5,0.5" />
+    <Body width="180" height="45" density="50" />
+    <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="35,-10" aimpos="35,-10" handle1="-15,-6" handle2="26,7" holdangle="-40" msg="ItemMsgPickUpSelect"/>
+    <RangedWeapon barrelpos="45,10" spread="1" unskilledspread="10" combatPriority="80" reload="1.5" drawhudwhenequipped="true" crosshairscale="0.2">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
+      <Sound file="Content/Items/Weapons/ShotgunShot1.ogg" type="OnUse" range="3000" selectionmode="Random" />
+      <Sound file="Content/Items/Weapons/ShotgunShot2.ogg" type="OnUse" range="3000" />
+      <Sound file="Content/Items/Weapons/ShotgunShot3.ogg" type="OnUse" range="3000" />
+      <Sound file="Content/Items/Weapons/ShotgunShot4.ogg" type="OnUse" range="3000" />
+      <StatusEffect type="OnUse">
+        <Explosion range="150.0" force="5" shockwave="false" smoke="false" flash="true" sparks="false" flames="false" underwaterbubble="false" camerashake="6.0" />
+      </StatusEffect>
+      <!-- Cocking sound, delayed by 1.0 seconds. -->
+      <StatusEffect type="OnUse" delay="1.0">
+        <Sound file="Content/Items/Weapons/ShotgunLoad1.ogg" type="OnUse" range="3000" selectionmode="Random"   />
+        <Sound file="Content/Items/Weapons/ShotgunLoad2.ogg" type="OnUse" range="3000" />
+        <Sound file="Content/Items/Weapons/ShotgunLoad3.ogg" type="OnUse" range="3000" />
+      </StatusEffect>
+      <RequiredItems items="shotgunammo" type="Contained" msg="ItemMsgAmmoRequired" />
+      <RequiredSkill identifier="weapons" level="60" />
+    </RangedWeapon>
+    <ItemContainer capacity="4" itempos="27,10" iteminterval="0,-4" hideitems="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="2,121,53,22" />
+      <Containable items="shotgunammo" />
+    </ItemContainer>
+    <aitarget sightrange="3000" soundrange="5000" fadeouttime="5" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+</Override>
+<Override>
+<Item name="Shotgun Buckshot Shell" identifier="shotgunshell" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light" description="Fires multiple pellets which allows for more bleeindg but less general damage">
+    <PreferredContainer primary="shotgun" minamount="3" maxamount="4" spawnprobability="1"/>
+    <PreferredContainer primary="secarmcab" minamount="0" maxamount="10" spawnprobability="0.25"/>
+    <PreferredContainer primary="wrecksecarmcab" minamount="0" maxamount="3" spawnprobability="0.33"/>
+    <Price baseprice="45" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.5" sold="false"/>
+      <Price locationtype="city" multiplier="1.25" minavailable="4" />
+      <Price locationtype="research" multiplier="1.25" sold="false"/>
+      <Price locationtype="military" multiplier="0.9" minavailable="12" />
+      <Price locationtype="mine" multiplier="1.25" sold="false"/>
+    </Price>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="832,960,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="189,299,23,11" depth="0.55" origin="0.5,0.5" />
+    <Body width="23" height="10" density="40" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect"/>
+    <!--When fired, spawns 8 projectiles simultaneously.-->
+    <Projectile characterusable="false" hitscan="true" hitscancount="8" removeonhit="true" spread="15">
+      <Attack structuredamage="0.5" targetforce="4" itemdamage="20" severlimbsprobability="0.2">
+        <Affliction identifier="bleeding" strength="15" />
+        <Affliction identifier="gunshotwound" strength="8" />
+        <Affliction identifier="stun" strength="0.2" />
+      </Attack>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure"/>
+        <Conditional hastag="eq door"/>
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+      </StatusEffect>
+    </Projectile>
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+</Override>
 </Items>
