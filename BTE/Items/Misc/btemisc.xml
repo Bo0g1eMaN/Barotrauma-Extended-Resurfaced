@@ -961,7 +961,7 @@
     </ItemContainer>
   </Item>
 <Override>
-<Item name="" identifier="assistantclothes" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+<Item name="" identifier="assistantclothes" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="Even the assistant needs clothing" scale="0.5" impactsoundtag="impact_soft">
     <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
     <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.125"/>
     <Price baseprice="150">
@@ -998,7 +998,7 @@
   </Item>
 </Override>
 
-<Item name="Assistants Clothes" identifier="deadmansswitch" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+<Item name="Assistants Clothes" identifier="deadmansswitch" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="Even the assistant needs clothing" scale="0.5" impactsoundtag="impact_soft">
     <Deconstruct time="10">
       <Item identifier="assistantclothes" />
 <Item identifier="fpgacircuit" />
@@ -1028,7 +1028,7 @@
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
 	<LightComponent LightColor="0.0,0.0,0.0,0.1" range="1" IsOn="false">
       <StatusEffect type="OnActive" target="Contained">
-		<RequiredItem name="explosive" type="Contained"/>
+		<RequiredItem identifier="explosive" type="Contained"/>
 		<Use/>
       </StatusEffect>
 	  <StatusEffect type="OnActive" target="This" Condition="-100">
