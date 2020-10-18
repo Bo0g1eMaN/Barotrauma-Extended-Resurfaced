@@ -721,10 +721,10 @@ Another note if you are changing seared crawler meat please do be alerted that s
       <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
 <ReduceAffliction identifier="internaldamage" amount="0.4"/>
 <ReduceAffliction identifier="lacerations" amount="0.1"/>
-<ReduceAffliction identifier="burns" amount="0.1"/>
+<ReduceAffliction identifier="burn" amount="0.1"/>
       </StatusEffect>
 	  
-	        <StatusEffect type="OnUse" target="Character" delay="40" duration="5">
+	        <StatusEffect type="OnUse" target="Character" delay="40" duration="20">
 <Affliction identifier="nausea" amount="0.4"/>
 <Affliction identifier="psychosis" amount="0.5"/>
       </StatusEffect>
@@ -1413,7 +1413,7 @@ description="Normally paired with fries, this has been claimed to be a sacred me
         useinhealthinterface="true" scale="0.5" impactsoundtag="impact_foodcan">
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="162,150,39,50" depth="0.6"/>
     <Body width="18" height="14" radius="14" density="13" friction="0.95"/>
-	<Fabricate suitablefabricators="oven" requiredtime="20">
+	<Fabricate suitablefabricators="oven" requiredtime="20" displayname="poisonedthresh">
 	      <RequiredItem identifier="foodcan" usecondition="false"/>
 	      <RequiredItem identifier="threshermeat" mincondition="0.3" usecondition="false"/>
 	  <RequiredItem identifier="crawlermeat1" mincondition="0.3" usecondition="false"/>
