@@ -697,6 +697,9 @@ Another note if you are changing seared crawler meat please do be alerted that s
 <Affliction identifier="organdamage" strength="0.00001"/>
 
       </StatusEffect>
+	        <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+	        </StatusEffect>
     </Holdable>
   </Item>
   
