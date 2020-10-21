@@ -29,7 +29,8 @@
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
  
-   <Item name="Pliers" identifier="pliers" category="Equipment" Tags="smallitem,tool,screwdriver" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
+   <Item name="Pliers" identifier="pliers" category="Equipment" Tags="smallitem,tool,
+" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="reactorcab" minamount="1" maxamount="4" spawnprobability="1"/>
     <PreferredContainer primary="wreckstoragecab" minamount="0" maxamount="3" spawnprobability="0.125"/>
     <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="2" spawnprobability="0.5"/>
@@ -195,6 +196,127 @@
   </Item>
 
   
+<Item name="Nailgun Clip" identifier="nailgunclip" aliases="nailgunnail,nailgun nail, nailgun nails, nail gun nails, nail gun nail," category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem" Scale="0.186">
+    <Sprite texture="Mods/BTE/Items/Tools/tools.png" sourcerect="366,17,202,134" depth="0.55"/>
+    <Body width="10" height="16" radius="5" density="40"/>
+    <Deconstruct time="10">
+	  <Item identifier="copper" mincondition="0.01" copycondition="true" />
+    </Deconstruct>
+<Fabricate suitablefabricators="constructionkit" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="5"/>
+<RequiredSkill identifier="weapons" level="1"/>
+      <RequiredItem identifier="copper" mincondition="1"/>
+    </Fabricate>
+<Fabricate suitablefabricators="constructionkit" requiredtime="12">
+      <RequiredSkill identifier="mechanical" level="5"/>
+<RequiredSkill identifier="weapons" level="1"/>
+      <RequiredItem identifier="copper" mincondition="1"/>
+      <RequiredItem identifier="clawhammer" mincondition="0" usecondition="true"/>
+    </Fabricate>
+
+    <Throwable canBeCombined="true" slots="Any" throwforce="3" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="This" condition="-2.5" disabledeltatime="true">
+        <SpawnItem identifiers="screw" spawnposition="ThisInventory"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" delay="0.2">
+        <Remove/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="Contained" delay="0.1">
+        <Remove/>
+      </StatusEffect>
+</Throwable>
+    <ItemContainer capacity="1" hideitems="true" drawinventory="false" canbeselected="false">
+      <Containable identifiers="screw"/>
+    </ItemContainer>
+
+  </Item>
+
+  <Item name="Nail" identifier="screw" hideinmenus="true" tags="nailgunclip" interactthroughwalls="true" Scale="0.12">
+    <Sprite texture="screw.png" sourcerect="0,0,0,0" depth="0.55"/>
+    <Body width="1" radius="0.1" height="2" density="40"/>
+    <Deconstruct time="0.4">
+	  <Item identifier="copper" outcondition="0.4" />
+    </Deconstruct>
+	<Pickable slots="Any" />
+    <Projectile characterusable="false" hitscan="true" removeonhit="true">
+      <Attack structuredamage="1.0123456789" itemdamage="2" stun="0.12" targetforce="1" severlimbsprobability="0.03">
+        <Affliction identifier="gunshotwound" strength="0.45"/>
+<Affliction identifier="internaldamage" strength="0.1234567"/>
+<Affliction identifier="bleeding" strength="1.21"/>
+        <Affliction identifier="lacerations" strength="3.12345"/>
+      </Attack>
+<Attack structuredamage="1.23" itemdamage="2" stun="0.12" targetforce="1.1234" severlimbsprobability="0.0345678901234">
+<Conditional SpeciesName="Crawler"/>
+<Affliction identifier="lacerations" strength="6.123"/>
+<Affliction identifier="bleeding" strength="1.45321"/>
+        <Affliction identifier="gunshotwound" strength="0.45"/>
+<Affliction identifier="internaldamage" strength="0.1234567"/>
+      </Attack>
+	  <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure"/>
+        <Conditional hastag="eq door"/>
+		<Conditional hastag="eq weapon"/>
+        <ParticleEmitter particle="dustcloud" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.7" scalemax="1.01234"/>
+		 <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.01" scalemax="0.02"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" targettype="UseTarget" targettags="explosiveitem" Condition="-500">
+       <ParticleEmitter particle="dustcloud" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.7" scalemax="1.3"/>
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.01" scalemax="0.02"/>
+      </StatusEffect>
+    </Projectile>
+	
+  </Item>
+
+<Item name="Nailgun" identifier="nailgun" aliases="nail gun" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,weapon" Scale="0.32" >
+    <Deconstruct time="10">
+      <RequiredItem identifier="steel" outcondition="0.2"/>
+      <RequiredItem identifier="aluminium" outcondition="0.2"/>
+<RequiredItem identifier="nailgunclip" outcondition="0.2"/>
+	  <RequiredItem identifier="plastic" outcondition="0.4"/>
+    </Deconstruct>
+<Fabricate suitablefabricators="constructionkit" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="30"/>
+<RequiredSkill identifier="weapons" level="30"/>
+      <RequiredItem identifier="steel" mincondition="0.2"/>
+      <RequiredItem identifier="aluminium" mincondition="0.2"/>
+<RequiredItem identifier="nailgunclip" mincondition="0.2" usecondition="true"/>
+	  <RequiredItem identifier="plastic" mincondition="0.4"/>
+    </Fabricate>
+<Fabricate suitablefabricators="constructionkit" requiredtime="10">
+      <RequiredSkill identifier="mechanical" level="35"/>
+<RequiredSkill identifier="weapons" level="30"/>
+      <RequiredItem identifier="steel" mincondition="0.2"/>
+      <RequiredItem identifier="aluminium" mincondition="0.2"/>
+<RequiredItem identifier="nailgunclip" mincondition="0.2" usecondition="true"/>
+	  <RequiredItem identifier="plastic" mincondition="0.4"/>
+<RequiredItem identifier="clawhammer" mincondition="0.0" usecondition="true"/>
+    </Fabricate>
+    <Sprite texture="Mods/BTE/Items/Tools/tools.png" sourcerect="301,191,168,156" depth="0.55"/>
+    <Body width="28" height="50" radius="15" density="50"/>
+    <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="90,10" handle1="-11,-7" handle2="55,-7"/>
+    <RangedWeapon barrelpos="14,6" spread="0" unskilledspread="4" reload="0.34" drawhudwhenequipped="true" crosshairscale="0.1">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+	  <Sound file="Mods/BTE/Items/Tools/airgun_1.ogg" type="OnUse" range="300"/>
+      <StatusEffect type="OnUse">
+        <Explosion range="12.567" force="2.5" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="4.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained">
+        <RequiredItem identifiers="nailgunclip" type="Contained"/>
+        <Use />
+      </StatusEffect>
+      <RequiredItems identifier="nailgunclip" type="Contained" msg="ItemMsgAmmoRequired"/>
+      <RequiredSkill identifier="weapons" level="17"/>
+<RequiredSkill identifier="mechanical" level="15"/>
+<RequiredSkill identifier="electrical" level="14"/>
+    </RangedWeapon>
+    <ItemContainer capacity="1" hideitems="true">
+      <ContainedStateIndicator texture="Mods/BTE/Items/Tools/Nailgun_Nails_icon.png" sourcerect="0,0,0,0" scale="0.5"/>
+      <Containable identifiers="nailgunclip"/>
+    </ItemContainer>
+  </Item>		
+
+
   <Item name="Hacksaw" identifier="hacksaw" category="Equipment" Tags="mediumitem,tool" cargocontaineridentifier="metalcrate" Scale="0.4" impactsoundtag="impact_metal_light"
     description="Standard issue tool for construction workers.">
     <PreferredContainer primary="engcab" minamount="1" maxamount="2" spawnprobability="0.9"/>
