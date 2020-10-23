@@ -488,6 +488,18 @@
 	<Deconstruct time="10">
       <Item identifier="paperboat"/>
     </Deconstruct>
+    <Fabricate suitablefabricators="op_researchterminal" requiredtime="20">
+      <RequiredSkill identifier="medical" level="35" />
+      <RequiredItem identifier="huskeggs" />
+<RequiredItem identifier="friedthresher" mincondition="0.5" usecondition="false" />
+    </Fabricate>
+	
+    <Fabricate suitablefabricators="op_researchterminal" requiredtime="25">
+      <RequiredSkill identifier="medical" level="35" />
+      <RequiredItem identifier="huskeggs" />
+<RequiredItem identifier="humanflesh" mincondition="0.5" usecondition="false" />
+
+    </Fabricate>
 	<ItemComponent canbeselected="false" drawhudwhenequipped="true">
       <GuiFrame relativesize="0.3,0.8" minsize="392,624" maxsize="581,819" absoluteoffset="0,40" anchor="TopCenter" style="drawHuskBoi"/>
     </ItemComponent>
@@ -913,7 +925,7 @@
       <Item identifier="rubber" />
 <Item identifier="fpgacircuit" />
     </Deconstruct>
-    <Fabricate suitablefabricators="fabricator,constructionkit" requiredtime="20">
+    <Fabricate suitablefabricators="op_terminal,constructionkit" requiredtime="20">
       <RequiredSkill identifier="electrical" level="25" />
       <RequiredItem identifier="plastic" />
 <RequiredItem identifier="fpgacircuit" />

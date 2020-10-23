@@ -68,7 +68,7 @@
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
   
-  <Item name="Claw Hammer" identifier="clawhammer" aliases="hammer" category="Equipment" Tags="mediumitem,tool" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light"
+  <Item name="Claw Hammer" identifier="clawhammer" aliases="hammer" category="Equipment" Tags="smallitem,tool" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light"
     description="Now you can be bob the builder and fix a clown via lobotomy.">
     <PreferredContainer primary="engcab" minamount="1" maxamount="2" spawnprobability="1"/>
     <PreferredContainer primary="wreckstoragecab" minamount="0" maxamount="1" spawnprobability="0.125"/>
@@ -317,7 +317,7 @@
   </Item>		
 
 
-  <Item name="Hacksaw" identifier="hacksaw" category="Equipment" Tags="mediumitem,tool" cargocontaineridentifier="metalcrate" Scale="0.4" impactsoundtag="impact_metal_light"
+  <Item name="Hacksaw" identifier="hacksaw" category="Equipment" Tags="smallitem,tool" cargocontaineridentifier="metalcrate" Scale="0.4" impactsoundtag="impact_metal_light"
     description="Standard issue tool for construction workers.">
     <PreferredContainer primary="engcab" minamount="1" maxamount="2" spawnprobability="0.9"/>
     <PreferredContainer primary="wreckstoragecab" minamount="0" maxamount="1" spawnprobability="0.125"/>
@@ -354,13 +354,13 @@
 
   <Item name="Construction Kit" identifier="constructionkit" tags="container" linkable="true" pickdistance="150" scale="0.5" Description="Drop to use">
   <Price baseprice="50" >
-      <Price locationtype="outpost" multiplier="1" minavailable="10" />
-      <Price locationtype="city" multiplier="0.9" minavailable="15" />
-      <Price locationtype="research" multiplier="1.25" minavailable="10" />
-      <Price locationtype="military" multiplier="1.25" minavailable="10" />
+      <Price locationtype="outpost" multiplier="1" minavailable="1" />
+      <Price locationtype="city" multiplier="0.9" minavailable="2" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="1.25" minavailable="1" />
       <Price locationtype="mine" multiplier="1" minavailable="1" />
     </Price>
-    <Sprite texture="tools.png" depth="0.84" sourcerect="3,326,256,126" origin="0.5,0.5" />
+    <Sprite texture="tools.png" depth="0.55" sourcerect="3,326,256,126" origin="0.5,0.5" />
 	<Body width="145" height="85" density="50" />
     <Deconstruct time="50">
       <Item identifier="steel" />
