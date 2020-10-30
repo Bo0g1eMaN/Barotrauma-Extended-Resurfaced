@@ -127,10 +127,14 @@
 
   
   
- <Item name="testitem" identifier="testitem" category="Equipment" tags="smallitem,mobilecontainer,tool" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy">
-    <PreferredContainer primary="engcab"/>
-    <PreferredContainer primary="wreckstoragecab" minamount="0" maxamount="3" spawnprobability="0.06"/>
-    <PreferredContainer primary="outpostcrewcabinet" minamount="0" maxamount="1" spawnprobability="0.5"/>
+
+  <Item name="Hydrogen Tank" identifier="hydrogentank" category="Equipment,Misc" Tags="smallitem,reactorfuel"
+		cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Price locationtype="Research" buyprice="75"/>
+    <Price locationtype="City" buyprice="75"/>
+    <Price locationtype="Military" buyprice="75"/>
+    <Price locationtype="Outpost" buyprice="70"/>
+
     <Deconstruct time="10">
       <Item identifier="steel" />
     </Deconstruct>

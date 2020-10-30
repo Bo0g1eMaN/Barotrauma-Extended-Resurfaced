@@ -7,8 +7,10 @@
   <UIStyle file="Mods/BTE/UI/BTEstyle.xml" />
   <Text file="Mods/BTE/Texts/EnglishBTE.xml" />
   <Sounds file="Mods/BTE/Sounds/BTEsounds.xml" />
+  <Afflictions file="Mods/BTE/bteafflictions.xml" />
  <!-- <Structure file="Mods/BTE/Map/BTEStructurePrefabs.xml" /> -->
   <!-- <Item file="Mods/BTE/Items/Weapons/BTEexplosives.xml" /> -->
+  <Item file="Mods/BTE/Items/BTEidcard.xml" />
   <Item file="Mods/BTE/Items/Weapons/BTErailgun.xml" />
   <Item file="Mods/BTE/Items/Weapons/BTEweapons.xml" />
   <Item file="Mods/BTE/Items/Tools/fuel.xml" />
@@ -19,10 +21,13 @@
   <Item file="Mods/BTE/Items/OxygenGenerator/bteoxygengenerator.xml" />
   <Item file="Mods/BTE/Items/OxygenGenerator/btehydrogengenerator.xml" />
   <Item file="Mods/BTE/Items/Misc/btemisc.xml" />
+  <Item file="Mods/BTE/Items/Materials/btematerials.xml" />
+  <Item file="Mods/BTE/Items/Materials/bteminerals.xml" />
   <Item file="Mods/BTE/Items/Medical/btefood.xml" />
   <Item file="Mods/BTE/Items/Medical/btemedical.xml" />
+  <Item file="Mods/BTE/Items/Medical/btepoisons.xml" />
   <Item file="Mods/BTE/Items/Jobgear/Officer/Officer_gear.xml" />
-  <Item file="Mods/BTE/Items/Jobgear/Security/btesecurityofficer_gear.xml" />
+  <Item file="Mods/BTE/Items/Jobgear/Security/btesecurity_gear.xml" />
   <Item file="Mods/BTE/Items/Jobgear/Medic/btemedic_gear.xml" />
   <Item file="Mods/BTE/Items/Jobgear/Engineering/utility_gear.xml" />
   <Item file="Mods/BTE/Items/Fabricators/btefabricators.xml" />
