@@ -145,7 +145,7 @@
       <RequiredItem identifier="stabilozine" mincondition="0.25" useconditon="true" />
 <RequiredItem identifier="drawHuskBoi" mincondition="0.0" useconditon="true" />
     </Fabricate>
-    <Deconstruct time="20">
+ <Deconstruct time="20">
       <Item identifier="antibiotics" copycondition="true" mincondition="0.1" />
       <Item identifier="stabilozine" copycondition="true" mincondition="0.1" />
     </Deconstruct>
@@ -174,11 +174,20 @@
         <Conditional huskinfection="eq 100.0" />
         <Affliction identifier="organdamage" amount="3" />
       </StatusEffect>
-      <StatusEffect tags="medical,calyxanide" type="OnUse" target="Character" duration="10.0">
-        <Conditional SpeciesName="husk" />
+      <StatusEffect tags="medical,calyxanide" type="OnUse" target="Character" duration="10.0" comparison="or">
+        <Conditional IsHusk="true" />
         <Affliction identifier="organdamage" amount="4" />
-        </StatusEffect>
- <StatusEffect tags="medical,calyxanide" type="OnImpact" target="Character">
+      </StatusEffect>
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+    <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" launchrotation="-90">
+      <StatusEffect type="OnImpact" target="This" Condition="-100.0" disabledeltatime="true">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect tags="medical,calyxanide" type="OnImpact" target="Character">
         <Conditional huskinfection="lt 100.0" />
         <ReduceAffliction identifier="huskinfection" amount="40" />
       </StatusEffect>
