@@ -366,12 +366,11 @@
       <Item identifier="steel" />
 	  <Item identifier="plastic" />
     </Deconstruct>
- <Holdable selectkey="Select" pickkey="Use" holdpos="0,-80" handle1="-40,30" handle2="40,30" slots="RightHand+LeftHand" msg="ItemMsgDetach" PickingTime="0.001"/>
+ <Holdable selectkey="Select" pickkey="Action" holdpos="0,-80" handle1="-40,30" handle2="40,30" slots="RightHand+LeftHand" hudpriority="10"  msg="ItemMsgPickUpAction"/>
    <Fabricator canbeselected="true" powerconsumption="0" msg="ItemMsgInteractSelect">
       <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
       <sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="1000.0" loop="true"/>
       <poweronsound file="Content/Items/PowerOnLight1.ogg" range="600" loop="false" />
-      <StatusEffect type="InWater" target="This" condition="-0.5" />
     </Fabricator>
 
  <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="Input" allowuioverlap="true"/>
@@ -385,6 +384,7 @@
 
 
 	  </Item>
+
 
   
   
