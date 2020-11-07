@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
 <style>
+<UndoHistoryButton color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
+    <Sprite name="UndoHistoryButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="752,193,40,37" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
+  </UndoHistoryButton>
   <!-- 
   General green highlight color used for elements that are highlighted from code 
   ("thing done successfully" messages, green highlights when placing an item in an inventory slot, full progress bars, etc) 

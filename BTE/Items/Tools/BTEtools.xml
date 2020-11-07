@@ -638,6 +638,10 @@
       <LightComponent LightColor="1.0,0.9,0.7,1.0" Flicker="0.5">
         <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5" />
       </LightComponent>
+<StatusEffect type="OnUse" target="Character">
+        <Conditional HasStatusTag="!equals weldingmaskon" />
+        <Affliction identifier="burn" strength="0.03" />
+</StatusEffect>
     </RepairTool>
     <!-- one welding fuel or oxygen tank can be contained inside the welding tool -->
     <ItemContainer capacity="1" hideitems="false" itempos="8,-35" containedspritedepth="0.56">
@@ -678,7 +682,7 @@
  <Sprite texture="Mods/BTE/Items/Tools/tools2.png" sourcerect="0,0,224,108" depth="0.55" origin="0.5,0.5"/>
     <Body radius="40" width="60" density="40" />
     <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="50,0" handle1="-67,-21" handle2="-25,-25" msg="ItemMsgPickUpSelect" />
-    <RepairTool structurefixamount="-0.125" range="150" barrelpos="45,10" combatpriority="30" repairthroughholes="true">
+    <RepairTool structurefixamount="-2.5" range="150" barrelpos="45,10" combatpriority="30" repairthroughholes="true">
       <RequiredItems items="oxygentank,oxygenitetank,weldingfueltank,incendiumfueltank" type="Contained" msg="ItemMsgOxygenTankRequired" />
       <StatusEffect type="OnUse" targettype="Contained" targets="oxygentank" Condition="-1.0" />
       <StatusEffect type="OnUse" targettype="Contained" targets="oxygenitetank" Condition="-0.5" />
@@ -720,7 +724,11 @@
       <StatusEffect type="OnFailure" targettype="Contained" targets="oxygenitetank" Condition="-1.5" />
       <LightComponent LightColor="0.8,0.7,1.0,1.0" Flicker="0.5">
         <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5" />
-      </LightComponent>      
+      </LightComponent>   
+<StatusEffect type="OnUse" target="Character">
+        <Conditional HasStatusTag="!equals weldingmaskon" />
+        <Affliction identifier="burn" strength="0.035" />
+</StatusEffect>   
     </RepairTool>
     <ItemContainer capacity="1" hideitems="false" itempos="0,-39" containedspritedepth="0.56">
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,92,27" />
