@@ -657,6 +657,7 @@
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
   </Override>
+
   <Override>
   <Item name="" identifier="plasmacutter" category="Equipment" Tags="smallitem,cuttingequipment,tool" cargocontaineridentifier="metalcrate" description="" Scale="0.25" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="divingcab" minamount="1" maxamount="3" spawnprobability="1"/>
@@ -682,13 +683,13 @@
  <Sprite texture="Mods/BTE/Items/Tools/tools2.png" sourcerect="0,0,224,108" depth="0.55" origin="0.5,0.5"/>
     <Body radius="40" width="60" density="40" />
     <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="50,0" handle1="-67,-21" handle2="-25,-25" msg="ItemMsgPickUpSelect" />
-    <RepairTool structurefixamount="-2.5" range="150" barrelpos="45,10" combatpriority="30" repairthroughholes="true">
+    <RepairTool structurefixamount="-1.0" range="150" barrelpos="45,10" combatpriority="30" repairthroughholes="true">
       <RequiredItems items="oxygentank,oxygenitetank,weldingfueltank,incendiumfueltank" type="Contained" msg="ItemMsgOxygenTankRequired" />
       <StatusEffect type="OnUse" targettype="Contained" targets="oxygentank" Condition="-1.0" />
       <StatusEffect type="OnUse" targettype="Contained" targets="oxygenitetank" Condition="-0.5" />
       <StatusEffect type="OnUse" targettype="UseTarget" targets="door,ductblock,aliendoor" Stuck="-20.0" Condition="-3.0" />
       <StatusEffect type="OnUse" targettype="UseTarget" Condition="-3.0" />
-      <StatusEffect type="OnUse" targettype="Limb" severlimbsprobability="0.15">        
+      <StatusEffect type="OnUse" targettype="Limb" severlimbsprobability="0.35">        
         <Affliction identifier="burn" amount="2.9" />
 <Affliction identifier="lacerations" amount="0.0001" />
 <Affliction identifier="bleeding" amount="0.0001" />
@@ -740,6 +741,64 @@
       </RepairTool>
     </Upgrade>
     <aitarget sightrange="2000" soundrange="500" fadeouttime="3" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+</Override>
+
+<Override>
+<Item name="" identifier="flashlight" category="Equipment" Tags="smallitem,tool,provocative" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="divingcab" minamount="1" maxamount="2" spawnprobability="1"/>
+    <PreferredContainer primary="supplycab" minamount="1" maxamount="1" spawnprobability="0.25"/>
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.125"/>
+    <Price baseprice="175" >
+      <Price locationtype="outpost" multiplier="1" minavailable="2" />
+      <Price locationtype="city" multiplier="0.9" minavailable="3" />
+      <Price locationtype="research" multiplier="1.25" minavailable="2" />
+      <Price locationtype="military" multiplier="1.25" minavailable="2" />
+      <Price locationtype="mine" multiplier="1" minavailable="2" />
+    </Price>
+    <Deconstruct time="15">
+      <Item identifier="aluminium" />
+      <Item identifier="lightcomponent" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="mechanical" level="25" />
+      <RequiredItem identifier="aluminium" />
+      <RequiredItem identifier="lightcomponent" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,320,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="293,185,49,18" depth="0.55" origin="0.5,0.5" />
+    <Body width="48" height="15" density="15" />
+    <Holdable slots="Any,RightHand,LeftHand,Head" holdpos="30,-15" aimpos="100,0" handle1="-13,0" handle2="-13,0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnActive" targettype="Contained" Condition="-0.2">
+        <RequiredItem items="batterycell" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" targettype="Contained" Condition="-0.1">
+        <RequiredItem items="fulguriumbatterycell" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" targettype="Contained" Condition="-0.2">
+        <RequiredItem excludedidentifiers="batterycell,fulguriumbatterycell" type="Contained" />
+      </StatusEffect>
+    <AiTarget />
+	<LightComponent LightColor="0.5,0.5,0.5,0.9" Flicker="0.02" range="1000" powerconsumption="10" IsOn="false">
+      <LightTexture texture="Content/Lights/lightcone.png" origin="0.0, 0.5" size="1.0,1.0"/>
+	  <StatusEffect type="OnActive" targettype="Contained" Condition="-0.1"/>
+    </LightComponent>
+	<CustomInterface canbeselected="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.08,0.1" anchor="BottomCenter" absoluteoffset="0,140" style="ItemUI"/>
+      <TickBox text="Toggle">
+        <StatusEffect type="OnUse" targettype="This" IsOn="true"/>
+        <StatusEffect type="OnSecondaryUse" targettype="This" IsOn="false"/>
+      </TickBox>
+    </CustomInterface>
+    </Holdable>
+    <ItemContainer capacity="1" hideitems="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
+      <Containable items="mobilebattery">
+        <StatusEffect type="OnContaining" targettype="This" Voltage="1.0" setvalue="true" />
+      </Containable>
+    </ItemContainer>
+    <AiTarget sightrange="3000" />
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
 </Override>
