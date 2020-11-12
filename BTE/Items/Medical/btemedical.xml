@@ -766,10 +766,18 @@
 	<Sprite texture="Mods/BTE/Items/Medical/Useables.png" sourcerect="263,0,235,108" depth="0.6" origin="0.5,0.5"/>
     <Body width="225" height="95" density="11"/>
 	
-	<Price locationtype="Military" buyprice="70"/>
-    <Price locationtype="Research" buyprice="60"/>
-    <Price locationtype="City" buyprice="80"/>
-    <Price locationtype="Outpost" buyprice="90"/>
+	 <PreferredContainer primary="medcab" minamount="2" maxamount="3" />
+    <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="2" spawnprobability="0.5" />
+    <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25" />
+	
+		 <Price baseprice="40" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1" minavailable="3" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="0.9" minavailable="8" />
+      <Price locationtype="military" multiplier="1.1" sold="false"/>
+      <Price locationtype="mine" multiplier="1.1" sold="false"/>
+    </Price>
+
 	
 	<Deconstruct time="15">
       <Item identifier="organicfiber" outcondition="0.5"/>
@@ -868,7 +876,10 @@
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,768,64,64"/>
     <Sprite texture="Content/Items/Materials/CraftingElements2.png" sourcerect="0,0,76,140" depth="0.6" origin="0.5,0.5"/>
     <Body width="75" height="140" density="15"/>
-	
+	 <PreferredContainer primary="toxcab" minamount="2" maxamount="3" />
+    <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="2" spawnprobability="0.5" />
+    <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25" />
+	 
 	 <Price baseprice="40" soldeverywhere="false">
       <Price locationtype="outpost" multiplier="1" minavailable="3" />
       <Price locationtype="city" multiplier="0.9" minavailable="6" />
@@ -911,6 +922,9 @@
       <Price locationtype="mine" multiplier="1.1" sold="false"/>
     </Price>
 
+ <PreferredContainer primary="medcab" minamount="2" maxamount="3" />
+    <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="2" spawnprobability="0.5" />
+    <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25" />
 <SuitableTreatment identifier="sickness" suitability="100"/>
 <SuitableTreatment identifier="toxin" suitability="-100"/>
 <SuitableTreatment identifier="husk" suitability="55"/>
@@ -1010,7 +1024,7 @@
     </Projectile>
   </Item>
   
-   <Item name="Thrombolysis" identifier="thrombolysis" category="Material" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="Used to fight of toxins in the body" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+   <Item name="Thrombolysis" identifier="thrombolysis" category="Material" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="Used to fight to destroy blood clots" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <PreferredContainer primary="medcab" spawnprobability="1" />
     <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="1" spawnprobability="0.5" />
