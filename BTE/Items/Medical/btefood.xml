@@ -728,7 +728,7 @@ Another note if you are changing seared crawler meat please do be alerted that s
       </StatusEffect>
 	  
 	        <StatusEffect type="OnUse" target="Character" delay="40" duration="20">
-<Affliction identifier="nausea" amount="0.4"/>
+<Affliction identifier="nausea" amount="2.4"/>
 <Affliction identifier="psychosis" amount="0.5"/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
@@ -751,10 +751,7 @@ Another note if you are changing seared crawler meat please do be alerted that s
       <RequiredItem identifier="crawlermeat1" mincondition="0.3" usecondition="false"/>
 <RequiredItem identifier="fryingpan" mincondition="0.0" usecondition="true"/>
     </Fabricate>
-	<Fabricate suitablefabricators="oven" requiredtime="20">
-      <RequiredItem identifier="crawlermeat2" mincondition="0.3" usecondition="false"/>
-<RequiredItem identifier="fryingpan" mincondition="0.0" usecondition="true"/>
-    </Fabricate>
+
     
 	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
       <StatusEffect type="Always" target="This" Condition="-0.014"/>
@@ -788,10 +785,7 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	  <RequiredItem identifier="flour" mincondition="0.75" usecondition="true"/>
 	  
     </Fabricate>
-	<Fabricate suitablefabricators="oven" requiredtime="30">
-      <RequiredItem identifier="crawlermeat2" count="2" mincondition="0.4" usecondition="false"/>
-	  	  <RequiredItem identifier="flour" mincondition="0.75" usecondition="true"/>
-    </Fabricate>
+
     
 	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
       <StatusEffect type="Always" target="This" Condition="-0.014"/>
@@ -1173,6 +1167,8 @@ description="Normally paired with fries, this has been claimed to be a sacred me
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
   <ReduceAffliction identifier="internaldamage" amount="0.4"/>
+        <Affliction identifier="organdamage" amount="0.01"/>
+		<Affliction identifier="leadpoisoning" amount="0.1"/>
 
 
 
@@ -1195,9 +1191,9 @@ description="Normally paired with fries, this has been claimed to be a sacred me
 	  <RequiredItem identifier="whiskey" mincondition="0.75" usecondition="true"/>
 		      </Fabricate>
 			  	<Fabricate suitablefabricators="oven" requiredtime="21">
-	      <RequiredItem identifier="foodcan" usecondition="false"/>
+	      <RequiredItem identifier="foodcanlead" usecondition="false"/>
 	      <RequiredItem identifier="threshermeat" mincondition="0.3" usecondition="false"/>
-	  <RequiredItem identifier="crawlermeat2" mincondition="0.3" usecondition="false"/>
+	  <RequiredItem identifier="crawlermeat1" mincondition="0.3" usecondition="false"/>
 	  <RequiredItem identifier="whiskey" mincondition="0.76" usecondition="true"/>
 		      </Fabricate>
 
@@ -1424,9 +1420,9 @@ description="Normally paired with fries, this has been claimed to be a sacred me
 	  	  <RequiredItem identifier="snailfishmeat" mincondition="0.0" usecondition="false"/>
 		      </Fabricate>
 			  	<Fabricate suitablefabricators="oven" requiredtime="21" displayname="poisonedthresh">
-	      <RequiredItem identifier="foodcan" usecondition="false"/>
+	      <RequiredItem identifier="foodcanlead" usecondition="false"/>
 	      <RequiredItem identifier="threshermeat" mincondition="0.3" usecondition="false"/>
-	  <RequiredItem identifier="crawlermeat2" mincondition="0.3" usecondition="false"/>
+	  <RequiredItem identifier="crawlermeat1" mincondition="0.3" usecondition="false"/>
 	  <RequiredItem identifier="whiskey" mincondition="0.76" usecondition="true"/>
 	  	  	  <RequiredItem identifier="snailfishmeat" mincondition="0.0" usecondition="false"/>
 		      </Fabricate>

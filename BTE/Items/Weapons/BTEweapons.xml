@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
 	  <Item name="Thermoblade" identifier="thermoblade" category="Equipment" Tags="smallitem,weapon" cargocontaineridentifier="metalcrate" scale="0.4" useinhealthinterface="true" impactsoundtag="impact_maghit">
-    <Price locationtype="Research" buyprice="80"/>
-    <Price locationtype="Military" buyprice="60"/>
-    
+
+        <Fabricate suitablefabricators="op_researchterminal" requiredtime="30">
+      <RequiredSkill identifier="medical" level="40" />
+      <RequiredItem identifier="divingknife" />
+<RequiredItem identifier="incendium" />
+    </Fabricate>
+
 	<Deconstruct time="10">
       <Item identifier="divingknife"/>
 	  <Item identifier="incendium" outcondition="0.3"/>
@@ -11,7 +15,7 @@
 	<Fabricate suitablefabricators="fabricator" requiredtime="10">
       <RequiredSkill identifier="weapons" level="30"/>
       <RequiredItem identifier="divingknife"/>
-	  <RequiredItem identifier="incendium" mincondition="0.3"/>
+	  <RequiredItem identifier="incendium" mincondition="0.3" usecondition="true"/>
     </Fabricate>
     
 	<InventoryIcon texture="Mods/BTE/Items/InventoryIconAtlas.png" sourcerect="835,385,64,64"/>
@@ -20,36 +24,7 @@
 	<LightComponent LightColor="1.0,0.5,0.5,0.4" Flicker="0.4" range="50" powerconsumption="10" IsOn="true"/>
 	
 	<ItemComponent>
-      <StatusEffect type="OnUse" target="Limb">
-        <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" type="OnUse" range="500" selectionmode="Random"/>
-		<Sound file="Content/Sounds/Damage/LimbSlash2.ogg" type="OnUse" range="500"/>
-		<Sound file="Content/Sounds/Damage/LimbSlash3.ogg" type="OnUse" range="500"/>
-		<Sound file="Content/Sounds/Damage/LimbSlash4.ogg" type="OnUse" range="500"/>
-		<Sound file="Content/Sounds/Damage/LimbSlash5.ogg" type="OnUse" range="500"/>
-		<Sound file="Content/Sounds/Damage/LimbSlash6.ogg" type="OnUse" range="500"/>
-		<Sound file="Mods/BTE/Items/Weapons/Stabbing.ogg" type="OnUse" range="500"/>
-         <Affliction identifier="lacerations" strength="10" />
-        <Affliction identifier="bleeding" strength="10" />
-        <Affliction identifier="stun" strength="0.2" />
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Contained" Condition="-20" disabledeltatime="true">
-        <RequiredItem identifier="mobilebattery" type="Contained"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Limb">
-        <sound file="Mods/BTE/Items/Weapons/Burn.ogg" range="500"/>
-        <RequiredItem identifier="mobilebattery" type="Contained"/>
-        <Explosion range="100" force="0.1" shockwave="false" sparks="false" flames="false" smoke="false" underwaterbubble="false" camerashake="5.0"/>
-		<Affliction identifier="burn" strength="6"/>
-		<ReduceAffliction identifier="bleeding" strength="24"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Limb">
-        <RequiredItem identifier="hybridbatterycell" type="Contained"/>
-		<Affliction identifier="burn" strength="4"/>
-		<ReduceAffliction identifier="bleeding" strength="6"/>
-      </StatusEffect>
-    </ItemComponent>
-	
-	<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-5,-5" holdangle="30" reload="0.75" range="50" msg="ItemMsgPickUpSelect">
+<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-5,-5" holdangle="30" reload="0.75" range="50" msg="ItemMsgPickUpSelect">
       <Attack itemdamage="4" stun="0.2">
          <Affliction identifier="lacerations" strength="10" />
         <Affliction identifier="stun" strength="0.2" />
@@ -86,7 +61,135 @@
         <StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true"/>
       </Containable>
     </ItemContainer>
+<SuitableTreatment identifier="masochism" suitability="99"/>
+<SuitableTreatment identifier="bleeding" suitability="-100"/>
+<SuitableTreatment identifier="lacerations" suitability="-100"/>
+<SuitableTreatment identifier="burns" suitability="-100"/>
+      <StatusEffect type="OnUse" target="Limb">
+        <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" type="OnUse" range="500" selectionmode="Random"/>
+		<Sound file="Content/Sounds/Damage/LimbSlash2.ogg" type="OnUse" range="500"/>
+		<Sound file="Content/Sounds/Damage/LimbSlash3.ogg" type="OnUse" range="500"/>
+		<Sound file="Content/Sounds/Damage/LimbSlash4.ogg" type="OnUse" range="500"/>
+		<Sound file="Content/Sounds/Damage/LimbSlash5.ogg" type="OnUse" range="500"/>
+		<Sound file="Content/Sounds/Damage/LimbSlash6.ogg" type="OnUse" range="500"/>
+		<Sound file="Mods/BTE/Items/Weapons/Stabbing.ogg" type="OnUse" range="500"/>
+         <Affliction identifier="lacerations" strength="10" />
+        <Affliction identifier="bleeding" strength="10" />
+        <Affliction identifier="stun" strength="0.2" />
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained" Condition="-20" disabledeltatime="true">
+        <RequiredItem identifier="mobilebattery" type="Contained"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Limb">
+        <sound file="Mods/BTE/Items/Weapons/Burn.ogg" range="500"/>
+        <RequiredItem identifier="mobilebattery" type="Contained"/>
+        <Explosion range="100" force="0.1" shockwave="false" sparks="false" flames="false" smoke="false" underwaterbubble="false" camerashake="5.0"/>
+		<Affliction identifier="burn" strength="6"/>
+		<ReduceAffliction identifier="bleeding" strength="24"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Limb">
+        <RequiredItem identifier="hybridbatterycell" type="Contained"/>
+		<Affliction identifier="burn" strength="4"/>
+		<ReduceAffliction identifier="bleeding" strength="6"/>
+      </StatusEffect>
+	  	  <StatusEffect type="OnUse" target="Limb">
+	  				  <Conditional masochism="gt 6" />
+		<ReduceAffliction identifier="masochism" strength="6"/>
+		      </StatusEffect>
+    </ItemComponent>
+  </Item>	
+
+<Override>
+<Item name="" identifier="divingknife" category="Equipment" Tags="smallitem,weapon" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" useinhealthinterface="true">
+    <PreferredContainer primary="armcab" minamount="0" maxamount="3" spawnprobability="1"/>
+    <PreferredContainer secondary="wreckarmcab" minamount="0" maxamount="2" spawnprobability="0.25"/>
+    <Price baseprice="30" >
+      <Price locationtype="outpost" multiplier="1.5" minavailable="6" />
+      <Price locationtype="city" multiplier="1.25" minavailable="8" />
+      <Price locationtype="research" multiplier="1.25" minavailable="2" />
+      <Price locationtype="military" multiplier="0.9" minavailable="15" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="2" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="iron" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="weapons" level="30" />
+      <RequiredItem identifier="iron" />
+    </Fabricate>
+<SuitableTreatment identifier="masochism" suitability="98"/>
+<SuitableTreatment identifier="bleeding" suitability="-100"/>
+<SuitableTreatment identifier="lacerations" suitability="-100"/>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="835,385,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="183,203,66,16" depth="0.55" origin="0.5,0.5" />
+    <Body width="65" height="15" density="50" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-5,-5" holdangle="30" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect">
+      <Attack targetimpulse="2" severlimbsprobability="0.1" itemdamage="10">
+        <Affliction identifier="lacerations" strength="10" />
+        <Affliction identifier="bleeding" strength="10" />
+        <Affliction identifier="stun" strength="0.2" />
+        <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+      </Attack>
+    </MeleeWeapon>
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Limb">
+        <Affliction identifier="lacerations" strength="10" />
+        <Affliction identifier="bleeding" strength="10" />
+        <Affliction identifier="stun" strength="0.2" />
+
+      </StatusEffect>
+	  	  <StatusEffect type="OnUse" target="Limb">
+	  				  <Conditional masochism="gt 6" />
+		<ReduceAffliction identifier="masochism" strength="6"/>
+		      </StatusEffect>
+    </ItemComponent>
+    <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
+  </Override>
+
+<Item name="Harpoon Gun Mark 2" identifier="harpoongunmark2" category="Equipment" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun" Scale="0.5" description="Fires harpoons at a faster rate also easier to fire accurately" impactsoundtag="impact_metal_light">
+
+    <Deconstruct time="10">
+      <Item identifier="steel" />
+      <Item identifier="plastic" />
+<Item identifier="fpgacircuit" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="op_researchterminal" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="45" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="plastic" />
+<Item identifier="fpgacircuit" />
+    </Fabricate>
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,203,181,39" depth="0.55" origin="0.5,0.5" />
+    <Body width="180" height="30" density="50" />
+    <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="35,-10" aimpos="35,-10" handle1="-15,-6" handle2="26,7" holdangle="-40" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon barrelpos="49,10" spread="1" unskilledspread="8" combatPriority="61" reload="0.73123" drawhudwhenequipped="true" crosshairscale="0.2">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Sound file="Content/Items/Weapons/HarpoonGun1.ogg" type="OnUse" />
+      <Sound file="Content/Items/Weapons/HarpoonGun2.ogg" type="OnUse" />
+      <Sound file="Content/Items/Weapons/HarpoonGun3.ogg" type="OnUse" />
+      <StatusEffect type="OnUse">
+        <Explosion range="150.0" force="5" shockwave="false" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" camerashake="6.0" />
+      </StatusEffect>
+      <RequiredItems items="harpoonammo" type="Contained" msg="ItemMsgSpearRequired" />
+      <RequiredSkill identifier="weapons" level="21" />
+    </RangedWeapon>
+    <ItemContainer itempos="27,10" iteminterval="0,-4" hideitems="false" capacity="6">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,0,121,30" />
+      <Containable items="harpoonammo" />
+    </ItemContainer>
+    <aitarget sightrange="0" soundrange="500" fadeouttime="2" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+
+	
   
 	
 	 <Item name="Shotgun Slug Shell" identifier="shotgunslug" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.28" impactsoundtag="impact_metal_light" description="Leaves a massive bullet hole with one big pellet but at the cost of bleeding">

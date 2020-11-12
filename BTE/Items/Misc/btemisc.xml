@@ -753,7 +753,7 @@
       <StatusEffect type="OnFire" target="This" Condition="-25" />
       <StatusEffect type="Always" target="This,Character,Limb">
         <Conditional Condition="eq 50" />
- <sound file="Mods/BTE/Sounds/Impact/GlassBreak.ogg" />
+ <sound file="Mods/BTE/Sounds/Impact/GlassBreak.ogg" range="500" />
 
         <Explosion range="23.487" stun="5" structuredamage="5" itemdamage="500" force="0.1" flames="true" severlimbsprobability="0.1" decal="explosion" decalsize="0.1">
           <Affliction identifier="explosiondamage" strength="7" />

@@ -26,10 +26,12 @@
   <Item file="Mods/BTE/Items/CreatureLoot/btecreatureloot.xml" />
   <Item file="Mods/BTE/Items/Containers/btecontainers.xml" />
   <Character file="Mods/BTE/Characters/Teleglitch/Teleglitch.xml" />
+  <Character file="Mods/BTE/Characters/Snailfish/snailfish.xml" />
   <None file="Mods/BTE/DefaultWorkshopPreviewImage.png" />
   <None file="Mods/BTE/Items/connectionpanel.png" />
   <None file="Mods/BTE/Items/connector.png" />
   <Missions file="Mods/BTE/Missions.xml" />
+  <Afflictions file="Mods/BTE/BTEAfflictions.xml" />
   <None file="Mods/BTE/Items/InventoryIconAtlas.png" />
   <None file="Mods/BTE/Items/InventoryIconAtlas2.png" />
   <None file="Mods/BTE/Items/MachineInterface.png" />

@@ -29,6 +29,12 @@
       <StatusEffect type="OnUse" target="Character" delay="3" duration="5">
   <ReduceAffliction identifier="internaldamage" amount="0.1"/>
       </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="5" duration="20">
+		<Affliction identifier="tryposluginfestation" probability="0.5" amount="2.5"/>
+        <Affliction identifier="organdamage" probability="0.5" amount="0.2"/>
+				<Affliction identifier="foodpoisoning2" probability="0.2" amount="2.5"/>
+						<Affliction identifier="foodpoisoning" probability="0.5" amount="2.5"/>
+      </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
       </StatusEffect>
@@ -67,6 +73,7 @@
       </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="5" duration="20">
 <Affliction identifier="psychosis" strength="1" />
+<Affliction identifier="nausea" strength="4.3" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -75,78 +82,7 @@
   </Item>
 
   
-  <Item name="Crawler Meat" identifier="crawlermeat2" category="Material"
-        cargocontaineridentifier="chemicalcrate" impactsoundtag="impact_fleshhit"
-        description="A chunk of raw crawler meat. It stinks like this so better find an oven." 
-        Tags="smallitem,food" useinhealthinterface="true" scale="0.5">
-
-<Price baseprice="11" soldeverywhere="false">
-      <Price locationtype="outpost" multiplier="1" minavailable="1" />
-      <Price locationtype="city" sold="false" />
-      <Price locationtype="research" multiplier="1.1" minavailable="1" />
-      <Price locationtype="military" sold="false" />
-      <Price locationtype="mine" multiplier="1" minavailable="0" />
-    </Price>
-
-    <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="128,0,38,36" depth="0.6" origin="0.5,0.5"/>
-    <Body width="18" height="16" radius="16" density="13"/>
-    
-	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
-      <StatusEffect type="Always" target="This" Condition="-0.017"/>
-	  <StatusEffect type="Always" target="This" Condition="0.017">
-        <RequiredItem identifier="foodcan" type="Container"/>
-      </StatusEffect>
-	  	  	  	  
-	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
-	  </StatusEffect>
-      <StatusEffect type="OnUse" target="Character" delay="3" duration="5">
-  <ReduceAffliction identifier="internaldamage" amount="0.1"/>
-
-
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character" delay="15" duration="7">
-
-<Affliction identifier="organdamage" strength="0.4" />
-<Affliction identifier="invertcontrols" strength="0.4" />
-
-      </StatusEffect>
-
-      <StatusEffect type="OnUse" target="Character" delay="22" duration="3">
-
-<Affliction identifier="oxygenlow" strength="0.4" />
-
-      </StatusEffect>
-
-      <StatusEffect type="OnUse" target="Character" delay="35" duration="8">
-
-<Affliction identifier="oxygenlow" strength="0.4" />
-<Affliction identifier="stun" strength="0.43" />
-
-      </StatusEffect>
-
-
-      <StatusEffect type="OnUse" target="Character" delay="60" duration="7">
-
-<Affliction identifier="drunk" strength="0.4" />
-
-
-      </StatusEffect>
-	  
-	        <StatusEffect type="OnUse" target="Character" delay="67" duration="25">
-
-  <ReduceAffliction identifier="invertcontrols" amount="7"/>
-
-
-      </StatusEffect>
-	  
-
-
-      <StatusEffect type="OnBroken" target="This">
-        <Remove/>
-      </StatusEffect>
-    </Holdable>
-  </Item>
+ 
   
   <Item name="Thresher Meat" identifier="threshermeat" category="Material"
         cargocontaineridentifier="chemicalcrate" impactsoundtag="impact_fleshhit"

@@ -119,6 +119,7 @@
 	  <StatusEffect type="OnBroken" target="Hull" oxygen="-15000"/>
     </Holdable>
   </Item>
+  </Items>
 
 
 
@@ -127,72 +128,4 @@
 
   
   
-
-  <Item name="Hydrogen Tank" identifier="hydrogentank" category="Equipment,Misc" Tags="smallitem,reactorfuel"
-		cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
-    <Price locationtype="Research" buyprice="75"/>
-    <Price locationtype="City" buyprice="75"/>
-    <Price locationtype="Military" buyprice="75"/>
-    <Price locationtype="Outpost" buyprice="70"/>
-
-    <Deconstruct time="10">
-      <Item identifier="steel" />
-    </Deconstruct>
-    <Fabricate suitablefabricators="fabricator" requiredtime="20">
-      <RequiredSkill identifier="mechanical" level="20" />
-      <Item identifier="steel" />
-    </Fabricate>
-    <Price baseprice="25" >
-      <Price locationtype="outpost" multiplier="1" minavailable="4" />
-      <Price locationtype="city" multiplier="0.9" minavailable="6" />
-      <Price locationtype="research" multiplier="1.25" minavailable="1" />
-      <Price locationtype="military" multiplier="1.25" minavailable="1" />
-      <Price locationtype="mine" multiplier="1.25" minavailable="8" />
-    </Price>
-	<CustomInterface canbeselected="false" drawhudwhenequipped="true">
-      <GuiFrame relativesize="0.08,0.1" anchor="BottomCenter" absoluteoffset="0,140" style="ItemUI"/>
-      <TickBox text="Toggle">
-        <StatusEffect tags="clown" type="OnUse" targettype="Character" HideFace="true" duration="15" IsOn="true" />
-        <StatusEffect tags="flown" type="OnSecondaryUse" targettype="Character" HideFace="true" duration="15" IsOn="false"/>
-      </TickBox>
-    </CustomInterface>
-
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,256,64,64" origin="0.5,0.6" />
-    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="314,1,94,74" origin="0.5,0.5" />
-    <!--<Sprite texture="Content/Items/Containers/crates.png" depth="0.54" sourcerect="1,0,68,39"/>-->
-    <Body width="90" height="60" density="20" />
-
-    <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="0,10" handle2="-15,10" holdangle="90" reload="1" range="50" combatpriority="5" msg="ItemMsgPickUpSelect">
-	
-	        <StatusEffect type="OnUse" target="Character">
-        <Conditional HasStatusTag="clown" />
-      <Attack structuredamage="10" itemdamage="5" stun="0.6" targetimpulse="2">
-        <Affliction identifier="blunttrauma" strength="2" />
-		      </Attack>
-
-      </StatusEffect>
-
-
-
-
-	        <StatusEffect type="OnSecondaryUse" target="Character">
-        <Conditional HasStatusTag="flown" />
-      <Attack structuredamage="10" itemdamage="5" stun="0.6" targetimpulse="2">
-        <Affliction identifier="blunttrauma" strength="122" />
-		      </Attack>
-
-      </StatusEffect>
-
-
-
-
-    <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true">
-      <Containable items="smallitem" excludeditems="toolbox" />
-    </ItemContainer>
-    <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
-    <Upgrade gameversion="0.10.0.0" scale="0.5" />
-				  	      </MeleeWeapon>
-  </Item>
-  
-
-</Items>
+ 
