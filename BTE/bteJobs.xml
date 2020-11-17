@@ -185,7 +185,7 @@
     <ItemSet>
       <Item identifier="idcard_officer" equip="true" showpreview="false"/>
       <Item identifier="officersberet" equip="true"/>
-      <Item identifier="administratorclothes" equip="true" outfit="true"/>
+      <Item identifier="commandersjacket" equip="true" outfit="true"/>
       <Item identifier="headset" equip="true" showpreview="false">
         <Item identifier="batterycell" showpreview="false"/>
       </Item>
