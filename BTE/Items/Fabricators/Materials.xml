@@ -44,7 +44,7 @@
       </StatusEffect>
     </Holdable>
   </Item>
-<Items>
+
 
 <Item name="" identifier="caliche" category="Material" Tags="smallitem,ore" canbepicked="true" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="locker"/>
