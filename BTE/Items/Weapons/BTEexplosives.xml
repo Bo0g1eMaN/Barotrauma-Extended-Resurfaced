@@ -26,8 +26,7 @@
       <sound file="Content/Items/Weapons/StunGrenade.ogg" type="OnUse" range="7500"/>
       <StatusEffect type="OnUse" target="This" Condition="-100">
         <Explosion range="350" structuredamage="60" itemdamage="60" stun="5" force="20" decal="explosion" decalsize="0.5">
-		  <Affliction identifier="damagehead" strength="40"/>
-		  <Affliction identifier="damagechest" strength="30"/>	
+		  <Affliction identifier="explosivedamage" strength="70"/>	
           <Affliction identifier="internaldamage" strength="25"/>
         </Explosion>
         <Remove />
@@ -56,8 +55,7 @@
       <StatusEffect type="OnUse" target="This" Condition="-100">
         <Explosion range="450" structuredamage="30" itemdamage="30" stun="4" force="16" decal="explosion" decalsize="0.5">
           <Affliction identifier="burn" strength="10"/>
-		  <Affliction identifier="damagehead" strength="60"/>
-		  <Affliction identifier="damagechest" strength="50"/>
+		  <Affliction identifier="explosivedamage" strength="110"/>
           <Affliction identifier="internaldamage" strength="40"/>
         </Explosion>
         <Remove />
@@ -93,8 +91,7 @@
       <StatusEffect type="OnUse" target="This" Condition="-100">
         <Explosion range="525" structuredamage="200" itemdamage="200" stun="8" force="18" severlimbsprobability="0.4" decal="explosion" decalsize="0.5">
           <Affliction identifier="burn" strength="50"/>
-		  <Affliction identifier="damagehead" strength="120"/>
-		  <Affliction identifier="damagechest" strength="110"/>
+		  <Affliction identifier="explosivedamage" strength="230"/>
           <Affliction identifier="internaldamage" strength="100"/>
         </Explosion>
         <Remove />
@@ -133,8 +130,7 @@
       <StatusEffect type="OnBroken" target="This">
         <Explosion range="550" structuredamage="400" itemdamage="400" stun="10" force="20" severlimbsprobability="0.6" decal="explosion" decalsize="0.5">
           <Affliction identifier="burn" strength="75"/>
-		  <Affliction identifier="damagehead" strength="170"/>
-		  <Affliction identifier="damagechest" strength="160"/>
+		  <Affliction identifier="explosivedamage" strength="330"/>
           <Affliction identifier="internaldamage" strength="150"/>
         </Explosion>
         <Remove />
@@ -163,8 +159,7 @@
       <StatusEffect type="OnBroken" target="This">
         <Explosion range="650" structuredamage="600" itemdamage="600" stun="12" force="22" severlimbsprobability="0.8" decal="explosion" decalsize="0.5">
           <Affliction identifier="burn" strength="100"/>
-		  <Affliction identifier="damagehead" strength="270"/>
-		  <Affliction identifier="damagechest" strength="260"/>
+		  <Affliction identifier="explosivedamage" strength="530"/>
           <Affliction identifier="internaldamage" strength="250"/>
         </Explosion>
         <Remove />
@@ -194,8 +189,7 @@
       <StatusEffect type="OnBroken" target="This">
         <Explosion range="150" structuredamage="1500" itemdamage="1500" stun="12" force="22" severlimbsprobability="0.2" decal="explosion" decalsize="0.5">
           <Affliction identifier="burn" strength="100"/>
-		  <Affliction identifier="damagehead" strength="270"/>
-		  <Affliction identifier="damagechest" strength="260"/>
+		  <Affliction identifier="explosivedamage" strength="530"/>
           <Affliction identifier="internaldamage" strength="250"/>
         </Explosion>
         <Remove />
@@ -234,8 +228,7 @@
       <StatusEffect type="OnUse" target="This" Condition="-100">
         <Explosion range="525" structuredamage="60" itemdamage="90" stun="8" force="18" decal="explosion" decalsize="0.5">
           <Affliction identifier="bleeding" strength="100"/>
-		  <Affliction identifier="damagehead" strength="100"/>
-		  <Affliction identifier="damagechest" strength="90"/>
+		  <Affliction identifier="explosivedamage" strength="190"/>
           <Affliction identifier="internaldamage" strength="80"/>
         </Explosion>
         <Remove />
@@ -274,8 +267,7 @@
       <StatusEffect type="OnUse" target="This" Condition="-100">
         <Explosion range="725" structuredamage="60" itemdamage="90" stun="8" force="18" decal="explosion" decalsize="0.5">
           <Affliction identifier="bleeding" strength="200"/>
-		  <Affliction identifier="damagehead" strength="90"/>
-		  <Affliction identifier="damagechest" strength="80"/>
+		  <Affliction identifier="explosivedamage" strength="180"/>
           <Affliction identifier="internaldamage" strength="70"/>
         </Explosion>
         <Remove />
@@ -347,7 +339,7 @@
       <StatusEffect type="OnUse" target="This" Condition="-100">
         <Explosion range="400" force="10" flames="false" smoke="false" sparks="false">
           <Affliction identifier="stun" strength="4"/>
-          <Affliction identifier="dazed" strength="80"/>
+          <Affliction identifier="confused" strength="80"/>
         </Explosion>
         <Remove />
       </StatusEffect>
@@ -376,8 +368,7 @@
         <Explosion range="460" structuredamage="2" itemdamage="2" force="5" flames="false" smoke="false" sparks="false">
 		  <Affliction identifier="cold" strength="80"/>
 		  <Affliction identifier="stun" strength="10"/>
-		  <Affliction identifier="damagehead" strength="3"/>
-		  <Affliction identifier="damagechest" strength="2"/>
+		  <Affliction identifier="explosivedamage" strength="5"/>
           <Affliction identifier="internaldamage" strength="1"/>
         </Explosion>
         <Remove />
@@ -454,6 +445,7 @@
   </Item>
   </Override>
 
+
   <Item name="Electrical Payload" identifier="shockcharge" category="Equipment" Scale="0.5" Tags="smallitem,explosive" impactsoundtag="impact_maghit">
 
     <Deconstruct time="10">
@@ -473,17 +465,17 @@
     <Body width="23" height="16" density="20"/>
     <ElectricalDischarger duration="0.5" range="400" rangemultiplierinwalls="2" powerconsumption="0">
       <Attack targetimpulse="50">
-        <Affliction identifier="dazed" strength="25"/>
+        <Affliction identifier="confused" strength="25"/>
 		<Affliction identifier="stun" strength="3"/>
-        <Affliction identifier="electricalburn" strength="6"/>
+        <Affliction identifier="burn" strength="6"/>
       </Attack>
       <StatusEffect type="OnUse" target="This">
         <sound file="Content/Items/Weapons/ElectricalDischarger.ogg" range="6000"/>
         <ParticleEmitter particle="risingbubbles" anglemin="0" anglemax="360" particleamount="50" velocitymin="50" velocitymax="100" scalemin="1" scalemax="2"/>
         <Explosion range="400" stun="0" force="0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" empstrength="0.1">
-          <Affliction identifier="dazed" strength="25"/>
+          <Affliction identifier="confused" strength="25"/>
 		  <Affliction identifier="stun" strength="3"/>
-		  <Affliction identifier="electricalburn" strength="6"/>
+		  <Affliction identifier="burn" strength="6"/>
         </Explosion>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-80" duration="3"/>
@@ -560,8 +552,7 @@
 	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="4.0" msg="ItemMsgPickUpSelect"/>
 	<Projectile characterusable="false" launchimpulse="20" sticktocharacters="false">
       <Attack structuredamage="1" stun="0.2">
-        <Affliction identifier="damagehead" strength="8"/>
-		<Affliction identifier="damagechest" strength="6"/>
+        <Affliction identifier="explosivedamage" strength="12"/>
 		<Affliction identifier="internaldamage" strength="4"/>
       </Attack>
       <StatusEffect type="OnImpact" target="This">
@@ -621,8 +612,7 @@
     </Throwable>
 	<Projectile characterusable="false" launchimpulse="20" sticktocharacters="false">
       <Attack structuredamage="1" stun="0.2">
-        <Affliction identifier="damagehead" strength="8"/>
-		<Affliction identifier="damagechest" strength="6"/>
+        <Affliction identifier="explosivedamage" strength="14"/>
 		<Affliction identifier="internaldamage" strength="4"/>
       </Attack>
     </Projectile>
@@ -645,8 +635,7 @@
         <sound file="Content/Items/Weapons/ExplosionDebris3.ogg" selectionmode="All" range="8000"/>
         <Explosion range="600" structuredamage="80" itemdamage="80" force="20" severlimbsprobability="0.4" decal="explosion" decalsize="0.5">
           <Affliction identifier="burn" amount="100"/>
-		  <Affliction identifier="damagehead" strength="220"/>
-		  <Affliction identifier="damagechest" strength="210"/>
+		  <Affliction identifier="explosivedamage" strength="430"/>
           <Affliction identifier="internaldamage" amount="200"/>
           <Affliction identifier="stun" amount="5"/>
         </Explosion>
@@ -684,8 +673,7 @@
       <StatusEffect type="OnUse" target="This" Condition="-100">
         <Explosion range="1000" structuredamage="950" itemdamage="950" force="50" severlimbsprobability="1.0" decal="explosion" decalsize="1.0">
           <Affliction identifier="burn" strength="500"/>
-		  <Affliction identifier="damagehead" strength="520"/>
-		  <Affliction identifier="damagechest" strength="510"/>
+		  <Affliction identifier="explosivedamage" strength="1030"/>
           <Affliction identifier="internaldamage" strength="500"/>
           <Affliction identifier="stun" strength="10"/>
         </Explosion>
@@ -751,15 +739,14 @@
       <StatusEffect type="OnUse" target="This" Condition="-100">
         <Explosion range="750" structuredamage="475" itemdamage="475" force="25" severlimbsprobability="0.5" decal="explosion" decalsize="1.0">
           <Affliction identifier="burn" strength="250"/>
-		  <Affliction identifier="damagehead" strength="270"/>
-		  <Affliction identifier="damagechest" strength="260"/>
+		  <Affliction identifier="explosivedamage" strength="530"/>
           <Affliction identifier="internaldamage" strength="250"/>
-		  <Affliction identifier="dazed" strength="250"/>
+		  <Affliction identifier="confused" strength="250"/>
           <Affliction identifier="stun" strength="10"/>
         </Explosion>
 		<Explosion range="2000" structuredamage="25" stun="0.2" force="0.1" camerashake="1" flames="false" smoke="false" shockwave="false" sparks="true" underwaterbubble="false" empstrength="0.4">
           <Affliction identifier="radiationsickness" strength="200"/>
-		  <Affliction identifier="dazed" strength="400"/>
+		  <Affliction identifier="confused" strength="400"/>
         </Explosion>
       </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
@@ -887,9 +874,8 @@
       <sound file="Content/Items/Weapons/ExplosionLarge2.ogg" type="OnUse" selectionmode="Random" range="20000"/>
       <StatusEffect type="OnUse" target="This" Condition="-100">
         <Explosion range="1100" structuredamage="250" itemdamage="250" force="30" severlimbsprobability="0.25" decal="explosion" decalsize="1.0">
-          <Affliction identifier="electricalburn" strength="1000"/>
-		  <Affliction identifier="damagehead" strength="170"/>
-		  <Affliction identifier="damagechest" strength="160"/>
+          <Affliction identifier="eburn" strength="1000"/>
+		  <Affliction identifier="explosivedamage" strength="330"/>
           <Affliction identifier="internaldamage" strength="150"/>
           <Affliction identifier="stun" strength="10"/>
         </Explosion>
