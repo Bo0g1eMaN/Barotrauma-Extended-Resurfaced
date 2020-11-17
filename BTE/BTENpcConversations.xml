@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Conversations identifier="vanillaconversations" Language="English">
+
+<!-- Personality traits -->
+<PersonalityTrait name="Professional" alloweddialogtags="professional,none" commonness="1"/>
+<PersonalityTrait name="Laid-back" alloweddialogtags="laid-back,none" commonness="1"/>
+<PersonalityTrait name="Rude" alloweddialogtags="rude,none" commonness="1"/>
+<PersonalityTrait name="Tough" alloweddialogtags="tough,none" commonness="1"/>
+<PersonalityTrait name="Joker" alloweddialogtags="joker,none" commonness="0.5"/>
+<PersonalityTrait name="Broken English" alloweddialogtags="brokenenglish" commonness="0.5"/>
+<PersonalityTrait name="Fearful" alloweddialogtags="fearful,none" commonness="0.5"/>
+<PersonalityTrait name="Crazy" alloweddialogtags="crazy,none" commonness="0.5"/>
+
+<Conversation line="I'm feeling faint." speaker="0" flags="Unwell"/>
+<Conversation line="I'm not feeling too good." speaker="0" flags="Unwell"/>
+<Conversation line="I think I'm dying." speaker="0" flags="Unwell"/>
+<Conversation line="I feel goo- huhhrp." speaker="0" flags="Unwell" speakertags="joker">
+	<Conversation line="Never mind" speaker="0"/>
+</Conversation>
+<Conversation line="Maggots have I." speaker="0" flags="Unwell" speakertags="brokenenglish"/>
+<Conversation line="Somebody fucking kill me." speaker="0" flags="Unwell"/>
+<Conversation line="Sure!." speaker="1" speakertags="rude,crazy"/>
+<Conversation line="This isnt shit..." speakertags="tough">
+	<Conversation line="You're going to need one" speaker="1" speakertags="rude,joker"/>
+<Conversation line="You're right" speaker="0"/>
+</Conversation>
+
+<Override>
+<Conversation line="I have a bad feeling about this..." speaker="0" speakertags="fearful" maxintensity="0.4">
+	<Conversation line="I knew this old captain who used to say..." speaker="1" speakertags="professional,tough">
+		<Conversation line="You can't calm the storm, so stop trying." speaker="1">
+			<Conversation line="What you can do is calm yourself. The storm will pass." speaker="1">
+				<Conversation line="...Man, you're full of shit." speaker="0" speakertags="rude,fearful"/>
+				<Conversation line="I... don't think the storm will pass for me." speaker="2" flags="Unwell"/>
+			</Conversation>
+		</Conversation>
+	</Conversation>
+	<Conversation line="I'm sure we all do." speaker="1"/>
+	<Conversation line="Are you having gas again?" speaker="1" speakertags="joker"/>
+	<Conversation line="Ugh..." speaker="1" flags="Unwell"/>
+</Conversation>
+</Override>
+
+<Conversation line="Thanks for itching my back!" speaker="0" flags="GunshotWound" speakertags="tough"/>
+<Conversation line="FUCKING FUCKER MOTHER FUCKING FUCK SHIT!" speaker="0" flags="PainMed"/>
+<Conversation line="MOTHER OF FUCKING BULLSHITTERY!" speaker="0" flags="PainMed"/>
+<Conversation line="WHY!" speaker="0" flags="PainMed"/>
+<Conversation line="FUHKKING SHCHIT!" speaker="0" flags="PainHigh"/>
+<Conversation line="KILL ME!" speaker="0" flags="PainHigh"/>
+<Conversation line="IM GOING INTO SHOCK!" speaker="0" flags="PainHigh"/>
+<Conversation line="END ME!" speaker="0" flags="PainHigh"/>
+<Conversation line="Doc why am I hurting is there something wrong with me holy shit holy shit holy someone help" speaker="0" flags="PainLow" speakertags="fearful">
+<Conversation line="dont cry bro" speaker="1" speakertags="rude"/>
+<Conversation line="MAN UP" speaker="1" speakertags="rude,tough"/>
+<Conversation line="WAHHHHHHH" speaker="1" speakertags="rude"/>
+</Conversation>
+
+<Conversation line="Doc I've got a headache what does that mean?! AM I GOING TO DIE!?" speaker="0" flags="Headache" speakertags="fearful"/>
+<Conversation line="I have survived big fucking fish ripping people apart and I can safely say that a headache." speaker="0" flags="Headache">
+<Conversation line="is the worst thing ive had." speaker="0"/>
+<Conversation line="is more painful." speaker="0"/>
+</Conversation>
+
+<Override>
+<Conversation line="I can hear the hull creaking." speaker="0" speakertags="fearful" maxintensity="0.4">
+	<Conversation line="I am hearing too as well." speaker="1" speakertags="brokenenglish"/>
+	<Conversation line="Are you having gas again?" speaker="1" speakertags="joker"/>
+	<Conversation line="Ugh..." speaker="1" flags="Unwell"/>
+</Conversation>
+</Override>
+<Override>
+<Conversation line="Can't wait to get back home and pop a bottle of Ol' Cadmus." speaker="0" speakertags="laid-back" maxintensity="0.2">
+	<Conversation line="Focus on your job or you'll get to join that bottle in your casket." speaker="1" speakertags="professional,tough,rude">
+		<Conversation line="Haha! Burial in a casket! When was the last time that happened?" speaker="2" speakertags="laid-back,joker"/>
+	</Conversation>
+	<Conversation line="This ain't no time to think about home. We've got a long way ahead of us." speaker="1" speakertags="professional,tough"/>
+	<Conversation line="Cadmus fish piss. I like it stronger." speaker="1" speakertags="brokenenglish"/>
+	<Conversation line="Can't wait... can't wait to get some proper medical attention." speaker="1" flags="Unwell"/>
+</Conversation>
+</Override>
+
+<Override>
+<Conversation line="Ever seen what happens to a human body when it's exposed to the pressure outside?" speaker="0" speakertags="fearful" maxintensity="0.2">
+	<Conversation line="You're going to see soon." speaker="0" flags="Psychosis">
+		<Conversation line="Yes, I'm talking to you." speaker="0" flags="Psychosis"/>
+	</Conversation>
+	<Conversation line="I can imagine." speaker="1">
+		<Conversation line="Still can't get the image out of my head." speaker="0">
+			<Conversation line="A bag of meat and bones under a hydraulic press, that's the only way I can describe it." speaker="0"/>
+			<Conversation line="The loving embrace of Europa." speaker="2" speakertags="crazy"/>
+			<Conversation line="Ugh... lovely." speaker="1" flags="Unwell"/>
+		</Conversation>
+	</Conversation>
+	<Conversation line="No... but I hope it is... faster than this." speaker="1" flags="Unwell"/>
+</Conversation>
+</Override>
+</Conversations>

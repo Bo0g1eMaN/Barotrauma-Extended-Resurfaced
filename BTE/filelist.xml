@@ -4,7 +4,10 @@
   <UIStyle file="Mods/BTE/UI/BTEstyle.xml" />
   <Text file="Mods/BTE/Texts/EnglishBTE.xml" />
   <Sounds file="Mods/BTE/Sounds/BTEsounds.xml" />
+ <NPCConversations file="Mods/BTE/BTENpcConversations.xml" />
   <Item file="Mods/BTE/Items/Weapons/BTErailgun.xml" />
+  <Item file="Mods/BTE/BTEidcard.xml" />
+  <Item file="Mods/BTE/Items/Fabricators/Materials.xml" />
   <Item file="Mods/BTE/Items/Jobgear/Hats.xml" />
   <Item file="Mods/BTE/Items/Weapons/BTEweapons.xml" />
   <Item file="Mods/BTE/Items/Tools/fuel.xml" />
@@ -15,6 +18,7 @@
   <Item file="Mods/BTE/Items/Medical/btefood.xml" />
   <Item file="Mods/BTE/Items/Medical/btemedical.xml" />
   <Item file="Mods/BTE/Items/Jobgear/Security/btesecurityofficer_gear.xml" />
+  <Item file="Mods/BTE/Items/Jobgear/Officer/officer_gear.xml" />
   <Item file="Mods/BTE/Items/Jobgear/Medic/btemedic_gear.xml" />
   <Item file="Mods/BTE/Items/Jobgear/Engineering/utility_gear.xml" />
   <Item file="Mods/BTE/Items/Fabricators/btefabricators.xml" />
@@ -399,7 +403,7 @@
 
 
 
-  <None file="Mods/BTE/Items/Weapons/BTEexplosives.xml" />
+  <Item file="Mods/BTE/Items/Weapons/BTEexplosives.xml" />
   <None file="Mods/BTE/Items/Weapons/Stabbing.ogg" />
   <None file="Mods/BTE/Items/Weapons/StunBaton1.ogg" />
   <None file="Mods/BTE/Items/Weapons/StunBaton2.ogg" />

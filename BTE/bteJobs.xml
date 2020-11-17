@@ -900,7 +900,7 @@
       </Item>
 	  <Item identifier="clipboard" equip="false">
 		<Item identifier="docbasic"/>
-<Item identifier="Cookbook"/>
+<Item identifier="cookbook"/>
       </Item>
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />

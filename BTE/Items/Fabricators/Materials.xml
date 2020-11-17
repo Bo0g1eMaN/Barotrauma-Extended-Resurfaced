@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <Item name="Bronze Bar" identifier="bronze" category="Material" Tags="smallitem" cargocontaineridentifier="metalcrate" scale="0.4" impactsoundtag="impact_metal_light">
+ <Price baseprice="22" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.5" sold="true"/>
+      <Price locationtype="city" multiplier="1.25" minavailable="2" />
+      <Price locationtype="research" multiplier="1.25" minavailable="2" sold="true"/>
+      <Price locationtype="military" multiplier="1.9" minavailable="3" />
+      <Price locationtype="mine" multiplier="0.4" minavailable="25" sold="true"/>
+    </Price>
+
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredItem identifier="copper" mincondition="0.7"/>
+      <RequiredItem identifier="tin" mincondition="0.2"/>
+	  <RequiredItem identifier="phosphorus" mincondition="0.1"/>
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="768,128,64,64" />
+    <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="11,407,108,54" depth="0.55" origin="0.5,0.5" />
+    <Body width="100" height="50" density="30" />
+    <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+<Item name="" identifier="iodine" category="Material" Tags="smallitem" canbepicked="true" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="storagecab" minamount="0" maxamount="2" spawnprobability="1"/>
+    <PreferredContainer primary="wreckstoragecab" minamount="0" maxamount="3" spawnprobability="0.06"/>
+    <Price baseprice="10" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false"/>
+      <Price locationtype="city" multiplier="1.25" sold="false"/>
+      <Price locationtype="research" multiplier="1.1" sold="false"/>
+      <Price locationtype="military" multiplier="1.1" sold="false"/>
+      <Price locationtype="mine" multiplier="0.8" sold="true"  minavailable="20"/>
+    </Price>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,192,64,64" />
+    <Sprite texture="CraftingElements1.png" sourcerect="5,55,46,38" depth="0.55" origin="0.5,0.5" />
+    <Body width="45" height="30" density="50" />
+    <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+<Items>
+
+<Item name="" identifier="caliche" category="Material" Tags="smallitem,ore" canbepicked="true" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="locker"/>
+    <PreferredContainer primary="mineralcontainer" spawnprobability="0.1"/>
+    <Price baseprice="250" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.1" sold="false"/>
+      <Price locationtype="city" multiplier="1.25" sold="false"/>
+      <Price locationtype="research" multiplier="1" sold="false"/>
+      <Price locationtype="military" multiplier="1" sold="false"/>
+      <Price locationtype="mine" multiplier="0.75" sold="false"/>
+    </Price>
+    <Deconstruct time="5">
+      <Item identifier="iodine" />
+      <Item identifier="iodine" />
+    </Deconstruct>
+    <!-- TODO: sprite and inventory icon -->
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="705,515,60,60" origin="0.5,0.5" />
+    <ContainedSprite texture="Content/Items/Materials/MineralEnvironment.png" usewhenattached="true" depth="0.2" sourcerect="786,296,227,139" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Materials/Minerals.png" depth="0.55" sourcerect="394,133,118,123" origin="0.5,0.5" />
+    <Body radius="40" width="20" density="50" />
+    <LevelResource deattachduration="10">
+      <Commonness commonness="6" />
+      <RequiredItem items="cuttingequipment" type="Equipped" />
+    </LevelResource>
+    <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgUsePlasmaCutter" handle1="0,0" pickingtime="5.0" attachable="true" reattachable="false" />
+  </Item>
+</Items>
