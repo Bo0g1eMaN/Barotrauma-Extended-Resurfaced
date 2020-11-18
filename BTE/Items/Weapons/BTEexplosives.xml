@@ -335,16 +335,21 @@
     <Sprite texture="Content/Items/Weapons/weapons.png" depth="0.8" sourcerect="103,58,23,16"/>
     <Body width="23" height="16" density="20"/>
     <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="1.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-      <sound file="Content/Items/Weapons/StunGrenade.ogg" type="OnUse" range="5000"/>
+    
+      <sound file="Mods/BTE/Items/Weapons/flashbang_explode1.ogg" type="OnUse" range="5000" selectionmode="Random"/>
+	   <sound file="Mods/BTE/Items/Weapons/flashbang_explode2.ogg" type="OnUse" range="5000"/>
+
       <StatusEffect type="OnUse" target="This" Condition="-100">
-        <Explosion range="400" force="10" flames="false" smoke="false" sparks="false">
+        <Explosion range="1000" force="10" flames="false" smoke="false" sparks="false" flashrange="435" flashduration="5.0" screencolor="255,255,255,255" screencolorrange="5000" screencolorduration="3.0">
           <Affliction identifier="stun" strength="4"/>
           <Affliction identifier="confused" strength="80"/>
         </Explosion>
         <Remove />
       </StatusEffect>
+
     </Throwable>
   </Item>
+  
   
   <Item name="Cryo Payload" identifier="coldbomb" category="Equipment" Scale="0.5" Tags="smallitem,explosive"
 	cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
@@ -547,13 +552,12 @@
       <RequiredItem identifier="aluminium" mincondition="0.2"/>
     </Fabricate>
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="450,450,64,64" origin="0.5,0.5"/>
-    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="454,7,27,54" depth="0.55" origin="0.5,0.5185185"/>
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="159,311,27,54" depth="0.55" origin="0.5,0.5185185" />
     <Body width="26" height="50" density="20"/>
 	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="4.0" msg="ItemMsgPickUpSelect"/>
 	<Projectile characterusable="false" launchimpulse="20" sticktocharacters="false">
-      <Attack structuredamage="1" stun="0.2">
-        <Affliction identifier="explosivedamage" strength="12"/>
-		<Affliction identifier="internaldamage" strength="4"/>
+      <Attack structuredamage="1" itemdamage="0.1" stun="0.2" targetforce="10" severlimbsprobability="0.003">>
+		<Affliction identifier="internaldamage" strength="28"/>
       </Attack>
       <StatusEffect type="OnImpact" target="This">
 	    <RequiredItems identifier="explosive" type="Contained"/>
@@ -603,7 +607,7 @@
       <RequiredItem identifier="aluminium" mincondition="0.2"/>
     </Fabricate>
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="450,450,64,64" origin="0.5,0.5"/>
-    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="454,7,27,54" depth="0.55" origin="0.5,0.5185185"/>
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="159,311,27,54" depth="0.55" origin="0.5,0.5185185" />
     <Body width="26" height="50" density="20"/>
 	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="4.0" msg="ItemMsgPickUpSelect">
 	  <StatusEffect type="OnImpact" target="Contained">
@@ -611,9 +615,8 @@
       </StatusEffect>
     </Throwable>
 	<Projectile characterusable="false" launchimpulse="20" sticktocharacters="false">
-      <Attack structuredamage="1" stun="0.2">
-        <Affliction identifier="explosivedamage" strength="14"/>
-		<Affliction identifier="internaldamage" strength="4"/>
+      <Attack structuredamage="1" itemdamage="0.1" stun="0.2" targetforce="10" severlimbsprobability="0.003">>
+		<Affliction identifier="internaldamage" strength="28"/>
       </Attack>
     </Projectile>
 	<ItemContainer hideitems="true" capacity="1" canbeselected="false">
