@@ -16,6 +16,9 @@
 	  </StatusEffect>
 	</Throwable>
 	
+    <Deconstruct time="1">
+      <Item identifier="tobaco" outcondition="0.1" />
+    </Deconstruct>
 	<ItemContainer capacity="12" canbeselected="true" hideitems="true">
       <Containable identifier="cigarette"/>
 	  <Containable identifier="handrolled"/>
@@ -31,6 +34,10 @@
     <BrokenSprite texture="Other.png" sourcerect="2,20,34,4" depth="0.55" maxcondition="0"/>
     <Body width="28" height="2" density="9.9"/>
 	
+    <Deconstruct time="1">
+      <Item identifier="tobaco" copycondition="true"/>
+    </Deconstruct>
+
 	<Price locationtype="Research" buyprice="60"/>
     <Price locationtype="Military" buyprice="40"/>
     <Price locationtype="City" buyprice="20"/>
@@ -76,6 +83,10 @@
     <BrokenSprite texture="Other.png" sourcerect="2,44,34,4" depth="0.55" maxcondition="0"/>
     <Body width="28" height="2" density="9.95"/>
 	
+    <Deconstruct time="1">
+      <Item identifier="tobaco" copycondition="true"/>
+    </Deconstruct>
+
     <Fabricate suitablefabricators="constructionkit" requiredtime="10">
       <RequiredItem identifier="cigarette" mincondition="0" usecondition="false" />
       <RequiredItem identifier="cigarette" mincondition="0" usecondition="false" />
@@ -322,6 +333,7 @@
         <ReduceAffliction identifier="stun" amount="5.64" />
         <ReduceAffliction identifier="oxygenlow" amount="0.09" />
 		         <RequiredItem items="batterycell" type="Contained" />
+				 	<ReduceAffliction identifier="heartattack" amount="15" />
       </StatusEffect>
 	  
       <StatusEffect tags="medical" type="OnUse" target="Character">
@@ -336,6 +348,7 @@
         <Affliction identifier="burn" amount="0.08" />
         <ReduceAffliction identifier="oxygenlow" amount="0.08" />
         <ReduceAffliction identifier="stun" amount="4" />
+		<ReduceAffliction identifier="heartattack" amount="1" />
 		             <RequiredItem items="batterycell" type="Contained" />  
       </StatusEffect>
       <StatusEffect tags="medical" type="OnFailure" target="Character">
@@ -725,7 +738,7 @@
 				  description="A sedative that can be used to knock someone out for a short period of time."
 				  cargocontaineridentifier="chemicalcrate" useinhealthinterface="true" scale="0.3" impactsoundtag="impact_plastichit">
 	<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,704,64,64"/>
-    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="126,232,67,124" depth="0.6" origin="0.5,0.5"/>
+     <Sprite texture="Medicines.png" sourcerect="75,138,37,71" depth="0.6" origin="0.5,0.5" />
     <Body width="65" height="120" density="20"/>
 	
 	<Price locationtype="Research" buyprice="150"/>
@@ -752,8 +765,12 @@
       <StatusEffect type="OnUse" target="Character" delay="2.6">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500"/>
 		<Affliction identifier="anesthesia" amount="10"/>
+<Affliction identifier="stun" amount="3"/>
       </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true"/>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
     </MeleeWeapon>
   </Item>
   </Override>
@@ -971,12 +988,12 @@
   </Item>
   </Override>
   
-  <Item name="Antitoxin" identifier="antitoxin" category="Material" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="Used to fight of toxins in the body" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="Antitoxin" identifier="antitoxin" category="Medical" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="Used to fight of toxins in the body" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <PreferredContainer primary="medcab" spawnprobability="0.5" />
     <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="1" spawnprobability="0.5" />
     <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25" />
-    <Price baseprice="125" >
+    <Price baseprice="75" >
       <Price locationtype="outpost" multiplier="1" minavailable="1" />
       <Price locationtype="city" multiplier="0.9" minavailable="1" />
       <Price locationtype="research" multiplier="0.9" minavailable="1" />
@@ -1024,12 +1041,12 @@
     </Projectile>
   </Item>
   
-   <Item name="Thrombolysis" identifier="thrombolysis" category="Material" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="Used to fight to destroy blood clots" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+   <Item name="Thrombolysis" identifier="thrombolysis" category="Medical" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="Used to fight blood clots" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
-    <PreferredContainer primary="medcab" spawnprobability="1" />
+    <PreferredContainer primary="medcab" minamount="2" maxamount="3" spawnprobability="1" />
     <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="1" spawnprobability="0.5" />
     <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25" />
-    <Price baseprice="125" >
+    <Price baseprice="75" >
       <Price locationtype="outpost" multiplier="1" minavailable="1" />
       <Price locationtype="city" multiplier="0.9" minavailable="1" />
       <Price locationtype="research" multiplier="0.9" minavailable="1" />

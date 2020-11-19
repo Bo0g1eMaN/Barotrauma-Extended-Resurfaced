@@ -3,9 +3,10 @@
 	  <Item name="Thermoblade" identifier="thermoblade" category="Equipment" Tags="smallitem,weapon" cargocontaineridentifier="metalcrate" scale="0.4" useinhealthinterface="true" impactsoundtag="impact_maghit">
 
         <Fabricate suitablefabricators="op_researchterminal" requiredtime="30">
-      <RequiredSkill identifier="medical" level="40" />
+      <RequiredSkill identifier="science" level="40" />
+<RequiredSkill identifier="weapons" level="40" />
       <RequiredItem identifier="divingknife" />
-<RequiredItem identifier="incendium" />
+<RequiredItem identifier="incendium" mincondition="0.3" usecondition="true" />
     </Fabricate>
 
 	<Deconstruct time="10">
@@ -13,9 +14,9 @@
 	  <Item identifier="incendium" outcondition="0.3"/>
     </Deconstruct>
 	<Fabricate suitablefabricators="fabricator" requiredtime="10">
-      <RequiredSkill identifier="weapons" level="30"/>
+      <RequiredSkill identifier="weapons" level="80"/>
       <RequiredItem identifier="divingknife"/>
-	  <RequiredItem identifier="incendium" mincondition="0.3" usecondition="true"/>
+	  <RequiredItem identifier="incendium"/>
     </Fabricate>
     
 	<InventoryIcon texture="Mods/BTE/Items/InventoryIconAtlas.png" sourcerect="835,385,64,64"/>
@@ -161,6 +162,7 @@
 <Item identifier="fpgacircuit" />
     </Deconstruct>
     <Fabricate suitablefabricators="op_researchterminal" requiredtime="20">
+      <RequiredSkill identifier="science" level="40" />
       <RequiredSkill identifier="weapons" level="45" />
       <RequiredItem identifier="steel" />
       <RequiredItem identifier="plastic" />

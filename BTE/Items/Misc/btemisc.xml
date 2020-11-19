@@ -489,13 +489,13 @@
       <Item identifier="paperboat"/>
     </Deconstruct>
     <Fabricate suitablefabricators="op_researchterminal" requiredtime="20">
-      <RequiredSkill identifier="medical" level="35" />
+      <RequiredSkill identifier="science" level="35" />
       <RequiredItem identifier="huskeggs" />
 <RequiredItem identifier="friedthresher" mincondition="0.5" usecondition="false" />
     </Fabricate>
 	
     <Fabricate suitablefabricators="op_researchterminal" requiredtime="25">
-      <RequiredSkill identifier="medical" level="35" />
+      <RequiredSkill identifier="science" level="35" />
       <RequiredItem identifier="huskeggs" />
 <RequiredItem identifier="humanflesh" mincondition="0.5" usecondition="false" />
 
