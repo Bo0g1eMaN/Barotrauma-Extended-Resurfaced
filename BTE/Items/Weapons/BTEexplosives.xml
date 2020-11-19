@@ -335,7 +335,6 @@
         <Explosion range="1000" force="10" flames="false" smoke="false" sparks="false" flashrange="435" flashduration="5.0" screencolor="255,255,255,255" screencolorrange="5000" screencolorduration="3.0">
           <Affliction identifier="stun" strength="4"/>
           <Affliction identifier="confused" strength="80"/>
-		  <Affliction identifier="heartattack" probability="0.3" strength="1"/>
         </Explosion>
         <Remove />
       </StatusEffect>

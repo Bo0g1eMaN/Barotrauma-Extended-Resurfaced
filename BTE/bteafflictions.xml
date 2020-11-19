@@ -1,6 +1,115 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Afflictions>
 
+ <Affliction
+    name="Sonic"
+    identifier="sonic"
+    description="Ultra-sonic audio waves are quick and extremely harmful to living things and their organs."
+    type="sonic"
+	causeofdeathdescription="Internal injuries"
+    selfcauseofdeathdescription="You have succumbed to your internal injuries." 
+    limbspecific="true"
+	showiconthreshold="610"
+	activationthreshold="1"
+    maxstrength="100">
+	
+    <Effect minstrength="0" maxstrength="100"
+	  minvitalitydecrease="0"
+      maxvitalitydecrease="50"
+	  strengthchange="-2">
+	  <StatusEffect target="Limb">
+		<Affliction identifier="bloodloss" strength="0.5"/>
+		<Affliction identifier="blunttrauma" strength="3.5"/>
+		<Affliction identifier="internaldamage" strength="1"/>
+		<Affliction identifier="organdamage" strength="31"/>
+      </StatusEffect>
+	</Effect>
+	
+    <icon texture="Mods/BTE/UI/IconAtlas.png" sourcerect="0,256,128,128" color="150,80,255,255" origin="0,0"/>
+  </Affliction>
+
+<Override>
+<Affliction
+    name="Drunk"
+    identifier="drunk"
+    description="The smell of alcohol rises from them like a vapor, their speech slurs a little, and their eyes fail to focus."
+    type="poison"
+    causeofdeathdescription="Alcohol poisoning"
+    selfcauseofdeathdescription="You have died of alcohol poisoning."
+    limbspecific="false"
+    indicatorlimb="Head"
+    activationthreshold="20"
+    maxstrength="100">
+
+    <!-- Low level of drunkenness decreases vitality and speed slightly -->
+    <Effect minstrength="20" maxstrength="40"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="10"
+      minscreendistort="0"
+      maxscreendistort="0.1"
+      strengthchange="-0.1"
+resistancefor="pain"
+      minresistance="0"
+      maxresistance="0.35">
+      <StatusEffect target="Character" SpeedMultiplier="0.8" setvalue="true"/>
+    </Effect>
+
+    <!-- Heavier drunkenness decreases vitality and speed more -->
+    <Effect minstrength="40" maxstrength="80"
+      minvitalitydecrease="10"
+      maxvitalitydecrease="30"
+      minscreendistort="0.1"
+      maxscreendistort="1.0"
+      minscreenblur="0.1"
+      maxscreenblur="1.0"
+      strengthchange="-0.2"
+      minradialdistort="0.0"
+      maxradialdistort="5.0"
+      dialogflag="DrunkMedium"
+resistancefor="pain"
+      minresistance="0.35"
+      maxresistance="0.55">
+      <StatusEffect target="Character" SpeedMultiplier="0.7" setvalue="true"/>
+    </Effect>
+
+    <!-- After drinking enough the effect starts to get lethal -->
+    <Effect minstrength="80" maxstrength="100"
+      minvitalitydecrease="30"
+      maxvitalitydecrease="100"
+      minscreendistort="1.0"
+      maxscreendistort="3.0"
+      minscreenblur="1.0"
+      maxscreenblur="3.0"
+      strengthchange="-0.2"
+      minradialdistort="5.0"
+      maxradialdistort="10.0"
+      dialogflag="DrunkHigh"
+resistancefor="pain"
+      minresistance="0.55"
+      maxresistance="0.85">
+      <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
+    </Effect>
+    
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0"/>
+  </Affliction>
+</Override>
+
+ <Affliction
+    name="EMP" 
+    identifier="empdamage"
+    description="An electromagnetic pulse is taking effect."
+    type="burn"
+	causeofdeathdescription="EMP"
+    selfcauseofdeathdescription="You have succumbed to an EMP." 
+    limbspecific="false"
+	showiconthreshold="110"
+	activationthreshold="1"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" multiplybymaxvitality="true"
+	  minvitalitydecrease="0" maxvitalitydecrease="1"/>
+    <icon texture="Mods/BTE/UI/IconAtlas.png" sourcerect="0,256,128,128" color="244,207,33,255" origin="0,0"/>
+  </Affliction>
+
 <Affliction
     name="Calyxanide"
     identifier="calyxanidepoisoning"
@@ -114,7 +223,17 @@
     activationthreshold="1"
     maxstrength="30">
 	
-    <Effect minstrength="0" maxstrength="28"
+	
+    <Effect minstrength="12" maxstrength="28"
+      minscreenblur="0.0"
+      maxscreenblur="8.0"
+	  strengthchange="-1">
+	  	  	  	  <StatusEffect target="Character">
+			  <Affliction identifier="oxygenlow" strength="0.5"/>
+			  </StatusEffect>
+	</Effect>
+	
+    <Effect minstrength="12" maxstrength="28"
       minscreenblur="0.0"
       maxscreenblur="8.0"
 	  strengthchange="-1">
@@ -201,7 +320,7 @@
       dialogflag="DrunkMedium">
       <StatusEffect target="Character" SpeedMultiplier="0.7" setvalue="true"/>
 	  	        <StatusEffect target="Character" >
-				          <Affliction identifier="nausea" strength="2"/>
+				          <Affliction identifier="nausea" strength="0.1"/>
 						  </StatusEffect>
     </Effect>
 
@@ -912,7 +1031,7 @@
     causeofdeathdescription=""
     selfcauseofdeathdescription=""
     limbspecific="false"
-    showiconthreshold="100"
+    showiconthreshold="1"
     maxstrength="100">
     <Effect minstrength="50" maxstrength="100"
       minscreendistort="0.0"
@@ -922,7 +1041,36 @@
       strengthchange="-1">
       <StatusEffect target="Character" SpeedMultiplier="0.7" setvalue="true"/>
     </Effect>
+	 <icon texture="Mods/BTE/UI/IconAtlasOld.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0"/>
   </Affliction>
+  
+    <Affliction
+    name="Tetanus"
+    identifier="tetanus"
+    description="The patient is confused and dazed"
+    type="tetanus"
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="false"
+    showiconthreshold="6"
+    maxstrength="5">
+    <Effect minstrength="1" maxstrength="6"
+      minscreendistort="0.0"
+      maxscreendistort="0.5"
+      minradialdistort="0.0"
+      maxradialdistort="0.5"
+      strengthchange="-1">
+      <StatusEffect target="Character" SpeedMultiplier="0.7" setvalue="true"/>
+	  
+	  <PeriodicEffect mininterval="2.20" maxinterval="2.30">
+      <StatusEffect target="Character" >
+        <Sound file="Mods/BTE/Items/Weapons/ear_ringing.ogg"/>
+    </StatusEffect>
+    </PeriodicEffect> 
+    </Effect>
+	 <icon texture="Mods/BTE/UI/IconAtlasOld.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0"/>
+  </Affliction>
+  
   
   
  
@@ -992,7 +1140,7 @@
 	    showicontoothersthreshold="5"
     damageoverlayalpha="1">
 	
-	<Effect minstrength="0" maxstrength="5" strengthchange="-1"
+	<Effect minstrength="0" maxstrength="5" strengthchange="-0.1"
       minvitalitydecrease="0.0"
       maxvitalitydecrease="0.2"
       minscreenblur="0.1"
@@ -1002,7 +1150,7 @@
       </StatusEffect>
 	  </Effect>
 	  
-	  	<Effect minstrength="2" maxstrength="35" strengthchange="-1"
+	  	<Effect minstrength="2" maxstrength="35" strengthchange="-0.1"
       minvitalitydecrease="0.2"
       maxvitalitydecrease="0.3"
       minscreenblur="0.1"
@@ -1079,7 +1227,6 @@
       minvitalitydecrease="0.75"
       maxvitalitydecrease="1.75">
 	  	  	  	  <StatusEffect target="Character">
-	          <Affliction identifier="shock" amount="1.12"/>
 			          <Affliction identifier="pain" strength="0.01"/>
 					  <Affliction identifier="confused" strength="0.01"/>
 					  <Affliction identifier="nausea" strength="0.78"/>
@@ -1181,55 +1328,9 @@
   </Affliction>
   </Override>
   
-  <Override>
-  <Affliction
-    name="Nausea"
-    identifier="nausea"
-    description="The skin is clammy and the patient is vomiting periodically."
-    type="sickness"
-    causeofdeathdescription="Choked on vomit."
-    selfcauseofdeathdescription="You have choked on your own vomit."
-    limbspecific="false"
-    maxstrength="100"
-    karmachangeonapplied="-0.1"
-    damageoverlayalpha="1">
+  
 
-    <Effect minstrength="0" maxstrength="100" strengthchange="-1.0" 	  dialogflag="Unwell">
-      <StatusEffect target="Character" SpeedMultiplier="0.6" setvalue="true"/>
-    </Effect>
-    
-    <PeriodicEffect mininterval="12" maxinterval="16">
-      <StatusEffect target="Character" SpeedMultiplier="0.0" setvalue="true" duration="1.7" />
-      <StatusEffect target="Character" comparison="and">
-        <Conditional ishuman="true" />
-        <Conditional ismale="true"/>
-        <Sound file="Content/Sounds/HUMAN_chokeMale1.ogg" selectionmode="Random" />
-        <Sound file="Content/Sounds/HUMAN_chokeMale2.ogg" />
-        <Sound file="Content/Sounds/HUMAN_chokeMale3.ogg" />
-      </StatusEffect>
-      <StatusEffect target="Character" comparison="and">
-        <Conditional ishuman="true" />
-        <Conditional isfemale="true"/>
-        <Sound file="Content/Sounds/HUMAN_chokeFemale1.ogg" selectionmode="Random" />
-        <Sound file="Content/Sounds/HUMAN_chokeFemale2.ogg" />
-        <Sound file="Content/Sounds/HUMAN_chokeFemale3.ogg" />
-      </StatusEffect>
-      <StatusEffect target="Character">
-        <Affliction identifier="stun" strength="1.178"/>
-		<Affliction identifier="oxygenlow" strength="0.35"/>
-        <Affliction identifier="organdamage" strength="0.05"/>
-		<Affliction identifier="headache" strength="0.5"/>
-      </StatusEffect>
-      <StatusEffect target="Character" targetlimbs="Head" duration="1">
-        <ParticleEmitter particle="vomitsplash" copyentityangle="true" anglemin="-10" anglemax="10" particlespersecond="50" velocitymin="50" velocitymax="200" scalemin="0.1" scalemax="0.2" />
-        <Conditional HideFace="eq False" />  
-    </StatusEffect>
-    </PeriodicEffect> 
-    
-    <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,896,128,128" origin="0,0"/>
-  </Affliction>
 
-</Override>
 
     <Override>
   <Bloodloss
@@ -1404,7 +1505,7 @@
 	  <StatusEffect target="Limb">
         <Affliction identifier="pain" strength="0.35"/>
 		<Affliction identifier="bleeding" strength="0.3"/>
-		<Affliction identifier="bloodclot" strength="0.3"/>
+		<Affliction identifier="bloodclot" strength="0.5"/>
       </StatusEffect>
 
 	  	  </Effect>
