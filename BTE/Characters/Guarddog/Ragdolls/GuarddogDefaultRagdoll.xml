@@ -1,0 +1,93 @@
+﻿<Ragdoll type="Guarddog" limbscale="0.19" jointscale="0.19" texturescale="1" colliderheightfromfloor="65" impacttolerance="8" canentersubmarine="True" draggable="True" spritesheetorientation="90">
+  <collider radius="200" height="250" name="Main Collider" width="0" />
+  
+  <limb id="0" name="Head" type="Head" width="268" height="200" notes="111cr_Head" flip="True" healthindex="0" attackpriority="0" steerforce="20" stepoffset="0,0" radius="0" mass="0" density="10" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05" mouthpos="97,-76">
+    <sprite texture="Mods/BTE/Characters/Guarddog/Guarddog.png" sourcerect="0,0,238,232" origin="0.6730345,0.5158174" depth="0.1" />
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="damage,damagechest" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+	<attack context="Ground" cooldown="2" afterattack="Pursue" range="120" damagerange="100" duration="0.25" structuredamage="0" itemdamage="1" structuresoundtype="StructureSlash" targetforce="0" torque="-250" force="20" applyforceonlimbs="0,1,2,4" targettype="Any" hitdetectiontype="Distance" stun="0" onlyhumans="False" applyforcesonlyonce="True" targetimpulse="50" targetimpulseworld="0,0" targetforceworld="0,0" stickchance="0" priority="0" secondarycooldown="0">
+      <Affliction identifier="bitewound" strength="14" />
+      <Affliction identifier="damagehead" strength="8" />
+	  <Affliction identifier="damagechest" strength="8"/>
+	  <Affliction identifier="internaldamage" strength="8" />
+      <Affliction identifier="stun" strength="0.1" />
+    </attack>
+  </limb>
+  <limb id="1" name="Jaw" type="None" width="179" height="200" notes="1112br_Jaw" flip="True" healthindex="0" attackpriority="0" steerforce="0" stepoffset="0,0" radius="0" mass="0" density="10" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05">
+    <sprite texture="Mods/BTE/Characters/Guarddog/Guarddog.png" sourcerect="130,170,108,34" origin="1.925926,0.4117648" depth="0.1" />
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="damage,damagechest" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+	<attack context="Water" cooldown="2" afterattack="Pursue" range="100" damagerange="100" duration="0.25" structuredamage="0" itemdamage="1" structuresoundtype="StructureSlash" targetforce="0" torque="0" force="20" applyforceonlimbs="0,1,2,4" targettype="Any" hitdetectiontype="Distance" stun="0" onlyhumans="False" applyforcesonlyonce="True" targetimpulse="50" targetimpulseworld="0,0" targetforceworld="0,0" stickchance="0" priority="0" secondarycooldown="0">
+      <Affliction identifier="bitewound" strength="12" />
+      <Affliction identifier="damagehead" strength="6" />
+	  <Affliction identifier="damagechest" strength="6"/>
+	  <Affliction identifier="internaldamage" strength="6" />
+      <Affliction identifier="stun" strength="0.1" />
+    </attack>
+  </limb>
+  <limb id="2" name="Hips" type="None" width="0" height="0" notes="0_Hips" flip="True" healthindex="0" attackpriority="0" steerforce="0" stepoffset="0,0" radius="180" mass="0" density="5" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05">
+    <sprite texture="Mods/BTE/Characters/Guarddog/Guarddog.png" sourcerect="925,448,207,193" origin="0.2989055,0.4166048" depth="0.45" />
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="damagehead,damagechest" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+  </limb>
+  <limb id="3" name="Spine" type="Torso" width="235" height="268" notes="1cr_Spine" flip="True" healthindex="0" attackpriority="0" steerforce="1" stepoffset="0,0" radius="0" mass="0" density="12" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05">
+    <sprite texture="Mods/BTE/Characters/Guarddog/Guarddog.png" sourcerect="82,323,235,196" origin="0.3041298,0.4532903" depth="0.4" />
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="damagehead,damagechest" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+  </limb>
+  <limb id="4" name="Chest" type="Tail" width="0" height="0" notes="11cr_Chest" flip="True" healthindex="0" attackpriority="0" steerforce="5" stepoffset="0,0" radius="130" mass="0" density="12" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05">
+    <sprite texture="Mods/BTE/Characters/Guarddog/Guarddog.png" sourcerect="320,261,308,295" origin="0.5378767,0.4586558" depth="0.1" />
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="damagehead,damagechest" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+  </limb>
+  <limb id="5" name="FrontUpperLeg" type="None" width="80.24999" height="0" notes="3bc_FrontUpperLeg" flip="True" healthindex="0" attackpriority="0" steerforce="0" stepoffset="0,0" radius="101.625" mass="0" density="5" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05">
+    <sprite texture="Mods/BTE/Characters/Guarddog/Guarddog.png" sourcerect="51,635,315,139" origin="0.5365078,0.5503597" depth="0.09" />
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="damagehead,damagechest" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+  </limb>
+  <limb id="6" name="ArmPalm" type="RightFoot" width="60" height="200" notes="1121rm_ArmPalm" flip="True" healthindex="0" attackpriority="0" steerforce="0" stepoffset="0,0" radius="0" mass="0" density="10" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05">
+    <sprite texture="Mods/BTE/Characters/Guarddog/Guarddog.png" sourcerect="698,360,90,210" origin="0.4527565,0.3714285" depth="0.07" />
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="damagehead,damagechest" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+  </limb>
+  <limb id="7" name="FrontLegPalm" type="RightFoot" width="50.25001" height="0" notes="311cr_FrontLegPalm" flip="True" healthindex="0" attackpriority="0" steerforce="0" stepoffset="60,0" radius="49.875" mass="0" density="5" pullpos="39.07472,-35.74048" refjoint="2" ignorecollisions="False" friction="0.3" restitution="0.05">
+    <sprite texture="Mods/BTE/Characters/Guarddog/Guarddog.png" sourcerect="649,652,66,82" origin="0.318182,0.2701562" depth="0.1" />
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="damagehead,damagechest" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+  </limb>
+  <limb id="8" name="ArmLower" type="None" width="180" height="80" notes="112bc_ArmLower" flip="True" healthindex="0" attackpriority="0" steerforce="0" stepoffset="0,0" radius="0" mass="0" density="10" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05">
+    <sprite texture="Mods/BTE/Characters/Guarddog/Guarddog.png" sourcerect="862,1035,196,91" origin="0.4407524,0.606617" depth="0.08" />
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="damagehead,damagechest" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+  </limb>
+  <limb id="9" name="FrontLegLower" type="None" width="144.75" height="90.75" notes="31cr_FrontLegLower" flip="True" healthindex="0" attackpriority="0" steerforce="0" stepoffset="0,0" radius="0" mass="0" density="5" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05">
+    <sprite texture="Mods/BTE/Characters/Guarddog/Guarddog.png" sourcerect="434,644,153,79" origin="0.3757785,0.4794333" depth="0.1" />
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="damagehead,damagechest" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+  </limb>
+  <limb id="10" name="BackLegUpper" type="None" width="147" height="0" notes="4bl_BackLegUpper" flip="True" healthindex="0" attackpriority="0" steerforce="0" stepoffset="0,0" radius="80.24999" mass="0" density="5" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05">
+    <sprite texture="Mods/BTE/Characters/Guarddog/Guarddog.png" sourcerect="434,805,326,128" origin="0.6054167,0.6165028" depth="0.51" />
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="damagehead,damagechest" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+  </limb>
+  <limb id="11" name="BackLegLower" type="None" width="24.75" height="0" notes="41cr_BackLegLower" flip="True" healthindex="0" attackpriority="0" steerforce="0" stepoffset="0,0" radius="53.625" mass="0" density="5" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05">
+    <sprite texture="Mods/BTE/Characters/Guarddog/Guarddog.png" sourcerect="831,862,162,77" origin="0.391005,0.4495551" depth="0.52" />
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="damagehead,damagechest" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+  </limb>
+  <limb id="12" name="BackLegPalm" type="LeftFoot" width="80" height="0" notes="411cr_backLegPalm" flip="True" healthindex="0" attackpriority="0" steerforce="0" stepoffset="50,0" radius="40" mass="0" density="5" pullpos="68.81641,-29.82208" refjoint="2" ignorecollisions="False" friction="0.3" restitution="0.05">
+    <sprite texture="Mods/BTE/Characters/Guarddog/Guarddog.png" sourcerect="766,658,73,82" origin="0.02739739,0.2682924" depth="0.53" />
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="damagehead,damagechest" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+  </limb>
+  <limb id="13" name="BackArmLower" type="None" width="180" height="80" notes="112bc_BackArmLower" flip="True" healthindex="0" attackpriority="0" steerforce="0" stepoffset="0,0" radius="0" mass="0" density="10" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05">
+    <sprite texture="Mods/BTE/Characters/Guarddog/Guarddog.png" sourcerect="646,1035,196,91" origin="0.9285714,0.606617" depth="0.5" />
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="damagehead,damagechest" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+  </limb>
+  <limb id="14" name="BackArmPalm" type="LeftFoot" width="60" height="200" notes="1121rm_BackArmPalm" flip="True" healthindex="0" attackpriority="0" steerforce="0" stepoffset="0,0" radius="0" mass="0" density="10" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05">
+    <sprite texture="Mods/BTE/Characters/Guarddog/Guarddog.png" sourcerect="800,363,85,207" origin="0,0.3623188" depth="0.52" />
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="damagehead,damagechest" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+  </limb>
+  
+  <joint name="Joint Chest - Head" limb1="4" limb2="0" limb1anchor="80.62424,60.75816" limb2anchor="-111.5113,-55.17178" canbesevered="True" limitenabled="True" upperlimit="10.42033" lowerlimit="-39.29678" stiffness="0.25" />
+  <joint name="Joint Head - Jaw" limb1="0" limb2="1" limb1anchor="-24.82605,-43.10464" limb2anchor="-194.688,14.9909" canbesevered="True" limitenabled="True" upperlimit="25.17237" lowerlimit="-23.26671" stiffness="0.25" />
+  <joint name="Joint Hips - Spine" limb1="2" limb2="3" limb1anchor="104.6353,-37.37065" limb2anchor="-24.41067,-58.55694" canbesevered="True" limitenabled="True" upperlimit="-21.92335" lowerlimit="-3.901623" stiffness="0.25" />
+  <joint name="Joint Spine - Chest" limb1="3" limb2="4" limb1anchor="119.9716,-56.06873" limb2anchor="-81.53255,-79.68375" canbesevered="True" limitenabled="True" upperlimit="13.12977" lowerlimit="-96.27272" stiffness="5" />
+  <joint name="Joint Hips - FrontUpperLeg" limb1="2" limb2="5" limb1anchor="26.14751,-76.75445" limb2anchor="-118.6583,8.374504" canbesevered="True" limitenabled="True" upperlimit="-50" lowerlimit="-193.177" stiffness="0.25" />
+  <joint name="Joint ArmLower - ArmPalm" limb1="8" limb2="6" limb1anchor="78.08107,-4.0651" limb2anchor="-5.689933,44.04416" canbesevered="True" limitenabled="True" upperlimit="96.65473" lowerlimit="-236.5281" stiffness="5" />
+  <joint name="Joint BackArmLower - BackArmPalm" limb1="13" limb2="14" limb1anchor="-23.60569,3.698403" limb2anchor="30.30905,44.04416" canbesevered="True" limitenabled="True" upperlimit="96.65473" lowerlimit="-236.5281" stiffness="5" />
+  <joint name="Joint FrontLegLower - FrontLegPalm" limb1="9" limb2="7" limb1anchor="51.74354,-10.1465" limb2anchor="6.469903,-32.98658" canbesevered="True" limitenabled="True" upperlimit="11.01659" lowerlimit="-93.62492" stiffness="2" />
+  <joint name="Joint Chest - ArmLower" limb1="4" limb2="8" limb1anchor="36.36835,-90.91476" limb2anchor="-54.58921,2.952353" canbesevered="True" limitenabled="True" upperlimit="298.0002" lowerlimit="287.6305" stiffness="5" />
+  <joint name="Joint Chest - BackArmLower" limb1="4" limb2="13" limb1anchor="0.5371724,-76.65739" limb2anchor="-140.1815,8.733288" canbesevered="True" limitenabled="True" upperlimit="298.0002" lowerlimit="287.6305" stiffness="5" />
+  <joint name="Joint FrontUpperLeg - FrontLegLower" limb1="5" limb2="9" limb1anchor="106.6982,-4.812674" limb2anchor="-35.46935,-2.087779" canbesevered="True" limitenabled="True" upperlimit="88.57513" lowerlimit="15.89218" stiffness="0.25" />
+  <joint name="Joint 2 - 10" limb1="2" limb2="10" limb1anchor="-12.61093,-57.01484" limb2anchor="-148.903,13.71068" canbesevered="True" limitenabled="True" upperlimit="-50" lowerlimit="-193" stiffness="0.25" />
+  <joint name="Joint 10 - 11" limb1="10" limb2="11" limb1anchor="70.03864,-0.2953373" limb2anchor="-31.65673,-7.047664" canbesevered="True" limitenabled="True" upperlimit="107.8238" lowerlimit="46.30739" stiffness="0.25" />
+  <joint name="Joint 11 - 12" limb1="11" limb2="12" limb1anchor="56.09412,-5.953309" limb2anchor="23.71685,-26.60733" canbesevered="True" limitenabled="True" upperlimit="12.21289" lowerlimit="-35.97469" stiffness="2" />
+</Ragdoll>

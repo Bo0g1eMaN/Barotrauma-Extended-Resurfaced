@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+ <Item name="Flat Cap" aliases="flatcap,flat hat" identifier="flathat" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="standardshippingbox" description="" scale="0.4">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.3" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.3"/>
+    <Price baseprice="35">
+      <Price locationtype="outpost" multiplier="1" minavailable="2"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="3"/>
+      <Price locationtype="research" multiplier="1" minavailable="2"/>
+      <Price locationtype="military" multiplier="1" minavailable="2"/>
+      <Price locationtype="mine" multiplier="1" minavailable="2"/>
+    </Price>
+
+    <Deconstruct time="10"/>
+    <Sprite name="Flat Hat" texture="Mods/BTE/Items/Jobgear/headgears.png" depth="0.6" sourcerect="409,209,88,66" origin="0.5,0.55" />
+    <Body width="75" height="25" density="30" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Flat Hat Wearable" texture="Mods/BTE/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" sourcerect="409,209,88,66" origin="0.5,0.8"/>
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="drunk" damagemultiplier="0.8" deflectprojectiles="false" />
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.9" deflectprojectiles="false" />
+	  	  	  	  <damagemodifier armorsector="0.0,360.0" afflictiontypes="bluntforcetrauma" damagemultiplier="0.8" deflectprojectiles="false"/>
+		  	  	<damagemodifier armorsector="0.0,360.0" afflictiontypes="lacerations" damagemultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+    <ItemContainer capacity="1" depth="0.5" >
+      <Containable items="smallitem" excludeditems="toolbelt,toolbox,smg,shotgun,welder,plasmacutter" />
+    </ItemContainer>
+  </Item>
+
+<Item name="Ushanka" identifier="ushanka" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="standardshippingbox" description="A hat for true komrads" scale="0.4">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="2" spawnprobability="0.3" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.3"/>
+    <Price baseprice="35">
+      <Price locationtype="outpost" multiplier="1" minavailable="2"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="3"/>
+      <Price locationtype="research" multiplier="1" minavailable="2"/>
+      <Price locationtype="military" multiplier="1" minavailable="2"/>
+      <Price locationtype="mine" multiplier="1" minavailable="2"/>
+    </Price>
+
+	
+    <Deconstruct time="10"/>
+    <Sprite name="Ushanka" texture="Mods/BTE/Items/Jobgear/headgears.png" depth="0.6" sourcerect="166,247,104,76" origin="0.5,0.55" />
+    <Body width="75" height="25" density="30" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Ushanka Wearable" texture="Mods/BTE/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" sourcerect="166,247,104,76" origin="0.6,0.7"/>
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="drunk" damagemultiplier="0.8" deflectprojectiles="false" />
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.95" deflectprojectiles="false" />
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="radiationsickness" damagemultiplier="0.8" deflectprojectiles="false" />
+	  	  	  	  <damagemodifier armorsector="0.0,360.0" afflictiontypes="bluntforcetrauma" damagemultiplier="0.8" deflectprojectiles="false"/>
+		  	  	<damagemodifier armorsector="0.0,360.0" afflictiontypes="lacerations" damagemultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+   <ItemContainer capacity="1" depth="0.5" >
+      <Containable items="smallitem" excludeditems="toolbelt,crowbar,toolbox,smg,shotgun,weldingtool,oxygentank,weldingfueltank,clothing,plasmacutter" />
+    </ItemContainer>
+  </Item>
+
+<Item name="Barret" identifier="barret" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="standardshippingbox" description="" scale="0.4">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.1" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.1"/>
+    <Price baseprice="35">
+      <Price locationtype="outpost" multiplier="1" minavailable="2"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="3"/>
+      <Price locationtype="research" multiplier="1" minavailable="2"/>
+      <Price locationtype="military" multiplier="1" minavailable="2"/>
+      <Price locationtype="mine" multiplier="1" minavailable="2"/>
+    </Price>
+
+	
+    <Deconstruct time="10"/>
+    <Sprite name="Barret" texture="Mods/BTE/Items/Jobgear/headgears.png" depth="0.6" sourcerect="181,426,90,70" origin="0.5,0.55" />
+    <Body width="75" height="25" density="30" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Barret Wearable" texture="Mods/BTE/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" sourcerect="181,426,90,70" origin="0.5,0.9"/>
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.8" deflectprojectiles="false" />
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.9" deflectprojectiles="false" />
+	  	  	  	  <damagemodifier armorsector="0.0,360.0" afflictiontypes="bluntforcetrauma" damagemultiplier="0.8" deflectprojectiles="false"/>
+		  	  	<damagemodifier armorsector="0.0,360.0" afflictiontypes="lacerations" damagemultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+   <ItemContainer capacity="1" depth="0.5" >
+      <Containable items="smallitem" excludeditems="toolbelt,crowbar,toolbox,smg,shotgun,weldingtool,oxygentank,weldingfueltank,clothing,plasmacutter" />
+    </ItemContainer>
+  </Item>
+
+  <Item name="Hard Hat" aliases="safety hat, safetyhat" identifier="hardhat" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="standardshippingbox" description="" scale="0.4">
+<PreferredContainer primary="engcab" minamount="1" maxamount="4" spawnprobability="1"/>
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.4" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.41"/>
+    <Price baseprice="75">
+      <Price locationtype="outpost" multiplier="1" minavailable="2"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="3"/>
+      <Price locationtype="research" multiplier="1" minavailable="2"/>
+      <Price locationtype="military" multiplier="1" minavailable="2"/>
+      <Price locationtype="mine" multiplier="1" minavailable="2"/>
+    </Price>
+
+	
+	<Deconstruct time="15">
+      <Item identifier="organicfiber"/>
+<Item identifier="plastic"/>
+    </Deconstruct>
+    <Sprite name="Hard Hat" texture="Mods/BTE/Items/Jobgear/headgears.png" depth="0.6" sourcerect="13,35,84,70" origin="0.5,0.55" />
+    <Body width="75" height="25" density="30" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Hard Hat Wearable" texture="Mods/BTE/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true"  hidelimb="false" sourcerect="13,35,84,70" origin="0.45,0.8"/>
+	  	  	  	  <damagemodifier armorsector="0.0,360.0" afflictiontypes="bluntforcetrauma,gunshotwound" damagesound="LimbArmor" damagemultiplier="0.45" deflectprojectiles="false"/>
+		  	  	<damagemodifier armorsector="0.0,360.0" afflictiontypes="lacerations" damagemultiplier="0.4" deflectprojectiles="false"/>
+    </Wearable>
+   <ItemContainer capacity="1" depth="0.5" >
+      <Containable items="smallitem" excludeditems="toolbelt,crowbar,toolbox,smg,shotgun,weldingtool,oxygentank,weldingfueltank,clothing,plasmacutter" />
+    </ItemContainer>
+  </Item>
+
+  <Item name="Welding Helmet" fireproof="true" aliases="welding mask,weldingmask,weldersmask,welders mask" identifier="weldinghelmet" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="standardshippingbox" description="Useful against burns caused by welders" scale="0.4">
+<PreferredContainer primary="engcab" minamount="1" maxamount="3" spawnprobability="1"/>
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.1" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.1"/>
+    <Price baseprice="200">
+      <Price locationtype="outpost" multiplier="1" minavailable="2"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="3"/>
+      <Price locationtype="research" multiplier="1" minavailable="2"/>
+      <Price locationtype="military" multiplier="1" minavailable="2"/>
+      <Price locationtype="mine" multiplier="1" minavailable="2"/>
+    </Price>
+
+	
+	<Deconstruct time="15">
+<Item identifier="steel"/>
+<Item identifier="steel" outcondition="0.5"/>
+<Item identifier="plastic" outcondition="0.1"/>
+    </Deconstruct>
+    <Sprite name="Welding Helmet" texture="Mods/BTE/Items/Jobgear/headgears.png" depth="0.6" sourcerect="9,234,104,100" origin="0.5,0.55" />
+    <Body width="75" height="25" density="30" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Welding Helmet Wearable" texture="Mods/BTE/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" sourcerect="9,234,104,100" origin="0.4,0.53"/>
+<StatusEffect type="OnWearing" target="Character" tags="weldingmaskon" duration="0.1" stackable="false" HideFace="true" ObstructVision="true" SpeedMultiplier="0.8" setvalue="true" disabledeltatime="true" />
+	  	  	  	  <damagemodifier armorsector="0.0,360.0" afflictiontypes="bluntforcetrauma,gunshotwound,explosiondamage" damagesound="LimbArmor" damagemultiplier="0.18" deflectprojectiles="true"/>
+ <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.3213" deflectprojectiles="false"/>
+		  	  	<damagemodifier armorsector="0.0,360.0" afflictiontypes="lacerations" damagemultiplier="0.3" deflectprojectiles="false"/>
+    </Wearable>
+
+  </Item>
+
+<Item name="Medical Visor" fireproof="true" aliases="medicalvisor" identifier="visor" description="Protects against illness and chemical reactions" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="standardshippingbox" scale="0.4">
+<PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="0.5" />
+    <Price baseprice="125">
+      <Price locationtype="outpost" multiplier="1" minavailable="2"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="3"/>
+      <Price locationtype="research" multiplier="1" minavailable="2"/>
+      <Price locationtype="military" multiplier="1" minavailable="2"/>
+      <Price locationtype="mine" multiplier="1" minavailable="2"/>
+    </Price>
+
+	
+	<Deconstruct time="15">
+      <Item identifier="organicfiber"/>
+<Item identifier="plastic"/>
+<Item identifier="plastic" outcondition="0.15"/>
+    </Deconstruct>
+    <Sprite name="Medical Visor" texture="Mods/BTE/Items/Jobgear/headgears.png" depth="0.6" sourcerect="152,27,114,106" origin="0.5,0.55" />
+    <Body width="75" height="25" density="30" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Medical Visor Wearable" texture="Mods/BTE/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" sourcerect="152,27,114,106" origin="0.45,0.5"/>
+<StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" SpeedMultiplier="0.95" setvalue="true" disabledeltatime="true" />
+	  	  	  	  <damagemodifier armorsector="0.0,360.0" afflictiontypes="bluntforcetrauma,gunshotwound,explosiondamage" damagesound="LimbArmor" damagemultiplier="0.68" deflectprojectiles="true"/>
+ <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.3213" deflectprojectiles="false"/>
+ <damagemodifier armorsector="0.0,360.0" afflictiontypes="huskinfection,watchersgaze,poison" damagemultiplier="0.5" deflectprojectiles="false"/>
+		  	  	<damagemodifier armorsector="0.0,360.0" afflictiontypes="lacerations" damagemultiplier="0.4" deflectprojectiles="false"/>
+    </Wearable>
+
+  </Item>
+
+  
+    <Item name="Beanie" identifier="beanie" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="standardshippingbox" description="" scale="0.4">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.325" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.325"/>
+    <Price baseprice="25">
+      <Price locationtype="outpost" multiplier="1" minavailable="2"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="3"/>
+      <Price locationtype="research" multiplier="1" minavailable="2"/>
+      <Price locationtype="military" multiplier="1" minavailable="2"/>
+      <Price locationtype="mine" multiplier="1" minavailable="2"/>
+    </Price>
+
+	
+    <Deconstruct time="10"/>
+    <Sprite name="Beanie" texture="Mods/BTE/Items/Jobgear/headgears.png" depth="0.6" sourcerect="321,34,88,90" origin="0.5,0.5" />
+    <Body width="75" height="35" density="30" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Beanie Cap Wearable" texture="Mods/BTE/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" sourcerect="321,34,88,90" origin="0.5,0.7" />
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.8" deflectprojectiles="false" />
+	  	  <damagemodifier armorsector="0.0,360.0" afflictiontypes="bluntforcetrauma" damagemultiplier="0.8" deflectprojectiles="false"/>
+		  	  	<damagemodifier armorsector="0.0,360.0" afflictiontypes="lacerations" damagemultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+   <ItemContainer capacity="2" depth="0.5" >
+      <Containable items="smallitem" excludeditems="toolbelt,crowbar,toolbox,smg,shotgun,weldingtool,oxygentank,weldingfueltank,clothing,plasmacutter" />
+    </ItemContainer>
+  </Item>
+  
+    <Item name="Baseball Cap Flipped" identifier="baseballcapflipped" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="standardshippingbox" description="" scale="0.4">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.125"/>
+    <Price baseprice="75">
+      <Price locationtype="outpost" multiplier="1" minavailable="2"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="3"/>
+      <Price locationtype="research" multiplier="1" minavailable="2"/>
+      <Price locationtype="military" multiplier="1" minavailable="2"/>
+      <Price locationtype="mine" multiplier="1" minavailable="2"/>
+    </Price>
+
+	
+    <Deconstruct time="10"/>
+    <Sprite name="Baseball Cap" texture="Mods/BTE/Items/Jobgear/headgears.png" depth="0.6" sourcerect="321,332,86,45" origin="0.5,0.5" />
+    <Body width="75" height="50" density="30" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Baseball Cap Wearable" texture="Mods/BTE/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" sourcerect="321,332,86,45" origin="0.6,1.1" IsOn="true"/>
+	  <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.93" deflectprojectiles="false"/>
+	  	 <damagemodifier armorsector="0.0,360.0" afflictiontypes="bluntforcetrauma" damagemultiplier="0.78" deflectprojectiles="false"/>
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="lacerations" damagemultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+   <ItemContainer capacity="1" depth="0.5" >
+      <Containable items="smallitem" excludeditems="toolbelt,crowbar,toolbox,smg,shotgun,weldingtool,oxygentank,weldingfueltank,clothing,plasmacutter" />
+    </ItemContainer>
+  </Item>
+  
+  <Override>
+    <Item name="" identifier="baseballcap" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="standardshippingbox" description="" scale="0.4">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.125"/>
+    <Price baseprice="75">
+      <Price locationtype="outpost" multiplier="1" minavailable="2"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="3"/>
+      <Price locationtype="research" multiplier="1" minavailable="2"/>
+      <Price locationtype="military" multiplier="1" minavailable="2"/>
+      <Price locationtype="mine" multiplier="1" minavailable="2"/>
+    </Price>
+    <Deconstruct time="10"/>
+    <Sprite name="Baseball Cap" texture="Content/Items/Jobgear/headgears.png" depth="0.6" sourcerect="321,332,86,45" origin="0.5,0.5" />
+    <Body width="75" height="50" density="30" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Baseball Cap Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" sourcerect="321,332,86,45" origin="0.4,0.9" />
+	  <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.9" deflectprojectiles="true"/>
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="bluntforcetrauma" damagemultiplier="0.8" deflectprojectiles="false"/>
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="lacerations" damagemultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+   <ItemContainer capacity="1" depth="0.5" >
+      <Containable items="smallitem" excludeditems="toolbelt,crowbar,toolbox,smg,shotgun,weldingtool,oxygentank,weldingfueltank,clothing,plasmacutter" />
+    </ItemContainer>
+  </Item>
+  </Override>
+  
+    <Item name="Cowboy Hat" identifier="Cowboyhat" aliases="cow boy hat" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="standardshippingbox" description="" scale="0.4">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.325" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.325"/>
+    <Price baseprice="85">
+      <Price locationtype="outpost" multiplier="1" minavailable="2"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="3"/>
+      <Price locationtype="research" multiplier="1" minavailable="2"/>
+      <Price locationtype="military" multiplier="1" minavailable="2"/>
+      <Price locationtype="mine" multiplier="1" minavailable="2"/>
+    </Price>
+
+	
+    <Deconstruct time="10"/>
+       <Sprite name="Cowboy Hat" texture="Mods/BTE/Items/Jobgear/headgears.png" depth="0.6" sourcerect="300,115,130,68"  origin="0.5,0.5" />
+    <Body width="75" height="47" density="30" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Cowboy Hat Wearable" texture="Mods/BTE/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" sourcerect="300,115,130,68" origin="0.45,0.9" />
+	  <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.99" deflectprojectiles="false" />
+		<damagemodifier armorsector="0.0,360.0" afflictiontypes="gunshotwound" damagemultiplier="0.61" damagesound="LimbArmor" deflectprojectiles="true" />
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="bluntforcetrauma" damagemultiplier="0.8" deflectprojectiles="false"/>
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="lacerations" damagemultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+   <ItemContainer capacity="1" depth="0.5" >
+      <Containable items="smallitem" excludeditems="toolbelt,crowbar,toolbox,smg,shotgun,weldingtool,oxygentank,weldingfueltank,clothing,plasmacutter" />
+    </ItemContainer>
+  </Item>
+
+<Override>
+ <Item name="" identifier="captainscap1" aliases="captainscap" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="standardshippingbox" description="" scale="0.4">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <Price baseprice="75">
+      <Price locationtype="outpost" multiplier="1" minavailable="1"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" minavailable="1"/>
+      <Price locationtype="military" multiplier="1" minavailable="1"/>
+      <Price locationtype="mine" multiplier="1" minavailable="1"/>
+    </Price>
+    <Deconstruct time="10"/>
+    <Sprite name="Captain's Cap 1" texture="Content/Items/Jobgear/headgears.png" depth="0.6" sourcerect="16,132,76,50" origin="0.5,0.5" />
+    <Body width="75" height="50" density="30" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Captain's Cap 1 Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" sourcerect="16,132,76,50" origin="0.5,0.9" />
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="gunshotwound" damagemultiplier="0.60" damagesound="LimbArmor" deflectprojectiles="true" />
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="bluntforcetrauma" damagemultiplier="0.8" deflectprojectiles="false"/>
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="lacerations" damagemultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+   <ItemContainer capacity="1" depth="0.5" >
+      <Containable items="smallitem" excludeditems="toolbelt,crowbar,toolbox,smg,shotgun,weldingtool,oxygentank,weldingfueltank,clothing,plasmacutter" />
+    </ItemContainer>
+  </Item>
+</Override>
+
+<Override>
+  <Item name="" identifier="captainscap2" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="standardshippingbox" description="" scale="0.4">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <Price baseprice="75">
+      <Price locationtype="outpost" multiplier="1" minavailable="1"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" minavailable="1"/>
+      <Price locationtype="military" multiplier="1" minavailable="1"/>
+      <Price locationtype="mine" multiplier="1" minavailable="1"/>
+    </Price>
+    <Deconstruct time="10"/>
+    <Sprite name="Captain's Cap 2" texture="Content/Items/Jobgear/headgears.png" depth="0.6" sourcerect="118,130,68,47" origin="0.5,0.5" />
+    <Body width="75" height="50" density="30" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+<StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.257" setvalue="true" disabledeltatime="true" />
+      <sprite name="Captain's Cap 2 Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" sourcerect="118,130,68,47" origin="0.5,1" />
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="bluntforcetrauma" damagemultiplier="0.8" deflectprojectiles="false"/>
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="lacerations" damagemultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+   <ItemContainer capacity="1" depth="0.5" >
+      <Containable items="smallitem" excludeditems="toolbelt,crowbar,toolbox,smg,shotgun,weldingtool,oxygentank,weldingfueltank,clothing,plasmacutter" />
+    </ItemContainer>
+  </Item>
+</Override>
+
+<Override>
+  <Item name="" identifier="captainscap3" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="standardshippingbox" description="" scale="0.4">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <Price baseprice="75">
+      <Price locationtype="outpost" multiplier="1" minavailable="1"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" minavailable="1"/>
+      <Price locationtype="military" multiplier="1" minavailable="1"/>
+      <Price locationtype="mine" multiplier="1" minavailable="1"/>
+    </Price>
+    <Deconstruct time="10"/>
+    <Sprite name="Captain's Cap 3" texture="Content/Items/Jobgear/headgears.png" depth="0.6" sourcerect="211,124,82,50" origin="0.5,0.5" />
+    <Body width="75" height="50" density="30" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Captain's Cap 3 Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" sourcerect="211,124,82,50" origin="0.5,1" />
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="bluntforcetrauma,bleeding,watchersgaze,stun" damagemultiplier="0.8" deflectprojectiles="false"/>
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="bitewounds" damagemultiplier="0.87" damagesound="LimbArmor" deflectprojectiles="false"/>
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="lacerations" damagemultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+   <ItemContainer capacity="1" depth="0.5" >
+      <Containable items="smallitem" excludeditems="toolbelt,crowbar,toolbox,smg,shotgun,weldingtool,oxygentank,weldingfueltank,clothing,plasmacutter" />
+    </ItemContainer>
+  </Item>
+
+</Override>
+<Override>
+  <Item name="" identifier="healthscanner" scale="0.5" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="standardshippingbox" description="" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="0.5" />
+    <Price baseprice="150" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false"/>
+      <Price locationtype="city" multiplier="1.2" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" minavailable="8"/>
+      <Price locationtype="military" multiplier="1.25" minavailable="1"/>
+      <Price locationtype="mine" multiplier="1" sold="false"/>
+    </Price>
+    <Deconstruct time="20">
+      <Item identifier="fpgacircuit" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="mechanical" level="30" />
+      <RequiredSkill identifier="medical" level="50" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,256,64,64" origin="0.5,0.5" />
+    <Sprite name="Health Scanner" texture="Content/Items/Jobgear/headgears.png" sourcerect="115,349,75,26" depth="0.6" origin="0.5,0.5" />
+    <Body width="70" height="24" density="30" />
+    <Wearable limbtype="Head" slots="Any,Headset+Head" msg="ItemMsgPickUpSelect">
+	      <StatusEffect type="OnWearing" target="Contained" Condition="-0.06" />
+      <sprite name="Health Scanner Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" sourcerect="115,349,75,26" origin="0.55,0.85" />
+<damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.99" deflectprojectiles="false"/>
+ <damagemodifier armorsector="0.0,360.0" afflictiontypes="huskinfection,watchersgaze,poison" damagemultiplier="0.98" deflectprojectiles="false"/>
+    </Wearable>
+<WifiComponent range="35000" LinkToChat="true" MinChatMessageInterval="0.0">
+      <RequiredItems items="mobilebattery" type="Contained" />
+    </WifiComponent>
+	<WifiComponent range="35000" LinkToChat="true" MinChatMessageInterval="0.0" channel="78" canbeselected="false">
+      <RequiredItems items="hybridbatterycell" type="Contained" />
+    </WifiComponent>
+
+    <StatusHUD drawhudwhenequipped="true"/>
+
+	<ItemContainer capacity="1" hideitems="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
+      <Containable items="mobilebattery" />
+    </ItemContainer>
+
+  </Item>
+</Override>
+
+<Override>
+  <Item name="" identifier="ballistichelmet1" aliases="ballistichelmet" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="standardshippingbox" description="" impactsoundtag="impact_metal_heavy" scale="0.4">
+    <Upgrade gameversion="0.9.6.0" scale="0.4" />
+    <PreferredContainer primary="armcab" minamount="0" maxamount="1" spawnprobability="1" />
+    <Price baseprice="175" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false"/>
+      <Price locationtype="city" multiplier="1.2" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" sold="false"/>
+      <Price locationtype="military" multiplier="0.9" minavailable="3"/>
+      <Price locationtype="mine" multiplier="1" sold="false"/>
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="ballisticfiber" />
+	  <Item identifier="plastic" outcondition="0.5" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="30" />
+      <RequiredItem identifier="ballisticfiber" />
+	  <Item identifier="plastic" mincondition="0.5" usecondition="true" />
+    </Fabricate>
+    <Sprite name="Ballistic Helmet 1" texture="Content/Items/Jobgear/headgears.png" sourcerect="15,220,73,66" depth="0.6" origin="0.5,0.5" />
+    <Body radius="30" density="50" />
+    <Wearable slots="Any,Head" armorvalue="20.0" msg="ItemMsgPickUpSelect">
+<StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.85" ObstructVision="true" setvalue="true" disabledeltatime="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+ <damagemodifier afflictionidentifiers="watchersgaze,burn" armorsector="0.0,360.0" damagemultiplier="0.98" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.11" damagesound="LimbArmor" deflectprojectiles="true" />
+      <sprite name="Ballistic Helmet 1 Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidewearablesoftype="hair" sourcerect="15,220,73,66" origin="0.5,0.7" />
+    </Wearable>
+   <ItemContainer capacity="1" depth="0.5" >
+      <Containable items="smallitem" excludeditems="toolbelt,crowbar,toolbox,smg,shotgun,weldingtool,oxygentank,stunbaton,weldingfueltank,clothing,plasmacutter" />
+    </ItemContainer>
+  </Item>
+</Override>
+<Override>
+  <Item name="" identifier="ballistichelmet2" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="standardshippingbox" description="" impactsoundtag="impact_metal_heavy" scale="0.4">
+    <PreferredContainer primary="armcab" minamount="0" maxamount="1" spawnprobability="1" />
+    <Price baseprice="175" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false"/>
+      <Price locationtype="city" multiplier="1.2" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" sold="false"/>
+      <Price locationtype="military" multiplier="0.9" minavailable="3"/>
+      <Price locationtype="mine" multiplier="1" sold="false"/>
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="ballisticfiber" outcondition="0.7" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="30" />
+      <RequiredItem identifier="ballisticfiber" mincondition="0.7" usecondition="true" />
+    </Fabricate>
+    <Sprite name="Ballistic Helmet 2" texture="Content/Items/Jobgear/headgears.png" sourcerect="115,215,77,88" depth="0.6" origin="0.5,0.5" />
+    <Body radius="30" density="50" />
+    <Wearable slots="Any,Head" armorvalue="20.0" msg="ItemMsgPickUpSelect">
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.12" damagesound="LimbArmor" deflectprojectiles="true" />
+      <sprite name="Ballistic Helmet 2 Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidewearablesoftype="hair" sourcerect="115,215,77,88" origin="0.625,0.5" />
+    </Wearable>
+   <ItemContainer capacity="1" depth="0.5" >
+      <Containable items="smallitem" excludeditems="toolbelt,crowbar,toolbox,smg,shotgun,weldingtool,oxygentank,stunbaton,weldingfueltank,divingmask,clothing,plasmacutter" />
+    </ItemContainer>
+  </Item>
+</Override>
+
+<Override>
+  <Item name="" identifier="ballistichelmet3" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="standardshippingbox" description="" impactsoundtag="impact_metal_heavy" scale="0.4">
+    <PreferredContainer primary="armcab" minamount="0" maxamount="1" spawnprobability="1" />
+    <Price baseprice="175" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false"/>
+      <Price locationtype="city" multiplier="1.2" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" sold="false"/>
+      <Price locationtype="military" multiplier="0.9" minavailable="3"/>
+      <Price locationtype="mine" multiplier="1" sold="false"/>
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="ballisticfiber" />
+	  <Item identifier="ballisticfiber" outcondition="0.3" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="30" />
+      <RequiredItem identifier="ballisticfiber" />
+	  <RequiredItem identifier="ballisticfiber" mincondition="0.3" usecondition="true" />
+    </Fabricate>
+    <Sprite name="Ballistic Helmet 3" texture="Content/Items/Jobgear/headgears.png" sourcerect="208,214,92,81" depth="0.6" origin="0.5,0.5" />
+    <Body radius="30" density="50" />
+    <Wearable slots="Any,Head" armorvalue="20.0" msg="ItemMsgPickUpSelect">
+	<StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.8" HideFace="true" ObstructVision="true" setvalue="true" disabledeltatime="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+	   <damagemodifier afflictionidentifiers="watchersgaze,burn" armorsector="0.0,360.0" damagemultiplier="0.98" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+      <sprite name="Ballistic Helmet 3 Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidewearablesoftype="hair" sourcerect="208,214,92,81" origin="0.575,0.55" />
+    </Wearable>
+   <ItemContainer capacity="1" depth="0.5" >
+      <Containable items="smallitem" excludeditems="toolbelt,crowbar,toolbox,smg,shotgun,weldingtool,oxygentank,stunbaton,weldingfueltank,divingmask,clothing,plasmacutter" />
+    </ItemContainer>
+  </Item>
+</Override>
+</Items>

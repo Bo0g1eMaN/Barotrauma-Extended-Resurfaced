@@ -56,6 +56,9 @@
 <jobname.officer1>Crew Chief</jobname.officer1>
 <jobname.officer2>Enforcer</jobname.officer2>
 <jobname.officer3>XO</jobname.officer3>
+<jobname.assistant2>Battle Nurse</jobname.assistant2>
+<jobname.assistant1>Seaman</jobname.assistant1>
+<jobdescription.assistant2>Battle Nurses are for players who are wanting to learn how to play medic but also want to contribute in other areas as well</jobdescription.assistant2>
 <jobdescription.officer1>Crew Chiefs make sure everything on the sub is running smoothly and efficiently.</jobdescription.officer1>
 <jobdescription.officer2>Enforcers are normally battle hardened security officer's promoted to make sure law and order is maintained no matter the cost.</jobdescription.officer2>
 <jobdescription.officer3>The Executive Officer otherwise known as the XO is a senior officer about to become a captain. They know how to command both a security or maintanence team effectively.</jobdescription.officer3>
@@ -118,4 +121,12 @@
   <entityname.iodinepills>Iodine Pills</entityname.iodinepills>
   <entitydescription.iodinepills>These pills can prevent some effects of radiation exposure.</entitydescription.iodinepills>
 
+<displayname.deadmansswitch>Deadmans Switch</displayname.deadmansswitch>
+<displayname.poisonedthresh>Threshcrawl (Poisoned)</displayname.poisonedthresh>
+<displayname.poisonedhusk>Husk Caviar (Under Prepared)</displayname.poisonedhusk>
+<displayname.mysterymeat>Seared Human (Mystery Meat)</displayname.mysterymeat>
+<loadingscreentip>Hats can give minor resistances to damage.</loadingscreentip>
+<loadingscreentip>Bloodloss can help stop poison.</loadingscreentip>
+<loadingscreentip>Eating two different foods can give you a bonus, try fried thresher and fries.</loadingscreentip>
+<loadingscreentip>Bandaging now treats gunshot wounds, animal bites, deep tissue injury and also lacerations.</loadingscreentip>
 </infotexts>

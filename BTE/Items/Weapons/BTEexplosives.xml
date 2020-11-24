@@ -1,227 +1,873 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-  <Item name="" identifier="uex" category="Equipment" description="" Scale="0.5" Tags="smallitem,explosive" cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
-    <Upgrade gameversion="0.9.3.0" scale="0.5"/>
-    <PreferredContainer primary="secarmcab" minamount="1" maxamount="2" spawnprobability="0.5"/>
-    <Price baseprice="75" >
+<Override>
+  <Item name="Propellant Charge" identifier="uex" category="Equipment" Scale="0.5" Tags="smallitem,explosive"
+	cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
+	<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="768,64,64,64"/>
+    <Sprite texture="Content/Items/Weapons/weapons.png" depth="0.8" sourcerect="103,58,23,16"/>
+    <Body width="23" height="16" density="20"/>
+    
+	<Price baseprice="75" >
       <Price locationtype="outpost" multiplier="1.5" minavailable="2" />
       <Price locationtype="city" multiplier="1.25" minavailable="4" />
       <Price locationtype="research" multiplier="1.25" minavailable="1" />
       <Price locationtype="military" multiplier="0.9" minavailable="4" />
       <Price locationtype="mine" multiplier="1" minavailable="4" />
     </Price>
-    <Fabricate suitablefabricators="fabricator" requiredtime="20">
-      <RequiredSkill identifier="weapons" level="60" />
-      <RequiredItem identifier="sodium" />
-      <RequiredItem identifier="phosphorus" />
+	
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="40"/>
+      <RequiredItem identifier="aluminium" mincondition="0.2"/>
+	  <RequiredItem identifier="nitroglycerin" mincondition="0.2"/>
+      <RequiredItem identifier="sulphuricacid" mincondition="0.25"/>
     </Fabricate>
-    <!-- TODO: sprite and inventory icon -->
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="897,896,64,64" origin="0.5,0.5" />
-    <Sprite texture="weapons_new.png" depth="0.8" sourcerect="2,478,47,32" origin="0.5,0.5" />
-    <Body width="45" height="30" density="20" />
-    <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-      <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" type="OnBroken" range="10000" selectionmode="All" />
-      <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" type="OnBroken" range="10000" />
-      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true"/>
-      <StatusEffect type="OnBroken" target="This">
-        <Explosion range="800.0" structuredamage="150" itemdamage="1000" stun="5" force="20.0" severlimbsprobability="0.5" decal="explosion" decalsize="0.5">
-          <Affliction identifier="burn" strength="50" />
-          <Affliction identifier="lacerations" strength="25" />
+	
+	<Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="1.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <sound file="Content/Items/Weapons/StunGrenade.ogg" type="OnUse" range="7500"/>
+      <StatusEffect type="OnUse" target="This" Condition="-100">
+        <Explosion range="350" structuredamage="60" itemdamage="60" stun="5" force="20" decal="explosion" decalsize="0.5">
+          <Affliction identifier="internaldamage" strength="95"/>
         </Explosion>
         <Remove />
       </StatusEffect>
     </Throwable>
   </Item>
-  
-  <Item name="" identifier="c4block" category="Equipment" Tags="smallitem,explosive" Scale="0.5" cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
-    <Upgrade gameversion="0.9.3.0" scale="0.5"/>
-    <PreferredContainer primary="secarmcab" minamount="1" maxamount="2" spawnprobability="0.5"/>
-    <Price baseprice="160" soldeverywhere="false">
+  </Override>
+
+<Override>
+  <Item name="Concussion Payload" identifier="40mmstungrenade" category="Equipment" Scale="0.5" Tags="smallitem,explosive"
+	cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
+	<Price locationtype="Military" buyprice="75"/>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="768,64,64,64"/>
+    <Sprite texture="Content/Items/Weapons/weapons.png" depth="0.8" sourcerect="103,58,23,16"/>
+    <Body width="23" height="16" density="20"/>
+    
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="40"/>
+      <RequiredItem identifier="uex" mincondition="0.75"/>
+	  <RequiredItem identifier="phosphorus" mincondition="0.25"/>
+    </Fabricate>
+	
+	<Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="1.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" type="OnUse" range="10000" selectionmode="All"/>
+      <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" type="OnUse" range="10000"/>
+      <StatusEffect type="OnUse" target="This" Condition="-100">
+        <Explosion range="450" structuredamage="30" itemdamage="30" stun="4" force="16" decal="explosion" decalsize="0.5">
+          <Affliction identifier="burn" strength="120"/>
+          <Affliction identifier="internaldamage" strength="40"/>
+        </Explosion>
+        <Remove />
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  </Override>
+
+<Override>
+  <Item name="Blast Payload" identifier="c4block" category="Equipment" Scale="0.75" Tags="smallitem,explosivebig"
+    cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
+
+	 <Price baseprice="160" soldeverywhere="false">
       <Price locationtype="outpost" multiplier="1.5" sold="false"/>
       <Price locationtype="city" multiplier="1.25" minavailable="2" />
       <Price locationtype="research" multiplier="1.25" sold="false"/>
       <Price locationtype="military" multiplier="0.9" minavailable="3" />
       <Price locationtype="mine" multiplier="1" sold="false"/>
     </Price>
-    <Fabricate suitablefabricators="fabricator" requiredtime="20">
-      <RequiredSkill identifier="weapons" level="70" />
-      <RequiredItem identifier="uex" />
-      <RequiredItem identifier="plastic" />
+	
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="50"/>
+      <RequiredItem identifier="40mmstungrenade"/>
+      <RequiredItem identifier="chlorine" mincondition="0.25"/>
     </Fabricate>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="768,64,64,64" origin="0.5,0.5" />
-    <Sprite texture="weapons_new.png" depth="0.8" sourcerect="51,478,48,33" origin="0.5,0.5" />
-    <Body width="45" height="30" density="20" />
-    <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-      <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" type="OnBroken" range="10000" selectionmode="All" />
-      <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" type="OnBroken" range="10000" />
-      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true"/>      
-      <StatusEffect type="OnBroken" target="This">
-        <Explosion range="500.0" structuredamage="250" itemdamage="1000" stun="5" force="20.0" severlimbsprobability="0.5" decal="explosion" decalsize="0.5">
-          <Affliction identifier="burn" strength="150" />
-          <Affliction identifier="lacerations" strength="50" />
+	
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="768,64,64,64"/>
+    <Sprite texture="Content/Items/Weapons/weapons.png" depth="0.8" sourcerect="103,58,23,16"/>
+    <Body width="23" height="16" density="20"/>
+    <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="1.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" type="OnUse" range="10000" selectionmode="All"/>
+      <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" type="OnUse" range="10000"/>
+      <StatusEffect type="OnUse" target="This" Condition="-100">
+        <Explosion range="525" structuredamage="200" itemdamage="200" stun="8" force="18" severlimbsprobability="0.4" decal="explosion" decalsize="0.5">
+          <Affliction identifier="burn" strength="270"/>
+          <Affliction identifier="internaldamage" strength="100"/>
         </Explosion>
         <Remove />
       </StatusEffect>
     </Throwable>
   </Item>
-  
-  <Item name="" identifier="compoundn" category="Equipment" Tags="smallitem,explosive" Scale="0.5" cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
-    <Upgrade gameversion="0.9.3.0" scale="0.5"/>
-    <PreferredContainer primary="secarmcab,armcab,storagecab"/>
-    <Price baseprice="150" soldeverywhere="false">
+</Override>
+
+<Override>
+  <Item name="Destroyer Payload" identifier="compoundn" category="Equipment" Scale="0.75" Tags="smallitem,explosivebig"
+    cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
+	<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="832,64,64,64"/>
+    <Sprite texture="Content/Items/Weapons/weapons.png" depth="0.8" sourcerect="103,75,24,16"/>
+    <Body width="24" height="16" density="20"/>
+    
+<Price baseprice="150" soldeverywhere="false">
       <Price locationtype="outpost" multiplier="1.5" sold="false"/>
       <Price locationtype="city" multiplier="1.25" minavailable="2" />
       <Price locationtype="research" multiplier="1.25" sold="false"/>
       <Price locationtype="military" multiplier="0.9" minavailable="4" />
       <Price locationtype="mine" multiplier="1" sold="false"/>
     </Price>
-    <Fabricate suitablefabricators="medicalfabricator" requiredtime="20">
-      <RequiredSkill identifier="medical" level="60" />
-      <RequiredItem identifier="aluminium" />
-      <RequiredItem identifier="potassium" />
-      <RequiredItem identifier="sulphuricacid" />
+
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="60"/>
+      <RequiredItem identifier="c4block"/>
+      <RequiredItem identifier="aluminium" mincondition="0.25"/>
+      <RequiredItem identifier="sulphuricacid" mincondition="0.25"/>
     </Fabricate>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="832,64,64,64" origin="0.5,0.5" />
-    <Sprite texture="weapons_new.png" depth="0.8" sourcerect="101,476,49,34" origin="0.5,0.5" />
-    <Body width="45" height="30" density="20" />
-    <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-      <sound file="Content/Items/Weapons/ExplosionMedium2.ogg" type="OnBroken" range="10000" selectionmode="All" />
-      <sound file="Content/Items/Weapons/ExplosionDebris2.ogg" type="OnBroken" range="10000" />
-      <StatusEffect type="OnFire" target="This" Condition="-50.0" />
-      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true"/>
+	
+	<Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="1.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <sound file="Content/Items/Weapons/ExplosionMedium2.ogg" type="OnUse" range="10000" selectionmode="All"/>
+      <sound file="Content/Items/Weapons/ExplosionDebris2.ogg" type="OnUse" range="10000"/>
+      <StatusEffect type="OnFire" target="This" Condition="-50"/>
+      <StatusEffect type="OnUse" target="This" Condition="0" setvalue="true"/>
       <StatusEffect type="OnBroken" target="This">
-        <Explosion range="600.0" structuredamage="150" itemdamage="1000" stun="5" force="20.0" severlimbsprobability="0.6" decal="explosion" decalsize="0.5">
-          <Affliction identifier="burn" strength="250" />
-          <Affliction identifier="lacerations" strength="50" />
+        <Explosion range="550" structuredamage="400" itemdamage="400" stun="10" force="20" severlimbsprobability="0.6" decal="explosion" decalsize="0.5">
+          <Affliction identifier="burn" strength="405"/>
+          <Affliction identifier="internaldamage" strength="150"/>
+        </Explosion>
+        <Remove />
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  <Item name="Demolition Payload" identifier="volatilecompoundn" category="Equipment" Scale="0.75" Tags="smallitem,explosivebig"
+    cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft" impacttolerance="6">
+	<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="832,64,64,64"/>
+    <Sprite texture="Content/Items/Weapons/weapons.png" depth="0.8" sourcerect="103,108,23,17"/>
+    <Body width="24" height="8" density="20"/>
+    
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="70"/>
+      <RequiredItem identifier="compoundn"/>
+      <RequiredItem identifier="nitroglycerin" mincondition="0.25"/>
+    </Fabricate>
+	
+	<Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="1.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <sound file="Content/Items/Weapons/ExplosionMedium3.ogg" type="OnUse" range="10000" selectionmode="All"/>
+      <sound file="Content/Items/Weapons/ExplosionDebris3.ogg" type="OnUse" range="10000"/>
+      <sound file="Content/Items/Weapons/ExplosionMedium3.ogg" type="OnBroken" range="10000" selectionmode="All"/>
+      <sound file="Content/Items/Weapons/ExplosionDebris3.ogg" type="OnBroken" range="10000"/>
+      <StatusEffect type="OnFire" target="This" Condition="-25"/>
+      <StatusEffect type="OnUse" target="This" Condition="0" setvalue="true"/>
+      <StatusEffect type="OnBroken" target="This">
+        <Explosion range="650" structuredamage="600" itemdamage="600" stun="12" force="22" severlimbsprobability="0.8" decal="explosion" decalsize="0.5">
+          <Affliction identifier="burn" strength="630"/>
+          <Affliction identifier="internaldamage" strength="250"/>
+        </Explosion>
+        <Remove />
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  </Override>
+
+
+  <Item name="Breach Payload" identifier="breachbomb" category="Equipment" Scale="0.5" Tags="smallitem,explosive"
+    cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
+	<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="832,64,64,64"/>
+    <Sprite texture="Content/Items/Weapons/weapons.png" depth="0.8" sourcerect="103,108,23,17"/>
+    <Body width="24" height="8" density="20"/>
+    
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="60"/>
+      <RequiredItem identifier="volatilecompoundn" mincondition="0.5"/>
+      <RequiredItem identifier="stabilozine" mincondition="0.25"/>
+    </Fabricate>
+	
+	<Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="1.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <sound file="Content/Items/Weapons/ExplosionMedium3.ogg" type="OnUse" range="10000" selectionmode="All"/>
+      <sound file="Content/Items/Weapons/ExplosionDebris3.ogg" type="OnUse" range="10000"/>
+      <StatusEffect type="OnFire" target="This" Condition="-20"/>
+      <StatusEffect type="OnUse" target="This" Condition="0" setvalue="true"/>
+      <StatusEffect type="OnBroken" target="This">
+        <Explosion range="150" structuredamage="1500" itemdamage="1500" stun="12" force="22" severlimbsprobability="0.2" decal="explosion" decalsize="0.5">
+          <Affliction identifier="burn" strength="630"/>
+          <Affliction identifier="internaldamage" strength="250"/>
         </Explosion>
         <Remove />
       </StatusEffect>
     </Throwable>
   </Item>
   
-  <Item name="" identifier="volatilecompoundn" category="Equipment" Tags="smallitem,explosive" Scale="0.5" cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
+<Override>
+  <Item name="Shrapnel Payload" identifier="40mmgrenade" category="Equipment" Scale="0.5" Tags="smallitem,explosive"
+    cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.9.3.0" scale="0.5"/>
-    <PreferredContainer primary="secarmcab,armcab"/>
-    <Price baseprice="250" soldeverywhere="false">
+	<Price baseprice="75" soldeverywhere="false">
       <Price locationtype="outpost" multiplier="1.5" sold="false"/>
-      <Price locationtype="city" multiplier="1.25" sold="false"/>
+      <Price locationtype="city" multiplier="1.25" minavailable="2" />
       <Price locationtype="research" multiplier="1.25" sold="false"/>
-      <Price locationtype="military" multiplier="0.9" sold="false"/>
+      <Price locationtype="military" multiplier="1" minavailable="4" />
       <Price locationtype="mine" multiplier="1" sold="false"/>
     </Price>
-    <Fabricate suitablefabricators="medicalfabricator" requiredtime="20">
-      <RequiredSkill identifier="medical" level="40" />
-      <RequiredItem identifier="compoundn" />
-      <RequiredItem identifier="flashpowder" />
-    </Fabricate>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="832,64,64,64" origin="0.5,0.5" />
-    <Sprite texture="weapons_new.png" depth="0.8" sourcerect="152,477,50,34" origin="0.5,0.5" />
-    <Body width="45" height="30" density="20" />
-    <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-      <sound file="Content/Items/Weapons/ExplosionMedium3.ogg" type="OnBroken" range="10000" selectionmode="All" />
-      <sound file="Content/Items/Weapons/ExplosionDebris3.ogg" type="OnBroken" range="10000" />
-      <StatusEffect type="Always" target="This" Condition="-0.35" />
-      <StatusEffect type="OnFire" target="This" Condition="-50.0" />
-      <StatusEffect type="OnUse" target="This" Condition="-100" disabledeltatime="true"/>
-      <StatusEffect type="OnBroken" target="This">
-        <Explosion range="600.0" structuredamage="150" itemdamage="1000" stun="5" force="20.0" severlimbsprobability="0.6" decal="explosion" decalsize="0.5">
-          <Affliction identifier="burn" strength="250" />
-          <Affliction identifier="lacerations" strength="50" />
-        </Explosion>
-        <Remove />
-      </StatusEffect>
-    </Throwable>
-  </Item>
-  
-  <Item name="" identifier="ic4block" description="" category="Equipment" Tags="smallitem,explosive" Scale="0.5" cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
-    <Upgrade gameversion="0.9.3.0" scale="0.5"/>
-    <PreferredContainer primary="secarmcab" minamount="1" maxamount="2" spawnprobability="0.5"/>
-    <Price baseprice="400" soldeverywhere="false">
-      <Price locationtype="outpost" multiplier="1.5" sold="false"/>
-      <Price locationtype="city" multiplier="1.25" sold="false" />
-      <Price locationtype="research" multiplier="1.25" sold="false"/>
-      <Price locationtype="military" multiplier="0.9" minavailable="1" />
-      <Price locationtype="mine" multiplier="1" sold="false"/>
-    </Price>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,64,64,64" origin="0.5,0.5" />
-    <Sprite texture="weapons_new.png" depth="0.8" sourcerect="204,476,50,34" origin="0.5,0.5" />
-    <Body width="50" height="30" density="20" />
+	
+	<Deconstruct time="10">
+      <Item identifier="uex" mincondition="0.1" outcondition="0.8"/>
+	  <Item identifier="iron" mincondition="0.1" outcondition="0.2"/>
+    </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
-      <RequiredSkill identifier="weapons" level="50" />
-      <RequiredItem identifier="c4block" />
-      <RequiredItem identifier="incendium" />
+      <RequiredSkill identifier="weapons" level="40"/>
+      <RequiredItem identifier="uex" mincondition="0.8"/>
+	  <RequiredItem identifier="iron" mincondition="0.2"/>
     </Fabricate>
-    <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-      <sound file="Content/Items/Weapons/ExplosionMedium3.ogg" type="OnBroken" range="10000" selectionmode="All" />
-      <sound file="Content/Items/Weapons/ExplosionDebris4.ogg" type="OnBroken" range="10000" />
-      <StatusEffect type="OnFire" target="This" Condition="-50.0" />
-      <StatusEffect type="OnUse" target="This" Condition="-100" disabledeltatime="true"/>
-      <StatusEffect type="OnBroken" target="This">
-        <Explosion range="500.0" structuredamage="50" itemdamage="500" stun="5" force="20.0" severlimbsprobability="0.6">
-          <Affliction identifier="burn" strength="200" />
+	
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="768,64,64,64"/>
+    <Sprite texture="Content/Items/Weapons/weapons.png" depth="0.8" sourcerect="103,58,23,16"/>
+    <Body width="23" height="16" density="20"/>
+    <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="1.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" type="OnUse" range="10000" selectionmode="All"/>
+      <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" type="OnUse" range="10000"/>
+      <StatusEffect type="OnUse" target="This" Condition="-100">
+        <Explosion range="525" structuredamage="60" itemdamage="90" stun="8" force="18" decal="explosion" decalsize="0.5">
+          <Affliction identifier="bleeding" strength="290"/>
+          <Affliction identifier="internaldamage" strength="80"/>
         </Explosion>
-        <Fire size="500" />
+        <Remove />
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  </Override>
+
+  <Item name="Flak Payload" identifier="flakbomb" category="Equipment" Scale="0.75" Tags="smallitem,explosivebig"
+    cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
+
+<Price baseprice="100" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.5" sold="false"/>
+      <Price locationtype="city" multiplier="1.25" minavailable="2" />
+      <Price locationtype="research" multiplier="1.25" sold="false"/>
+      <Price locationtype="military" multiplier="0.9" minavailable="4" />
+      <Price locationtype="mine" multiplier="1" sold="false"/>
+    </Price>
+	
+	<Deconstruct time="10">
+      <Item identifier="40mmgrenade" mincondition="0.1"/>
+	  <Item identifier="steel" mincondition="0.1" outcondition="0.2"/>
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="40"/>
+      <RequiredItem identifier="40mmgrenade"/>
+	  <RequiredItem identifier="steel" mincondition="0.2"/>
+    </Fabricate>
+	
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="768,64,64,64"/>
+    <Sprite texture="Content/Items/Weapons/weapons.png" depth="0.8" sourcerect="103,58,23,16"/>
+    <Body width="23" height="16" density="20"/>
+    <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="1.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" type="OnUse" range="10000" selectionmode="All"/>
+      <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" type="OnUse" range="10000"/>
+      <StatusEffect type="OnUse" target="This" Condition="-100">
+        <Explosion range="725" structuredamage="60" itemdamage="90" stun="8" force="18" decal="explosion" decalsize="0.5">
+          <Affliction identifier="bleeding" strength="380"/>
+          <Affliction identifier="internaldamage" strength="70"/>
+        </Explosion>
         <Remove />
       </StatusEffect>
     </Throwable>
   </Item>
   
-  <Item name="" identifier="detonator" description="" category="Equipment" Tags="smallitem,detonator" Scale="0.5" cargocontaineridentifier="explosivecrate" impactsoundtag="impact_metal_light" isshootable="true">
-    <Upgrade gameversion="0.9.3.0" scale="0.5"/>
-    <PreferredContainer primary="armcab" minamount="1" maxamount="2" spawnprobability="0.5"/>
-    <Price baseprice="100" soldeverywhere="false">
+<Override>
+  <Item name="Incendiary Payload" identifier="ic4block" category="Equipment" Scale="0.5" Tags="smallitem,explosive"
+	cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
+	<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,64,64,64"/>
+    <Sprite texture="Content/Items/Weapons/weapons.png" depth="0.8" sourcerect="103,91,23,16"/>
+    <Body width="24" height="16" density="20"/>
+    
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="50"/>
+      <RequiredItem identifier="uex" mincondition="0.8"/>
+      <RequiredItem identifier="phosphorus" mincondition="0.1"/>
+	  <RequiredItem identifier="incendium" mincondition="0.1"/>
+    </Fabricate>
+	
+	<Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <sound file="Content/Items/Weapons/ExplosionMedium3.ogg" type="OnUse" range="10000" selectionmode="All"/>
+      <sound file="Content/Items/Weapons/ExplosionDebris4.ogg" type="OnUse" range="10000"/>
+      <sound file="Content/Items/Weapons/ExplosionMedium3.ogg" type="OnBroken" range="10000" selectionmode="All"/>
+      <sound file="Content/Items/Weapons/ExplosionDebris4.ogg" type="OnBroken" range="10000"/>
+      <StatusEffect type="OnFire" target="This" Condition="-50"/>
+      <StatusEffect type="OnUse" target="This" Condition="0" setvalue="true"/>
+      <StatusEffect type="OnBroken" target="This">
+        <Explosion range="500" structuredamage="50" itemdamage="100" stun="5" force="20">
+          <Affliction identifier="burn" strength="200"/>
+        </Explosion>
+        <Fire size="500"/>
+        <Remove/>
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  </Override>
+
+  <Item name="Flashbang Payload" identifier="flashbang" category="Equipment" Scale="0.5" Tags="smallitem,explosive"
+    cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
+	<Price locationtype="Military" buyprice="20"/>
+    <Price locationtype="City" buyprice="30"/>
+    <Price locationtype="Outpost" buyprice="50"/>
+    <Price locationtype="Research" buyprice="40"/>
+	
+	<Deconstruct time="10">
+      <Item identifier="flashpowder"/>
+	  <Item identifier="flashpowder"/>
+	  <Item identifier="flashpowder"/>
+	  <Item identifier="flashpowder"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="40"/>
+      <RequiredItem identifier="aluminium" mincondition="0.25"/>
+	  <RequiredItem identifier="chloralhydrate" mincondition="0.25"/>
+      <RequiredItem identifier="potassium" mincondition="0.5"/>
+    </Fabricate>
+	<Fabricate suitablefabricators="fabricator" requiredtime="15">
+      <RequiredSkill identifier="weapons" level="30"/>
+      <RequiredItem identifier="flashpowder" count="4"/>
+    </Fabricate>
+	
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="768,64,64,64"/>
+    <Sprite texture="Content/Items/Weapons/weapons.png" depth="0.8" sourcerect="103,58,23,16"/>
+    <Body width="23" height="16" density="20"/>
+    <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="1.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+    
+      <sound file="Mods/BTE/Items/Weapons/flashbang_explode1.ogg" type="OnUse" range="5000" selectionmode="Random"/>
+	   <sound file="Mods/BTE/Items/Weapons/flashbang_explode2.ogg" type="OnUse" range="5000"/>
+
+      <StatusEffect type="OnUse" target="This" Condition="-100">
+        <Explosion range="1000" force="10" flames="false" smoke="false" sparks="false" flashrange="435" flashduration="5.0" screencolor="255,255,255,255" screencolorrange="5000" screencolorduration="3.0">
+          <Affliction identifier="stun" strength="4"/>
+          <Affliction identifier="confused" strength="15"/>
+		  <Affliction identifier="heartattack" probability="0.3" strength="1"/>
+        </Explosion>
+        <Remove />
+      </StatusEffect>
+
+    </Throwable>
+  </Item>
+  
+  
+  <Item name="Cryo Payload" identifier="coldbomb" category="Equipment" Scale="0.5" Tags="smallitem,explosive"
+	cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
+
+	<Price locationtype="Military" buyprice="95"/>
+    <Price locationtype="Research" buyprice="85"/>
+	
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="50"/>
+      <RequiredItem identifier="uex" mincondition="0.25"/>
+	  <RequiredItem identifier="magnesium" mincondition="0.25"/>
+      <RequiredItem identifier="liquidoxygenite" mincondition="0.5"/>
+    </Fabricate>
+	
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="768,64,64,64"/>
+    <Sprite texture="Content/Items/Weapons/weapons.png" depth="0.8" sourcerect="103,58,23,16"/>
+    <Body width="23" height="16" density="20"/>
+    <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="1.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" type="OnUse" range="8000"/>
+      <StatusEffect type="OnUse" target="This" Condition="-100">
+        <Explosion range="460" structuredamage="2" itemdamage="2" force="5" flames="false" smoke="false" sparks="false">
+		  <Affliction identifier="stun" strength="10"/>
+          <Affliction identifier="internaldamage" strength="6"/>
+        </Explosion>
+        <Remove />
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  
+  <Item name="Shockwave Payload" identifier="sonicbomb" category="Equipment" Scale="0.75" Tags="smallitem,explosive"
+    cargocontaineridentifier="explosivecrate" impactsoundtag="impact_maghit">
+
+	<Price locationtype="Military" buyprice="200"/>
+	
+	<Deconstruct time="10">
+      <Item identifier="copper" outcondition="0.4"/>
+	  <Item identifier="physicorium" mincondition="0.2" outcondition="0.2"/>
+	  <Item identifier="fpgacircuit" mincondition="0.1"/>
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="50"/>
+      <RequiredItem identifier="copper" mincondition="0.4"/>
+      <RequiredItem identifier="physicorium" mincondition="0.2"/>
+	  <RequiredItem identifier="fpgacircuit"/>
+    </Fabricate>
+	
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="768,64,64,64"/>
+    <Sprite texture="Content/Items/Weapons/weapons.png" depth="0.8" sourcerect="103,58,23,16"/>
+    <Body width="23" height="16" density="20"/>
+    <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="1.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <sound file="Mods/BTE/Items/Weapons/SonicExplosion.ogg" type="OnUse" range="10000"/>
+      <StatusEffect type="OnUse" target="This" Condition="-100">
+        <Explosion range="750" structuredamage="25" itemdamage="15" stun="7" force="0.1" flames="false" smoke="false" sparks="false" underwaterbubble="false">
+          <Affliction identifier="sonic" strength="100"/>
+        </Explosion>
+        <Remove />
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  
+<Override>
+  <Item name="EMP Payload" identifier="empgrenade" category="Equipment" Scale="0.5" Tags="smallitem,explosive"
+	cargocontaineridentifier="explosivecrate" impactsoundtag="impact_maghit">
+<Price baseprice="100" soldeverywhere="false">
       <Price locationtype="outpost" multiplier="1.5" sold="false"/>
-      <Price locationtype="city" multiplier="1.25" minavailable="1" />
+      <Price locationtype="city" multiplier="1.25" minavailable="2" />
       <Price locationtype="research" multiplier="1.25" sold="false"/>
-      <Price locationtype="military" multiplier="0.9" minavailable="2" />
+      <Price locationtype="military" multiplier="0.9" minavailable="4" />
       <Price locationtype="mine" multiplier="1" sold="false"/>
     </Price>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,64,64,64" origin="0.5,0.5" />
-    <Sprite texture="weapons_new.png" depth="0.8" sourcerect="215,242,41,21" origin="0.5,0.5" />
-    <Body width="40" height="22" density="20" />
+	
+	<Deconstruct time="10">
+      <Item identifier="bronze" outcondition="0.5"/>
+	  <Item identifier="fulgurium" outcondition="0.1"/>
+	  <Item identifier="fpgacircuit" mincondition="0.1"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="50"/>
+      <RequiredItem identifier="bronze" mincondition="0.5"/>
+      <RequiredItem identifier="fulgurium" mincondition="0.1"/>
+	  <RequiredItem identifier="fpgacircuit"/>
+    </Fabricate>
+	
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="768,64,64,64"/>
+    <Sprite texture="Content/Items/Weapons/weapons.png" depth="0.8" sourcerect="103,58,23,16"/>
+    <Body width="23" height="16" density="20"/>
+    <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="1.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <sound file="Content/Items/Weapons/stungrenade.ogg" type="OnUse" range="6000"/>
+      <StatusEffect type="OnUse" target="This" Condition="-100">
+        <Explosion range="500" stun="0.5" force="0.1" flames="false" smoke="false" empstrength="10">
+          <Affliction identifier="empdamage" strength="100"/>
+        </Explosion>
+        <Remove/>
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  </Override>
+
+
+  <Item name="Electrical Payload" identifier="shockcharge" category="Equipment" Scale="0.5" Tags="smallitem,explosive" impactsoundtag="impact_maghit">
+
+    <Deconstruct time="10">
+      <Item identifier="copper" outcondition="0.4"/>
+	  <Item identifier="aluminium" outcondition="0.2"/>
+	  <Item identifier="fpgacircuit" mincondition="0.1"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="40"/>
+      <RequiredItem identifier="copper" mincondition="0.4"/>
+      <RequiredItem identifier="aluminium" mincondition="0.2"/>
+	  <RequiredItem identifier="fpgacircuit"/>
+    </Fabricate>
+	
+	<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="768,64,64,64"/>
+    <Sprite texture="Content/Items/Weapons/weapons.png" depth="0.8" sourcerect="103,58,23,16"/>
+    <Body width="23" height="16" density="20"/>
+    <ElectricalDischarger duration="0.5" range="400" rangemultiplierinwalls="2" powerconsumption="0">
+      <Attack targetimpulse="50">
+        <Affliction identifier="confused" strength="25"/>
+		<Affliction identifier="stun" strength="3"/>
+        <Affliction identifier="burn" strength="6"/>
+      </Attack>
+      <StatusEffect type="OnUse" target="This">
+        <sound file="Content/Items/Weapons/ElectricalDischarger.ogg" range="6000"/>
+        <ParticleEmitter particle="risingbubbles" anglemin="0" anglemax="360" particleamount="50" velocitymin="50" velocitymax="100" scalemin="1" scalemax="2"/>
+        <Explosion range="400" stun="0" force="0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" empstrength="0.1">
+          <Affliction identifier="confused" strength="25"/>
+		  <Affliction identifier="stun" strength="3"/>
+		  <Affliction identifier="burn" strength="6"/>
+        </Explosion>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-80" duration="3"/>
+    </ElectricalDischarger>
+	<Pickable characterusable="false" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect"/>
+  </Item>
+  
+<Override>
+  <Item name="Detonator" identifier="detonator" category="Equipment" Scale="0.5" Tags="smallitem,detonator"
+	cargocontaineridentifier="explosivecrate" impactsoundtag="impact_maghit" isshootable="true">
+<Price baseprice="100" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.5" sold="false"/>
+      <Price locationtype="city" multiplier="1.25" minavailable="2" />
+      <Price locationtype="research" multiplier="1.25" sold="false"/>
+      <Price locationtype="military" multiplier="0.9" minavailable="4" />
+      <Price locationtype="mine" multiplier="1" sold="false"/>
+    </Price>
+	
+	<Deconstruct time="10">
+      <Item identifier="bronze" outcondition="0.25"/>
+	  <Item identifier="fpgacircuit" mincondition="0.1"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="30"/>
+      <RequiredItem identifier="bronze" mincondition="0.25"/>
+      <RequiredItem identifier="fpgacircuit"/>
+    </Fabricate>
+	
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,64,64,64"/>
+    <Sprite texture="Content/Items/Weapons/weapons.png" depth="0.8" sourcerect="0,105,24,22"/>
+    <Body width="14" height="12" density="20"/>
     <Holdable selectkey="Action" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" aimpos="35,-10" handle1="0,0" attachable="true" aimable="true">
-      <RequiredItem items="wrench" type="Equipped" />
+      <RequiredItem identifier="wrench" type="Equipped"/>
     </Holdable>
     <ItemContainer canbeselected="true" capacity="1" itempos="0,0" hideitems="false">
-      <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
-      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,204,110,27" />
-      <Containable items="explosive" />
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,204,110,27"/>
+      <Containable identifiers="explosive,explosivebig"/>
     </ItemContainer>
     <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
-      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-      <RequiredItem items="screwdriver" type="Equipped" />
-      <input name="activate" displayname="connection.activate">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,175" maxsize="480,210" anchor="Center" style="ConnectionPanel"/>
+      <RequiredItem items="screwdriver" type="Equipped"/>
+      <input name="activate">
         <StatusEffect type="OnUse" target="Contained">
           <Use />
         </StatusEffect>
       </input>
     </ConnectionPanel>
   </Item>
-  
-  <Item name="" identifier="nitroglycerin" category="Material" description="" spritecolor="1.0,1.0,1.0,1.0" containercolor="1.0,1.0,1.0,1.0" cargocontaineridentifier="explosivecrate" Tags="smallitem,chem,medical" impacttolerance="6" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
-    <PreferredContainer primary="secarmcab,armcab,storagecab"/>
-    <Price baseprice="150" soldeverywhere="false">
+  </Override>
+
+<Override>
+  <Item name="Timed Grenade" identifier="stungrenade" category="Equipment" tags="smallitem,weapon,grenade" scale="0.5"
+    cargocontaineridentifier="explosivecrate" impactsoundtag="impact_grenadehit">
+
+	<Price baseprice="175" soldeverywhere="false">
       <Price locationtype="outpost" multiplier="1.5" sold="false"/>
       <Price locationtype="city" multiplier="1.25" minavailable="2" />
       <Price locationtype="research" multiplier="1.25" sold="false"/>
       <Price locationtype="military" multiplier="0.9" minavailable="4" />
       <Price locationtype="mine" multiplier="1" sold="false"/>
     </Price>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,768,64,64" origin="0.5,0.5" />
-    <Sprite texture="weapons_new.png" sourcerect="110,414,31,62" depth="0.6" origin="0.5,0.5" />
-    <Body width="35" height="60" density="20" />
+    <Deconstruct time="10">
+      <Item identifier="plastic" outcondition="0.4"/>
+      <Item identifier="aluminium" outcondition="0.2"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="30"/>
+      <RequiredItem identifier="plastic"  mincondition="0.4"/>
+      <RequiredItem identifier="aluminium" mincondition="0.2"/>
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="450,450,64,64" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="159,311,27,54" depth="0.55" origin="0.5,0.5185185" />
+    <Body width="26" height="50" density="20"/>
+	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="4.0" msg="ItemMsgPickUpSelect"/>
+	<Projectile characterusable="false" launchimpulse="20" sticktocharacters="false">
+      <Attack structuredamage="1" itemdamage="0.1" stun="0.2" targetforce="10" severlimbsprobability="0.003">>
+		<Affliction identifier="internaldamage" strength="28"/>
+      </Attack>
+      <StatusEffect type="OnImpact" target="This">
+	    <RequiredItems identifier="explosive" type="Contained"/>
+		<sound file="Mods/BTE/Items/Weapons/GrenadePrimer.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnImpact" target="Contained" delay="5">
+        <RequiredItems identifier="explosive" type="Contained"/>
+		<Use/>
+      </StatusEffect>
+    </Projectile>
+	<CustomInterface canbeselected="false" drawhudwhenequipped="true">
+	  <GuiFrame relativesize="0.08,0.1" anchor="BottomCenter" absoluteoffset="0,140" style="ItemUI"/>
+      <Button text="Prime">
+        <StatusEffect type="OnUse" target="This">
+	      <RequiredItems identifier="explosive" type="Contained"/>
+		  <sound file="Mods/BTE/Items/Weapons/GrenadePrimer.ogg"/>
+	    </StatusEffect>
+	    <StatusEffect type="OnUse" target="Contained" delay="5">
+          <RequiredItems identifier="explosive" type="Contained"/>
+		  <Use/>
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+	<ItemContainer hideitems="true" capacity="1" canbeselected="false">
+      <Containable identifiers="explosive"/>
+    </ItemContainer>
+  </Item>
+  </Override>
+<Override>
+  <Item name="Impact Grenade" identifier="fraggrenade" category="Equipment" tags="smallitem,weapon,grenade" scale="0.5"
+    cargocontaineridentifier="explosivecrate" impactsoundtag="impact_grenadehit" impacttolerance="5">
+<Price baseprice="165" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.5" sold="false"/>
+      <Price locationtype="city" multiplier="1.25" minavailable="2" />
+      <Price locationtype="research" multiplier="1.25" sold="false"/>
+      <Price locationtype="military" multiplier="0.9" minavailable="4" />
+      <Price locationtype="mine" multiplier="1" sold="false"/>
+    </Price>
+
+    <Deconstruct time="10">
+      <Item identifier="plastic" outcondition="0.4"/>
+      <Item identifier="aluminium" outcondition="0.2"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="30"/>
+      <RequiredItem identifier="plastic"  mincondition="0.4"/>
+      <RequiredItem identifier="aluminium" mincondition="0.2"/>
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="450,450,64,64" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="159,311,27,54" depth="0.55" origin="0.5,0.5185185" />
+    <Body width="26" height="50" density="20"/>
+	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="4.0" msg="ItemMsgPickUpSelect">
+	  <StatusEffect type="OnImpact" target="Contained">
+        <Use/>
+      </StatusEffect>
+    </Throwable>
+	<Projectile characterusable="false" launchimpulse="20" sticktocharacters="false">
+      <Attack structuredamage="1" itemdamage="0.1" stun="0.2" targetforce="10" severlimbsprobability="0.003">>
+		<Affliction identifier="internaldamage" strength="28"/>
+      </Attack>
+    </Projectile>
+	<ItemContainer hideitems="true" capacity="1" canbeselected="false">
+      <Containable identifiers="explosive"/>
+    </ItemContainer>
+  </Item>
+</Override>
+  
+  <Override>
+  <Item name="Nitroglycerin" identifier="nitroglycerin" category="Material" cargocontaineridentifier="explosivecrate" Tags="smallitem,chem,medical" impacttolerance="3" impactsoundtag="impact_glasshit" useinhealthinterface="true" scale="0.2">
+	<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="653,769,37,62" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="481,-1,31,62" depth="0.6" origin="0.5,0.5"/>
+    <Body width="26" height="50" density="30"/>
     <Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-      <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true" />
-      <StatusEffect type="OnFire" target="This" Condition="-50.0" />
+      <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true"/>
+      <StatusEffect type="OnFire" target="This" Condition="-50.0"/>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
-        <sound file="Content/Items/Weapons/ExplosionMedium2.ogg" selectionmode="All" range="8000" />
-        <sound file="Content/Items/Weapons/ExplosionDebris3.ogg" selectionmode="All" range="8000" />
-        <Explosion range="600.0" structuredamage="100" itemdamage="1000" force="20.0" severlimbsprobability="0.4" decal="explosion" decalsize="0.5">
-          <Affliction identifier="burn" strength="100" />
-          <Affliction identifier="lacerations" strength="200" />
-          <Affliction identifier="stun" strength="5" />
+        <sound file="Content/Items/Weapons/ExplosionMedium2.ogg" selectionmode="All" range="8000"/>
+        <sound file="Content/Items/Weapons/ExplosionDebris3.ogg" selectionmode="All" range="8000"/>
+        <Explosion range="600" structuredamage="80" itemdamage="80" force="20" severlimbsprobability="0.4" decal="explosion" decalsize="0.5">
+          <Affliction identifier="burn" amount="630"/>
+          <Affliction identifier="internaldamage" amount="200"/>
+          <Affliction identifier="stun" amount="5"/>
         </Explosion>
         <Remove />
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  
+  <Item name="Uranium Warhead" identifier="uraniumbomb" category="Equipment" Scale="0.6" Tags="mediumitem,fissionbomb"
+	cargocontaineridentifier="explosivecrate" impactsoundtag="impact_metal_light">
+	<Price locationtype="Military" buyprice="250"/>
+	
+	<Deconstruct time="10">
+      <Item identifier="uranium"/>
+      <Item identifier="uranium"/>
+      <Item identifier="lead"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="50"/>
+      <RequiredItem identifier="uranium"/>
+      <RequiredItem identifier="uranium"/>
+      <RequiredItem identifier="lead"/>
+    </Fabricate>
+	
+	<LightComponent range="50" lightcolor="0,0.5,0,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
+	  <LightTexture texture="Content/Lights/pointlight_bright.png" origin="0.5,0.5"/>
+	  <StatusEffect type="Always" target="This" IsOn="true"/>
+    </LightComponent>
+	
+    <Sprite texture="Mods/BTE/Items/Weapons/RailgunStuff.png" depth="0.8" sourcerect="2,438,71,35"/>
+    <Body width="68" height="32" density="10.4"/>
+    <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="1.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <sound file="Content/Items/Weapons/ExplosionLarge1.ogg" type="OnUse" selectionmode="Random" range="20000"/>
+      <sound file="Content/Items/Weapons/ExplosionLarge2.ogg" type="OnUse" selectionmode="Random" range="20000"/>
+      <StatusEffect type="OnUse" target="This" Condition="-100">
+        <Explosion range="1000" structuredamage="950" itemdamage="950" force="50" severlimbsprobability="1.0" decal="explosion" decalsize="1.0">
+          <Affliction identifier="burn" strength="1530"/>
+          <Affliction identifier="internaldamage" strength="500"/>
+          <Affliction identifier="stun" strength="10"/>
+        </Explosion>
+		<Explosion range="3000" structuredamage="50" stun="0.2" force="0.1" camerashake="1" flames="false" smoke="false" shockwave="false" sparks="true" underwaterbubble="false" empstrength="0.4">
+          <Affliction identifier="radiationsickness" strength="600"/>
+        </Explosion>
+      </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This">
+		<SpawnItem identifiers="spenturaniumbomb" spawnposition="This"/>
+		<Remove/>
+      </StatusEffect>
+    </Throwable>
+  </Item>
+</Override>
+
+  <Item name="Spent Uranium Warhead" identifier="spenturaniumbomb" Scale="0.6" Tags="mediumitem" impactsoundtag="impact_metal_light">
+	
+	<Deconstruct time="10">
+      <Item identifier="lead"/>
+    </Deconstruct>
+	
+	<LightComponent range="50" lightcolor="0,0.5,0,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
+	  <LightTexture texture="Content/Lights/pointlight_bright.png" origin="0.5,0.5"/>
+	  <StatusEffect type="Always" target="This" IsOn="true"/>
+    </LightComponent>
+	
+    <Sprite texture="Mods/BTE/Items/Weapons/RailgunStuff.png" depth="0.8" sourcerect="148,475,71,35"/>
+    <Body width="68" height="32" density="10.6"/>
+    <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="1.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="Always" target="NearbyCharacters" range="5000">
+		<Affliction identifier="radiationsickness" strength="0.3"/>
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  
+  <Item name="Thorium Warhead" identifier="thoriumbomb" category="Equipment" Scale="0.6" Tags="mediumitem,fissionbomb"
+	cargocontaineridentifier="explosivecrate" impactsoundtag="impact_metal_light">
+	<Price locationtype="Military" buyprice="200"/>
+	
+	<Deconstruct time="10">
+      <Item identifier="thorium"/>
+      <Item identifier="thorium"/>
+      <Item identifier="lead"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="50"/>
+      <RequiredItem identifier="thorium"/>
+      <RequiredItem identifier="thorium"/>
+      <RequiredItem identifier="lead"/>
+    </Fabricate>
+	
+	<LightComponent range="50" lightcolor="0.8,0.6,0.4,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
+	  <LightTexture texture="Content/Lights/pointlight_bright.png" origin="0.5,0.5"/>
+	  <StatusEffect type="Always" target="This" IsOn="true"/>
+    </LightComponent>
+	
+    <Sprite texture="Mods/BTE/Items/Weapons/RailgunStuff.png" depth="0.8" sourcerect="2,475,71,35"/>
+    <Body width="68" height="32" density="10.4"/>
+    <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="1.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <sound file="Content/Items/Weapons/ExplosionLarge1.ogg" type="OnUse" selectionmode="Random" range="20000"/>
+      <sound file="Content/Items/Weapons/ExplosionLarge2.ogg" type="OnUse" selectionmode="Random" range="20000"/>
+      <StatusEffect type="OnUse" target="This" Condition="-100">
+        <Explosion range="750" structuredamage="475" itemdamage="475" force="25" severlimbsprobability="0.5" decal="explosion" decalsize="1.0">
+          <Affliction identifier="burn" strength="780"/>
+          <Affliction identifier="internaldamage" strength="250"/>
+		  <Affliction identifier="confused" strength="250"/>
+          <Affliction identifier="stun" strength="10"/>
+        </Explosion>
+		<Explosion range="2000" structuredamage="25" stun="0.2" force="0.1" camerashake="1" flames="false" smoke="false" shockwave="false" sparks="true" underwaterbubble="false" empstrength="0.4">
+          <Affliction identifier="radiationsickness" strength="200"/>
+		  <Affliction identifier="confused" strength="400"/>
+        </Explosion>
+      </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This">
+		<SpawnItem identifiers="spentthoriumbomb" spawnposition="This"/>
+		<Remove/>
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  <Item name="Spent Thorium Warhead" identifier="spentthoriumbomb" Scale="0.6" Tags="mediumitem" impactsoundtag="impact_metal_light">
+	
+	<Deconstruct time="10">
+      <Item identifier="lead"/>
+    </Deconstruct>
+	
+	<LightComponent range="50" lightcolor="0.8,0.6,0.4,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
+	  <LightTexture texture="Content/Lights/pointlight_bright.png" origin="0.5,0.5"/>
+	  <StatusEffect type="Always" target="This" IsOn="true"/>
+    </LightComponent>
+	
+    <Sprite texture="Mods/BTE/Items/Weapons/RailgunStuff.png" depth="0.8" sourcerect="148,475,71,35"/>
+    <Body width="68" height="32" density="10.6"/>
+    <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="1.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="Always" target="NearbyCharacters" range="3000">
+		<Affliction identifier="radiationsickness" strength="0.1"/>
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  
+  <Item name="Incendium Warhead" identifier="incendiumbomb" category="Equipment" Scale="0.6" Tags="mediumitem,fissionbomb"
+	cargocontaineridentifier="explosivecrate" impactsoundtag="impact_metal_light">
+	<Price locationtype="Military" buyprice="400"/>
+	
+	<Deconstruct time="10">
+      <Item identifier="incendium"/>
+      <Item identifier="incendium"/>
+      <Item identifier="lead"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="50"/>
+      <RequiredItem identifier="incendium"/>
+      <RequiredItem identifier="incendium"/>
+      <RequiredItem identifier="lead"/>
+    </Fabricate>
+	
+	<LightComponent range="50" LightColor="0.9,0.3,0.0,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
+	  <LightTexture texture="Content/Lights/pointlight_bright.png" origin="0.5,0.5"/>
+	  <StatusEffect type="Always" target="This" IsOn="true"/>
+    </LightComponent>
+	
+    <Sprite texture="Mods/BTE/Items/Weapons/RailgunStuff.png" depth="0.8" sourcerect="75,475,71,35"/>
+    <Body width="68" height="32" density="10.4"/>
+    <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="1.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <sound file="Content/Items/Weapons/ExplosionLarge1.ogg" type="OnUse" selectionmode="Random" range="20000"/>
+      <sound file="Content/Items/Weapons/ExplosionLarge2.ogg" type="OnUse" selectionmode="Random" range="20000"/>
+      <StatusEffect type="OnUse" target="This" Condition="-100">
+        <Explosion range="1250" structuredamage="1100" itemdamage="1100" force="75" severlimbsprobability="1.0" decal="explosion" decalsize="1.0">
+          <ReduceAffliction identifier="cold" amount="200"/>
+		  <Affliction identifier="burn" strength="1000"/>
+          <Affliction identifier="internaldamage" strength="770"/>
+          <Affliction identifier="stun" strength="10"/>
+        </Explosion>
+		<Explosion range="4000" structuredamage="150" stun="0.2" force="0.1" camerashake="1" flames="false" smoke="false" shockwave="false" sparks="true" underwaterbubble="false" empstrength="0.4">
+          <Affliction identifier="radiationsickness" strength="400"/>
+		  <ReduceAffliction identifier="cold" amount="100"/>
+		  <Affliction identifier="heat" strength="200"/>
+        </Explosion>
+      </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This">
+		<SpawnItem identifiers="spentincendiumbomb" spawnposition="This"/>
+		<Remove/>
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  <Item name="Spent Incendium Warhead" identifier="spentincendiumbomb" Scale="0.6" Tags="mediumitem" impactsoundtag="impact_metal_light">
+	
+	<Deconstruct time="10">
+      <Item identifier="lead"/>
+    </Deconstruct>
+	
+	<LightComponent range="50" LightColor="0.9,0.3,0.0,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
+	  <LightTexture texture="Content/Lights/pointlight_bright.png" origin="0.5,0.5"/>
+	  <StatusEffect type="Always" target="This" IsOn="true"/>
+    </LightComponent>
+	
+    <Sprite texture="Mods/BTE/Items/Weapons/RailgunStuff.png" depth="0.8" sourcerect="148,475,71,35"/>
+    <Body width="68" height="32" density="10.6"/>
+    <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="1.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="Always" target="NearbyCharacters" range="5250">
+		<Affliction identifier="radiationsickness" strength="0.2"/>
+		<ReduceAffliction identifier="cold" amount="0.3"/>
+		<Affliction identifier="heat" strength="0.2"/>
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  
+  <Item name="Fulgurium Warhead" identifier="fulguriumbomb" category="Equipment" Scale="0.6" Tags="mediumitem,fissionbomb"
+	cargocontaineridentifier="explosivecrate" impactsoundtag="impact_metal_light">
+	<Price locationtype="Military" buyprice="300"/>
+	
+	<Deconstruct time="10">
+      <Item identifier="fulgurium" copycondition="true"/>
+      <Item identifier="fulgurium"/>
+      <Item identifier="lead"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="50"/>
+      <RequiredItem identifier="fulgurium"/>
+      <RequiredItem identifier="fulgurium"/>
+      <RequiredItem identifier="lead"/>
+    </Fabricate>
+	
+	<LightComponent range="50" LightColor="1.0,0.7,0.05,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
+	  <LightTexture texture="Content/Lights/pointlight_bright.png" origin="0.5,0.5"/>
+	  <StatusEffect type="Always" target="This" IsOn="true"/>
+	  <StatusEffect type="OnBroken" target="This" IsOn="false"/>
+    </LightComponent>
+	
+    <Sprite texture="Mods/BTE/Items/Weapons/RailgunStuff.png" depth="0.8" sourcerect="75,438,71,35"/>
+    <Body width="68" height="32" density="10.1"/>
+    <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="1.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <sound file="Content/Items/Weapons/ExplosionLarge1.ogg" type="OnUse" selectionmode="Random" range="20000"/>
+      <sound file="Content/Items/Weapons/ExplosionLarge2.ogg" type="OnUse" selectionmode="Random" range="20000"/>
+      <StatusEffect type="OnUse" target="This" Condition="-100">
+        <Explosion range="1100" structuredamage="250" itemdamage="250" force="30" severlimbsprobability="0.25" decal="explosion" decalsize="1.0">
+          <Affliction identifier="burn" strength="1000"/>
+          <Affliction identifier="internaldamage" strength="480"/>
+          <Affliction identifier="stun" strength="10"/>
+        </Explosion>
+		<Explosion range="5000" structuredamage="150" stun="0.2" force="0.1" camerashake="1" flames="false" smoke="false" shockwave="false" sparks="true" underwaterbubble="false" empstrength="0.4">
+          <Affliction identifier="radiationsickness" strength="100"/>
+        </Explosion>
       </StatusEffect>
     </Throwable>
   </Item>

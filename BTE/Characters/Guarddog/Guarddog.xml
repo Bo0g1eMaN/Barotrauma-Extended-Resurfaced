@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Character name="Guarddog" humanoid="false" needsair="true" blooddecal="blood">
+  
+  <ragdolls folder="Mods/BTE/Characters/Guarddog/Ragdolls"/>
+  <animations folder="Mods/BTE/Characters/Guarddog/Animations"/>
+  
+  <health
+    vitality="100"
+    doesbleed="true"/>
+
+  <bloodemitter particle="blood" particleamount="10"/>
+  <bloodemitter particle="waterblood" particleamount="1"/>
+  <gibemitter particle="gib" particleamount="20" velocitymin="200" velocitymax="700" anglemin="0" anglemax="360"/>
+  <gibemitter particle="heavygib" particleamount="10" velocitymin="50" velocitymax="500" anglemin="0" anglemax="360"/>
+
+  <sound file="Mods/BTE/Characters/Guarddog/DogBark1.ogg" state="Idle" range="800"/>
+  <sound file="Mods/BTE/Characters/Guarddog/DogBark2.ogg" state="Idle" range="800"/>
+  <sound file="Mods/BTE/Characters/Guarddog/DogBark3.ogg" state="Idle" range="800"/>
+  
+  <sound file="Mods/BTE/Characters/Guarddog/DogGrowl.ogg" state="Attack" range="900"/>
+  <sound file="Mods/BTE/Characters/Guarddog/DogAttack1.ogg" state="Attack" range="1000"/>
+  <sound file="Mods/BTE/Characters/Guarddog/DogAttack2.ogg" state="Attack" range="1000"/>
+  <sound file="Mods/BTE/Characters/Guarddog/DogBark1.ogg" state="Attack" range="2000"/>
+  <sound file="Mods/BTE/Characters/Guarddog/DogBark2.ogg" state="Attack" range="2000"/>
+  <sound file="Mods/BTE/Characters/Guarddog/DogBark3.ogg" state="Attack" range="2000"/>
+
+  <sound file="Mods/BTE/Characters/Guarddog/DogPain.ogg" state="Damage" range="2500"/>
+  <sound file="Mods/BTE/Characters/Guarddog/DogDie.ogg" state="Die" range="5000"/>
+  
+  <Item identifier="antibloodloss2"/>
+  
+  <ai
+    combatstrength="80"
+    sight="1.0"
+    hearing="1.5"
+    fleehealththreshold="20"
+    aggressiongreed="20"
+    aggressionhurt="100">
+
+    <targetpriority tag="stronger" state="Attack" priority="75"/>
+    <targetpriority tag="dead" state="Eat" priority="50"/> 
+    <targetpriority tag="human" state="Attack" priority="0"/>
+    <targetpriority tag="weaker" state="Attack" priority="100"/>
+  </ai>
+</Character>

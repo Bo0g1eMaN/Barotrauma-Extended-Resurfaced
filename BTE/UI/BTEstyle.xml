@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
 <style>
+<UndoHistoryButton color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
+    <Sprite name="UndoHistoryButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="752,193,40,37" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
+  </UndoHistoryButton>
   <!-- 
   General green highlight color used for elements that are highlighted from code 
   ("thing done successfully" messages, green highlights when placing an item in an inventory slot, full progress bars, etc) 
@@ -660,31 +663,31 @@
   </ChatTextBox>
   <!-- Sub editor -->
   <OpenButton color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
-    <Sprite name="OpenButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="437,467,32,26" tile="false" maintainaspectratio="true" origin="0.5,0.5" compress="false" />
+    <Sprite name="OpenButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="654,147,49,42" tile="false" maintainaspectratio="true" origin="0.5,0.5" compress="false" />
   </OpenButton>
   <SaveButton color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
-    <Sprite name="SaveButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="472,467,26,26" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
+    <Sprite name="SaveButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="704,147,42,43" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
   </SaveButton>
   <TestButton color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
-    <Sprite name="TestButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="456,500,16,16" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
+    <Sprite name="TestButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="707,194,35,36" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
   </TestButton>
   <EditSubButton color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
-    <Sprite name="EditSubButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="507,467,21,20" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
+    <Sprite name="EditSubButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="753,148,36,35" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
   </EditSubButton>
   <CharacterModeButton color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
-    <Sprite name="CharacterModeButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="541,462,17,30" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
+    <Sprite name="CharacterModeButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="800,141,35,49" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
   </CharacterModeButton>
   <WiringModeButton color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
-    <Sprite name="WiringModeButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="570,463,22,28" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
+    <Sprite name="WiringModeButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="846,144,32,39" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
   </WiringModeButton>
   <GenerateWaypointsButton color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
-    <Sprite name="GenerateWaypointsButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="664,464,26,26" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
+    <Sprite name="GenerateWaypointsButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="979,144,41,42" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
   </GenerateWaypointsButton>
   <RecentlyUsedButton color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
-    <Sprite name="RecentlyUsedButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="601,465,27,25" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
+    <Sprite name="RecentlyUsedButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="890,146,40,37" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
   </RecentlyUsedButton>
   <SetupVisibilityButton color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
-    <Sprite name="SetupVisibilityButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="632,465,28,25" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
+    <Sprite name="SetupVisibilityButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="936,146,40,37" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
   </SetupVisibilityButton>
   <CategoryButton.All color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
     <Sprite name="CategoryButton.All" texture="Content/UI/InventoryUIAtlas.png" sourcerect="437,269,64,64" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
@@ -1212,6 +1215,21 @@
     selectedcolor="255,255,255,255">
     <Sprite texture="Mods/BTE/Items/Misc/docEng.png" sourcerect="0,0,581,819" tile="false"/>
   </docEng>
+<CookBook
+    color="255,255,255,255"
+    hovercolor="255,255,255,255"
+    selectedcolor="255,255,255,255">
+    <Sprite texture="Mods/BTE/Items/Misc/Cookbook.png" sourcerect="0,0,581,819" tile="false"/>
+  </CookBook>
+
+
+<docCook2
+    color="255,255,255,255"
+    hovercolor="255,255,255,255"
+    selectedcolor="255,255,255,255">
+    <Sprite texture="Mods/BTE/Items/Misc/DocCook2.png" sourcerect="0,0,0,0" tile="false"/>
+  </docCook2>
+
   <docMec
     color="255,255,255,255"
     hovercolor="255,255,255,255"
@@ -1278,6 +1296,13 @@
     selectedcolor="255,255,255,255">
     <Sprite texture="Mods/BTE/Items/Misc/docScorpion.png" sourcerect="0,0,581,819" tile="false"/>
   </docScorpion>
+
+  <doccul
+    color="255,255,255,255"
+    hovercolor="255,255,255,255"
+    selectedcolor="255,255,255,255">
+    <Sprite texture="Mods/BTE/Items/Misc/doccul.png" sourcerect="0,0,581,819" tile="false"/>
+  </doccul>
   
   <propLaborUnions
     color="255,255,255,255"

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
   <!-- HATS START -->
-  <Item name="" identifier="officersberet" aliases="officersberet" category="Equipment" tags="smallitem" cargocontaineridentifier="metalcrate" description="" scale="0.4">
+  <Item name="" identifier="officersberet" aliases="officersberet" category="Equipment" tags="smallitem" cargocontaineridentifier="standardshippingbox" description="" scale="0.4">
     <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
     <Price baseprice="75">
       <Price locationtype="outpost" multiplier="1" minavailable="1"/>

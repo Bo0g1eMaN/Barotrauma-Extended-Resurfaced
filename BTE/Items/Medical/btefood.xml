@@ -21,11 +21,10 @@ Another note if you are changing seared crawler meat please do be alerted that s
     <Sprite texture="Mods/BTE/Items/Medical/Consumables.png" sourcerect="166,0,74,192" depth="0.6" origin="0.5,0.5"/>
     <Body width="70" height="182" density="15"/>
 	
-    <Price locationtype="City" buyprice="20"/>
-    <Price locationtype="Outpost" buyprice="50"/>
+    
 		<Fabricate suitablefabricators="oven" requiredtime="25">
+	  <RequiredSkill identifier="cooking" level="30"/>
       <RequiredItem identifier="sugar" mincondition="0.6" usecondition="true"/>
-
     </Fabricate>
     <Deconstruct time="15">
       <Item identifier="plastic" outcondition="0.3"/>
@@ -45,6 +44,45 @@ Another note if you are changing seared crawler meat please do be alerted that s
 
 	    </Throwable>
   </Moonshine>
+  
+    <Cadmus name="Ol' Cadmus" aliases="old cadmus,cadmus,ol cadmus" identifier="olcadmus" category="Misc" Tags="mediumitem,consumable"
+			 description="Wine made out of Pomegrenade."
+			 cargocontaineridentifier="chemicalcrate" useinhealthinterface="true" impactsoundtag="impact_glasshit" scale="0.237">
+    <Sprite texture="Mods/BTE/Items/Medical/Consumables.png" sourcerect="180,240,100,204" depth="0.6" origin="0.5,0.5"/>
+	
+    <Body width="70" height="182" density="15"/>
+	<Price baseprice="350" >
+      <Price locationtype="outpost" multiplier="1" minavailable="1" />
+      <Price locationtype="city" multiplier="0.9" minavailable="2" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="1.25" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="1" />
+    </Price>
+
+    <Deconstruct time="15">
+      <Item identifier="Pomegrenade" mincondition="0.4" copycondition="true"/>
+	  <Item identifier="ethanol" outcondition="0.6"/>
+	  <Item identifier="plastic" outcondition="0.3"/>
+    </Deconstruct>
+
+    <Throwable slots="Any,RightHand,LeftHand" throwforce="3.0" canBeCombined="true" msg="ItemMsgPickUpSelect">   
+      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+      <StatusEffect type="OnUse" target="Character" delay="10" duration="10">
+        <Affliction identifier="drunk" amount="1.0"/>
+		<Affliction identifier="psychosisresistance" amount="10" />
+		<Affliction identifier="durationincrease" amount="10" />
+		<ReduceAffliction identifier="internaldamage" amount="0.2"/>
+        <ReduceAffliction identifier="burn" amount="0.2"/>
+	      </StatusEffect>
+		        <StatusEffect type="OnUse" target="Character" delay="0" duration="25">
+        <ReduceAffliction identifier="damage" amount="0.25" />
+        <ReduceAffliction identifier="burn" amount="0.25" />
+	      </StatusEffect>
+		  
+
+
+	    </Throwable>
+  </Cadmus>
 
   <Whiskey name="Whiskey" identifier="whiskey" category="Misc" Tags="mediumitem,consumable"
 		   description="A liquor distilled from fermented wort. Drinking while on duty is not adviced."
@@ -78,6 +116,44 @@ Another note if you are changing seared crawler meat please do be alerted that s
 		      </Throwable>
 
   </Whiskey>
+  
+    <Whiskey name="Brandy" identifier="brandy" category="Misc" Tags="mediumitem,consumable"
+		   description="Distilled Wine. Drinking while on duty is not adviced."
+		   cargocontaineridentifier="chemicalcrate" useinhealthinterface="true" impactsoundtag="impact_glasshit" scale="0.18">
+    <Sprite texture="Mods/BTE/Items/Medical/Consumables.png" sourcerect="0,0,84,211" depth="0.6" origin="0.5,0.5"/>
+    <Body width="80" height="208" density="15"/>
+	
+<Price baseprice="25" >
+      <Price locationtype="outpost" multiplier="1" minavailable="4" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="1.25" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="8" />
+    </Price>
+	
+	<Deconstruct time="15">
+      <Item identifier="plastic" outcondition="0.3"/>
+	  <Item identifier="ethanol" outcondition="0.7"/>
+	  <Item identifier="Pomegrenade" mincondition="0.4" copycondition="true"/>
+    </Deconstruct>
+	    <Throwable slots="Any,RightHand,LeftHand" throwforce="3.0" canBeCombined="true">   
+  
+      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+      <StatusEffect type="OnUse" target="Character" delay="10" duration="11.5">
+        <Affliction identifier="drunk" amount="1.0"/>
+		<Affliction identifier="psychosisresistance" amount="10" />
+		<Affliction identifier="durationincrease" amount="10" />
+		<ReduceAffliction identifier="internaldamage" amount="0.2" />
+        <ReduceAffliction identifier="burn" amount="0.2"/>
+      </StatusEffect>
+		        <StatusEffect type="OnUse" target="Character" delay="0" duration="25">
+        <ReduceAffliction identifier="damage" amount="0.25" />
+        <ReduceAffliction identifier="burn" amount="0.25" />
+	      </StatusEffect>
+		      </Throwable>
+
+  </Whiskey>
+  
   
   <Vodka name="Vodka" identifier="vodka" category="Misc" Tags="mediumitem,consumable"
 		 description="A bottle of a strong distilled beverage. Drinking while on duty is not adviced."
@@ -113,6 +189,40 @@ Another note if you are changing seared crawler meat please do be alerted that s
 
   </Vodka>
   
+    <Absinthe name="Absinthe" identifier="absinthe" category="Misc" Tags="mediumitem,consumable"
+		 description="A bottle of a strong distilled beverage. Drinking while on duty is not adviced."
+		 cargocontaineridentifier="chemicalcrate" useinhealthinterface="true" impactsoundtag="impact_glasshit" scale="0.18">
+     <Sprite texture="Mods/BTE/Items/Medical/Consumables.png" sourcerect="166,0,74,192" depth="0.6" origin="0.5,0.5"/>
+    <Body width="70" height="182" density="15"/>
+	
+<Price baseprice="25" >
+      <Price locationtype="outpost" multiplier="1" minavailable="2" />
+      <Price locationtype="city" multiplier="0.9" minavailable="3" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="1.25" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="6" />
+    </Price>
+	<Deconstruct time="15">
+      <Item identifier="plastic" outcondition="0.3"/>
+	  <Item identifier="ethanol" outcondition="0.95"/>
+    </Deconstruct>
+
+    <Throwable slots="Any,RightHand,LeftHand" throwforce="3.0" canBeCombined="true">  
+      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+      <StatusEffect type="OnUse" target="Character" delay="10" duration="18">
+        <Affliction identifier="drunk" amount="1.1"/>
+		<Affliction identifier="psychosisresistance" amount="10"/>
+		<ReduceAffliction identifier="internaldamage" amount="0.2"/>
+        <ReduceAffliction identifier="burn" amount="0.2"/>
+		<Affliction identifier="durationincrease" amount="10" />
+		<ReduceAffliction identifier="radiationsickness" amount="0.2"/>
+      </StatusEffect>
+
+
+		      </Throwable>
+
+  </Absinthe>
+  
   <Bloodlust name="Bloodlust" identifier="bloodlust" category="Misc" Tags="mediumitem,consumable"
 			 description="Homebrew alcohol. Drinking while on duty is not adviced."
 			 cargocontaineridentifier="chemicalcrate" useinhealthinterface="true" impactsoundtag="impact_glasshit" scale="0.2">
@@ -122,12 +232,14 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	
     <Price locationtype="Outpost" buyprice="50"/>
 			<Fabricate suitablefabricators="oven" requiredtime="10">
+	  <RequiredSkill identifier="cooking" level="30"/>
       <RequiredItem identifier="sugar" mincondition="0.3" usecondition="true"/>
 	        <RequiredItem identifier="alienblood" mincondition="0.5" usecondition="true"/>
-
     </Fabricate>
 	
 				<Fabricate suitablefabricators="oven" requiredtime="10">
+	  <RequiredSkill identifier="cooking" level="30"/>
+<RequiredSkill identifier="medical" level="15"/>
       <RequiredItem identifier="sugar" mincondition="0.3" usecondition="true"/>
 	        <RequiredItem identifier="antibloodloss2" mincondition="0.2" usecondition="true"/>
 
@@ -209,8 +321,8 @@ Another note if you are changing seared crawler meat please do be alerted that s
     </Holdable>
   </Item>
   
-  <Item name="Chips" identifier="chips" category="Misc" Tags="smallitem,food"
-		description="A bag containing thin slices of deep fried potatoes commonly served as a snack."
+  <Item name="Chips" identifier="chips" aliases="crips" category="Misc" Tags="smallitem,food"
+		description="A bag containing thin slices of deep fried potatoes commonly served as a snack, also known as Crips in the United Kingdom."
         scale="0.5" useinhealthinterface="true" impactsoundtag="impact_soft">
 	<Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="362,138,46,62" depth="0.6"/>
 	<Body width="36" height="54" density="9.95"/>
@@ -235,6 +347,8 @@ Another note if you are changing seared crawler meat please do be alerted that s
 <Affliction identifier="durationincrease" amount="0.00005" />
 <Affliction identifier="haste" amount="0.00001" />
       </StatusEffect>
+	  
+
     </Holdable>
   </Item>
   
@@ -388,6 +502,7 @@ Another note if you are changing seared crawler meat please do be alerted that s
       <Item identifier="carbon" outcondition="0.26"/>
     </Deconstruct>
 	<Fabricate suitablefabricators="oven" requiredtime="10">
+<RequiredSkill identifier="cooking" level="10"/>
       <RequiredItem identifier="potato" mincondition="0.2" usecondition="false"/>
     </Fabricate>
     
@@ -421,8 +536,10 @@ Another note if you are changing seared crawler meat please do be alerted that s
       <Item identifier="carbon" outcondition="0.52"/>
     </Deconstruct>
 	<Fabricate suitablefabricators="oven" requiredtime="15">
+<RequiredSkill identifier="cooking" level="10"/>
       <RequiredItem identifier="potato" count="2" mincondition="0.2" usecondition="false"/>
 <RequiredItem identifier="salt"  mincondition="0.3" usecondition="true"/>
+<RequiredItem identifier="fryingpan" mincondition="0.0" usecondition="true"/>
     </Fabricate>
     
 	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
@@ -433,6 +550,7 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
+	  
       <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
 <ReduceAffliction identifier="internaldamage" amount="0.47"/>
 
@@ -442,7 +560,11 @@ Another note if you are changing seared crawler meat please do be alerted that s
 <Affliction identifier="durationincrease" amount="0.1" />
 <Affliction identifier="haste" amount="0.091" />
       </StatusEffect>
-
+      <StatusEffect type="OnUse" tags="chipeat" target="Character"  HideFace="false" delay="0" duration="35" stackable="true"/>
+	  	  	        <StatusEffect type="OnUse" target="Character" delay="0" duration="5">
+			        <Conditional HasStatusTag="fteat" />
+        <Affliction identifier="huskinfectionresistance" amount="5.0"/>
+      </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
       </StatusEffect>
@@ -557,6 +679,7 @@ Another note if you are changing seared crawler meat please do be alerted that s
 <Item identifier="carbon" outcondition="0.01"/>
     </Deconstruct>
 	<Fabricate suitablefabricators="oven" requiredtime="20">
+<RequiredSkill identifier="cooking" level="30"/>
       <RequiredItem identifier="flour" mincondition="0.25" usecondition="true"/>
 <RequiredItem identifier="salt" mincondition="0.01" usecondition="true"/>
     </Fabricate>
@@ -579,10 +702,50 @@ Another note if you are changing seared crawler meat please do be alerted that s
 <Affliction identifier="organdamage" strength="0.00001"/>
 
       </StatusEffect>
+	        <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+	        </StatusEffect>
     </Holdable>
   </Item>
   
-  <Item name="Seared Crawler" identifier="searedcrawler" category="Misc" Tags="smallitem,food"
+  <Item name="Mystery Meat" aliases="Seared Human, Seared Human Flesh" identifier="searedhuman" category="Misc" Tags="smallitem,food"
+        useinhealthinterface="true" scale="0.5" impactsoundtag="impact_fleshhit">
+    <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="130,42,40,40" depth="0.6"/>
+    <Body width="18" height="14" radius="14" density="13" friction="0.95"/>
+	
+	<Deconstruct time="15">
+      <Item identifier="carbon" outcondition="0.4"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="oven" requiredtime="20" displayname="mysterymeat">
+	  <RequiredSkill identifier="cooking" level="10"/>
+      <RequiredItem identifier="humanflesh" mincondition="0.3" usecondition="false"/>
+<RequiredItem identifier="fryingpan" mincondition="0.0" usecondition="true"/>
+    </Fabricate>
+
+<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
+      <StatusEffect type="Always" target="This" Condition="-0.014"/>
+	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
+	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
+	  </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
+<ReduceAffliction identifier="internaldamage" amount="0.4"/>
+<ReduceAffliction identifier="lacerations" amount="0.1"/>
+<ReduceAffliction identifier="burn" amount="0.1"/>
+      </StatusEffect>
+	  
+	        <StatusEffect type="OnUse" target="Character" delay="40" duration="20">
+<Affliction identifier="nausea" amount="2.4"/>
+<Affliction identifier="psychosis" amount="0.5"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+
+
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+<Item name="Seared Crawler" identifier="searedcrawler" category="Misc" Tags="smallitem,food"
         useinhealthinterface="true" scale="0.5" impactsoundtag="impact_fleshhit">
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="130,42,40,40" depth="0.6"/>
     <Body width="18" height="14" radius="14" density="13" friction="0.95"/>
@@ -591,11 +754,11 @@ Another note if you are changing seared crawler meat please do be alerted that s
       <Item identifier="carbon" outcondition="0.4"/>
     </Deconstruct>
 	<Fabricate suitablefabricators="oven" requiredtime="20">
+	  <RequiredSkill identifier="cooking" level="10"/>
       <RequiredItem identifier="crawlermeat1" mincondition="0.3" usecondition="false"/>
+<RequiredItem identifier="fryingpan" mincondition="0.0" usecondition="true"/>
     </Fabricate>
-	<Fabricate suitablefabricators="oven" requiredtime="20">
-      <RequiredItem identifier="crawlermeat2" mincondition="0.3" usecondition="false"/>
-    </Fabricate>
+
     
 	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
       <StatusEffect type="Always" target="This" Condition="-0.014"/>
@@ -625,14 +788,11 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	        <Item identifier="carbon" outcondition="0.75"/>
     </Deconstruct>
 	<Fabricate suitablefabricators="oven" requiredtime="30">
+	  	  <RequiredSkill identifier="cooking" level="40"/>
       <RequiredItem identifier="crawlermeat1" count="2" mincondition="0.4" usecondition="false"/>
 	  <RequiredItem identifier="flour" mincondition="0.75" usecondition="true"/>
-	  
     </Fabricate>
-	<Fabricate suitablefabricators="oven" requiredtime="30">
-      <RequiredItem identifier="crawlermeat2" count="2" mincondition="0.4" usecondition="false"/>
-	  	  <RequiredItem identifier="flour" mincondition="0.75" usecondition="true"/>
-    </Fabricate>
+
     
 	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
       <StatusEffect type="Always" target="This" Condition="-0.014"/>
@@ -666,9 +826,9 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	        <Item identifier="carbon" outcondition="0.75"/>
     </Deconstruct>
 	<Fabricate suitablefabricators="oven" requiredtime="30">
+	  	  <RequiredSkill identifier="cooking" level="50"/>
       <RequiredItem identifier="threshermeat" count="2" mincondition="0.4" usecondition="false"/>
 	  <RequiredItem identifier="flour" mincondition="0.75" usecondition="true"/>
-	  
     </Fabricate>
 
     
@@ -702,9 +862,9 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	        <Item identifier="carbon" outcondition="0.75"/>
     </Deconstruct>
 	<Fabricate suitablefabricators="oven" requiredtime="26">
+	  	  <RequiredSkill identifier="cooking" level="30"/>
       <RequiredItem identifier="carrot" count="2" mincondition="0.4" usecondition="false"/>
 	  <RequiredItem identifier="flour" mincondition="0.75" usecondition="true"/>
-	  
     </Fabricate>
 
     
@@ -737,10 +897,11 @@ Another note if you are changing seared crawler meat please do be alerted that s
       <Item identifier="carbon" outcondition="0.8"/>
 	        <Item identifier="carbon" outcondition="0.75"/>
     </Deconstruct>
+
 	<Fabricate suitablefabricators="oven" requiredtime="25">
+	  <RequiredSkill identifier="cooking" level="30"/>
       <RequiredItem identifier="apple" count="2" mincondition="0.4" usecondition="false"/>
 	  <RequiredItem identifier="flour" mincondition="0.75" usecondition="true"/>
-	  
     </Fabricate>
 
     
@@ -776,7 +937,9 @@ Another note if you are changing seared crawler meat please do be alerted that s
       <Item identifier="carbon" outcondition="0.4"/>
     </Deconstruct>
 	<Fabricate suitablefabricators="oven" requiredtime="20">
+<RequiredSkill identifier="cooking" level="12"/>
       <RequiredItem identifier="snailfishmeat" mincondition="0.3" usecondition="false"/>
+<RequiredItem identifier="fryingpan" mincondition="0.0" usecondition="true"/>
     </Fabricate>
 	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
       <StatusEffect type="Always" target="This" Condition="-0.014"/>
@@ -805,6 +968,7 @@ Another note if you are changing seared crawler meat please do be alerted that s
       <Item identifier="carbon" outcondition="0.4"/>
     </Deconstruct>
 	<Fabricate suitablefabricators="oven" requiredtime="15">
+<RequiredSkill identifier="cooking" level="25"/>
       <RequiredItem identifier="apple" mincondition="0.2" usecondition="false"/>
 	        <RequiredItem identifier="sugar" mincondition="0.3" usecondition="true"/>
     </Fabricate>
@@ -846,6 +1010,7 @@ Another note if you are changing seared crawler meat please do be alerted that s
       <Item identifier="carbon" outcondition="0.4"/>
     </Deconstruct>
 	<Fabricate suitablefabricators="oven" requiredtime="25">
+<RequiredSkill identifier="cooking" level="20"/>
 	        <RequiredItem identifier="sugar" mincondition="0.8" usecondition="true"/>
     </Fabricate>
 
@@ -885,7 +1050,9 @@ Another note if you are changing seared crawler meat please do be alerted that s
       <Item identifier="carbon" outcondition="0.5"/>
     </Deconstruct>
 	<Fabricate suitablefabricators="oven" requiredtime="20">
+<RequiredSkill identifier="cooking" level="10"/>
       <RequiredItem identifier="threshermeat" mincondition="0.4" usecondition="false"/>
+<RequiredItem identifier="fryingpan" mincondition="0.0" usecondition="true"/>
     </Fabricate>
     
 	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
@@ -914,6 +1081,7 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	        <Item identifier="ethanol" outcondition="0.5"/>
     </Deconstruct>
 	<Fabricate suitablefabricators="oven" requiredtime="20">
+<RequiredSkill identifier="cooking" level="25"/>
       <RequiredItem identifier="threshermeat" mincondition="0.4" usecondition="false"/>
 	  <RequiredItem identifier="bloodlust" mincondition="0.25" usecondition="true"/>
     </Fabricate>
@@ -954,6 +1122,7 @@ description="Normally paired with fries, this has been claimed to be a sacred me
 	        <Item identifier="ethanol" outcondition="0.5"/>
     </Deconstruct>
 	<Fabricate suitablefabricators="oven" requiredtime="20">
+<RequiredSkill identifier="cooking" level="20"/>
       <RequiredItem identifier="threshermeat" mincondition="0.3" usecondition="false"/>
 	  <RequiredItem identifier="flour" mincondition="0.2" usecondition="true"/>
 <RequiredItem identifier="whiskey" mincondition="0.2" usecondition="true"/>
@@ -974,6 +1143,12 @@ description="Normally paired with fries, this has been claimed to be a sacred me
 
 
       </StatusEffect>
+	  
+	        <StatusEffect type="OnUse" target="Character" delay="0" duration="5">
+			        <Conditional HasStatusTag="chipeat" />
+        <Affliction identifier="huskinfectionresistance" amount="5.0"/>
+      </StatusEffect>
+	        <StatusEffect type="OnUse" tags="fteat" target="Character"  HideFace="false" delay="0" duration="35" stackable="true"/>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
       </StatusEffect>
@@ -1006,6 +1181,8 @@ description="Normally paired with fries, this has been claimed to be a sacred me
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
   <ReduceAffliction identifier="internaldamage" amount="0.4"/>
+        <Affliction identifier="organdamage" amount="0.01"/>
+		<Affliction identifier="leadpoisoning" amount="0.1"/>
 
 
 
@@ -1022,16 +1199,18 @@ description="Normally paired with fries, this has been claimed to be a sacred me
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="162,150,39,50" depth="0.6"/>
     <Body width="18" height="14" radius="14" density="13" friction="0.95"/>
 	<Fabricate suitablefabricators="oven" requiredtime="20">
+<RequiredSkill identifier="cooking" level="50"/>
 	      <RequiredItem identifier="foodcan" usecondition="false"/>
 	      <RequiredItem identifier="threshermeat" mincondition="0.3" usecondition="false"/>
 	  <RequiredItem identifier="crawlermeat1" mincondition="0.3" usecondition="false"/>
 	  <RequiredItem identifier="whiskey" mincondition="0.75" usecondition="true"/>
 		      </Fabricate>
 			  	<Fabricate suitablefabricators="oven" requiredtime="21">
-	      <RequiredItem identifier="foodcan" usecondition="false"/>
+	      <RequiredItem identifier="foodcanlead" usecondition="false"/>
 	      <RequiredItem identifier="threshermeat" mincondition="0.3" usecondition="false"/>
-	  <RequiredItem identifier="crawlermeat2" mincondition="0.3" usecondition="false"/>
+	  <RequiredItem identifier="crawlermeat1" mincondition="0.3" usecondition="false"/>
 	  <RequiredItem identifier="whiskey" mincondition="0.76" usecondition="true"/>
+<RequiredSkill identifier="cooking" level="50"/>
 		      </Fabricate>
 
 	<Deconstruct time="15">
@@ -1070,6 +1249,7 @@ description="Normally paired with fries, this has been claimed to be a sacred me
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="162,150,39,50" depth="0.6"/>
     <Body width="18" height="14" radius="14" density="13" friction="0.95"/>
 	<Fabricate suitablefabricators="oven" requiredtime="40">
+<RequiredSkill identifier="cooking" level="55"/>
 	      <RequiredItem identifier="foodcan" usecondition="false"/>
 	      <RequiredItem identifier="threshermeat" mincondition="0.3" usecondition="false"/>
 	  <RequiredItem identifier="potato" mincondition="0.1" usecondition="false"/>
@@ -1118,11 +1298,11 @@ description="Normally paired with fries, this has been claimed to be a sacred me
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="162,150,39,50" depth="0.6"/>
     <Body width="18" height="14" radius="14" density="13" friction="0.95"/>
 	<Fabricate suitablefabricators="oven" requiredtime="10">
+<RequiredSkill identifier="cooking" level="50"/>
 		      <RequiredItem identifier="foodcan" usecondition="false"/>
 	      <RequiredItem identifier="huskeggs" usecondition="false"/>
 	      <RequiredItem identifier="salt" mincondition="0.4" usecondition="true"/>
 		  	      <RequiredItem identifier="sugar" mincondition="0.1" usecondition="true"/>
-
 		      </Fabricate>
 
 	<Deconstruct time="15">
@@ -1162,11 +1342,11 @@ description="Normally paired with fries, this has been claimed to be a sacred me
         useinhealthinterface="true" scale="0.5" impactsoundtag="impact_foodcan">
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="162,150,39,50" depth="0.6"/>
     <Body width="18" height="14" radius="14" density="13" friction="0.95"/>
-	<Fabricate suitablefabricators="oven" requiredtime="10">
+	<Fabricate suitablefabricators="oven" requiredtime="10" displayname="poisonedhusk">
+<RequiredSkill identifier="cooking" level="10"/>
 		      <RequiredItem identifier="foodcan" usecondition="false"/>
 	      <RequiredItem identifier="huskeggs" usecondition="false"/>
 		  	      <RequiredItem identifier="sugar" mincondition="0.1" usecondition="true"/>
-
 		      </Fabricate>
 
 	<Deconstruct time="15">
@@ -1202,12 +1382,12 @@ description="Normally paired with fries, this has been claimed to be a sacred me
   </Item>
   
   
-          <Item name="Seabed Soup" identifier="slop" category="Misc" Tags="mediumitem,food" 
+          <Item name="Seabed Soup" aliases="seabedsoup" identifier="slop" category="Misc" Tags="mediumitem,food" 
 	description="Also known as slop, This is used to feed prisoners or a very hungry crew"
         useinhealthinterface="true" scale="0.5" impactsoundtag="impact_foodcan">
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="162,150,39,50" depth="0.6"/>
     <Body width="18" height="14" radius="14" density="13" friction="0.95"/>
-	<Fabricate suitablefabricators="oven" requiredtime="10">
+	<Fabricate suitablefabricators="oven,constructionkit" requiredtime="10">
 	      <RequiredItem identifier="foodcan" usecondition="false"/>
 	      <RequiredItem identifier="fiberplant" mincondition="0.4" usecondition="true"/>
 
@@ -1249,17 +1429,19 @@ description="Normally paired with fries, this has been claimed to be a sacred me
         useinhealthinterface="true" scale="0.5" impactsoundtag="impact_foodcan">
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="162,150,39,50" depth="0.6"/>
     <Body width="18" height="14" radius="14" density="13" friction="0.95"/>
-	<Fabricate suitablefabricators="oven" requiredtime="20">
+	<Fabricate suitablefabricators="oven" requiredtime="20" displayname="poisonedthresh">
+<RequiredSkill identifier="cooking" level="10"/>
 	      <RequiredItem identifier="foodcan" usecondition="false"/>
 	      <RequiredItem identifier="threshermeat" mincondition="0.3" usecondition="false"/>
 	  <RequiredItem identifier="crawlermeat1" mincondition="0.3" usecondition="false"/>
 	  <RequiredItem identifier="whiskey" mincondition="0.75" usecondition="true"/>
 	  	  <RequiredItem identifier="snailfishmeat" mincondition="0.0" usecondition="false"/>
 		      </Fabricate>
-			  	<Fabricate suitablefabricators="oven" requiredtime="21">
-	      <RequiredItem identifier="foodcan" usecondition="false"/>
+			  	<Fabricate suitablefabricators="oven" requiredtime="21" displayname="poisonedthresh">
+<RequiredSkill identifier="cooking" level="10"/>
+	      <RequiredItem identifier="foodcanlead" usecondition="false"/>
 	      <RequiredItem identifier="threshermeat" mincondition="0.3" usecondition="false"/>
-	  <RequiredItem identifier="crawlermeat2" mincondition="0.3" usecondition="false"/>
+	  <RequiredItem identifier="crawlermeat1" mincondition="0.3" usecondition="false"/>
 	  <RequiredItem identifier="whiskey" mincondition="0.76" usecondition="true"/>
 	  	  	  <RequiredItem identifier="snailfishmeat" mincondition="0.0" usecondition="false"/>
 		      </Fabricate>
@@ -1268,13 +1450,11 @@ description="Normally paired with fries, this has been claimed to be a sacred me
       <Item identifier="carbon" outcondition="0.3"/>
 	        <Item identifier="foodcan" outcondition="0.9"/>
     </Deconstruct>
-    
+  
 	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
 	  <StatusEffect type="OnUse" target="This" Condition="-35" disabledeltatime="true">
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
-
-
      <StatusEffect type="OnUse" target="Character" delay="12" duration="10">
   <ReduceAffliction identifier="internaldamage" amount="1.681"/>
         <Affliction identifier="drunk" amount="1.0"/>
@@ -1284,12 +1464,7 @@ description="Normally paired with fries, this has been claimed to be a sacred me
         <ReduceAffliction identifier="burn" amount="0.878"/>
 				<ReduceAffliction identifier="psychosis" amount="0.2" />
 					  <Affliction identifier="morbusinepoisoning" strength="0.4" />
-					
-
       </StatusEffect>
-		    
-
-
       <StatusEffect type="OnBroken" target="This">
 	  <SpawnItem identifiers="foodcan" spawnposition="This" outcondition="0.9"/>
         <Remove/>

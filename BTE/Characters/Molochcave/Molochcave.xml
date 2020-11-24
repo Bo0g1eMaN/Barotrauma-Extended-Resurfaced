@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Character speciesname="Molochcave" humanoid="false" husk="False" needsair="False" canspeak="False" noise="100" group="moloch">
+
+  <ragdolls folder="Mods/BTE/Characters/Molochcave/Ragdolls"/>
+  <animations folder="Mods/BTE/Characters/Molochcave/Animations"/>
+
+  <bloodemitter particle="blackwaterblood" particleamount="10" velocitymin="0" velocitymax="100" anglemin="0" anglemax="360" scalemin="5" scalemax="10"/>
+  <gibemitter particle="blackwaterblood" particleamount="40" velocitymin="0" velocitymax="100" anglemin="0" anglemax="360" scalemin="5" scalemax="10"/>
+
+  <health vitality="700" doesbleed="true" crushdepth="-Infinity" usehealthwindow="False" bleedingreduction="0" burnreduction="0" constanthealthregeneration="0" healthregenerationwheneating="0"/>
+
+  <sound file="Mods/BTE/Characters/Molochcave/attack1.ogg" state="Attack" range="4000"/>
+  <sound file="Mods/BTE/Characters/Molochcave/attack2.ogg" state="Attack" range="4000"/>
+  <sound file="Mods/BTE/Characters/Molochcave/idle1.ogg" state="Idle" range="8000"/>
+  <sound file="Mods/BTE/Characters/Molochcave/idle2.ogg" state="Idle" range="8000"/>
+  <sound file="Mods/BTE/Characters/Molochcave/attack1.ogg" state="Die" range="6000"/>
+  <sound file="Mods/BTE/Characters/Molochcave/attack2.ogg" state="Die" range="6000"/>
+  
+  <StatusEffect type="InWater" target="This" needsair="False">
+    <ReduceAffliction identifier="oxygenlow" strength="1.5"/>
+  </StatusEffect>
+  <StatusEffect type="NotInWater" target="This" needsair="True" OxygenAvailable="-100"/>
+  
+  <Inventory slots="Any,Any,Any" accessiblewhenalive="false">
+    <Item identifier="hydroxyapatite"/>
+    <Item identifier="hydroxyapatite"/>
+    <Item identifier="brockite"/>
+  </Inventory>
+
+  <ai combatstrength="1100" sight="1" hearing="1" aggressionhurt="200" aggressiongreed="10" aggressiveboarding="True" attackonlywhenprovoked="False">
+    <target tag="decoy" state="Attack" priority="500" />
+    <target tag="stronger" state="Escape" priority="100"/>
+    <target tag="sonar" state="Attack" priority="50"/>
+    <target tag="nasonov" state="Attack" priority="45"/>
+    <target tag="provocative" state="Attack" priority="40"/>
+    <target tag="room" state="Attack" priority="50"/>
+	<target tag="door" state="Attack" priority="60"/>
+    <target tag="human" state="Attack" priority="200"/>
+    <target tag="weaker" state="Attack" priority="100"/>
+  </ai>
+</Character>

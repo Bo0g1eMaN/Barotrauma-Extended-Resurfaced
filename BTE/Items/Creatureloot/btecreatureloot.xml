@@ -29,21 +29,32 @@
       <StatusEffect type="OnUse" target="Character" delay="3" duration="5">
   <ReduceAffliction identifier="internaldamage" amount="0.1"/>
       </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="5" duration="20">
+		<Affliction identifier="tryposluginfestation" probability="0.5" amount="2.5"/>
+        <Affliction identifier="organdamage" probability="0.5" amount="0.2"/>
+				<Affliction identifier="foodpoisoning2" probability="0.2" amount="2.5"/>
+						<Affliction identifier="foodpoisoning" probability="0.5" amount="2.5"/>
+      </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
       </StatusEffect>
     </Holdable>
   </Item>
-  
-  <Item name="Crawler Meat" identifier="crawlermeat2" category="Material"
+
+<Item name="Human Flesh" aliases="human meat,humanmeat" identifier="humanflesh" category="Material"
         cargocontaineridentifier="chemicalcrate" impactsoundtag="impact_fleshhit"
-        description="A chunk of raw crawler meat. It stinks like this so better find an oven." 
+        description="A chunk of human flesh. Only the strong survive." 
         Tags="smallitem,food" useinhealthinterface="true" scale="0.5">
+	
+<Price baseprice="5" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1" minavailable="1" />
+      <Price locationtype="city" sold="false" />
+      <Price locationtype="research" multiplier="3.75" minavailable="1" />
+      <Price locationtype="military" sold="false" />
+      <Price locationtype="mine" multiplier="1" minavailable="0" />
+    </Price>
 
-    <Price locationtype="Military" buyprice="12" />
-    <Price locationtype="Outpost" buyprice="12" />
-
-    <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="128,0,38,36" depth="0.6" origin="0.5,0.5"/>
+    <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="-1,-1,38,39" depth="0.6" origin="0.5,0.5"/>
     <Body width="18" height="16" radius="16" density="13"/>
     
 	<Holdable slots="Any,RightHand,LeftHand" handle1="0,0">
@@ -51,69 +62,39 @@
 	  <StatusEffect type="Always" target="This" Condition="0.017">
         <RequiredItem identifier="foodcan" type="Container"/>
       </StatusEffect>
-	  	  	  	  
+	
 	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="3" duration="5">
   <ReduceAffliction identifier="internaldamage" amount="0.1"/>
-
-
+  <ReduceAffliction identifier="lacerations" amount="0.1"/>
+  <ReduceAffliction identifier="burn" amount="0.1"/>
       </StatusEffect>
-      <StatusEffect type="OnUse" target="Character" delay="15" duration="7">
-
-<Affliction identifier="organdamage" strength="0.4" />
-<Affliction identifier="invertcontrols" strength="0.4" />
-
+      <StatusEffect type="OnUse" target="Character" delay="5" duration="20">
+<Affliction identifier="psychosis" strength="1" />
+<Affliction identifier="nausea" strength="4.3" />
       </StatusEffect>
-
-      <StatusEffect type="OnUse" target="Character" delay="22" duration="3">
-
-<Affliction identifier="oxygenlow" strength="0.4" />
-
-      </StatusEffect>
-
-      <StatusEffect type="OnUse" target="Character" delay="35" duration="8">
-
-<Affliction identifier="oxygenlow" strength="0.4" />
-<Affliction identifier="stun" strength="0.43" />
-
-      </StatusEffect>
-
-
-      <StatusEffect type="OnUse" target="Character" delay="60" duration="7">
-
-<Affliction identifier="drunk" strength="0.4" />
-
-
-      </StatusEffect>
-	  
-	        <StatusEffect type="OnUse" target="Character" delay="67" duration="25">
-
-  <ReduceAffliction identifier="invertcontrols" amount="7"/>
-
-
-      </StatusEffect>
-	  
-
-
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
       </StatusEffect>
     </Holdable>
   </Item>
+
+  
+ 
   
   <Item name="Thresher Meat" identifier="threshermeat" category="Material"
         cargocontaineridentifier="chemicalcrate" impactsoundtag="impact_fleshhit"
         description="A chunk of raw tiger thresher meat. It's best not to eat it raw." 
         Tags="smallitem,food" useinhealthinterface="true" scale="0.5">
 
-<Price baseprice="25" >
-      <Price locationtype="outpost" multiplier="1" minavailable="1" />
-      <Price locationtype="city" multiplier="0.9" minavailable="2" />
-      <Price locationtype="research" multiplier="1.25" minavailable="1" />
-      <Price locationtype="military" multiplier="1.25" minavailable="3" />
-      <Price locationtype="mine" multiplier="1.25" minavailable="1" />
+<Price baseprice="22" >
+      <Price locationtype="outpost" multiplier="1.3" minavailable="1" />
+      <Price locationtype="city" multiplier="1" minavailable="1" />
+      <Price locationtype="research" multiplier="1.1" minavailable="1" />
+      <Price locationtype="military" multiplier="1.45" minavailable="2" />
+      <Price locationtype="mine" multiplier="1" minavailable="0" />
     </Price>
 
     <Sprite texture="Mods/BTE/Items/Medical/Food.png" sourcerect="44,0,38,36" depth="0.6" origin="0.5,0.5"/>
@@ -203,5 +184,20 @@
     </Holdable>
   </Item>
   
-  
+  <Item name="Human Skull" aliases="skeleton" identifier="skull" category="Misc" Tags="smallitem"
+			 description="To be, or not to be, this crewmember chose not to be."
+			 cargocontaineridentifier="chemicalcrate" useinhealthinterface="false" impactsoundtag="impact_bonehit" scale="0.68">
+    <Sprite texture="creatureloot.png" sourcerect="167,1,25,21" depth="0.6" origin="0.5,0.5"/>
+    <Body width="20" height="6" density="10.5" friction="0.95"/>
+	
+    
+    <Deconstruct time="15">
+      <Item identifier="carbon" outcondition="0.3"/>
+	  <Item identifier="alienblood" outcondition="0.1"/>
+    </Deconstruct>
+
+    <Throwable slots="Any,RightHand,LeftHand" throwforce="3.0" canBeCombined="false" aimpos="35,-10" msg="ItemMsgPickUpSelect">   
+	    </Throwable>
+  </Item>
+
 </Items>

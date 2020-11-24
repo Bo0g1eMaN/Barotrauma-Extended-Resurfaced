@@ -29,6 +29,42 @@
     </Projectile>
 	
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
-  </Item>																											  
+  </Item>	
+
+<Item name="Shuttle Railgun" identifier="shuttlerailgun" description="A much faster moving and less power using railgun though it does have higher recoil and really weak springs" Tags="turret" category="Machine" interactthroughwalls="true" Scale="0.25" interactdistance="10" focusonselected="true" offsetonselected="450" linkable="true" allowedlinks="railgunammosource">
+    <Sprite texture="Content/Items/Weapons/Turrets.png" depth="0.01" sourcerect="0,0,512,512" canflipy="false" />
+    <StaticBody width="40" radius="40" />
+    <Turret canbeselected="false" characterusable="false" linkable="true" barrelpos="252, 178" rotationlimits="180,360" powerconsumption="10000.0" showchargeindicator="true" showprojectileindicator="true" recoildistance="450" springstiffnesslowskill="4" springstiffnesshighskill="25" springdampinglowskill="1.5" springdampinghighskill="15" rotationspeedlowskill="4" rotationspeedhighskill="15">
+      <StatusEffect type="OnUse" target="This">
+        <sound file="Content/Items/Weapons/Railgun1.ogg" range="5000" type="OnUse" />
+        <sound file="Content/Items/Weapons/Railgun2.ogg" range="5000" type="OnUse" />
+        <sound file="Content/Items/Weapons/Railgun3.ogg" range="5000" type="OnUse" />
+        <Explosion range="500" structuredamage="0" force="0.01" camerashake="8" flames="false" smoke="false" sparks="false" underwaterbubble="false" />
+      </StatusEffect>
+      <RailSprite texture="Content/Items/Weapons/Turrets.png" origin="0.52, 0.59" sourcerect="0,512,328,512" depth="0.011" />
+      <BarrelSprite texture="Content/Items/Weapons/Turrets.png" origin="0.5, 0.85" sourcerect="512,0,250,672" depth="0.012" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,0,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,0,256,256" />
+      <MoveSound file="Content/Items/Weapons/RailgunLoop.ogg" />
+      <StartMoveSound file="Content/Items/Weapons/RailgunStart.ogg" />
+      <EndMoveSound file="Content/Items/Weapons/RailgunStop.ogg" />
+      <RequiredSkill identifier="weapons" level="45" />
+      <LightComponent LightColor="1.0,0.8,0.8,1.0" Flicker="0.0" range="1024" IsOn="true" drawbehindsubs="true" ignorecontinuoustoggle="true">
+        <LightTexture texture="Content/Lights/lightcone.png" origin="0.0, 0.5" size="1.0,1.0" />
+      </LightComponent>
+      <ParticleEmitter particle="muzzleflashrailgun" particleamount="1" velocitymin="50" velocitymax="100" />
+    </Turret>
+    <aitarget maxsightrange="3000" maxsoundrange="10000" fadeouttime="5" />
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <input name="position_in" displayname="connection.turretaimingin" />
+      <input name="trigger_in" displayname="connection.turrettriggerin" />
+      <input name="toggle_light" displayname="connection.togglelight"/>
+      <input name="set_light" displayname="connection.setlight" />
+    </ConnectionPanel>
+    <Upgrade gameversion="0.10.0.0" scale="*0.5" barrelpos="256,178" />
+  </Item>																										  
 </Items>											 
 
