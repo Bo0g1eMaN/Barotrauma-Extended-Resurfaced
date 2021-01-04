@@ -16,7 +16,7 @@
         <Affliction identifier="cold" strength="10"/>
       </StatusEffect>
     </attack>
-	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,damagebrain,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
+	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
     <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,sonic,electrical" damagemultiplier="5" deflectprojectiles="False"/>
   </limb>
   <!-- body -->
@@ -34,66 +34,66 @@
 	    <Affliction identifier="cold" strength="10"/>
       </StatusEffect>
     </attack>
-	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,damagebrain,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
+	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
     <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,sonic,electrical" damagemultiplier="5" deflectprojectiles="False"/>
   </limb>
   <!-- left arm -->
   <limb id="2" radius="8" height="20" mass="3" type="LeftArm" healthindex="0" name="Limb 2" flip="True" attackpriority="0" steerforce="0" stepoffset="0,0" width="0" density="10" pullpos="0,0" refjoint="-1" ignorecollisions="True" notes="" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite texture="Mods/BTE/Characters/Teleglitch/Teleglitch.png" sourcerect="121,128,76,128" depth="0.15" origin="0.4868421,0.3658537"/>
-    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,damagebrain,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
     <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,sonic,electrical" damagemultiplier="5" deflectprojectiles="False"/>
   </limb>
   <limb id="3" radius="6" height="26" mass="3" type="LeftHand" pullpos="0,-18" healthindex="0" name="Limb 3" flip="True" attackpriority="0" steerforce="0" stepoffset="0,0" width="0" density="10" refjoint="-1" ignorecollisions="True" notes="" friction="0.3" restitution="0.05" mouthpos="0,0" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7">
     <sprite texture="Mods/BTE/Characters/Teleglitch/Teleglitch.png" sourcerect="197,128,59,128" depth="0.16" origin="0.5084746,0.5121951"/>
-    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,damagebrain,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
     <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,sonic,electrical" damagemultiplier="5" deflectprojectiles="False"/>
   </limb>
   <!-- right arm -->
   <limb id="4" radius="8" height="20" mass="3" type="RightArm" healthindex="0" name="Limb 4" flip="True" attackpriority="0" steerforce="0" stepoffset="0,0" width="0" density="10" pullpos="0,0" refjoint="-1" ignorecollisions="True" notes="" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite texture="Mods/BTE/Characters/Teleglitch/Teleglitch.png" sourcerect="121,0,76,128" depth="0.01" origin="0.4868421,0.3658537"/>
-    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,damagebrain,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
     <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,sonic,electrical" damagemultiplier="5" deflectprojectiles="False"/>
   </limb>
   <limb id="5" radius="6" height="26" mass="3" type="RightHand" pullpos="0,-18" healthindex="0" name="Limb 5" flip="True" attackpriority="0" steerforce="0" stepoffset="0,0" width="0" density="10" refjoint="-1" ignorecollisions="True" notes="" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite texture="Mods/BTE/Characters/Teleglitch/Teleglitch.png" sourcerect="197,0,59,128" origin="0.5084746,0.5121951" depth="0"/>
-    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,damagebrain,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
     <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,sonic,electrical" damagemultiplier="5" deflectprojectiles="False"/>
   </limb>
   <!-- left leg -->
   <limb id="6" radius="10" height="30" mass="8" type="LeftThigh" healthindex="0" name="Limb 6" flip="True" attackpriority="0" steerforce="0" stepoffset="0,0" width="0" density="10" pullpos="0,0" refjoint="-1" ignorecollisions="True" notes="" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite texture="Mods/BTE/Characters/Teleglitch/Teleglitch.png" sourcerect="179,2,77,145" depth="0.15" origin="0.5454546,0.5310345"/>
-    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,damagebrain,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
     <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,sonic,electrical" damagemultiplier="5" deflectprojectiles="False"/>
   </limb>
   <limb id="7" radius="7" height="19.032" mass="5" type="LeftLeg" healthindex="0" name="Limb 7" flip="True" attackpriority="0" steerforce="0" stepoffset="0,0" width="0" density="10" pullpos="0,0" refjoint="-1" ignorecollisions="True" notes="" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite texture="Mods/BTE/Characters/Teleglitch/Teleglitch.png" sourcerect="188,148,58,107" depth="0.16" origin="0.4482759,0.5"/>
-    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,damagebrain,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
     <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,sonic,electrical" damagemultiplier="5" deflectprojectiles="False"/>
   </limb>
   <limb id="8" radius="7" height="13" mass="2" type="LeftFoot" flip="True" pullpos="-5,0" healthindex="0" name="Limb 8" attackpriority="0" steerforce="0" stepoffset="0,0" width="0" density="10" refjoint="-1" ignorecollisions="True" notes="" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite texture="Mods/BTE/Characters/Teleglitch/Teleglitch.png" sourcerect="1,91,73,102" depth="0.17" origin="0.3972603,0.3627451"/>
-    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,damagebrain,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
     <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,sonic,electrical" damagemultiplier="5" deflectprojectiles="False"/>
   </limb>
   <!-- right leg -->
   <limb id="9" radius="10" height="30" mass="8" type="RightThigh" healthindex="0" name="Limb 9" flip="True" attackpriority="0" steerforce="0" stepoffset="0,0" width="0" density="10" pullpos="0,0" refjoint="-1" ignorecollisions="True" notes="" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite texture="Mods/BTE/Characters/Teleglitch/Teleglitch.png" sourcerect="98,2,77,145" depth="0.11" origin="0.5454546,0.5310345"/>
-    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,damagebrain,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
     <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,sonic,electrical" damagemultiplier="5" deflectprojectiles="False"/>
   </limb>
   <limb id="10" radius="7" height="19.032" mass="5" type="RightLeg" healthindex="0" name="Limb 10" flip="True" attackpriority="0" steerforce="0" stepoffset="0,0" width="0" density="10" pullpos="0,0" refjoint="-1" ignorecollisions="True" notes="" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite texture="Mods/BTE/Characters/Teleglitch/Teleglitch.png" sourcerect="113,148,58,107" depth="0.12" origin="0.4482759,0.5"/>
-    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,damagebrain,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
     <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,sonic,electrical" damagemultiplier="5" deflectprojectiles="False"/>
   </limb>
   <limb id="11" radius="7" height="13" mass="2" type="RightFoot" flip="True" pullpos="-5,0" healthindex="0" name="Limb 11" attackpriority="0" steerforce="0" stepoffset="0,0" width="0" density="10" refjoint="-1" ignorecollisions="True" notes="" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite texture="Mods/BTE/Characters/Teleglitch/Teleglitch.png" sourcerect="1,91,73,102" origin="0.3972603,0.3627451" depth="0.14"/>
-    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,damagebrain,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
     <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,sonic,electrical" damagemultiplier="5" deflectprojectiles="False"/>
   </limb>
   <limb id="12" radius="13" mass="20" type="Waist" healthindex="0" name="Limb 12" flip="True" attackpriority="0" steerforce="0" stepoffset="0,0" height="0" width="0" density="10" pullpos="0,0" refjoint="-1" ignorecollisions="True" notes="" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite texture="Mods/BTE/Characters/Teleglitch/Teleglitch.png" sourcerect="0,1,98,90" depth="0.11" origin="0.5612245,0.4222222"/>
-    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,damagebrain,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="bleeding,damage,damageorgan,,radiationsickness,cold,heat,burn,chemical,acid" damagemultiplier="0" deflectprojectiles="False"/>
     <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,sonic,electrical" damagemultiplier="5" deflectprojectiles="False"/>
   </limb>
   <joint limb1="0" limb1anchor="-1.107115,-9.960549" limb2="1" limb2anchor="2.598679,24.53047" lowerlimit="-90" upperlimit="45" canbesevered="True" name="Joint 0 - 1" limitenabled="True" stiffness="0.25"/>

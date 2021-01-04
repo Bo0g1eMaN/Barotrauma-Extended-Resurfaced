@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Health Scanner HUD" identifier="healthscanner" scale="0.5" category="Equipment" tags="smallitem"
+		cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="0.5" />
+	<Price locationtype="Research" buyprice="100" />
+    <Price locationtype="Military" buyprice="150" />
+    <Price locationtype="City" buyprice="150" />
+    <Price locationtype="Outpost" buyprice="150" />
+    <Deconstruct time="20">
+      <Item identifier="fpgacircuit" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="medical" level="50" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,256,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/headgears.png" sourcerect="115,349,75,26" depth="0.6" origin="0.5,0.5" />
+    <Body width="30" height="15" density="30" />
+    
+	<WifiComponent range="35000" LinkToChat="true" MinChatMessageInterval="0.0">
+      <RequiredItems items="mobilebattery" type="Contained" />
+    </WifiComponent>
+	<WifiComponent range="35000" LinkToChat="true" MinChatMessageInterval="0.0" channel="78" canbeselected="false">
+      <RequiredItems items="hybridbatterycell" type="Contained" />
+    </WifiComponent>
+	<StatusHUD drawhudwhenequipped="true"/>
+	<ItemContainer capacity="1" hideitems="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
+      <Containable items="mobilebattery" />
+    </ItemContainer>
+	
+	<Wearable limbtype="Head" slots="Any,Headset" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnWearing" target="Contained" Condition="-0.06" />
+	  <sprite texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" sourcerect="115,349,75,26" origin="0.55,0.85" />
+    </Wearable>
+  </Item>
+  
+  <Item name="Doctor's Uniform" identifier="doctorsuniform1" aliases="doctorsuniform" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,uniform" scale="0.5" impactsoundtag="impact_soft">
+	<PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />																							 
+    <Price locationtype="Research" buyprice="50" />
+    <Price locationtype="Military" buyprice="50" />
+    <Price locationtype="City" buyprice="50" />
+    <Price locationtype="Outpost" buyprice="100" />
+    <InventoryIcon texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="128,151,128,105" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="18,614,197,84" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Deconstruct time="15">
+      <Item identifier="organicfiber"/>
+	  <Item identifier="organicfiber"/>
+    </Deconstruct>
+	<Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite texture="Mods/BTE/Items/Jobgear/Medic/medic_torso_[GENDER]_1.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Mods/BTE/Items/Jobgear/Medic/medic_torso_[GENDER]_1.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Mods/BTE/Items/Jobgear/Medic/medic_torso_[GENDER]_1.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Mods/BTE/Items/Jobgear/Medic/medic_torso_[GENDER]_1.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Mods/BTE/Items/Jobgear/Medic/medic_torso_[GENDER]_1.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Mods/BTE/Items/Jobgear/Captain/captain_legs_[GENDER]_1.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Mods/BTE/Items/Jobgear/Captain/captain_legs_[GENDER]_1.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+	  <damagemodifier armorsector="0,360" afflictiontypes="damage" damagemultiplier="0.9"/>
+	  <damagemodifier armorsector="0,360" afflictiontypes="bleeding" damagemultiplier="0.9"/>
+	  <damagemodifier armorsector="0,360" afflictiontypes="heat" damagemultiplier="0.9"/>
+	  <damagemodifier armorsector="0,360" afflictiontypes="cold" damagemultiplier="0.5"/>
+    </Wearable>
+    <ItemContainer capacity="2">
+      <Containable items="smallitem" excludeditems="uniform,bag"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item name="Doctor's Medkit" identifier="medkit" category="Equipment" tags="smallitem,bag" scale="0.5"
+		description="The medpack offers some extra space for all the chems and medical items a medical doctor might need."
+		fireproof="true" cargocontaineridentifier="metalcrate">
+	<PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <Price locationtype="Research" buyprice="50"/>
+    <Price locationtype="Military" buyprice="50"/>
+    <Price locationtype="City" buyprice="50"/>
+    <Price locationtype="Outpost" buyprice="100"/>
+
+    <Sprite texture="Mods/BTE/Items/Jobgear/itempacks.png" sourcerect="133,170,99,56" depth="0.6"/>
+    <Body width="50" height="17" density="20"/>
+	<Deconstruct time="15">
+      <Item identifier="organicfiber"/>
+    </Deconstruct>
+    <Wearable slots="OuterClothes">
+      <sprite name="Medical Torso" texture="Mods/BTE/Items/Jobgear/itempacks.png" limb="Torso" inherittexturescale="true" inheritorigin="true" sourcerect="121,0,119,257"/>
+    </Wearable>
+	
+	<ItemContainer capacity="12">
+      <Containable items="chem,medical" excludeditems="uniform,bag"/>
+    </ItemContainer>
+  </Item>
+</Items>

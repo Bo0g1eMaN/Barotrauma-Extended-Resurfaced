@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+	<Item name="Watchman ID Card" identifier="idcard_watchman" category="Equipment" Tags="smallitem,idcard,id_watchman" cargocontaineridentifier="metalcrate" scale="0.35">
+		<InventoryIcon texture="Mods/BTE/Items/BTEInventoryIconAtlas.png" sourcerect="64,0,64,64" origin="0.5,0.5" />
+		<Sprite texture="BTEidcard.png" depth="0.8" sourcerect="48,0,48,29" />
+		<Body width="16" height="12" density="20" />
+		<Pickable slots="Card,Any" msg="ItemMsgPickUpSelect" />
+	</Item>
+	<Item name="Captain ID Card" identifier="idcard_captain" category="Equipment" Tags="smallitem,idcard,id_captain,captain,commandingofficer,commander,leader,cap,co,ex,leading,bigboss,borisjohnson,com" cargocontaineridentifier="metalcrate" scale="0.35">
+		<InventoryIcon texture="Mods/BTE/Items/BTEInventoryIconAtlas.png" sourcerect="128,0,64,64" origin="0.5,0.5" />
+		<Sprite texture="BTEidcard.png" depth="0.8" sourcerect="96,0,48,29" />
+		<Body width="16" height="12" density="20" />
+		<Pickable slots="Card,Any" msg="ItemMsgPickUpSelect" />
+		
+		<Fabricate suitablefabricators="idcardprinter" requiredtime="300">
+			<RequiredSkill identifier="mechanical" level="20" />
+			<RequiredItem identifier="idcard_blank"/>
+			<RequiredItem identifier="plastic"  mincondition="0.5" usecondition="true" />
+		</Fabricate>
+		<Deconstruct time="5">
+			<Item identifier="plastic" copycondition="true" outcondition="0.5"/>
+		</Deconstruct>
+	</Item>
+	<Item name="Officer ID Card" identifier="idcard_officer" category="Equipment" Tags="smallitem,idcard,id_officer,of,off,offic,officer" cargocontaineridentifier="metalcrate" scale="0.35">
+		<InventoryIcon texture="Mods/BTE/Items/BTEInventoryIconAtlas.png" sourcerect="192,0,64,64" origin="0.5,0.5" />
+		<Sprite texture="BTEidcard.png" depth="0.8" sourcerect="144,0,48,29" />
+		<Body width="16" height="12" density="20" />
+		<Pickable slots="Card,Any" msg="ItemMsgPickUpSelect" />
+		
+		<Fabricate suitablefabricators="idcardprinter" requiredtime="180">
+			<RequiredSkill identifier="mechanical" level="20" />
+			<RequiredItem identifier="idcard_blank"/>
+			<RequiredItem identifier="plastic"  mincondition="0.5" usecondition="true" />
+		</Fabricate>
+		<Deconstruct time="5">
+			<Item identifier="plastic" copycondition="true" outcondition="0.5"/>
+		</Deconstruct>
+	</Item>
+	<Item name="Security Officer ID Card" identifier="idcard_securityofficer" category="Equipment" Tags="smallitem,idcard,id_securityofficer,sec,security,securityofficer" cargocontaineridentifier="metalcrate" scale="0.35">
+		<InventoryIcon texture="Mods/BTE/Items/BTEInventoryIconAtlas.png" sourcerect="256,0,64,64" origin="0.5,0.5" />
+		<Sprite texture="BTEidcard.png" depth="0.8" sourcerect="192,0,48,29" />
+		<Body width="16" height="12" density="20" />
+		<Pickable slots="Card,Any" msg="ItemMsgPickUpSelect" />
+		
+		<Fabricate suitablefabricators="idcardprinter" requiredtime="120">
+			<RequiredSkill identifier="mechanical" level="20" />
+			<RequiredItem identifier="idcard_blank"/>
+			<RequiredItem identifier="plastic"  mincondition="0.5" usecondition="true" />
+		</Fabricate>
+		<Deconstruct time="5">
+			<Item identifier="plastic" copycondition="true" outcondition="0.5"/>
+		</Deconstruct>
+	</Item>
+	<Item name="Medical Doctor ID Card" identifier="idcard_medicaldoctor" category="Equipment" Tags="smallitem,idcard,id_medicaldoctor,med,medicaldoctor,medic,doctor,meddoc,medical,healing,med/sci,med/sci/nurse,med/nurse" cargocontaineridentifier="metalcrate" scale="0.35">
+		<InventoryIcon texture="Mods/BTE/Items/BTEInventoryIconAtlas.png" sourcerect="320,0,64,64" origin="0.5,0.5" />
+		<Sprite texture="BTEidcard.png" depth="0.8" sourcerect="240,0,48,29" />
+		<Body width="16" height="12" density="20" />
+		<Pickable slots="Card,Any" msg="ItemMsgPickUpSelect" />
+		
+		<Fabricate suitablefabricators="idcardprinter" requiredtime="60">
+			<RequiredSkill identifier="mechanical" level="20" />
+			<RequiredItem identifier="idcard_blank"/>
+			<RequiredItem identifier="plastic"  mincondition="0.5" usecondition="true" />
+		</Fabricate>
+		<Deconstruct time="5">
+			<Item identifier="plastic" copycondition="true" outcondition="0.5"/>
+		</Deconstruct>
+	</Item>
+	<Item name="Scientist ID Card" identifier="idcard_scientist" category="Equipment" Tags="smallitem,idcard,id_scientist,med/sci,scientist,sci,science,med/sci/nurse,sci/nurse" cargocontaineridentifier="metalcrate" scale="0.35">
+		<InventoryIcon texture="Mods/BTE/Items/BTEInventoryIconAtlas.png" sourcerect="384,0,64,64" origin="0.5,0.5" />
+		<Sprite texture="BTEidcard.png" depth="0.8" sourcerect="288,0,48,29" />
+		<Body width="16" height="12" density="20" />
+		<Pickable slots="Card,Any" msg="ItemMsgPickUpSelect" />
+		
+		<Fabricate suitablefabricators="idcardprinter" requiredtime="60">
+			<RequiredSkill identifier="mechanical" level="20" />
+			<RequiredItem identifier="idcard_blank"/>
+			<RequiredItem identifier="plastic"  mincondition="0.5" usecondition="true" />
+		</Fabricate>
+		<Deconstruct time="5">
+			<Item identifier="plastic" copycondition="true" outcondition="0.5"/>
+		</Deconstruct>
+	</Item>
+	<Item name="Engineer ID Card" identifier="idcard_engineer" category="Equipment" Tags="smallitem,idcard,id_engineer,egg,engie,engineer/mechanic,engineer/mechanic/assistant,engineer,electricalengineer,engineer/mechanic,engineer/mechanic/seaman" cargocontaineridentifier="metalcrate" scale="0.35">
+		<InventoryIcon texture="Mods/BTE/Items/BTEInventoryIconAtlas.png" sourcerect="448,0,64,64" origin="0.5,0.5" />
+		<Sprite texture="BTEidcard.png" depth="0.8" sourcerect="336,0,48,29" />
+		<Body width="16" height="12" density="20" />
+		<Pickable slots="Card,Any" msg="ItemMsgPickUpSelect" />
+		
+		<Fabricate suitablefabricators="idcardprinter" requiredtime="60">
+			<RequiredSkill identifier="mechanical" level="20" />
+			<RequiredItem identifier="idcard_blank"/>
+			<RequiredItem identifier="plastic"  mincondition="0.5" usecondition="true" />
+		</Fabricate>
+		<Deconstruct time="5">
+			<Item identifier="plastic" copycondition="true" outcondition="0.5"/>
+		</Deconstruct>
+	</Item>
+	<Item name="Mechanic ID Card" identifier="idcard_mechanic" category="Equipment" Tags="smallitem,idcard,id_mechanic,engineer/mechanic,engineer/mechanic/assistant,engineer/mechanic,engineer/mechanic/seaman,mec,mech,mechanic" cargocontaineridentifier="metalcrate" scale="0.35">
+		<InventoryIcon texture="Mods/BTE/Items/BTEInventoryIconAtlas.png" sourcerect="512,0,64,64" origin="0.5,0.5" />
+		<Sprite texture="BTEidcard.png" depth="0.8" sourcerect="384,0,48,29" />
+		<Body width="16" height="12" density="20" />
+		<Pickable slots="Card,Any" msg="ItemMsgPickUpSelect" />
+		
+		<Fabricate suitablefabricators="idcardprinter" requiredtime="60">
+			<RequiredSkill identifier="mechanical" level="20" />
+			<RequiredItem identifier="idcard_blank"/>
+			<RequiredItem identifier="plastic"  mincondition="0.5" usecondition="true" />
+		</Fabricate>
+		<Deconstruct time="5">
+			<Item identifier="plastic" copycondition="true" outcondition="0.5"/>
+		</Deconstruct>
+	</Item>
+	<Item name="Cook ID Card" identifier="idcard_cook" category="Equipment" Tags="smallitem,idcard,id_cook,cook,cul,cook/assistant,cook/assistant,cookery,chef,cooking,cooker" cargocontaineridentifier="metalcrate" scale="0.35">
+		<InventoryIcon texture="Mods/BTE/Items/BTEInventoryIconAtlas.png" sourcerect="576,0,64,64" origin="0.5,0.5" />
+		<Sprite texture="BTEidcard.png" depth="0.8" sourcerect="432,0,48,29" />
+		<Body width="16" height="12" density="20" />
+		<Pickable slots="Card,Any" msg="ItemMsgPickUpSelect" />
+		
+		<Fabricate suitablefabricators="idcardprinter" requiredtime="60">
+			<RequiredSkill identifier="mechanical" level="20" />
+			<RequiredItem identifier="idcard_blank"/>
+			<RequiredItem identifier="plastic"  mincondition="0.5" usecondition="true" />
+		</Fabricate>
+		<Deconstruct time="5">
+			<Item identifier="plastic" copycondition="true" outcondition="0.5"/>
+		</Deconstruct>
+	</Item>
+	<Item name="Ensign ID Card" identifier="idcard_ensign" category="Equipment" Tags="smallitem,idcard,id_assistant,seaman/nurse,engineer/mechanic/assistant,cook/assistant,cook/seaman,engineer/mechanic/seaman,seaman,sea,assis,assist,assistant,assister" cargocontaineridentifier="metalcrate" scale="0.35">
+		<InventoryIcon texture="Mods/BTE/Items/BTEInventoryIconAtlas.png" sourcerect="640,0,64,64" origin="0.5,0.5" />
+		<Sprite texture="BTEidcard.png" depth="0.8" sourcerect="480,0,48,29" />
+		<Body width="16" height="12" density="20" />
+		<Pickable slots="Card,Any" msg="ItemMsgPickUpSelect" />
+		
+		<Fabricate suitablefabricators="idcardprinter" requiredtime="30">
+			<RequiredSkill identifier="mechanical" level="20" />
+			<RequiredItem identifier="idcard_blank"/>
+			<RequiredItem identifier="plastic"  mincondition="0.5" usecondition="true" />
+		</Fabricate>
+		<Deconstruct time="5">
+			<Item identifier="plastic" copycondition="true" outcondition="0.5"/>
+		</Deconstruct>
+	</Item>
+
+	<Item name="Blank ID Card" identifier="idcard_blank" category="Equipment" Tags="smallitem,idcard,spare" cargocontaineridentifier="metalcrate" scale="0.35">
+		<InventoryIcon texture="Mods/BTE/Items/BTEInventoryIconAtlas.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+		<Sprite texture="BTEidcard.png" depth="0.8" sourcerect="0,0,48,29" />
+		<Body width="16" height="12" density="20" />
+		<Pickable slots="Card,Any" msg="ItemMsgPickUpSelect" />
+		
+		<Fabricate suitablefabricators="idcardprinter" requiredtime="60">
+			<RequiredSkill identifier="mechanical" level="20" />
+			<RequiredItem identifier="plastic"  mincondition="0.5" usecondition="true" />
+		</Fabricate>
+		<Deconstruct time="5">
+			<Item identifier="plastic" copycondition="true" outcondition="0.5"/>
+		</Deconstruct>
+	</Item>
+
+<Item name="Armoury Keycard" identifier="idcard_armoury" aliases="idcard_armory" category="Equipment" Tags="smallitem,idcard,armor,armoury,armory,arm,armour,armed" cargocontaineridentifier="metalcrate" description="Allows the captain to choose who gets to open the armoury doors" scale="0.35">
+		<InventoryIcon texture="Mods/BTE/Items/BTEInventoryIconAtlas.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+		<Sprite texture="BTEidcard.png" depth="0.8" sourcerect="0,0,48,29" />
+		<Body width="16" height="12" density="20" />
+		<Pickable slots="Card,Any" msg="ItemMsgPickUpSelect" />
+		
+		<Fabricate suitablefabricators="idcardprinter" requiredtime="120">
+			<RequiredSkill identifier="mechanical" level="20" />
+			<RequiredItem identifier="plastic"  mincondition="0.5" usecondition="true" />
+		</Fabricate>
+		<Deconstruct time="5">
+			<Item identifier="plastic" copycondition="true" outcondition="0.5"/>
+		</Deconstruct>
+	</Item>
+
+<Item name="Escape Pod" identifier="idcard_escapepod" aliases="idcard_pod" category="Equipment" Tags="smallitem,idcard,shuttle,shut,shutt,pod,escape,escapepod,podders,escapeshuttle,freedomshuttle,dockingshuttle" cargocontaineridentifier="metalcrate" description="Allows the captain to choose who gets to use the escape pod/shuttle" scale="0.35">
+		<InventoryIcon texture="Mods/BTE/Items/BTEInventoryIconAtlas.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+		<Sprite texture="BTEidcard.png" depth="0.8" sourcerect="0,0,48,29" />
+		<Body width="16" height="12" density="20" />
+		<Pickable slots="Card,Any" msg="ItemMsgPickUpSelect" />
+		
+		<Fabricate suitablefabricators="idcardprinter" requiredtime="15">
+			<RequiredSkill identifier="mechanical" level="20" />
+			<RequiredItem identifier="plastic"  mincondition="0.5" usecondition="true" />
+		</Fabricate>
+		<Deconstruct time="5">
+			<Item identifier="plastic" copycondition="true" outcondition="0.5"/>
+		</Deconstruct>
+	</Item>
+
+<Item name="Access Command" identifier="idcard_accesscommand" aliases="idcard_commandaccess,idcard_commandpoint" category="Equipment" Tags="smallitem,idcard,commandroom,commandingroom,commandpoint,drivingroom,commanderingroom,captainsroomaccess" cargocontaineridentifier="metalcrate" description="Lets the captain choose who gets to enter his room" scale="0.35">
+		<InventoryIcon texture="Mods/BTE/Items/BTEInventoryIconAtlas.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+		<Sprite texture="BTEidcard.png" depth="0.8" sourcerect="0,0,48,29" />
+		<Body width="16" height="12" density="20" />
+		<Pickable slots="Card,Any" msg="ItemMsgPickUpSelect" />
+		
+		<Fabricate suitablefabricators="idcardprinter" requiredtime="300">
+			<RequiredSkill identifier="mechanical" level="20" />
+			<RequiredItem identifier="plastic"  mincondition="0.5" usecondition="true" />
+		</Fabricate>
+		<Deconstruct time="5">
+			<Item identifier="plastic" copycondition="true" outcondition="0.5"/>
+		</Deconstruct>
+	</Item>
+</Items>

@@ -4,7 +4,7 @@
   <Job identifier="captain"
        minnumber="1" maxnumber="1" minkarma="45" initialcount="1"
        uicolor="0.65,0.73,0.84"
-       vitalitymodifier="-20"
+       vitalitymodifier="0"
        pricemultiplier="1.3">
     <Jobicon>
       <sprite texture="Content/UI/MainIconsAtlas.png" sourcerect="384,256,128,128" origin="0.5,0.5"/>
@@ -48,6 +48,8 @@
         <Item identifier="docSecretA"/>
 		<Item identifier="docCom"/>
 		<Item identifier="docbasic"/>
+<Item identifier="huskprotocola"/>
+<Item identifier="huskprotocolb"/>
       </Item>					 
       <Item identifier="revolver" equip="false">
         <Item identifier="revolverround"/>
@@ -90,6 +92,8 @@
         <Item identifier="docSecretA"/>
 		<Item identifier="docCom"/>
 		<Item identifier="docbasic"/>
+<Item identifier="huskprotocola"/>
+<Item identifier="huskprotocolb"/>
       </Item>
       <Item identifier="revolver" equip="false">
         <Item identifier="revolverround"/>
@@ -132,6 +136,8 @@
         <Item identifier="docSecretA"/>
 		<Item identifier="docCom"/>
 		<Item identifier="docbasic"/>
+<Item identifier="huskprotocola"/>
+<Item identifier="huskprotocolb"/>
       </Item>					 
       <Item identifier="stunbaton">
         <Item identifier="batterycell" showpreview="false"/>
@@ -148,6 +154,7 @@
     <AutonomousObjectives>
       <Order identifier="extinguishfires" prioritymodifier ="1"/>
       <Order identifier="rescue" prioritymodifier="1"/>
+	        <Order identifier="fightintruders" prioritymodifier="0.51"/>
       <Order identifier="steer" option="maintainposition" prioritymodifier="0.5"/>
     </AutonomousObjectives>
     <AppropriateOrders>
@@ -157,9 +164,9 @@
   </Override>
   
   <Job identifier="Officer"
-       minnumber="1" maxnumber="1" minkarma="45" initialcount="1"
+       maxnumber="1" minkarma="45"
        uicolor="0.65,0.73,0.84"
-       vitalitymodifier="-20"
+       vitalitymodifier="0"
        pricemultiplier="1.3">
     <Jobicon>
       <sprite texture="Mods/BTE/UI/jobs.png" sourcerect="475,0,128,128" origin="0.5,0.5"/>
@@ -178,88 +185,7 @@
     </Skills>
     <ItemSet>
       <Item identifier="idcard_officer" equip="true" showpreview="false"/>
-      <Item identifier="officersberet" equip="true"/>
-      <Item identifier="crewchiefclothes" equip="true" outfit="true"/>
-      <Item identifier="headset" equip="true" showpreview="false">
-        <Item identifier="batterycell" showpreview="false"/>
-      </Item>
-	  <Item identifier="wallet">
-        <Item identifier="stampa"/>
-		<Item identifier="stampa"/>
-		<Item identifier="stampa"/>
-		<Item identifier="stampa"/>
-		<Item identifier="stampb"/>
-		<Item identifier="stampb"/>
-		<Item identifier="stampb"/>
-		<Item identifier="stampb"/>
-		<Item identifier="stampc"/>
-		<Item identifier="stampc"/>
-		<Item identifier="stampc"/>
-		<Item identifier="stampc"/>
-		<Item identifier="stampd"/>
-		<Item identifier="stampe"/>
-      </Item>
-	  <Item identifier="clipboard" equip="false">
-        <Item identifier="docSecretA"/>
-		<Item identifier="docCom"/>
-		<Item identifier="docbasic"/>
-      </Item>
-	  <Item identifier="toolbox" equip="false">
-       <Item identifier="wrench" equip="false"/>
-       <Item identifier="screwdriver" equip="false"/>
-	   <Item identifier="crowbar" equip="false"/>
-	  </Item>
-      <PreviewSprites dims="120,109">
-        <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
-        <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
-      </PreviewSprites>
-    </ItemSet>
-    <ItemSet>
-      <Item identifier="idcard_officer" equip="true" showpreview="false"/>
-      <Item identifier="officersberet" equip="true"/>
-      <Item identifier="securityuniform1" equip="true" outfit="true"/>
-      <Item identifier="headset" equip="true" showpreview="false">
-        <Item identifier="batterycell" showpreview="false"/>
-      </Item>
-	  <Item identifier="wallet">
-        <Item identifier="stampa"/>
-		<Item identifier="stampa"/>
-		<Item identifier="stampa"/>
-		<Item identifier="stampa"/>
-		<Item identifier="stampb"/>
-		<Item identifier="stampb"/>
-		<Item identifier="stampb"/>
-		<Item identifier="stampb"/>
-		<Item identifier="stampc"/>
-		<Item identifier="stampc"/>
-		<Item identifier="stampc"/>
-		<Item identifier="stampc"/>
-		<Item identifier="stampd"/>
-		<Item identifier="stampe"/>
-      </Item>
-	  <Item identifier="clipboard" equip="false">
-        <Item identifier="docSecretA"/>
-		<Item identifier="docCom"/>
-		<Item identifier="docbasic"/>
-      </Item>
-      <Item identifier="revolver" equip="false">
-        <Item identifier="revolverround"/>
-        <Item identifier="revolverround"/>
-        <Item identifier="revolverround"/>
-        <Item identifier="revolverround"/>
-        <Item identifier="revolverround"/>
-        <Item identifier="revolverround"/>
-      </Item>
-      <Item identifier="divingknife"/>
-	  <Item identifier="antibleeding1"/>
-      <PreviewSprites dims="120,109">
-        <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="2,38,120,109" offset="0,0" />
-        <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="121,0,76,80" offset="-20,15" />
-      </PreviewSprites>
-    </ItemSet>
-    <ItemSet>
-      <Item identifier="idcard_officer" equip="true" showpreview="false"/>
-      <Item identifier="officersberet" equip="true"/>
+      <Item identifier="beret" equip="true"/>
       <Item identifier="commandersjacket" equip="true" outfit="true"/>
       <Item identifier="headset" equip="true" showpreview="false">
         <Item identifier="batterycell" showpreview="false"/>
@@ -285,14 +211,93 @@
 		<Item identifier="docCom"/>
 		<Item identifier="docbasic"/>
       </Item>
+       <Item identifier="wrench" equip="false"/>
+       <Item identifier="screwdriver" equip="false"/>
+	   <Item identifier="crowbar" equip="false"/>
+       <Item identifier="stunbaton" equip="false">
+	     <Item identifier="batterycell" />
+		 </Item>
+      <PreviewSprites dims="120,109">
+	  <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="0,27,128,101" origin="0.5,0.5" offset="0,0" />
+        <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="0,27,128,101" origin="0.5,0.5" offset="-20,15" />
+      </PreviewSprites>
+    </ItemSet>
+    <ItemSet>
+      <Item identifier="idcard_officer" equip="true" showpreview="false"/>
+      <Item identifier="beret" equip="true"/>
+      <Item identifier="securityuniform1" equip="true" outfit="true"/>
+      <Item identifier="headset" equip="true" showpreview="false">
+        <Item identifier="batterycell" showpreview="false"/>
+      </Item>
+	  <Item identifier="wallet">
+        <Item identifier="stampa"/>
+		<Item identifier="stampa"/>
+		<Item identifier="stampa"/>
+		<Item identifier="stampa"/>
+		<Item identifier="stampb"/>
+		<Item identifier="stampb"/>
+		<Item identifier="stampb"/>
+		<Item identifier="stampb"/>
+		<Item identifier="stampc"/>
+		<Item identifier="stampc"/>
+		<Item identifier="stampc"/>
+		<Item identifier="stampc"/>
+		<Item identifier="stampd"/>
+		<Item identifier="stampe"/>
+      </Item>
+	  <Item identifier="clipboard" equip="false">
+        <Item identifier="docSecretA"/>
+		<Item identifier="docCom"/>
+		<Item identifier="docbasic"/>
+      </Item>
+      <Item identifier="pistol" equip="true">
+        <Item identifier="pistolmag"/>
+      </Item>
+      <Item identifier="divingknife"/>
+	  <Item identifier="antibleeding1"/>
+      <PreviewSprites dims="120,109">
+                <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+    </ItemSet>
+    <ItemSet>
+      <Item identifier="idcard_officer" equip="true" showpreview="false"/>
+      <Item identifier="beret" equip="true"/>
+      <Item identifier="commandersjacket" equip="true" outfit="true"/>
+      <Item identifier="headset" equip="true" showpreview="false">
+        <Item identifier="batterycell" showpreview="false"/>
+      </Item>
+	  <Item identifier="wallet">
+        <Item identifier="stampa"/>
+		<Item identifier="stampa"/>
+		<Item identifier="stampa"/>
+		<Item identifier="stampa"/>
+		<Item identifier="stampb"/>
+		<Item identifier="stampb"/>
+		<Item identifier="stampb"/>
+		<Item identifier="stampb"/>
+		<Item identifier="stampc"/>
+		<Item identifier="stampc"/>
+		<Item identifier="stampc"/>
+		<Item identifier="stampc"/>
+		<Item identifier="stampd"/>
+		<Item identifier="stampe"/>
+      </Item>
+	  <Item identifier="clipboard" equip="false">
+        <Item identifier="docSecretA"/>
+		<Item identifier="docCom"/>
+		<Item identifier="docbasic"/>
+<Item identifier="huskprotocola"/>
+<Item identifier="huskprotocolb"/>
+      </Item>
       <Item identifier="stunbaton">
         <Item identifier="batterycell" showpreview="false"/>
       </Item>
       <Item identifier="handcuffs" equip="false"/>
 	  <Item identifier="antibleeding1"/>
       <PreviewSprites dims="120,109">
-        <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
-        <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
+	    <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="0,27,128,101" offset="0,0" />
+        <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="0,27,128,101" offset="-20,15" />
       </PreviewSprites>
     </ItemSet>
     <PortraitClothing>
@@ -301,6 +306,7 @@
     <AutonomousObjectives>
       <Order identifier="extinguishfires" prioritymodifier ="1"/>
       <Order identifier="rescue" prioritymodifier="1"/>
+	  <Order identifier="fightintruders" prioritymodifier="0.51"/>
       <Order identifier="steer" option="maintainposition" prioritymodifier="0.5"/>
     </AutonomousObjectives>
     <AppropriateOrders>
@@ -312,7 +318,7 @@
   <Job identifier="engineer"    
        minkarma="30" initialcount="1"
        uicolor="0.88,0.72,0.43"
-       vitalitymodifier="-10"
+       vitalitymodifier="0"
        pricemultiplier="1">
     <Jobicon>
       <sprite texture="Content/UI/MainIconsAtlas.png" sourcerect="768,256,128,128" origin="0.5,0.5"/>
@@ -331,7 +337,7 @@
     </Skills>
     <ItemSet>
       <Item identifier="idcard_engineer" equip="true" showpreview="false"/>
-      <Item identifier="toolbox">
+      <Item identifier="toolbelt">
         <Item identifier="wrench"/>
         <Item identifier="screwdriver"/>
         <Item identifier="fuelrod"/>
@@ -360,7 +366,7 @@
 		<Item identifier="docbasic"/>
 		<Item identifier="docPowerGrid"/>
       </Item>
-	  <Item identifier="toolbox">
+      <Item identifier="toolbelt">
         <Item identifier="screwdriver"/>
         <Item identifier="redwire"/>
         <Item identifier="bluewire"/>
@@ -402,7 +408,7 @@
   <Job identifier="mechanic"
        minkarma="30" initialcount="1"
        uicolor="0.5,0.86,0.9"
-       vitalitymodifier="-10"
+       vitalitymodifier="0"
        pricemultiplier="1">
     <Jobicon>
       <sprite texture="Content/UI/MainIconsAtlas.png" sourcerect="896,256,128,128" origin="0.5,0.5"/>
@@ -421,7 +427,7 @@
     </Skills>
     <ItemSet>
       <Item identifier="idcard_mechanic" equip="true" showpreview="false"/>
-      <Item identifier="toolbox">
+      <Item identifier="toolbelt">
         <Item identifier="wrench"/>   
         <Item identifier="weldingtool">
           <Item identifier="weldingfueltank" showpreview="false"/>
@@ -443,7 +449,7 @@
     </ItemSet>
     <ItemSet>
       <Item identifier="idcard_mechanic" equip="true" showpreview="false"/>
-      <Item identifier="toolbox">
+      <Item identifier="toolbelt">
         <Item identifier="wrench"/>
         <Item identifier="screwdriver"/>
         <Item identifier="weldingtool">
@@ -488,7 +494,7 @@
   <Job identifier="securityofficer"
        maxnumber="2" minkarma="40"
        uicolor="0.57,0.48,0.43"
-       vitalitymodifier="0"
+       vitalitymodifier="+10"
        pricemultiplier="1.15">
     <Jobicon>
       <sprite texture="Content/UI/MainIconsAtlas.png" sourcerect="256,256,128,128" origin="0.5,0.5"/>
@@ -523,10 +529,10 @@
 		<Item identifier="docSecretB"/>
 		<Item identifier="docSec"/>
 		<Item identifier="docbasic"/>
+<Item identifier="huskprotocola"/>
+<Item identifier="huskprotocolb"/>
 	  </Item>					 
-      <Item identifier="smg">
         <Item identifier="smgmagazine" showpreview="false"/>
-      </Item>
       <Item identifier="divingknife" equip="false"/>
       <Item identifier="steroids"/>
       <Item identifier="antibleeding1"/>
@@ -562,6 +568,8 @@
 		<Item identifier="docSecretB"/>
 		<Item identifier="docSec"/>
 		<Item identifier="docbasic"/>
+<Item identifier="huskprotocola"/>
+<Item identifier="huskprotocolb"/>
       </Item>				 
       <Item identifier="stungun">
         <Item identifier="stungundart"/>
@@ -600,12 +608,10 @@
 		<Item identifier="docSecretB"/>
 		<Item identifier="docSec"/>
 		<Item identifier="docbasic"/>
+<Item identifier="huskprotocola"/>
+<Item identifier="huskprotocolb"/>
 	  </Item>
       <Item identifier="revolver" equip="false">
-        <Item identifier="revolverround"/>
-        <Item identifier="revolverround"/>
-        <Item identifier="revolverround"/>
-        <Item identifier="revolverround"/>
         <Item identifier="revolverround"/>
         <Item identifier="revolverround"/>
       </Item>
@@ -667,9 +673,17 @@
     <ItemSet>
       <Item identifier="idcard_medicaldoctor" equip="true" showpreview="false"/>
       <Item identifier="doctorsuniform1" equip="true" outfit="true">
-        <Item identifier="antibloodloss2"/>
+       <Item identifier="antibloodloss2"/>
       </Item>
-      <Item identifier="healthscanner"/>
+      <Item identifier="medkit" equip="true" outfit="true">
+      <Item identifier="antibleeding1"/>
+      <Item identifier="antibiotics"/>
+      <Item identifier="antidama1"/>
+      <Item identifier="antidama4"/>
+      </Item>
+      <Item identifier="healthscanner">
+        <Item identifier="batterycell" showpreview="false"/>
+		</Item>
       <Item identifier="headset" equip="true" showpreview="false">
         <Item identifier="batterycell" showpreview="false"/>
       </Item>
@@ -688,9 +702,6 @@
 		<Item identifier="docbasic"/>
 	  </Item>					
       <Item identifier="syringegun"/>
-      <Item identifier="antibleeding1"/>
-      <Item identifier="antibiotics"/>
-      <Item identifier="antidama1"/>
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
         <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
@@ -735,8 +746,8 @@
     </PortraitClothing>
     <AutonomousObjectives>
       <Order identifier="rescue" prioritymodifier="1"/>
-      <Order identifier="extinguishfires" prioritymodifier ="0.5"/>
-      <Order identifier="pumpwater" option="pumpout" prioritymodifier="0.1"/>
+      <Order identifier="extinguishfires" prioritymodifier="0.5"/>
+      <Order identifier="pumpwater" option="pumpout" prioritymodifier="0.11"/>
       <Order identifier="fixleaks" prioritymodifier="0.1"/>
       <Order identifier="repairsystems" prioritymodifier="0.1"/>
     </AutonomousObjectives>
@@ -748,7 +759,7 @@
   </Override>
   
   <Job identifier="scientist"
-       maxnumber="2" minkarma="30" initialcount="1"
+       maxnumber="1" minkarma="30"
        uicolor="0.57,0.13,0.30"
        vitalitymodifier="0"
        pricemultiplier="1.15">
@@ -835,7 +846,7 @@
     </PortraitClothing>
     <AutonomousObjectives>
       <Order identifier="rescue" prioritymodifier="1"/>
-      <Order identifier="extinguishfires" prioritymodifier ="0.5"/>
+      <Order identifier="extinguishfires" prioritymodifier="0.5"/>
       <Order identifier="pumpwater" option="pumpout" prioritymodifier="0.1"/>
       <Order identifier="fixleaks" prioritymodifier="0.1"/>
       <Order identifier="repairsystems" prioritymodifier="0.1"/>
@@ -847,9 +858,9 @@
   </Job>
   
   <Job identifier="cook"
-       allowalways="true" minkarma="0" initialcount="1"
+       allowalways="true" minkarma="0" maxnumber="1"
 	   uicolor="0.42,0.22,0.50"
-       vitalitymodifier="-10"
+       vitalitymodifier="0"
        pricemultiplier="0.81">
     <Jobicon>
       <sprite texture="Mods/BTE/UI/jobs.png" sourcerect="340,0,128,128" origin="0.5,0.5"/>
@@ -870,6 +881,8 @@
       <Item identifier="idcard_cook" equip="true" showpreview="false"/>
       <Item identifier="commonerclothes1" equip="true" outfit="true"/>
       <Item identifier="fryingpan"/>
+      <Item identifier="cleaver"/>
+      <Item identifier="baseballcapflipped" equip="true"/>
       <Item identifier="headset" equip="true" showpreview="false">
         <Item identifier="batterycell" showpreview="false"/>
       </Item>
@@ -883,6 +896,7 @@
       </Item>
 	  <Item identifier="clipboard" equip="false">
 		<Item identifier="docbasic"/>
+<Item identifier="cookbook"/>
       </Item>
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
@@ -898,14 +912,15 @@
       <Order identifier="rescue" prioritymodifier="1"/>
       <Order identifier="repairsystems" prioritymodifier="0.5"/>
       <Order identifier="fixleaks" prioritymodifier="0.5"/>
+      <Order identifier="repairsystems" prioritymodifier="0.0005"/>
     </AutonomousObjectives>
   </Job>
   
-	<Override>
-	<Job identifier="assistant"
-       allowalways="true" minkarma="0"
+    <Override>
+ <Job identifier="assistant"
+       allowalways="true" minkarma="0" maxnumber="2"
 	   uicolor="0.81,0.63,0.53"
-       vitalitymodifier="-10"
+       vitalitymodifier="0"
        pricemultiplier="0.8">
     <Jobicon>
       <sprite texture="Content/UI/MainIconsAtlas.png" sourcerect="640,256,128,128" origin="0.5,0.5"/>
@@ -923,17 +938,14 @@
 	  <Skill identifier="cooking" level="12.5,15"/>
     </Skills>
     <ItemSet>
-      <Item identifier="assistant_idcard" equip="true" showpreview="false"/>
+      <Item identifier="idcard_ensign" equip="true" showpreview="false"/>
 		  <Item identifier="wallet">
         <Item identifier="stampa"/>
 		<Item identifier="stampb"/>
 		<Item identifier="stampb"/>
 		<Item identifier="stampc"/>
-      </Item>
-	  <Item identifier="clipboard" equip="false">
-		<Item identifier="docNov"/>
-		<Item identifier="docbasic"/>
-      </Item>						 
+      </Item>				
+	  <Item identifier="Beret" equip="true"/>	  
       <Item identifier="assistantclothes" equip="true" outfit="true"/>
       <Item identifier="wrench"/>
       <Item identifier="screwdriver"/>
@@ -944,35 +956,6 @@
         <sprite texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
         <sprite texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
       </PreviewSprites>
-    </ItemSet>
-    <PortraitClothing>
-      <sprite name="Portrait Clothing Assistant" texture="Content/Items/Jobgear/PortraitClothing.png" sheetindex="0,2"/>
-    </PortraitClothing>
-    <AutonomousObjectives>
-      <Order identifier="extinguishfires" prioritymodifier ="1"/>
-      <Order identifier="pumpwater" option="pumpout" prioritymodifier="1"/>
-      <Order identifier="rescue" prioritymodifier="1"/>
-      <Order identifier="repairsystems" prioritymodifier="0.5"/>
-      <Order identifier="fixleaks" prioritymodifier="0.5"/>
-    </AutonomousObjectives>
-  </Job>
-  </Override>
-	
-	<Override>
-  <Job identifier="watchman"
-       onlyjobspecificdialog="false"
-       minnumber="0" maxnumber="0" initialcount="0">
-    <ItemSet>
-      <Item identifier="watchmanclothes" equip="true"/>
-      <Item identifier="idcard_watchman" equip="true" showpreview="false"/>
-      <Item identifier="revolver" equip="false">
-        <Item identifier="revolverround"/>
-        <Item identifier="revolverround"/>
-        <Item identifier="revolverround"/>
-        <Item identifier="revolverround"/>
-        <Item identifier="revolverround"/>
-        <Item identifier="revolverround"/>
-      </Item>
     </ItemSet>
   </Job>
   </Override>

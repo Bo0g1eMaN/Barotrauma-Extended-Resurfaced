@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sounds>
+  <impact_grenadehit file="Mods/BTE/Sounds/Impact/GrenadeHit1.ogg" range="540"/>
+  <impact_grenadehit file="Mods/BTE/Sounds/Impact/GrenadeHit2.ogg" range="540"/>
+  <impact_grenadehit file="Mods/BTE/Sounds/Impact/GrenadeHit3.ogg" range="540"/>
+  <impact_grenadehit file="Mods/BTE/Sounds/Impact/GrenadeHit4.ogg" range="540"/>
+  <impact_grenadehit file="Mods/BTE/Sounds/Impact/GrenadeHit5.ogg" range="540"/>
+  
+  <impact_sodacan file="Mods/BTE/Sounds/Impact/SodaCan1.ogg" range="640"/>
+  <impact_sodacan file="Mods/BTE/Sounds/Impact/SodaCan2.ogg" range="640"/>
+  <impact_sodacan file="Mods/BTE/Sounds/Impact/SodaCan3.ogg" range="640"/>
+  <impact_sodacan file="Mods/BTE/Sounds/Impact/SodaCan4.ogg" range="640"/>
+  <impact_sodacan file="Mods/BTE/Sounds/Impact/SodaCan5.ogg" range="640"/>
+  <impact_sodacan file="Mods/BTE/Sounds/Impact/SodaCan6.ogg" range="640"/>
+  
+  <impact_foodcan file="Mods/BTE/Sounds/Impact/FoodCan1.ogg" range="650"/>
+  <impact_foodcan file="Mods/BTE/Sounds/Impact/FoodCan2.ogg" range="650"/>
+  <impact_foodcan file="Mods/BTE/Sounds/Impact/FoodCan3.ogg" range="650"/>
+  <impact_foodcan file="Mods/BTE/Sounds/Impact/FoodCan4.ogg" range="650"/>
+  <impact_foodcan file="Mods/BTE/Sounds/Impact/FoodCan5.ogg" range="650"/>
+  <impact_foodcan file="Mods/BTE/Sounds/Impact/FoodCan6.ogg" range="650"/>
+  <impact_foodcan file="Mods/BTE/Sounds/Impact/FoodCan7.ogg" range="650"/>
+  <impact_foodcan file="Mods/BTE/Sounds/Impact/FoodCan8.ogg" range="650"/>
+  <impact_foodcan file="Mods/BTE/Sounds/Impact/FoodCan9.ogg" range="650"/>
+  
+  
+  <impact_gunhit file="Mods/BTE/Sounds/Impact/GunHit.ogg" range="580"/>
+  <impact_maghit file="Mods/BTE/Sounds/Impact/MagHit.ogg" range="560"/>
+  <impact_knifehit file="Mods/BTE/Sounds/Impact/KnifeHit1.ogg" range="520"/>
+  <impact_knifehit file="Mods/BTE/Sounds/Impact/KnifeHit2.ogg" range="520"/>
+  <impact_knifehit file="Mods/BTE/Sounds/Impact/KnifeHit3.ogg" range="520"/>
+  
+  <impact_metalcan file="Mods/BTE/Sounds/Impact/MetalCanHitSoft1.ogg" range="700"/>
+  <impact_metalcan file="Mods/BTE/Sounds/Impact/MetalCanHitSoft2.ogg" range="700"/>
+  <impact_metalcan file="Mods/BTE/Sounds/Impact/MetalCanHitSoft3.ogg" range="700"/>
+  <impact_glasshit file="Mods/BTE/Sounds/Impact/GlassHit.ogg" range="600"/>
+  <impact_plastichit file="Mods/BTE/Sounds/Impact/PlasticHit.ogg" range="500"/>
+  <impact_rubberhit file="Mods/BTE/Sounds/Impact/RubberHit.ogg" range="400"/>
+  <impact_rockhit file="Mods/BTE/Sounds/Impact/RockHit.ogg" range="460"/>
+  <impact_bonehit file="Mods/BTE/Sounds/Impact/BoneHit.ogg" range="480"/>
+  <impact_fleshhit file="Mods/BTE/Sounds/Impact/FleshHit.ogg" range="440"/>
+  
+  <impact_guitarhit file="Mods/BTE/Sounds/Impact/GuitarHit1.ogg" range="800"/>
+  <impact_guitarhit file="Mods/BTE/Sounds/Impact/GuitarHit2.ogg" range="800"/>
+  <impact_guitarhit file="Mods/BTE/Sounds/Impact/GuitarHit3.ogg" range="800"/>
+  <impact_guitarhit file="Mods/BTE/Sounds/Impact/GuitarHit4.ogg" range="800"/>
+  <impact_guitarhit file="Mods/BTE/Sounds/Impact/GuitarHit5.ogg" range="800"/>
+</sounds>

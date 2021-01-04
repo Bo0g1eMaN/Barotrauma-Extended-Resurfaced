@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+
+<Override>
+<Item name="Seamans Uniform" identifier="assistantclothes" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="standardshippingbox" description="Even the seaman needs clothing" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.125"/>
+    <Price baseprice="150">
+      <Price locationtype="outpost" multiplier="1" minavailable="1"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" minavailable="1"/>
+      <Price locationtype="military" multiplier="1" minavailable="1"/>
+      <Price locationtype="mine" multiplier="1" minavailable="1"/>
+    </Price>
+    <Deconstruct time="10"/>
+    <InventoryIcon name="Assistant Clothes Icon" texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="383,274,128,110" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="664,375,212,64" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Assistant Torso" texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Upper Arm" texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Upper Arm" texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Lower Arm" texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Lower Arm" texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Waist" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Thigh" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Thigh" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Leg" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Leg" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Shoe" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Shoe" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <ItemContainer capacity="3" hideitems="true">
+      <Containable items="smallitem,explosive" excludeditems="toolbox,toolbelt" />
+    </ItemContainer>
+  </Item>
+</Override>
+
+<Item name="Seamans uniform" identifier="deadmansswitch" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="standardshippingbox" description="Even the seaman needs clothing" scale="0.5" impactsoundtag="impact_soft">
+    <Deconstruct time="10">
+      <Item identifier="assistantclothes" />
+<Item identifier="fpgacircuit" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="constructionkit" displayname="deadmansswitch" requiredtime="20">
+      <RequiredSkill identifier="electrical" level="25" />
+      <RequiredItem identifier="assistantclothes" />
+<RequiredItem identifier="fpgacircuit" />
+    </Fabricate>
+    <InventoryIcon name="Assistant Clothes Icon" texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="383,274,128,110" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="664,375,212,64" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Assistant Torso" texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Upper Arm" texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Upper Arm" texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Lower Arm" texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Lower Arm" texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Waist" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Thigh" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Thigh" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Leg" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Leg" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Shoe" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Shoe" texture="Content/Items/Jobgear/Assistant/assistant_legs_[GENDER]_1.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+	<LightComponent LightColor="0.0,0.0,0.0,0.1" range="1" IsOn="false">
+      <StatusEffect type="OnActive" target="Contained">
+		<RequiredItem identifier="explosive" type="Contained"/>
+		<Use/>
+      </StatusEffect>
+	  <StatusEffect type="OnActive" target="This" Condition="-100">
+		<RequiredItem name="explosive" type="Contained"/>
+      </StatusEffect>
+    </LightComponent>
+	
+	<ItemComponent characterusable="false">
+      <StatusEffect type="OnWearing" target="This,Character" IsOn="true">
+        <Conditional IsDead="true"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="This,Character" IsOn="false">
+        <Conditional IsDead="false"/>
+      </StatusEffect>
+    </ItemComponent>
+    </Wearable>
+    <ItemContainer capacity="3" hideitems="true">
+      <Containable items="smallitem,explosive" excludeditems="toolbox,toolbelt" />
+    </ItemContainer>
+  </Item>
+
+<Item name="White Shirt A" identifier="whiteshirta" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="standardshippingbox" description="A Standard White Shirt with Black Pants, White shirts are commonly used as a way of checking hygiene" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.125"/>
+    <Price baseprice="150">
+      <Price locationtype="outpost" multiplier="1" minavailable="1"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" minavailable="1"/>
+      <Price locationtype="military" multiplier="1" minavailable="1"/>
+      <Price locationtype="mine" multiplier="1" minavailable="1"/>
+    </Price>
+    <Deconstruct time="10"/>
+    <InventoryIcon name="Assistant Clothes Icon" texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="383,274,128,110" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="664,375,212,64" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Assistant Torso" texture="Mods/BTE/Items/Jobgear/Other/white_shirt_[GENDER].png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Upper Arm" texture="Mods/BTE/Items/Jobgear/Other/white_shirt_[GENDER].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Upper Arm" texture="Mods/BTE/Items/Jobgear/Other/white_shirt_[GENDER].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Lower Arm" texture="Mods/BTE/Items/Jobgear/Other/white_shirt_[GENDER].png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Lower Arm" texture="Mods/BTE/Items/Jobgear/Other/white_shirt_[GENDER].png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Waist" texture="Mods/BTE/Items/Jobgear/Other/black_pants_[GENDER].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Thigh" texture="Mods/BTE/Items/Jobgear/Other/black_pants_[GENDER].png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Thigh" texture="Mods/BTE/Items/Jobgear/Other/black_pants_[GENDER].png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Leg" texture="Mods/BTE/Items/Jobgear/Other/black_pants_[GENDER].png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Leg" texture="Mods/BTE/Items/Jobgear/Other/black_pants_[GENDER].png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Shoe" texture="Mods/BTE/Items/Jobgear/Other/black_pants_[GENDER].png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Shoe" texture="Mods/BTE/Items/Jobgear/Other/black_pants_[GENDER].png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bleeding" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <ItemContainer capacity="3" hideitems="true">
+      <Containable items="smallitem,explosive" excludeditems="toolbox,toolbelt" />
+    </ItemContainer>
+  </Item>
+
+<Item name="White Shirt B" identifier="whiteshirtb" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="standardshippingbox" description="A Standard White Shirt with White Pants, White shirts are commonly used as a way of checking hygiene" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.125"/>
+    <Price baseprice="150">
+      <Price locationtype="outpost" multiplier="1" minavailable="1"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" minavailable="1"/>
+      <Price locationtype="military" multiplier="1" minavailable="1"/>
+      <Price locationtype="mine" multiplier="1" minavailable="1"/>
+    </Price>
+    <Deconstruct time="10"/>
+    <InventoryIcon name="Assistant Clothes Icon" texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="383,274,128,110" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="664,375,212,64" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Assistant Torso" texture="Mods/BTE/Items/Jobgear/Other/white_shirt_[GENDER].png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Upper Arm" texture="Mods/BTE/Items/Jobgear/Other/white_shirt_[GENDER].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Upper Arm" texture="Mods/BTE/Items/Jobgear/Other/white_shirt_[GENDER].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Lower Arm" texture="Mods/BTE/Items/Jobgear/Other/white_shirt_[GENDER].png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Lower Arm" texture="Mods/BTE/Items/Jobgear/Other/white_shirt_[GENDER].png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Waist" texture="Mods/BTE/Items/Jobgear/Other/white_pants_[GENDER].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Thigh" texture="Mods/BTE/Items/Jobgear/Other/white_pants_[GENDER].png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Thigh" texture="Mods/BTE/Items/Jobgear/Other/white_pants_[GENDER].png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Leg" texture="Mods/BTE/Items/Jobgear/Other/white_pants_[GENDER].png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Leg" texture="Mods/BTE/Items/Jobgear/Other/white_pants_[GENDER].png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Shoe" texture="Mods/BTE/Items/Jobgear/Other/white_pants_[GENDER].png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Shoe" texture="Mods/BTE/Items/Jobgear/Other/white_pants_[GENDER].png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bleeding" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <ItemContainer capacity="3" hideitems="true">
+      <Containable items="smallitem,explosive" excludeditems="toolbox,toolbelt" />
+    </ItemContainer>
+  </Item>
+
+<Item name="White Shirt C" identifier="whiteshirtc" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="standardshippingbox" description="A Standard White Shirt with Very White Pants, White shirts are commonly used as a way of checking hygiene" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.125"/>
+    <Price baseprice="150">
+      <Price locationtype="outpost" multiplier="1" minavailable="1"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" minavailable="1"/>
+      <Price locationtype="military" multiplier="1" minavailable="1"/>
+      <Price locationtype="mine" multiplier="1" minavailable="1"/>
+    </Price>
+    <Deconstruct time="10"/>
+    <InventoryIcon name="Assistant Clothes Icon" texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="383,274,128,110" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="664,375,212,64" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Assistant Torso" texture="Mods/BTE/Items/Jobgear/Other/white_shirt_[GENDER].png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Upper Arm" texture="Mods/BTE/Items/Jobgear/Other/white_shirt_[GENDER].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Upper Arm" texture="Mods/BTE/Items/Jobgear/Other/white_shirt_[GENDER].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Lower Arm" texture="Mods/BTE/Items/Jobgear/Other/white_shirt_[GENDER].png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Lower Arm" texture="Mods/BTE/Items/Jobgear/Other/white_shirt_[GENDER].png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Waist" texture="Mods/BTE/Items/Jobgear/Other/verywhite_pants_[GENDER].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Thigh" texture="Mods/BTE/Items/Jobgear/Other/verywhite_pants_[GENDER].png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Thigh" texture="Mods/BTE/Items/Jobgear/Other/verywhite_pants_[GENDER].png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Leg" texture="Mods/BTE/Items/Jobgear/Other/verywhite_pants_[GENDER].png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Leg" texture="Mods/BTE/Items/Jobgear/Other/verywhite_pants_[GENDER].png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Shoe" texture="Mods/BTE/Items/Jobgear/Other/verywhite_pants_[GENDER].png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Shoe" texture="Mods/BTE/Items/Jobgear/Other/verywhite_pants_[GENDER].png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bleeding" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <ItemContainer capacity="3" hideitems="true">
+      <Containable items="smallitem,explosive" excludeditems="toolbox,toolbelt" />
+    </ItemContainer>
+  </Item>
+
+<Item name="Black Shirt A" identifier="blackshirta" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="standardshippingbox" description="A Black shirt with Black Pants" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.125"/>
+    <Price baseprice="150">
+      <Price locationtype="outpost" multiplier="1" minavailable="1"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" minavailable="1"/>
+      <Price locationtype="military" multiplier="1" minavailable="1"/>
+      <Price locationtype="mine" multiplier="1" minavailable="1"/>
+    </Price>
+    <Deconstruct time="10"/>
+    <InventoryIcon name="Assistant Clothes Icon" texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="383,274,128,110" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="664,375,212,64" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Assistant Torso" texture="Mods/BTE/Items/Jobgear/Other/black_shirt_[GENDER].png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Upper Arm" texture="Mods/BTE/Items/Jobgear/Other/black_shirt_[GENDER].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Upper Arm" texture="Mods/BTE/Items/Jobgear/Other/black_shirt_[GENDER].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Lower Arm" texture="Mods/BTE/Items/Jobgear/Other/black_shirt_[GENDER].png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Lower Arm" texture="Mods/BTE/Items/Jobgear/Other/black_shirt_[GENDER].png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Waist" texture="Mods/BTE/Items/Jobgear/Other/black_pants_[GENDER].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Thigh" texture="Mods/BTE/Items/Jobgear/Other/black_pants_[GENDER].png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Thigh" texture="Mods/BTE/Items/Jobgear/Other/black_pants_[GENDER].png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Leg" texture="Mods/BTE/Items/Jobgear/Other/black_pants_[GENDER].png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Leg" texture="Mods/BTE/Items/Jobgear/Other/black_pants_[GENDER].png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Shoe" texture="Mods/BTE/Items/Jobgear/Other/black_pants_[GENDER].png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Shoe" texture="Mods/BTE/Items/Jobgear/Other/black_pants_[GENDER].png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bleeding" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <ItemContainer capacity="3" hideitems="true">
+      <Containable items="smallitem,explosive" excludeditems="toolbox,toolbelt" />
+    </ItemContainer>
+  </Item>
+
+<Item name="Black Shirt B" identifier="blackshirtb" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="standardshippingbox" description="A Black shirt with White pants" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.125"/>
+    <Price baseprice="150">
+      <Price locationtype="outpost" multiplier="1" minavailable="1"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" minavailable="1"/>
+      <Price locationtype="military" multiplier="1" minavailable="1"/>
+      <Price locationtype="mine" multiplier="1" minavailable="1"/>
+    </Price>
+    <Deconstruct time="10"/>
+    <InventoryIcon name="Assistant Clothes Icon" texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="383,274,128,110" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="664,375,212,64" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Assistant Torso" texture="Mods/BTE/Items/Jobgear/Other/black_shirt_[GENDER].png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Upper Arm" texture="Mods/BTE/Items/Jobgear/Other/black_shirt_[GENDER].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Upper Arm" texture="Mods/BTE/Items/Jobgear/Other/black_shirt_[GENDER].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Lower Arm" texture="Mods/BTE/Items/Jobgear/Other/black_shirt_[GENDER].png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Lower Arm" texture="Mods/BTE/Items/Jobgear/Other/black_shirt_[GENDER].png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Waist" texture="Mods/BTE/Items/Jobgear/Other/white_pants_[GENDER].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Thigh" texture="Mods/BTE/Items/Jobgear/Other/white_pants_[GENDER].png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Thigh" texture="Mods/BTE/Items/Jobgear/Other/white_pants_[GENDER].png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Leg" texture="Mods/BTE/Items/Jobgear/Other/white_pants_[GENDER].png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Leg" texture="Mods/BTE/Items/Jobgear/Other/white_pants_[GENDER].png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Shoe" texture="Mods/BTE/Items/Jobgear/Other/white_pants_[GENDER].png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Shoe" texture="Mods/BTE/Items/Jobgear/Other/white_pants_[GENDER].png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn" damagemultiplier="0.65" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bleeding" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <ItemContainer capacity="3" hideitems="true">
+      <Containable items="smallitem,explosive" excludeditems="toolbox,toolbelt" />
+    </ItemContainer>
+  </Item>
+
+<Item name="Black Shirt C" identifier="blackshirtc" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="standardshippingbox" description="A Black shirt with Very White pants" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.125"/>
+    <Price baseprice="150">
+      <Price locationtype="outpost" multiplier="1" minavailable="1"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" minavailable="1"/>
+      <Price locationtype="military" multiplier="1" minavailable="1"/>
+      <Price locationtype="mine" multiplier="1" minavailable="1"/>
+    </Price>
+    <Deconstruct time="10"/>
+    <InventoryIcon name="Assistant Clothes Icon" texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="383,274,128,110" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="664,375,212,64" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Assistant Torso" texture="Mods/BTE/Items/Jobgear/Other/black_shirt_[GENDER].png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Upper Arm" texture="Mods/BTE/Items/Jobgear/Other/black_shirt_[GENDER].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Upper Arm" texture="Mods/BTE/Items/Jobgear/Other/black_shirt_[GENDER].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Lower Arm" texture="Mods/BTE/Items/Jobgear/Other/black_shirt_[GENDER].png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Lower Arm" texture="Mods/BTE/Items/Jobgear/Other/black_shirt_[GENDER].png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Waist" texture="Mods/BTE/Items/Jobgear/Other/verywhite_pants_[GENDER].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Thigh" texture="Mods/BTE/Items/Jobgear/Other/verywhite_pants_[GENDER].png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Thigh" texture="Mods/BTE/Items/Jobgear/Other/verywhite_pants_[GENDER].png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Leg" texture="Mods/BTE/Items/Jobgear/Other/verywhite_pants_[GENDER].png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Leg" texture="Mods/BTE/Items/Jobgear/Other/verywhite_pants_[GENDER].png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Shoe" texture="Mods/BTE/Items/Jobgear/Other/verywhite_pants_[GENDER].png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Shoe" texture="Mods/BTE/Items/Jobgear/Other/verywhite_pants_[GENDER].png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn" damagemultiplier="0.67" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bleeding" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <ItemContainer capacity="3" hideitems="true">
+      <Containable items="smallitem,explosive" excludeditems="toolbox,toolbelt" />
+    </ItemContainer>
+  </Item>
+ 
+  <Item name="Grey Shirt A" identifier="greyshirta" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="standardshippingbox" description="A Grey shirt with Black Pants" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.125"/>
+    <Price baseprice="150">
+      <Price locationtype="outpost" multiplier="1" minavailable="1"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" minavailable="1"/>
+      <Price locationtype="military" multiplier="1" minavailable="1"/>
+      <Price locationtype="mine" multiplier="1" minavailable="1"/>
+    </Price>
+    <Deconstruct time="10"/>
+    <InventoryIcon name="Assistant Clothes Icon" texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="383,274,128,110" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="664,375,212,64" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Assistant Torso" texture="Mods/BTE/Items/Jobgear/Other/grey_shirt_[GENDER].png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Upper Arm" texture="Mods/BTE/Items/Jobgear/Other/grey_shirt_[GENDER].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Upper Arm" texture="Mods/BTE/Items/Jobgear/Other/grey_shirt_[GENDER].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Lower Arm" texture="Mods/BTE/Items/Jobgear/Other/grey_shirt_[GENDER].png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Lower Arm" texture="Mods/BTE/Items/Jobgear/Other/grey_shirt_[GENDER].png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Waist" texture="Mods/BTE/Items/Jobgear/Other/black_pants_[GENDER].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Thigh" texture="Mods/BTE/Items/Jobgear/Other/black_pants_[GENDER].png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Thigh" texture="Mods/BTE/Items/Jobgear/Other/black_pants_[GENDER].png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Leg" texture="Mods/BTE/Items/Jobgear/Other/black_pants_[GENDER].png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Leg" texture="Mods/BTE/Items/Jobgear/Other/black_pants_[GENDER].png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Shoe" texture="Mods/BTE/Items/Jobgear/Other/black_pants_[GENDER].png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Shoe" texture="Mods/BTE/Items/Jobgear/Other/black_pants_[GENDER].png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn" damagemultiplier="0.63" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bleeding" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <ItemContainer capacity="3" hideitems="true">
+      <Containable items="smallitem,explosive" excludeditems="toolbox,toolbelt" />
+    </ItemContainer>
+  </Item>
+  <Item name="Grey Shirt B" identifier="greyshirtb" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="standardshippingbox" description="A Grey shirt with White pants" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.125"/>
+    <Price baseprice="150">
+      <Price locationtype="outpost" multiplier="1" minavailable="1"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" minavailable="1"/>
+      <Price locationtype="military" multiplier="1" minavailable="1"/>
+      <Price locationtype="mine" multiplier="1" minavailable="1"/>
+    </Price>
+    <Deconstruct time="10"/>
+    <InventoryIcon name="Assistant Clothes Icon" texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="383,274,128,110" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="664,375,212,64" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Assistant Torso" texture="Mods/BTE/Items/Jobgear/Other/grey_shirt_[GENDER].png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Upper Arm" texture="Mods/BTE/Items/Jobgear/Other/grey_shirt_[GENDER].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Upper Arm" texture="Mods/BTE/Items/Jobgear/Other/grey_shirt_[GENDER].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Lower Arm" texture="Mods/BTE/Items/Jobgear/Other/grey_shirt_[GENDER].png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Lower Arm" texture="Mods/BTE/Items/Jobgear/Other/grey_shirt_[GENDER].png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Waist" texture="Mods/BTE/Items/Jobgear/Other/white_pants_[GENDER].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Thigh" texture="Mods/BTE/Items/Jobgear/Other/white_pants_[GENDER].png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Thigh" texture="Mods/BTE/Items/Jobgear/Other/white_pants_[GENDER].png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Leg" texture="Mods/BTE/Items/Jobgear/Other/white_pants_[GENDER].png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Leg" texture="Mods/BTE/Items/Jobgear/Other/white_pants_[GENDER].png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Shoe" texture="Mods/BTE/Items/Jobgear/Other/white_pants_[GENDER].png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Shoe" texture="Mods/BTE/Items/Jobgear/Other/white_pants_[GENDER].png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn" damagemultiplier="0.66" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bleeding" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <ItemContainer capacity="3" hideitems="true">
+      <Containable items="smallitem,explosive" excludeditems="toolbox,toolbelt" />
+    </ItemContainer>
+  </Item>
+
+<Item name="Grey Shirt C" identifier="greyshirtc" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="standardshippingbox" description="A Grey shirt with Very White pants" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="1" spawnprobability="0.125"/>
+    <Price baseprice="150">
+      <Price locationtype="outpost" multiplier="1" minavailable="1"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" minavailable="1"/>
+      <Price locationtype="military" multiplier="1" minavailable="1"/>
+      <Price locationtype="mine" multiplier="1" minavailable="1"/>
+    </Price>
+    <Deconstruct time="10"/>
+    <InventoryIcon name="Assistant Clothes Icon" texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="383,274,128,110" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="664,375,212,64" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Assistant Torso" texture="Mods/BTE/Items/Jobgear/Other/grey_shirt_[GENDER].png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Upper Arm" texture="Mods/BTE/Items/Jobgear/Other/grey_shirt_[GENDER].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Upper Arm" texture="Mods/BTE/Items/Jobgear/Other/grey_shirt_[GENDER].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Lower Arm" texture="Mods/BTE/Items/Jobgear/Other/grey_shirt_[GENDER].png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Lower Arm" texture="Mods/BTE/Items/Jobgear/Other/grey_shirt_[GENDER].png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Waist" texture="Mods/BTE/Items/Jobgear/Other/verywhite_pants_[GENDER].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Thigh" texture="Mods/BTE/Items/Jobgear/Other/verywhite_pants_[GENDER].png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Thigh" texture="Mods/BTE/Items/Jobgear/Other/verywhite_pants_[GENDER].png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Leg" texture="Mods/BTE/Items/Jobgear/Other/verywhite_pants_[GENDER].png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Leg" texture="Mods/BTE/Items/Jobgear/Other/verywhite_pants_[GENDER].png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Right Shoe" texture="Mods/BTE/Items/Jobgear/Other/verywhite_pants_[GENDER].png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant Left Shoe" texture="Mods/BTE/Items/Jobgear/Other/verywhite_pants_[GENDER].png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn" damagemultiplier="0.68" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bleeding" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <ItemContainer capacity="3" hideitems="true">
+      <Containable items="smallitem,explosive" excludeditems="toolbox,toolbelt" />
+    </ItemContainer>
+  </Item>
+
+</Items>

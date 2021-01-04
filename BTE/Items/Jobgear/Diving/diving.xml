@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+<Item
+    name="Wetsuit" identifier="wetsuit" aliases="watersuit, water suit, swim suit,swimsuit" category="Equipment"  tags="bigitem,diving,clothing" scale="0.5"
+	description="A wetsuit allows faster movement underwater but it can't withstand the immense pressure under Europa's crust unless properly sealed.">
+    <Price baseprice="550">
+      <Price locationtype="outpost" multiplier="1" minavailable="3"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="5"/>
+      <Price locationtype="research" multiplier="1" minavailable="2"/>
+      <Price locationtype="military" multiplier="1" minavailable="1"/>
+      <Price locationtype="mine" multiplier="1" minavailable="2"/>
+    </Price>
+	
+
+	<Deconstruct time="30">
+      <Item identifier="rubber" />
+	        <Item identifier="rubber" />
+			      <Item identifier="rubber" />
+				        <Item identifier="rubber" />
+    </Deconstruct>
+
+    <Sprite texture="Wetsuit.png" sourcerect="0,225,158,65" scale="0.1" depth="0.55"/>
+
+    <Body width="56" height="23" density="12"/>
+
+    <Wearable slots="OuterClothes+InnerClothes+Bag+Head,Any">
+		    <StatusEffect tags="wetsuit" type="OnWearing" target="Character" duration="0.1" stackable="false"/>
+	  <sprite texture="Wetsuit.png" limb="Head" depth="0.039" inheritlimbdepth="true"  scale="0.1"  inherittexturescale="true" sourcerect="77,145,64,81" origin="0.55,0.5"/>
+	  
+	  <sprite texture="Wetsuit.png" limb="Torso" sourcerect="-1,17,75,130" origin="0.45,0.5" depth="0.004" inheritlimbdepth="true"  inherittexturescale="true" hidelimb="true">
+      </sprite>
+
+      <sprite texture="Wetsuit.png" limb="RightHand" sourcerect="122,0,50,130" origin="0.45,0.451" depth="0.0" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
+      <sprite texture="Wetsuit.png" limb="LeftHand" sourcerect="122,0,50,130" origin="0.45,0.451" depth="0.016" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
+
+      <sprite texture="Wetsuit.png" limb="RightArm" sourcerect="73,3,52,111" origin="0.45,0.451" depth="0.001" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
+      <sprite texture="Wetsuit.png" limb="LeftArm" sourcerect="73,3,52,111" origin="0.45,0.451" depth="0.015" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
+
+      <sprite texture="Wetsuit.png" limb="RightThigh" sourcerect="179,3,71,130" origin="0.65,0.71" depth="0.011" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
+      <sprite texture="Wetsuit.png" limb="LeftThigh" sourcerect="179,3,71,130" origin="0.6,0.71" depth="0.015" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
+
+      <sprite texture="Wetsuit.png" limb="RightLeg" sourcerect="192,137,66,180" origin="0.6,0.71" depth="0.012" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
+      <sprite texture="Wetsuit.png" limb="LeftLeg" sourcerect="192,137,66,180" origin="0.6,0.71" depth="0.016" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
+
+      <sprite texture="Wetsuit.png" limb="RightFoot" sourcerect="117,126,32,72" origin="0.7,0.3" depth="0.013" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
+      <sprite texture="Wetsuit.png" limb="LeftFoot" sourcerect="117,126,32,72" origin="0.3,0.3" depth="0.013" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.85"/>
+      <damagemodifier damagetype="Damage" armorsector="0.0,360.0" damagemultiplier="0.75" bleedingmultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Wound" armorsector="0.0,360.0" damagemultiplier="0.65" bleedingmultiplier="0.65" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.03" setvalue="true" disabledeltatime="true"/>
+    </Wearable>
+  </Item>
+
+<Item name="Rebreather" identifier="rebreather" scale="0.5" category="Equipment" Tags="smallitem,diving,lightdiving" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" description="A breathing mask that recycles the user's exhaled breath, reducing the amount of oxygen needed from the equipped tank.">
+    <Deconstruct time="10">
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="researchstation" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="25" />
+      <RequiredItem identifier="plastic" />
+<RequiredItem identifier="bronze" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="515,322,57,62" origin="0.5,0.5" />
+    <Sprite name="Diving Mask" texture="Content/Items/Jobgear/headgears.png" depth="0.55" sourcerect="226,326,69,68" origin="0.5,0.5" />
+    <Body width="40" height="35" density="15" />
+    <Wearable limbtype="Head" slots="Any,Headset" msg="ItemMsgPickUpSelect" displaycontainedstatus="true">
+      <sprite name="Diving Mask Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" sourcerect="226,326,69,68" origin="0.4,0.3" hidewearablesoftype="moustache,beard" />
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" SpeedMultiplier="0.9" setvalue="true" disabledeltatime="true" />
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.25" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygentank" type="Contained" />
+      </StatusEffect>
+	  	       <StatusEffect type="OnWearing" target="Character" PressureProtection="20">
+	    <Conditional hasstatustag="wetsuit"/>
+			    <damagemodifier damagetype="radiationsickness" armorsector="0.0,360.0" damagemultiplier="0.15" bleedingmultiplier="0.65" deflectprojectiles="true"/>
+	  </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100.0" Oxygen="-2.5" Condition="-2.5">
+        <Conditional IsDead="false" />
+        <RequiredItem items="weldingfueltank" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100.0" Oxygen="-3.5" Condition="-2.5">
+        <RequiredItem items="incendiumfueltank" type="Contained" />
+        <Affliction identifier="burn" amount="0.1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.15" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygeniteshard" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.05" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.11" setvalue="true" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygeniteshard" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.23" setvalue="true" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" />
+      </StatusEffect>
+    </Wearable>
+    <ItemContainer capacity="1" hideitems="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,92,27" />
+      <Containable items="oxygensource,weldingfuel" />
+    </ItemContainer>
+  </Item>
+  
+<Override>
+ <Item name="" identifier="divingmask" aliases="diving mask" scale="0.5" category="Equipment" Tags="smallitem,diving,lightdiving" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light">
+    <Price baseprice="100" >
+      <Price locationtype="outpost" multiplier="0.9" minavailable="5"/>
+      <Price locationtype="city" multiplier="0.85" minavailable="7"/>
+      <Price locationtype="research" multiplier="1" minavailable="5"/>
+      <Price locationtype="military" multiplier="1" minavailable="6"/>
+      <Price locationtype="mine" multiplier="1.25" minavailable="15"/>
+    </Price>
+    <PreferredContainer primary="divingcab" minamount="1" maxamount="2" spawnprobability="1"/>
+    <PreferredContainer primary="supplycab" minamount="1" maxamount="1" spawnprobability="0.25"/>
+    <Deconstruct time="10">
+      <Item identifier="plastic" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="25" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="515,322,57,62" origin="0.5,0.5" />
+    <Sprite name="Diving Mask" texture="Content/Items/Jobgear/headgears.png" depth="0.55" sourcerect="226,326,69,68" origin="0.5,0.5" />
+    <Body width="40" height="35" density="15" />
+    <Wearable limbtype="Head" slots="Any,Headset" msg="ItemMsgPickUpSelect" displaycontainedstatus="true">
+      <sprite name="Diving Mask Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" sourcerect="226,326,69,68" origin="0.4,0.3" hidewearablesoftype="moustache,beard" />
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" SpeedMultiplier="0.9" setvalue="true" disabledeltatime="true" />
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.5" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygentank" type="Contained" />
+      </StatusEffect>
+	       <StatusEffect type="OnWearing" target="Character" PressureProtection="10">
+	    <Conditional hasstatustag="wetsuit"/>
+					    <damagemodifier damagetype="radiationsickness" armorsector="0.0,360.0" damagemultiplier="0.15" bleedingmultiplier="0.65" deflectprojectiles="true"/>
+	  </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100.0" Oxygen="-5.0" Condition="-5.0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="weldingfueltank" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100.0" Oxygen="-7.0" Condition="-5.0">
+        <RequiredItem items="incendiumfueltank" type="Contained" />
+        <Affliction identifier="burn" amount="0.1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.3" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygeniteshard" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.1" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.1" setvalue="true" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygeniteshard" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.2" setvalue="true" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" />
+      </StatusEffect>
+    </Wearable>
+    <ItemContainer capacity="1" hideitems="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,92,27" />
+      <Containable items="oxygensource,weldingfuel" />
+    </ItemContainer>
+  </Item>
+  </Override>
+ 
+  
+  
+
+</Items>

@@ -38,7 +38,464 @@
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,768,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
   </Override>
+
+<Override>
+<Affliction
+    name="Drunk"
+    identifier="drunk"
+    description="The smell of alcohol rises from them like a vapor, their speech slurs a little, and their eyes fail to focus."
+    type="poison"
+    causeofdeathdescription="Alcohol poisoning"
+    selfcauseofdeathdescription="You have died of alcohol poisoning."
+    limbspecific="false"
+    indicatorlimb="Head"
+    activationthreshold="20"
+    maxstrength="100">
+
+    <!-- Low level of drunkenness decreases vitality and speed slightly -->
+    <Effect minstrength="20" maxstrength="40"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="10"
+      minscreendistort="0"
+      maxscreendistort="0.1"
+      strengthchange="-0.1"
+resistancefor="pain"
+      minresistance="0.2"
+      maxresistance="0.4">
+      <StatusEffect target="Character" SpeedMultiplier="0.8" setvalue="true"/>
+    </Effect>
+
+    <!-- Heavier drunkenness decreases vitality and speed more -->
+    <Effect minstrength="40" maxstrength="80"
+      minvitalitydecrease="10"
+      maxvitalitydecrease="30"
+      minscreendistort="0.1"
+      maxscreendistort="1.0"
+      minscreenblur="0.1"
+      maxscreenblur="1.0"
+      strengthchange="-0.2"
+      minradialdistort="0.0"
+      maxradialdistort="5.0"
+      dialogflag="DrunkMedium"
+resistancefor="pain"
+      minresistance="0.4"
+      maxresistance="0.8">
+      <StatusEffect target="Character" SpeedMultiplier="0.7" setvalue="true"/>
+    </Effect>
+
+    <!-- After drinking enough the effect starts to get lethal -->
+    <Effect minstrength="80" maxstrength="100"
+      minvitalitydecrease="30"
+      maxvitalitydecrease="100"
+      minscreendistort="1.0"
+      maxscreendistort="3.0"
+      minscreenblur="1.0"
+      maxscreenblur="3.0"
+      strengthchange="-0.2"
+      minradialdistort="5.0"
+      maxradialdistort="10.0"
+      dialogflag="DrunkHigh"
+resistancefor="pain"
+      minresistance="0.8"
+      maxresistance="0.1">
+      <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
+    </Effect>
+    
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0"/>
+  </Affliction>
+</Override>
+
+ <Affliction
+    name="EMP" 
+    identifier="empdamage"
+    description="An electromagnetic pulse is taking effect."
+    type="burn"
+	causeofdeathdescription="EMP"
+    selfcauseofdeathdescription="You have succumbed to an EMP." 
+    limbspecific="false"
+	showiconthreshold="110"
+	activationthreshold="1"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" multiplybymaxvitality="true"
+	  minvitalitydecrease="0" maxvitalitydecrease="1"/>
+    <icon texture="Mods/BTE/UI/IconAtlas.png" sourcerect="0,256,128,128" color="244,207,33,255" origin="0,0"/>
+  </Affliction>
   
+  <Override>
+  <Affliction   
+    name="Vigor"
+    identifier="strengthen"
+    description="The patient feels a great deal of strength"
+    type="resistance"
+    isbuff="true"
+    limbspecific="false"
+    maxstrength="600">
+    <Effect minstrength="0" maxstrength="600"
+      strengthchange="-1"
+      resistancefor="damage"
+      minresistance="0"
+      maxresistance="0.75"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+  </Override>
+  
+  <Affliction
+    name="Toxin Resistance"
+    identifier="toxinresistance"
+    description="Toxins be gone."
+    type="resistance"
+    isbuff="true"
+    limbspecific="false"
+    maxstrength="600">
+    <Effect minstrength="0" maxstrength="600"
+      strengthchange="-1"
+      resistancefor="toxin"
+      minresistance="0"
+      maxresistance="0.75"/>
+ <icon texture="Mods/BTE/UI/IconAtlasOld.png" sourcerect="640,640,128,128" color="90,90,90,255" origin="0,0"/>
+  </Affliction>
+  
+   <Affliction
+    name="Cardiac Arrest"
+    identifier="heartattack"
+    description="The patient is suffering from a heart attack."
+    type="bloodclot"
+    causeofdeathdescription="Heart Attack"
+    selfcauseofdeathdescription="Heart Attack."    
+    limbspecific="false"
+    indicatorlimb="Torso"
+    maxstrength="100"
+	activationthreshold="10"
+	showiconthreshold="20"
+    damageoverlayalpha="1">
+	
+	<Effect minstrength="0" maxstrength="20" strengthchange="0" minscreenblur="0.1" maxscreenblur="1.5">
+	  <StatusEffect target="Character" SpeedMultiplier=".8" setvalue="true">
+      </StatusEffect>
+    </Effect>
+	<Effect minstrength="20" maxstrength="100" strengthchange="0" minscreenblur="0.1" maxscreenblur="1.5">
+	  <StatusEffect target="Character" SpeedMultiplier=".8" setvalue="true">
+	  <Affliction identifier="organdamage" strength="0.15"/>
+	  </StatusEffect>
+    </Effect>
+	
+   <icon texture="Mods/BTE/UI/IconAtlas.png" sourcerect="256,0,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+  name="Pain"
+  identifier="pain"
+  description="There's a feeling of pain in this part of the body."
+  type="pain"
+  limbspecific="false"
+  showiconthreshold="1"
+  activationthreshold="1"
+  maxstrength="100"
+  damageoverlayalpha="1">
+  <Effect minstrength="0" maxstrength="20"
+      strengthchange="-1"
+	  	dialogflag="PainLow">
+	  <StatusEffect target="Character" SpeedMultiplier="1.15" setvalue="true"/>
+	</Effect>
+	<Effect minstrength="20" maxstrength="40"
+      strengthchange="-1"
+	  	dialogflag="PainLow">
+	  <StatusEffect target="Character" SpeedMultiplier=".9" setvalue="true"/>
+	</Effect>
+	<Effect minstrength="40" maxstrength="60"
+      strengthchange="-1"
+	  	dialogflag="PainMed">
+	  <StatusEffect target="Character" SpeedMultiplier=".8" setvalue="true"/>
+	</Effect>
+	<Effect minstrength="60" maxstrength="80"
+      strengthchange="-1"
+	  	dialogflag="PainHigh">
+	  <StatusEffect target="Character" SpeedMultiplier=".75" setvalue="true"/>
+	</Effect>
+	<Effect minstrength="80" maxstrength="100"
+      strengthchange="-1"
+	  	dialogflag="PainHigh">
+	  <StatusEffect target="Character" SpeedMultiplier=".65" setvalue="true"/>
+	</Effect>
+	<icon texture="Mods/BTE/UI/IconAtlas.png" sourcerect="0,256,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+<Override>
+<AfflictionHusk
+    name="Husk infection"
+    identifier="huskinfection"
+    description="Something dark and unpleasant moves in the mouth. They are rendered completely mute, save for occasional clicking sounds apparently emanating from deep within the throat."
+    type="huskinfection"
+    targets="human,crawler"
+    huskedspeciesname="[speciesname]husk"
+    causeofdeathdescription="Taken over by a husk parasite"
+    selfcauseofdeathdescription="You have been taken over by the husk parasite."
+    limbspecific="false"
+    indicatorlimb="Torso"
+    activationthreshold="0"
+    showiconthreshold="40"    
+    karmachangeonapplied="-1"
+    maxstrength="100"
+    achievementonremoved="healhusk"
+    iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
+    <Effect minstrength="0" maxstrength="35"
+      maxvitalitydecrease="0"
+      strengthchange="0.3">
+						  </Effect>
+    <Effect minstrength="35" maxstrength="100"
+      maxvitalitydecrease="0"
+      strengthchange="0.3">
+	  		  	<StatusEffect type="InWater" target="Character">
+			<Affliction identifier="pressureresistance" strength="12"/>
+			<Affliction identifier="internaldamage" strength="0.5"/>
+					      </StatusEffect>
+						  </Effect>
+	  
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="0,640,128,128" color="60,107,195,255" origin="0,0"/>
+  </AfflictionHusk>
+  </Override>
+  
+<Override>
+	<Burn
+    name="Burn"
+    identifier="burn"
+    description="The area is blistered and red, and skin is already beginning to peel away in sheets. The patient is in a great deal of pain."
+    type="burn"
+    causeofdeathdescription="Burned to death"
+    selfcauseofdeathdescription="You have burned to death."
+    limbspecific="true"
+    maxstrength="100"
+    burnoverlayalpha="1">
+<Effect minstrength="0" maxstrength="10"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="10">
+	  <StatusEffect target="Limb">
+		<Affliction identifier="pain" strength="0.12"/>
+		</StatusEffect>
+	</Effect>
+	<Effect minstrength="10" maxstrength="25"
+      minvitalitydecrease="10"
+      maxvitalitydecrease="25">
+	  <StatusEffect target="Limb">
+		<Affliction identifier="pain" strength="0.28"/>
+		<Affliction identifier="bleeding" strength="0.07"/>
+      </StatusEffect>
+	</Effect>		
+	<Effect minstrength="25" maxstrength="33"
+      minvitalitydecrease="25"
+      maxvitalitydecrease="33">
+	  <StatusEffect target="Limb">
+		<Affliction identifier="pain" strength="0.44"/>
+      </StatusEffect>
+	  			</Effect>
+	  	<Effect minstrength="33" maxstrength="98"
+      minvitalitydecrease="25"
+      maxvitalitydecrease="33">
+	  <StatusEffect target="Limb">
+		<Affliction identifier="pain" strength="0.47"/>
+				<Affliction identifier="bleeding" strength="0.1"/>
+      </StatusEffect>
+	</Effect>
+		  	<Effect minstrength="98" maxstrength="100"
+      minvitalitydecrease="25"
+      maxvitalitydecrease="33">
+	  <StatusEffect target="Limb">
+		<Affliction identifier="pain" strength="0.47"/>
+				<Affliction identifier="bleeding" strength="0.3"/>
+      </StatusEffect>
+	</Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,640,128,128" color="195,104,60,255" origin="0,0"/>
+  </Burn>
+</Override>
+ 
+  <Affliction
+    name="Adrenaline" 
+    identifier="adrenaline"
+    description="Patients heart is beating faster and is suffering from stress pain is reduced and their movement speed is hightened, goosebumps are presents which can be prognosed as the fight or flight response."
+    type="haste"
+    isbuff="true"
+    limbspecific="false"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="60"
+      strengthchange="-1"
+      minspeedmultiplier="1.0"
+      maxspeedmultiplier="1.2"
+resistancefor="pain"
+      minresistance="0.0"
+      maxresistance="0.75">
+	  <StatusEffect target="Character">
+		<ReduceAffliction identifier="stun" strength="0.005"/>
+		<ReduceAffliction identifier="oxygenlow" strength="0.005"/>
+		<ReduceAffliction identifier="pain" strength="1.0"/>
+      </StatusEffect>
+	  </Effect>
+
+    <Effect minstrength="60" maxstrength="100"
+      strengthchange="-1"
+      minspeedmultiplier="1.2"
+      maxspeedmultiplier="1.257"
+resistancefor="pain"
+      minresistance="0.75"
+      maxresistance="1">
+	  <StatusEffect target="Character">
+		<ReduceAffliction identifier="stun" strength="0.005"/>
+		<ReduceAffliction identifier="oxygenlow" strength="0.005"/>
+		<ReduceAffliction identifier="pain" strength="1.0"/>
+		<Affliction identifier="heartattack" strength="0.535"/>
+      </StatusEffect>
+	  </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+  
+<Override>
+  <InternalDamage
+    name="Internal Damage"
+    identifier="internaldamage"
+    description="The area is an ugly shade of purple. A broken bone impairs movement and enough damage can be lethal."
+    type="damage"
+    causeofdeathdescription="Internal injuries"
+    selfcauseofdeathdescription="You have succumbed to your internal injuries."    
+    limbspecific="true"
+    maxstrength="100"
+	activationthreshold="1"
+	showiconthreshold="10">
+    <Effect minstrength="0" maxstrength="25" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="0.1">
+	<StatusEffect target="Limb">
+	<Affliction identifier="pain" strength=".35"/>
+	</StatusEffect>
+	</Effect>
+	<Effect minstrength="25" maxstrength="75" multiplybymaxvitality="true" minvitalitydecrease="0.1" maxvitalitydecrease="0.2">
+	  <StatusEffect target="Character" SpeedMultiplier="0.6" setvalue="true"/>
+	  <StatusEffect target="Limb">
+	<Affliction identifier="pain" strength=".35"/>
+	</StatusEffect>
+	</Effect>
+	<Effect minstrength="75" maxstrength="100" multiplybymaxvitality="true" minvitalitydecrease="0.2" maxvitalitydecrease="0.3">
+	  <StatusEffect target="Character" SpeedMultiplier="0.3" setvalue="true"/>
+	  <StatusEffect target="Limb">
+	<Affliction identifier="pain" strength="2"/>
+	</StatusEffect>
+	</Effect>
+	
+    <icon texture="Mods/BTE/UI/IconAtlas.png" sourcerect="128,256,128,128" color="195,136,60,255" origin="0,0"/>
+  </InternalDamage>
+</Override>
+
+<Override>
+<InternalDamage
+	  name="Blunt force trauma"
+	  identifier="blunttrauma"
+	  description=""
+	  type="damage"
+	  causeofdeathdescription=""
+	  selfcauseofdeathdescription=""
+	  limbspecific="true"
+	  maxstrength="100"
+	  damageoverlayalpha="1">
+	<Effect minstrength="0" maxstrength="125" multiplybymaxvitality="true" minvitalitydecrease="0.1" maxvitalitydecrease="1">
+	<StatusEffect target="Limb">
+	<Affliction identifier="pain" strength=".35"/>
+	</StatusEffect>
+	  </Effect>
+		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,896,128,128" color="195,136,60,255" origin="0,0"/>
+	</InternalDamage>
+</Override>
+
+<Override>
+	<!--Lacerations are received from sharp damage sources-->
+	<InternalDamage
+	  name="Lacerations"
+	  identifier="lacerations"
+	  description=""
+	  type="damage"
+	  causeofdeathdescription=""
+	  selfcauseofdeathdescription=""
+	  limbspecific="true"
+	  maxstrength="100"
+	  damageoverlayalpha="1">
+		<Effect minstrength="0" maxstrength="100" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="1">
+		<StatusEffect target="Limb">
+	<Affliction identifier="pain" strength=".35"/>
+	</StatusEffect>
+		</Effect>	  
+		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+	</InternalDamage>
+</Override>
+
+<Override>
+	<!--Bite wounds are monster specific-->
+	<InternalDamage
+	  name="Bite wounds"
+	  identifier="bitewounds"
+	  description=""
+	  type="damage"
+	  causeofdeathdescription="Mauled to death"
+	  selfcauseofdeathdescription="You have been mauled to death."
+	  limbspecific="true"
+	  maxstrength="100"
+	  damageoverlayalpha="1">
+		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="0,512,128,128" color="195,136,60,255" origin="0,0"/>
+		<Effect minstrength="0" maxstrength="100" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="1">
+		<StatusEffect target="Limb">
+	<Affliction identifier="pain" strength=".35"/>
+	</StatusEffect>
+	  </Effect>
+		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="0,512,128,128" color="195,136,60,255" origin="0,0"/>
+	</InternalDamage>
+</Override>
+
+<Override>
+	<InternalDamage
+	  name="Gunshot wound"
+	  identifier="gunshotwound"
+	  description="The entry site is a small, dark, bruised hole oozing a little blood. The exit wound however is a large ragged mess of exposed tissue and pouring blood."
+	  type="damage"
+	  causeofdeathdescription="Shot to death"
+	  selfcauseofdeathdescription="You have died of gunshot wounds."
+	  limbspecific="true"
+	  maxstrength="100"
+	  karmachangeonapplied="-1"
+	  damageoverlayalpha="1">
+	      <Effect minstrength="0" maxstrength="7" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="0.07" dialogflag="GunshotWound">
+		  <StatusEffect target="Limb">
+	<Affliction identifier="pain" strength="0.55"/>
+	</StatusEffect>
+	  </Effect>
+    <Effect minstrength="7" maxstrength="15" multiplybymaxvitality="true" minvitalitydecrease="0.07" maxvitalitydecrease="0.15" dialogflag="GunshotWound">
+	<StatusEffect target="Limb">
+	<Affliction identifier="pain" strength="2"/>
+	</StatusEffect>
+	  </Effect>
+	      <Effect minstrength="15" maxstrength="100" multiplybymaxvitality="true" minvitalitydecrease="0.15" maxvitalitydecrease="1" dialogflag="GunshotWound">
+		  <StatusEffect target="Limb">
+	<Affliction identifier="pain" strength="2"/>
+	</StatusEffect>
+	</Effect> 
+		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,768,128,128" color="195,60,60,255" origin="0,0"/>
+	</InternalDamage>
+</Override>
+
+
+<Override>
+  <!--For damage inflicted by explosions' blast waves and other sources that aren't quite blunt force trauma-->
+  <InternalDamage
+    name="Deep tissue injury"
+    identifier="explosiondamage"
+    description=""
+    type="damage"
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="true"
+    maxstrength="100"
+    damageoverlayalpha="1">
+       <Effect minstrength="0" maxstrength="100" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="1">
+	   <StatusEffect target="Limb">
+	<Affliction identifier="pain" strength="0.35"/>
+	</StatusEffect>
+	  </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,0,128,128" color="195,136,60,255" origin="0,0"/>
+  </InternalDamage>
+</Override>
+
   <Affliction
     name="Internal Radiation Poisoning"
     identifier="internalradiationpoisoning"
@@ -78,4 +535,76 @@
 
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,768,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
-  </Afflictions>
+
+ <Affliction
+    name="Methamphetamine"
+    identifier="meth"
+    description="The patient is under the effects of methamphetamine."
+    type="meth"
+	isbuff="true"
+    limbspecific="false"
+    indicatorlimb="Torso"
+    maxstrength="100">
+
+	<Effect minstrength="0" maxstrength="40"
+	  strengthchange="-0.2">
+	  <StatusEffect target="Character" SpeedMultiplier="1.08" setvalue="true"  disabledeltatime="true"/>
+	  <StatusEffect target="Character">
+		<Affliction identifier="organdamage" strength="0.01"/>
+		<Affliction identifier="psychosis" strength="0.06"/>
+      </StatusEffect>
+    </Effect>
+	<Effect minstrength="40" maxstrength="60"
+	  strengthchange="-0.4">
+	  <StatusEffect target="Character" SpeedMultiplier="1.12"  setvalue="true"  disabledeltatime="true"/>
+	  <StatusEffect target="Character">
+		<Affliction identifier="organdamage" strength="0.02"/>
+		<Affliction identifier="psychosis" strength="0.08"/>
+      </StatusEffect>
+    </Effect>
+	<Effect minstrength="60" maxstrength="80"
+	  strengthchange="-0.6"
+	        dialogflag="MethPain">
+	  <StatusEffect target="Character" SpeedMultiplier="1.16" setvalue="true" disabledeltatime="true"/>
+	  <StatusEffect target="Character">
+		<Affliction identifier="organdamage" strength="0.04"/>
+				<Affliction identifier="pain" strength="0.15"/>
+		<Affliction identifier="psychosis" strength="0.12"/>
+      </StatusEffect>
+    </Effect>
+	<Effect minstrength="80" maxstrength="100"
+	  strengthchange="-0.8"
+	  	        dialogflag="MethPain">
+	  <StatusEffect target="Character" SpeedMultiplier="2" setvalue="true" disabledeltatime="true"/>
+	  <StatusEffect target="Character">
+		<Affliction identifier="organdamage" strength="0.08"/>
+		<Affliction identifier="psychosis" strength="0.16"/>
+		<Affliction identifier="pain" strength="0.15"/>
+      </StatusEffect>
+    </Effect>
+    
+    <icon texture="Mods/BTE/UI/IconAtlas.png" sourcerect="128,128,128,128" color="60,209,42,255" origin="0,0"/>
+  </Affliction>
+ 
+ <Override>
+  <InternalDamage
+	  name="Organ damage"
+	  identifier="organdamage"
+	  description="Damage to the bodies vital organs."
+	  type="damage"
+	  causeofdeathdescription="Major organ failure"
+	  selfcauseofdeathdescription="You have died to major organ failure."
+	  limbspecific="false"
+    indicatorlimb="Torso"
+	  maxstrength="100"
+	  damageoverlayalpha="1">
+    <Effect minstrength="0" maxstrength="100" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="1">
+	<StatusEffect target="Limb">
+	<Affliction identifier="pain" strength="0.55"/>
+	</StatusEffect>
+	</Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,384,128,128" color="195,136,60,255" origin="0,0"/>
+  </InternalDamage>
+  </Override>
+
+</Afflictions>

@@ -20,4 +20,27 @@
       </StatusEffect>
     </Holdable>
   </Item>
+  
+  <Item name="Bronze Bar" identifier="bronze" category="Material" Tags="smallitem" cargocontaineridentifier="metalcrate" scale="0.4" impactsoundtag="impact_metal_light">
+ <Price baseprice="22" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.5" sold="true"/>
+      <Price locationtype="city" multiplier="1.25" minavailable="2" />
+      <Price locationtype="research" multiplier="1.25" minavailable="2" sold="true"/>
+      <Price locationtype="military" multiplier="1.9" minavailable="3" />
+      <Price locationtype="mine" multiplier="0.4" minavailable="25" sold="true"/>
+    </Price>
+
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredItem identifier="copper" mincondition="0.8"/>
+      <RequiredItem identifier="tin" mincondition="0.2"/>
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="768,128,64,64" />
+    <Sprite texture="Content/Items/InventoryIconAtlas.png" sourcerect="768,128,64,64" depth="0.55" origin="0.5,0.5" />
+    <Body width="100" height="50" density="30" />
+    <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
   </Items>

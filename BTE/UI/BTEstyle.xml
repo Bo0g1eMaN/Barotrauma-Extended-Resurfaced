@@ -163,6 +163,7 @@
   <SmallFont file="Content/Fonts/NotoSans/NotoSans-Bold.ttf" size="12"/>
   <LargeFont file="Content/Fonts/NotoSans/NotoSans-ExtraBold.ttf" size="22"/>
   -->
+
   <InnerGlow color="255,255,255,204" hovercolor="255,255,255,204" selectedcolor="255,255,255,204">
     <Sprite texture="Content/UI/InnerGlow.png" sourcerect="0,0,512,384" slice="128,128,384,256" />
   </InnerGlow>
@@ -185,7 +186,7 @@
     <Sprite name="GUIFrameTop" texture="Content/UI/UIAtlasFrames.png" size="0.0, 0.0" sourcerect="380,175,363,193" slice="402,177,722,349" origin="0.5,0.5" />
   </GUIFrameTop>
   <GUIFrameBottom color="255,255,255,242" hovercolor="255,255,255,242" selectedcolor="255,255,255,242" pressedcolor="255,255,255,242" textcolor="0,0,0,255">
-    <Sprite name="GUIFrameBottom" texture="Content/UI/UIAtlasFrames.png" size="0.0, 0.0" sourcerect="380,5,363,159" slice="402,32,722,367" origin="0.5,0.5" />
+    <Sprite name="GUIFrameBottom" texture="Content/UI/UIAtlasFrames.png" size="0.0, 0.0" sourcerect="380,5,363,159" slice="402,32,722,148" origin="0.5,0.5" />
   </GUIFrameBottom>
   <GUIFrameLeft color="255,255,255,242" hovercolor="255,255,255,242" selectedcolor="255,255,255,242" pressedcolor="255,255,255,242" textcolor="0,0,0,255">
     <Sprite name="GUIFrameLeft" texture="Content/UI/UIAtlasFrames.png" size="0.0, 0.0" sourcerect="550,5,194,363" slice="551,32,722,349" origin="0.5,0.5" />
@@ -248,6 +249,9 @@
   <MainMenuOptionIcon color="44,208,150,255">
     <Sprite name="MainMenuOptionIcon" texture="Content/UI/InventoryUIAtlas.png" sourcerect="582,524,159,174" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
   </MainMenuOptionIcon>
+  <MainMenuVignette color="255,255,255,255">
+    <Sprite name="MainMenuVignette" texture="Content/UI/MainMenuVignette.png" sourcerect="0,0,2048,1152" origin="0.5,0.5" />
+  </MainMenuVignette>
   <GUIButtonLarge color="255,255,255,255" hovercolor="255,255,255,255" selectedcolor="255,255,255,255" disabledcolor="125,125,125,255" pressedcolor="230,230,230,255">
     <Sprite name="GUIButtonLarge.None" texture="Content/UI/UIAtlasGeneral.png" state="None" sourcerect="6,216,164,45" slice="11,221,165,256" origin="0.5,0.5" />
     <Sprite name="GUIButtonLarge.Hover" texture="Content/UI/UIAtlasGeneral.png" state="Hover" sourcerect="6,281,164,45" slice="11,286,165,321" origin="0.5,0.5" />
@@ -370,11 +374,11 @@
     <Sprite name="GUIButtonToggleLeft" texture="Content/UI/UIAtlasGeneral.png" sourcerect="525,49,46,46" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
   </GUIButtonToggleRight>
   <GUIButtonHorizontalArrow color="204,204,204,204" hovercolor="255,255,255,255" selectedcolor="204,204,204,204" pressedcolor="150,150,150,255" disabledcolor="125,125,125,125">
-    <Sprite name="GUIButtonHorizontalArrow" texture="Content/UI/UIAtlasGeneral.png" state="None" tile="false" sourcerect="276,499,22,25" origin="0.5,0.5" />
+    <Sprite name="GUIButtonHorizontalArrow" texture="Content/UI/UIAtlasGeneral.png" tile="false" sourcerect="276,499,22,25" origin="0.5,0.5" />
     <GUITextBlock textcolor="153,166,179,255" padding="0.0, 0.0, 0.0, 0.0" />
   </GUIButtonHorizontalArrow>
   <GUIButtonVerticalArrow color="204,204,204,204" hovercolor="255,255,255,255" selectedcolor="204,204,204,204" pressedcolor="150,150,150,255" disabledcolor="125,125,125,125">
-    <Sprite name="GUIButtonVerticalArrow" texture="Content/UI/UIAtlasGeneral.png" state="None" tile="false" sourcerect="276,569,27,21" origin="0.5,0.5" />
+    <Sprite name="GUIButtonVerticalArrow" texture="Content/UI/UIAtlasGeneral.png" tile="false" sourcerect="276,569,27,21" origin="0.5,0.5" />
     <GUITextBlock textcolor="153,166,179,255" padding="0.0, 0.0, 0.0, 0.0" />
   </GUIButtonVerticalArrow>
   <GUITextBlock textcolor="228,217,167,255" disabledtextcolor="125,125,125,125" hovercolor="255,255,255,255" selectedcolor="255,255,255,255" padding="10.0, 0.0, 10.0, 0.0">
@@ -548,6 +552,9 @@
   <GameModeIcon.mission selectedcolor="169,212,187,255" hovercolor="255,255,255,255" color="100,100,100,255">
     <Sprite name="GameModeIcon.mission" texture="Content/UI/UIAtlasGeneral.png" tile="false" maintainaspectratio="true" sourcerect="130,893,128,128" origin="0.5,0.5" />
   </GameModeIcon.mission>
+  <GameModeIcon.pvp selectedcolor="169,212,187,255" hovercolor="255,255,255,255" color="100,100,100,255">
+    <Sprite name="GameModeIcon.pvp" texture="Content/UI/UIAtlasGeneral.png" tile="false" maintainaspectratio="true" sourcerect="386,893,128,128" origin="0.5,0.5" />
+  </GameModeIcon.pvp>
   <GameModeIcon.multiplayercampaign selectedcolor="169,212,187,255" hovercolor="255,255,255,255" color="100,100,100,255">
     <Sprite name="GameModeIcon.multiplayercampaign" texture="Content/UI/UIAtlasGeneral.png" tile="false" maintainaspectratio="true" sourcerect="253,893,128,128" origin="0.5,0.5" />
   </GameModeIcon.multiplayercampaign>
@@ -612,6 +619,11 @@
       <Sprite name="GUIMessageBox.Default" texture="Content/UI/UIAtlasFrames.png" size="0.0, 0.0" sourcerect="376,368,376,371" slice="398,390,727,707" origin="0.5,0.5" />
     </GUIFrame>
   </GUIMessageBox.Default>
+  <GUIMessageBox.Vote color="0,0,0,0" hovercolor="0,0,0,0" selectedcolor="0,0,0,0" pressedcolor="0,0,0,0" textcolor="0,0,0,0">
+    <GUIFrame color="255,255,255,242" hovercolor="255,255,255,242" selectedcolor="255,255,255,242" textcolor="0,0,0,255">
+      <Sprite name="GUIMessageBox.Default" texture="Content/UI/UIAtlasFrames.png" size="0.0, 0.0" sourcerect="376,368,376,371" slice="398,390,727,707" origin="0.5,0.5" />
+    </GUIFrame>
+  </GUIMessageBox.Vote>
   <GUIMessageBox.InGame color="0,0,0,0" hovercolor="0,0,0,0" selectedcolor="0,0,0,0" pressedcolor="0,0,0,0" textcolor="0,0,0,0">
     <GUIFrame color="255,255,255,255" hovercolor="255,255,255,255" selectedcolor="255,255,255,255" textcolor="228,217,167,255">
       <Sprite name="GUIMessageBox.InGame" texture="Content/UI/UIAtlasFrames.png" size="0.0, 0.0" sourcerect="751,1,187,189" slice="759,10,927,178" origin="0.5,0.5" />
@@ -660,31 +672,31 @@
   </ChatTextBox>
   <!-- Sub editor -->
   <OpenButton color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
-    <Sprite name="OpenButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="437,467,32,26" tile="false" maintainaspectratio="true" origin="0.5,0.5" compress="false" />
+    <Sprite name="OpenButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="654,147,49,42" tile="false" maintainaspectratio="true" origin="0.5,0.5" compress="false" />
   </OpenButton>
   <SaveButton color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
-    <Sprite name="SaveButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="472,467,26,26" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
+    <Sprite name="SaveButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="704,147,42,43" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
   </SaveButton>
   <TestButton color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
-    <Sprite name="TestButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="456,500,16,16" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
+    <Sprite name="TestButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="707,194,35,36" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
   </TestButton>
   <EditSubButton color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
-    <Sprite name="EditSubButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="507,467,21,20" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
+    <Sprite name="EditSubButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="753,148,36,35" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
   </EditSubButton>
-  <CharacterModeButton color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
-    <Sprite name="CharacterModeButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="541,462,17,30" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
-  </CharacterModeButton>
+  <UndoHistoryButton color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
+    <Sprite name="UndoHistoryButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="752,193,40,37" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
+  </UndoHistoryButton>
   <WiringModeButton color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
-    <Sprite name="WiringModeButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="570,463,22,28" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
+    <Sprite name="WiringModeButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="846,144,32,39" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
   </WiringModeButton>
   <GenerateWaypointsButton color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
-    <Sprite name="GenerateWaypointsButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="664,464,26,26" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
+    <Sprite name="GenerateWaypointsButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="979,144,41,42" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
   </GenerateWaypointsButton>
   <RecentlyUsedButton color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
-    <Sprite name="RecentlyUsedButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="601,465,27,25" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
+    <Sprite name="RecentlyUsedButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="890,146,40,37" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
   </RecentlyUsedButton>
   <SetupVisibilityButton color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
-    <Sprite name="SetupVisibilityButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="632,465,28,25" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
+    <Sprite name="SetupVisibilityButton" texture="Content/UI/InventoryUIAtlas.png" sourcerect="936,146,40,37" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
   </SetupVisibilityButton>
   <CategoryButton.All color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
     <Sprite name="CategoryButton.All" texture="Content/UI/InventoryUIAtlas.png" sourcerect="437,269,64,64" tile="false" maintainaspectratio="true" origin="0.5,0.5" />
@@ -901,6 +913,7 @@
     <Sprite name="OutlineFrame" texture="Content/UI/UIAtlasGeneral.png" sourcerect="391,212,126,126" slice="401,222,497,318" tile="true" origin="0.5,0.5" minborderscale="1" />
   </OutlineFrame>
   <DigitalFrameLight color="255,255,255,255">
+    <GUITextBlock textcolor="51, 59, 46,255" disabledtextcolor="125,125,125,125" padding="5.0, 0.0, 5.0, 0.0" />
     <Sprite name="DigitalFrameLight" texture="Content/UI/UIAtlasDevices.png" sourcerect="672,148,168,66" slice="677,153,835,209" tile="true" origin="0.5,0.5" />
   </DigitalFrameLight>
   <DigitalFrameDark color="255,255,255,255">
@@ -910,12 +923,7 @@
   <InfoAreaPortraitBG>
     <Sprite name="InfoAreaPortraitBG" texture="Content/UI/InventoryUIAtlas.png" tile="false" sourcerect="251,269,142,97" origin="0.5,0.5" compress="false" />
   </InfoAreaPortraitBG>
-  <CharacterHealthBarSlider color="255,255,255,255">
-    <Slider color="255,255,255,255">
-      <Sprite name="CharacterHealthBarSlider" texture="Content/UI/InventoryUIAtlas.png" tile="false" sourcerect="406,381,8,8" origin="0.5,0.5" />
-    </Slider>
-  </CharacterHealthBarSlider>
- <CharacterHealthBar color="255,255,255,255">
+  <CharacterHealthBar color="255,255,255,255">
     <GUIFrame color="255,255,255,255">
       <Sprite name="CharacterHealthBarBG" texture="Content/UI/InventoryUIAtlas.png" tile="false" sourcerect="288,366,107,67" slice="329,384,390,413" origin="0.5,0.5" />
     </GUIFrame>
@@ -923,9 +931,6 @@
       <Sprite name="CharacterHealthBarSlider" texture="Content/UI/InventoryUIAtlas.png" tile="false" sourcerect="288,434,107,68" slice="330,453,390,481"  origin="0.5,0.5" />
     </Slider>
   </CharacterHealthBar>
-  <CharacterHealthBarBG color="255,255,255,255">
-    <Sprite name="CharacterHealthBarBG" texture="Content/UI/InventoryUIAtlas.png" tile="false" sourcerect="265,373,131,65" slice="329,384,389,444" origin="0.5,0.5" />
-  </CharacterHealthBarBG>
   <EquipmentToggleButton color="255,255,255,255">
     <Sprite name="EquipmentToggleButton" texture="Content/UI/InventoryUIAtlas.png" tile="false" sourcerect="492,140,25,95" origin="0.5,0.5" />
   </EquipmentToggleButton>
@@ -1092,29 +1097,60 @@
     <Sprite name="RepairBuyButton.Pressed" texture="Content/UI/CampaignUIAtlas2.png" state="Pressed" sourcerect="302,156,92,68" maintainaspectratio="true" tile="false" origin="0.5,0.5" />
   </RepairBuyButton>
 
+  <CampaignInteractionBubble.Store color="206,162,138">
+    <Sprite name="CampaignInteractionBubble.Store" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="701,1,35,28" origin="0.5,0.5" maintainaspectratio="true" />
+  </CampaignInteractionBubble.Store>
+  <CampaignInteractionBubble.Crew color="198,211,242">
+    <Sprite name="CampaignInteractionBubble.Crew" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="701,32,35,28" origin="0.5,0.5" maintainaspectratio="true" />
+  </CampaignInteractionBubble.Crew>
+  <CampaignInteractionBubble.Repair color="242,190,113">
+    <Sprite name="CampaignInteractionBubble.Repair" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="701,63,35,28" origin="0.5,0.5" maintainaspectratio="true" />
+  </CampaignInteractionBubble.Repair>
+  <CampaignInteractionBubble.Upgrade color="106,250,115">
+    <Sprite name="CampaignInteractionBubble.Upgrade" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="737,32,35,28" origin="0.5,0.5" maintainaspectratio="true" />
+  </CampaignInteractionBubble.Upgrade>
+  <CampaignInteractionBubble.RepairUpgrade color="185,105,250">
+    <Sprite name="CampaignInteractionBubble.RepairUpgrade" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="701,63,35,28" origin="0.5,0.5" maintainaspectratio="true" />
+  </CampaignInteractionBubble.RepairUpgrade>
+  <CampaignInteractionBubble.PurchaseSub color="169,212,187">
+    <Sprite name="CampaignInteractionBubble.PurchaseSub" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="737,63,35,28" origin="0.5,0.5" maintainaspectratio="true" />
+  </CampaignInteractionBubble.PurchaseSub>
+  <CampaignInteractionBubble.Talk color="255,255,255">
+    <Sprite name="CampaignInteractionBubble.Talk" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="774,1,35,28" origin="0.5,0.5" maintainaspectratio="true" />
+  </CampaignInteractionBubble.Talk>
+
   <CampaignInteractionIcon.Store color="206,162,138">
-    <Sprite name="CampaignInteractionIcon.Store" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="701,1,35,28" origin="0.5,0.5" maintainaspectratio="true" />
+    <Sprite name="CampaignInteractionIcon.Store" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="701,1,35,18" origin="0.5,0.5" maintainaspectratio="true" />
   </CampaignInteractionIcon.Store>
   <CampaignInteractionIcon.Crew color="198,211,242">
-    <Sprite name="CampaignInteractionIcon.Crew" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="701,32,35,28" origin="0.5,0.5" maintainaspectratio="true" />
+    <Sprite name="CampaignInteractionIcon.Crew" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="701,32,35,18" origin="0.5,0.5" maintainaspectratio="true" />
   </CampaignInteractionIcon.Crew>
   <CampaignInteractionIcon.Repair color="242,190,113">
-    <Sprite name="CampaignInteractionIcon.Repair" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="701,63,35,28" origin="0.5,0.5" maintainaspectratio="true" />
+    <Sprite name="CampaignInteractionIcon.Repair" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="701,63,35,18" origin="0.5,0.5" maintainaspectratio="true" />
   </CampaignInteractionIcon.Repair>
   <CampaignInteractionIcon.Upgrade color="106,250,115">
-    <Sprite name="CampaignInteractionIcon.Upgrade" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="737,32,35,28" origin="0.5,0.5" maintainaspectratio="true" />
+    <Sprite name="CampaignInteractionIcon.Upgrade" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="737,32,35,18" origin="0.5,0.5" maintainaspectratio="true" />
   </CampaignInteractionIcon.Upgrade>
   <CampaignInteractionIcon.RepairUpgrade color="185,105,250">
-    <Sprite name="CampaignInteractionIcon.RepairUpgrade" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="701,63,35,28" origin="0.5,0.5" maintainaspectratio="true" />
+    <Sprite name="CampaignInteractionIcon.RepairUpgrade" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="701,63,35,18" origin="0.5,0.5" maintainaspectratio="true" />
   </CampaignInteractionIcon.RepairUpgrade>
   <CampaignInteractionIcon.PurchaseSub color="169,212,187">
-    <Sprite name="CampaignInteractionIcon.PurchaseSub" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="737,63,35,28" origin="0.5,0.5" maintainaspectratio="true" />
+    <Sprite name="CampaignInteractionIcon.PurchaseSub" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="737,63,35,18" origin="0.5,0.5" maintainaspectratio="true" />
   </CampaignInteractionIcon.PurchaseSub>
   <CampaignInteractionIcon.Talk color="255,255,255">
-    <Sprite name="CampaignInteractionIcon.Talk" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="774,1,35,28" origin="0.5,0.5" maintainaspectratio="true" />
+    <Sprite name="CampaignInteractionIcon.Talk" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="774,1,35,18" origin="0.5,0.5" maintainaspectratio="true" />
   </CampaignInteractionIcon.Talk>
 
-
+  <PetIcon.Happy color="255,255,255">
+    <Sprite name="PetIcon.Happy" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="701,94,35,28" origin="0.5,0.5" maintainaspectratio="true" />
+  </PetIcon.Happy>
+  <PetIcon.Sad color="255,255,255">
+    <Sprite name="PetIcon.Sad" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="736,94,35,28" origin="0.5,0.5" maintainaspectratio="true" />
+  </PetIcon.Sad>
+  <PetIcon.Hungry color="255,255,255">
+    <Sprite name="PetIcon.Hungry" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="774,94,35,28" origin="0.5,0.5" maintainaspectratio="true" />
+  </PetIcon.Hungry>
+  
   <StoreAddToCrateButton color="255,255,255,255" disabledcolor="128,128,128,255">
     <Sprite name="StoreAddToCrateButton_None" texture="Content/UI/CampaignUIAtlas2.png" state="None" tile="false" sourcerect="10,8,92,68" maintainaspectratio="true" />
     <Sprite name="StoreAddToCrateButton_Hover" texture="Content/UI/CampaignUIAtlas2.png" state="Hover" tile="false" sourcerect="10,82,92,68" maintainaspectratio="true" />
@@ -1160,10 +1196,18 @@
   <MissionFailedIcon color="245,105,105,255">
     <Sprite name="MissionFailedIcon" texture="Content/UI/UIAtlasGeneral.png" tile="false" sourcerect="862,34,140,163" maintainaspectratio="true" />
   </MissionFailedIcon>
+  <CrushDepthWarningLowIcon color="255,201,14,255">
+    <Sprite name="CrushDepthWarningLowIcon" texture="Content/UI/MainIconsAtlas.png" tile="false" sourcerect="768,768,128,128" maintainaspectratio="true" />
+  </CrushDepthWarningLowIcon>
+  <CrushDepthWarningHighIcon color="207,48,48,255">
+    <Sprite name="CrushDepthWarningHighIcon" texture="Content/UI/MainIconsAtlas.png" tile="false" sourcerect="768,768,128,128" maintainaspectratio="true" />
+  </CrushDepthWarningHighIcon>
   <LocationReputationIcon color="187,198,200,255">
     <Sprite name="LocationReputationIcon" texture="Content/UI/CampaignUIAtlas2.png" tile="false" sourcerect="533,517,87,106" maintainaspectratio="true" />
   </LocationReputationIcon>
-<!--  slice="789,159,840,223"-->
+  <LockIcon color="51,51,51,255" hovercolor="255,255,255,255" selectedcolor="255,255,255,255">
+    <Sprite name="LockIcon" texture="Content/UI/UIAtlasGeneral.png" tile="false" maintainaspectratio="true" sourcerect="721,52,34,43" origin="0.5,0.5" />
+  </LockIcon>
   <EndRoundButton color="255,255,255,255" hovercolor="255,255,255,255" selectedcolor="255,255,255,255" disabledcolor="125,125,125,255" pressedcolor="230,230,230,255">
     <Sprite name="EndRoundButton.None" texture="Content/UI/CampaignUIAtlas2.png" state="None" sourcerect="716,159,196,64" slice="789,159,840,223" maintainborderaspectratio="true" tile="true" origin="0.5,0.5" />
     <Sprite name="EndRoundButton.Hover" texture="Content/UI/CampaignUIAtlas2.png" state="Hover" sourcerect="716,233,196,64" slice="789,233,840,297" maintainborderaspectratio="true" tile="true" origin="0.5,0.5" />
@@ -1212,6 +1256,21 @@
     selectedcolor="255,255,255,255">
     <Sprite texture="Mods/BTE/Items/Misc/docEng.png" sourcerect="0,0,581,819" tile="false"/>
   </docEng>
+<CookBook
+    color="255,255,255,255"
+    hovercolor="255,255,255,255"
+    selectedcolor="255,255,255,255">
+    <Sprite texture="Mods/BTE/Items/Misc/Cookbook.png" sourcerect="0,0,581,819" tile="false"/>
+  </CookBook>
+
+
+<docCook2
+    color="255,255,255,255"
+    hovercolor="255,255,255,255"
+    selectedcolor="255,255,255,255">
+    <Sprite texture="Mods/BTE/Items/Misc/DocCook2.png" sourcerect="0,0,0,0" tile="false"/>
+  </docCook2>
+
   <docMec
     color="255,255,255,255"
     hovercolor="255,255,255,255"
@@ -1278,6 +1337,13 @@
     selectedcolor="255,255,255,255">
     <Sprite texture="Mods/BTE/Items/Misc/docScorpion.png" sourcerect="0,0,581,819" tile="false"/>
   </docScorpion>
+
+  <doccul
+    color="255,255,255,255"
+    hovercolor="255,255,255,255"
+    selectedcolor="255,255,255,255">
+    <Sprite texture="Mods/BTE/Items/Misc/doccul.png" sourcerect="0,0,581,819" tile="false"/>
+  </doccul>
   
   <propLaborUnions
     color="255,255,255,255"

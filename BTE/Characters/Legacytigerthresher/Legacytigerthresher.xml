@@ -1,0 +1,36 @@
+﻿<Character speciesname="Legacytigerthresher" humanoid="False" displayname="" group="thresherhybrid" husk="False" needsair="False" canspeak="False" noise="100" blooddecal="blood">
+  <ragdolls folder="Mods/BTE/Characters/Legacytigerthresher/Ragdolls/" />
+  <animations folder="Mods/BTE/Characters/Legacytigerthresher/Animations/" />
+  
+  <bloodemitter particle="blood" particleamount="10" scalemin="1" scalemax="2" anglemin="0" anglemax="0" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+  <bloodemitter particle="waterblood" particleamount="1" scalemin="1" scalemax="2" anglemin="0" anglemax="0" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+  <gibemitter particle="gib" particleamount="30" velocitymin="200" velocitymax="1500" anglemin="0" anglemax="360" scalemin="1" scalemax="2" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+  <gibemitter particle="heavygib" particleamount="15" velocitymin="50" velocitymax="1000" anglemin="0" anglemax="360" scalemin="1" scalemax="2" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+  
+  <health vitality="110" doesbleed="True" crushdepth="-Infinity" usehealthwindow="False" bleedingreduction="0" burnreduction="0" constanthealthregeneration="0" healthregenerationwheneating="1" />
+  
+  <sound file="Mods/BTE/Characters/Legacytigerthresher/thresherattack1.ogg" state="Attack" range="1000" volume="1" gender="None" />
+  <sound file="Mods/BTE/Characters/Legacytigerthresher/thresheridle1.ogg" state="Idle" range="1000" volume="1" gender="None" />
+  <sound file="Mods/BTE/Characters/Legacytigerthresher/thresheridle2.ogg" state="Idle" range="1000" volume="1" gender="None" />
+  
+  <StatusEffect type="OnEating" target="This">
+    <ReduceAffliction identifier="hunger" strength="1"/>
+  </StatusEffect>
+  <StatusEffect type="InWater" target="This" needsair="False">
+    <ReduceAffliction identifier="oxygenlow" strength="1.5"/>
+  </StatusEffect>
+  <StatusEffect type="NotInWater" target="This" needsair="True" OxygenAvailable="-100">
+    <Affliction identifier="damagelung" strength="0.1" />
+  </StatusEffect>
+  
+  <ai combatstrength="300" sight="1" hearing="1" aggressionhurt="100" aggressiongreed="10" fleehealththreshold="0" attackonlywhenprovoked="False" avoidgunfire="True" aggressiveboarding="False">
+    <target tag="decoy" state="Attack" priority="600" />
+    <target tag="stronger" state="Escape" priority="100" />
+    <target tag="human" state="Attack" priority="90" />
+    <target tag="dead" state="Eat" priority="60" />
+    <target tag="weaker" state="Attack" priority="50" />
+    <target tag="nasonov" state="Attack" priority="50" />
+    <target tag="sonar" state="Attack" priority="45" />
+    <target tag="room" state="Attack" priority="40" />
+  </ai>
+</Character>

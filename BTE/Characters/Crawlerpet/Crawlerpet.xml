@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Character speciesname="Crawlerpet" humanoid="False" blooddecal="blood" husk="False" needsair="False" group="human" canspeak="False" noise="90">
+  
+  <ragdolls folder="Mods/BTE/Characters/Crawlerpet/Ragdolls"/>
+  <animations folder="Mods/BTE/Characters/Crawlerpet/Animations" />
+  
+  <bloodemitter particle="blood" particleamount="10" anglemin="0" anglemax="0" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+  <bloodemitter particle="waterblood" particleamount="1" anglemin="0" anglemax="0" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+  <gibemitter particle="gib" particleamount="20" velocitymin="200" velocitymax="700" anglemin="0" anglemax="360" scalemin="1" scalemax="1" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+  <gibemitter particle="heavygib" particleamount="10" velocitymin="50" velocitymax="500" anglemin="0" anglemax="360" scalemin="1" scalemax="1" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+  
+  <health vitality="80" doesbleed="True" usehealthwindow="False" bleedingreduction="0.1" burnreduction="0"
+		  constanthealthregeneration="0" healthregenerationwheneating="1" />
+		  
+  <sound file="Content/Characters/Crawler/CRAWLER_attack1.ogg" state="Attack" range="1000" volume="1" gender="None" />
+  <sound file="Content/Characters/Crawler/CRAWLER_attack2.ogg" state="Attack" range="1000" volume="1" gender="None" />
+  <sound file="Content/Characters/Crawler/CRAWLER_attack3.ogg" state="Attack" range="1000" volume="1" gender="None" />
+  <sound file="Content/Characters/Crawler/CRAWLER_attack4.ogg" state="Attack" range="1000" volume="1" gender="None" />
+  <sound file="Content/Characters/Crawler/CRAWLER_idle1.ogg" state="Idle" range="1000" volume="1" gender="None" />
+  <sound file="Content/Characters/Crawler/CRAWLER_idle2.ogg" state="Idle" range="1000" volume="1" gender="None" />
+  <sound file="Content/Characters/Crawler/CRAWLER_idle3.ogg" state="Idle" range="1000" volume="1" gender="None" />
+  <sound file="Content/Characters/Crawler/CRAWLER_death1.ogg" state="Die" range="1000" volume="1" gender="None" />
+  <sound file="Content/Characters/Crawler/CRAWLER_death2.ogg" state="Die" range="1000" volume="1" gender="None" />
+  <sound file="Content/Characters/Crawler/CRAWLER_damage1.ogg" state="Damage" range="1000" volume="1" gender="None" />
+  <sound file="Content/Characters/Crawler/CRAWLER_damage2.ogg" state="Damage" range="1000" volume="1" gender="None" />
+  <sound file="Content/Characters/Crawler/CRAWLER_damage3.ogg" state="Damage" range="1000" volume="1" gender="None" />
+  
+  <StatusEffect type="OnEating" target="This">
+    <ReduceAffliction identifier="hunger" strength="1"/>
+  </StatusEffect>
+  <StatusEffect type="OnFire" target="This">
+    <ReduceAffliction identifier="cold" strength="0.25" />
+	<Affliction identifier="heat" strength="0.25" />
+  </StatusEffect>
+  
+  <Inventory slots="Any,Any" accessiblewhenalive="false" commonness="50">
+    <Item identifier="crawlermeat1"/>
+	<Item identifier="alienblood"/>
+  </Inventory>
+  <Inventory slots="Any,Any" accessiblewhenalive="false" commonness="25">
+    <Item identifier="crawlermeat2"/>
+	<Item identifier="alienblood"/>
+  </Inventory>
+  
+  <ai combatstrength="95" sight="0.75" hearing="1" fleehealththreshold="10" aggressiveboarding="True" aggressiongreed="10"
+      aggressionhurt="100" attackonlywhenprovoked="False" retaliatewhentakingdamage="True">
+	<target tag="flarelight" state="Escape" priority="500"/>
+	<target tag="dead" state="Eat" priority="150"/>
+    <target tag="human" state="Idle" priority="15"/>
+    <target tag="nasonov" state="Attack" priority="60"/>
+	<target tag="stronger" state="Attack" priority="30"/>
+    <target tag="weaker" state="Attack" priority="60"/>
+    <SwarmBehavior mindistfromclosest="200" maxdistfromcenter="1000" cohesion="0.1" />
+  </ai>
+</Character>

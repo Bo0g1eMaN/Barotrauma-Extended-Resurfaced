@@ -1,13 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-
 <Item name="Fusion Reactor" identifier="reactor3" tags="reactor" type="Reactor" scale="0.5" linkable="true" category="Machine" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
     <Upgrade gameversion="0.10.0.0" scale="*0.5" />
     <trigger />
     <Sprite texture="Mods/BTE/Items/Reactor/fusionreactor.png" sourcerect="0,0,539,335" origin="0.5,0.45" depth="0.8" />
     <aitarget sightrange="500" soundrange="7500" />
     <Reactor canbeselected="true" firedelay="20" meltdowndelay="120" maxpoweroutput="10000" fuelconsumptionrate="0.2" vulnerabletoemp="false" msg="ItemMsgInteractSelect">
-      <StatusEffect type="InWater" target="This" condition="-0.5">
+      <StatusEffect type="InWater" target="This" condition="-0.2">
         <Conditional condition="gt 10"/>
       </StatusEffect>
       <GuiFrame relativesize="0.5,0.45" minsize="700,350" maxsize="2688,1166" anchor="Center" relativeoffset="0.1,0" style="ItemUI" />
@@ -108,16 +107,44 @@
     </Repairable>
   </Item>
 
+ <Item name="Hydrogen Tank" identifier="hydrogentank" category="Equipment,Misc" Tags="smallitem,reactorfuel"
+		cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Price locationtype="Research" buyprice="75"/>
+    <Price locationtype="City" buyprice="75"/>
+    <Price locationtype="Military" buyprice="75"/>
+    <Price locationtype="Outpost" buyprice="70"/>
+    <Deconstruct time="10">
+      <Item identifier="aluminium"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="fabricator" outcondition="0.0">
+      <RequiredItem identifier="aluminium"/>
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="410,71,24,66" depth="0.55" origin="0.5,0.5" />
+<Body width="22" height="64" density="5" />
+    <Holdable slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnFire" target="This" Condition="-100" disabledeltatime="true">
+        <Conditional Condition="gt 25"/>
+        <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="4000"/>
+        <Explosion range="250" structuredamage="3" stun="4" force="3">
+          <Affliction identifier="bleeding" strength="4"/>
+          <Affliction identifier="internaldamage" strength="8"/>
+        </Explosion>
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-100" disabledeltatime="true"/>
+    </Holdable>
+  </Item>
+  
 <Override>
 <Item name="" identifier="reactor1" tags="reactor" type="Reactor" scale="0.5" linkable="true" category="Machine" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
     <Upgrade gameversion="0.10.0.0" scale="*0.5" />
     <trigger />
-    <Sprite texture="reactor.png" sourcerect="0,16,528,336" origin="0.5,0.45" depth="0.8" />
-    <BrokenSprite texture="reactor.png" sourcerect="0,368,528,336" depth="0.8" origin="0.5,0.45" maxcondition="40" />
-    <BrokenSprite texture="reactor.png" sourcerect="0,720,528,336" depth="0.8" origin="0.5,0.45" maxcondition="0" />
+    <Sprite texture="Content/Items/Reactor/reactor.png" sourcerect="0,16,528,336" origin="0.5,0.45" depth="0.8" />
+    <BrokenSprite texture="Content/Items/Reactor/reactor.png" sourcerect="0,368,528,336" depth="0.8" origin="0.5,0.45" maxcondition="40" />
+    <BrokenSprite texture="Content/Items/Reactor/reactor.png" sourcerect="0,720,528,336" depth="0.8" origin="0.5,0.45" maxcondition="0" />
     <aitarget sightrange="500" soundrange="7500" />
     <Reactor canbeselected="true" firedelay="20" meltdowndelay="120" maxpoweroutput="10000" fuelconsumptionrate="0.2" vulnerabletoemp="false" msg="ItemMsgInteractSelect">
-      <StatusEffect type="InWater" target="This" condition="-0.5">
+      <StatusEffect type="InWater" target="This" condition="-0.2">
         <Conditional condition="gt 10"/>
       </StatusEffect>
       <GuiFrame relativesize="0.5,0.45" minsize="700,350" maxsize="2688,1166" anchor="Center" relativeoffset="0.1,0" style="ItemUI" />
@@ -172,7 +199,7 @@
       <GuiFrame relativesize="0.3,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
       <RequiredSkill identifier="electrical" level="70" />
       <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
-        <Sound file="Content/Items/Weapons/ElectricalDischarger.ogg" range="1000" />
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
         <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
         <Affliction identifier="stun" strength="5" />
         <Affliction identifier="burn" strength="5" />
@@ -192,19 +219,17 @@
       <input name="set_turbineoutput" displayname="connection.setturbineoutput" />
       <output name="power_value_out" displayname="connection.powervalueout" />
       <output name="load_value_out" displayname="connection.loadvalueout" />
+      <output name="fuel_out" displayname="connection.availablefuelout" />
     </ConnectionPanel>
     <ItemContainer capacity="4" canbeselected="true" hudpos="0.5,0.15" slotsperrow="1" uilabel="FuelRods">
       <Containable items="fuelrod">
         <StatusEffect type="OnContaining" target="This" AvailableFuel="80.0" disabledeltatime="true" />
       </Containable>
       <Containable items="fulguriumfuelrod">
-        <StatusEffect type="OnContaining" target="This" AvailableFuel="40.0" disabledeltatime="true" />
+        <StatusEffect type="OnContaining" target="This" AvailableFuel="150.0" disabledeltatime="true" />
       </Containable>
       <Containable items="thoriumfuelrod">
         <StatusEffect type="OnContaining" target="This" AvailableFuel="100.0" disabledeltatime="true" />
-      </Containable>
-	  <Containable items="incendiumfuelrod">
-        <StatusEffect type="OnContaining" target="This" AvailableFuel="150.0" disabledeltatime="true" />
       </Containable>
     </ItemContainer>
     <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.125" mindeteriorationdelay="120" maxdeteriorationdelay="720" MinDeteriorationCondition="10" minsabotagecondition="10" RepairThreshold="50" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
@@ -221,9 +246,27 @@
       </StatusEffect>
     </Repairable>
   </Item>
-</Override>
+  </Override>
 
-<Override>
+  <Item name="Nuclear Waste" identifier="nuclearwaste" Tags="mediumitem,reactorfuel" indestructible="true" scale="0.4" impactsoundtag="impact_metal_light">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,64,64,64" />
+    <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="411,3,19,68" />
+    <Body radius="6" width="20" height="70" density="10.8" />
+    <LightComponent range="50" lightcolor="0.8,0.6,0.4,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
+      <LightTexture texture="Content/Lights/pointlight_bright.png" origin="0.5,0.5" />
+      <StatusEffect type="Always" target="This" IsOn="true" />
+    </LightComponent>
+    <Holdable handle1="0,0" slots="RightHand,LeftHand" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="NotInWater" target="NearbyCharacters" range="500">
+        <Affliction identifier="radiationsickness" strength="0.08" />
+      </StatusEffect>
+      <StatusEffect type="InWater" target="NearbyCharacters" range="250">
+        <Affliction identifier="radiationsickness" strength="0.04" />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  
+  <Override>
   <Item name="Uranium Fuel Rod" identifier="fuelrod" Tags="mediumitem,reactorfuel"
     cargocontaineridentifier="metalcrate" scale="0.5" health="200" impactsoundtag="impact_metal_light">
 
@@ -243,7 +286,7 @@
     </Fabricate>
     
 	<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="576,64,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="371,3,19,68" />
+    <Sprite texture="Content/Items/InventoryIconAtlas.png" depth="0.55" sourcerect="576,64,64,64" />
     <Body radius="6" width="20" height="70" density="10.2"/>
 	
 	<LightComponent range="50" lightcolor="0,0.5,0,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
@@ -279,13 +322,13 @@
       <StatusEffect type="NotInWater" target="NearbyCharacters" range="750">
         <Affliction identifier="radiationsickness" strength="0.1" />
       </StatusEffect>
-      <StatusEffect type="InWater" target="NearbyCharacters" range="500">
+      <StatusEffect type="InWater" target="NearbyCharacters" range="50">
         <Affliction identifier="radiationsickness" strength="0.05" />
       </StatusEffect>
     </Holdable>
   </Item>
-
-<Override>
+  
+  <Override>
   <Item name="Thorium Fuel Rod" identifier="thoriumfuelrod" Tags="mediumitem,reactorfuel"
 		cargocontaineridentifier="metalcrate" health="300" scale="0.5" impactsoundtag="impact_metal_light">
     <Deconstruct time="10">
@@ -298,7 +341,7 @@
     </Fabricate>
     
 	<InventoryIcon texture="Mods/BTE/Items/InventoryIconAtlas.png" sourcerect="576,64,64,64" origin="0.5,0.5" />
-    <Sprite texture="Mods/BTE/Items/Tools/tools.png" depth="0.55" sourcerect="371,3,19,68" />
+    <Sprite texture="Mods/BTE/Items/Tools/tools2.png" depth="0.55" sourcerect="367,0,24,72" />
     <Body radius="6" width="20" height="70" density="10.2"/>
     
 	<LightComponent range="50" lightcolor="0.8,0.6,0.4,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
@@ -314,7 +357,7 @@
 	</Holdable>
   </Item>
   </Override>
-
+  
   <Item name="Spent Thorium Rod" identifier="spentthoriumfuelrod" Tags="mediumitem,reactorfuel" indestructible="true" scale="0.4" impactsoundtag="impact_metal_light">
     <Deconstruct time="50">
       <Item identifier="lead" outcondition="0.25" />
@@ -331,12 +374,13 @@
       <StatusEffect type="NotInWater" target="NearbyCharacters" range="500">
         <Affliction identifier="radiationsickness" strength="0.08" />
       </StatusEffect>
-      <StatusEffect type="InWater" target="NearbyCharacters" range="500">
+      <StatusEffect type="InWater" target="NearbyCharacters" range="50">
         <Affliction identifier="radiationsickness" strength="0.04" />
       </StatusEffect>
     </Holdable>
   </Item>
-
+ 
+  <Override>
   <Item name="Incendium Fuel Rod" identifier="incendiumfuelrod" Tags="mediumitem,reactorfuel"
 		cargocontaineridentifier="metalcrate" health="100" scale="0.5" impactsoundtag="impact_metal_light">
     <Deconstruct time="10">
@@ -346,9 +390,11 @@
     <Fabricate suitablefabricators="fabricator" requiredtime="10">
       <RequiredItem identifier="lead" mincondition="0.25"/>
 	  <RequiredItem identifier="incendium"/>
+	  <RequiredItem identifier="fuelrod" />
+	  <RequiredItem identifier="advrodresearch" mincondition="0" />
     </Fabricate>
     <InventoryIcon texture="Mods/BTE/Items/InventoryIconAtlas.png" sourcerect="640,64,64,64" origin="0.5,0.5" />
-	<Sprite texture="Mods/BTE/Items/Tools/tools.png" depth="0.55" sourcerect="391,3,19,68" />
+	<Sprite texture="Mods/BTE/Items/Tools/tools2.png" depth="0.55" sourcerect="390,0,22,72" />
     <Body radius="6" width="21" height="71" density="10.2"/>
     
 	<LightComponent range="50" LightColor="0.9,0.3,0.0,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
@@ -363,7 +409,7 @@
       </StatusEffect>
 	</Holdable>
   </Item>
-
+  </Override>
   <Item name="Spent Incendium Rod" identifier="spentincendiumfuelrod" Tags="mediumitem,reactorfuel" indestructible="true" scale="0.5" impactsoundtag="impact_metal_light">
     <Deconstruct time="50">
       <Item identifier="lead" outcondition="0.25" />
@@ -380,13 +426,13 @@
       <StatusEffect type="NotInWater" target="NearbyCharacters" range="1000">
         <Affliction identifier="radiationsickness" strength="0.12" />
       </StatusEffect>
-      <StatusEffect type="InWater" target="NearbyCharacters" range="750">
+      <StatusEffect type="InWater" target="NearbyCharacters" range="250">
         <Affliction identifier="radiationsickness" strength="0.08" />
       </StatusEffect>
     </Holdable>
   </Item>
- 
- <Override>
+   
+   <Override>
   <Item name="Fulgurium Fuel Rod" identifier="fulguriumfuelrod" Tags="mediumitem,reactorfuel"
 		cargocontaineridentifier="metalcrate" health="600" scale="0.5" impactsoundtag="impact_metal_light">
     
@@ -397,10 +443,18 @@
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredItem identifier="lead" mincondition="0.25"/>
 	  <RequiredItem identifier="fulgurium"/>
+	  <RequiredItem identifier="sulphuricacid" />
+	  <RequiredItem identifier="advrodresearch" mincondition="0" />
+    </Fabricate>
+	
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+	  <RequiredItem identifier="fulguriumfuelrod" mincondition="0" />
+	  <RequiredItem identifier="sulphuricacid" />
+	  <RequiredItem identifier="advrodresearch" />
     </Fabricate>
     
 	<InventoryIcon texture="Mods/BTE/Items/InventoryIconAtlas.png" sourcerect="384,64,64,64" origin="0.5,0.5" />
-    <Sprite texture="Mods/BTE/Items/Tools/tools.png" depth="0.55" sourcerect="411,3,19,68" />
+    <Sprite texture="Mods/BTE/Items/Reactor/Fuelrods.png" depth="0.55" sourcerect="20,0,19,69" />
 	<Body radius="6" width="20" height="70" density="10.1"/>
     
 	<LightComponent range="50" LightColor="1.0,0.7,0.05,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
@@ -413,51 +467,6 @@
   </Item>
   </Override>
   
-  <Override>
-  <Item name="Fulgurium Fuel Rod" identifier="fulguriumfuelrod" Tags="mediumitem,reactorfuel"
-		cargocontaineridentifier="metalcrate" health="600" scale="0.5" impactsoundtag="impact_metal_light">
-    
-	<Deconstruct time="10">
-      <Item identifier="lead" outcondition="0.25"/>
-      <Item identifier="fulgurium"/>
-    </Deconstruct>
-    <Fabricate suitablefabricators="fabricator" requiredtime="20">
-      <RequiredItem identifier="sulphuricacid" />
-	  <RequiredItem identifier="fulguriumfuelrod" mincondition="0.0"/>
-    </Fabricate>
-    
-	<InventoryIcon texture="Mods/BTE/Items/InventoryIconAtlas.png" sourcerect="384,64,64,64" origin="0.5,0.5" />
-    <Sprite texture="Mods/BTE/Items/Tools/tools.png" depth="0.55" sourcerect="411,3,19,68" />
-	<Body radius="6" width="20" height="70" density="10.1"/>
-    
-	<LightComponent range="50" LightColor="1.0,0.7,0.05,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
-	  <LightTexture texture="Content/Lights/pointlight_bright.png" origin="0.5,0.5"/>
-	  <StatusEffect type="Always" target="This" IsOn="true"/>
-	  <StatusEffect type="OnBroken" target="This" IsOn="false"/>
-    </LightComponent>
-	
-	<Holdable handle1="0,0" slots="RightHand,LeftHand" msg="ItemMsgPickUpSelect" />
-  </Item>
-  </Override>
-  
-  <Item name="Nuclear Waste" identifier="nuclearwaste" Tags="mediumitem,reactorfuel" indestructible="true" scale="0.4" impactsoundtag="impact_metal_light">
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,64,64,64" />
-    <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="411,3,19,68" />
-    <Body radius="6" width="20" height="70" density="10.8" />
-    <LightComponent range="50" lightcolor="0.8,0.6,0.4,0.25" powerconsumption="0" IsOn="true" Flicker="0.5" castshadows="true" allowingameediting="false">
-      <LightTexture texture="Content/Lights/pointlight_bright.png" origin="0.5,0.5" />
-      <StatusEffect type="Always" target="This" IsOn="true" />
-    </LightComponent>
-    <Holdable handle1="0,0" slots="RightHand,LeftHand" msg="ItemMsgPickUpSelect">
-      <StatusEffect type="NotInWater" target="NearbyCharacters" range="500">
-        <Affliction identifier="radiationsickness" strength="0.08" />
-      </StatusEffect>
-      <StatusEffect type="InWater" target="NearbyCharacters" range="250">
-        <Affliction identifier="radiationsickness" strength="0.04" />
-      </StatusEffect>
-    </Holdable>
-  </Item>
-
   <Item name="Diesel-Electric Generator" identifier="generator1" tags="generator" type="Reactor" linkable="true" category="Machine" scale="0.5">
     <Sprite texture="dieselGen.png" sourcerect="0,0,760,388" depth="0.8" origin="0.5,0.5" />
     <BrokenSprite texture="dieselGenBroken.png" sourcerect="0,0,528,288" depth="0.8" maxcondition="0" />
@@ -514,11 +523,11 @@
       <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="3" mincondition="0.0" maxcondition="15" />
       <ParticleEmitter particle="spark" particleamount="5" emitinterval="5" anglemax="360" velocitymin="5.0" velocitymax="250" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15" />
     </Repairable>
-    <ItemContainer capacity="1" canbeselected="true">
+    <ItemContainer capacity="4" canbeselected="true" slotsperrow="1" slotspercolumn="4">
       <Containable items="dieselcan">
         <StatusEffect type="OnContaining" target="This" AvailableFuel="80" disabledeltatime="true" />
       </Containable>
-    </ItemContainer>
+</ItemContainer>
   </Item>
   <Item name="Diesel Can" identifier="dieselcan" description="A plastic canister containing diesel, which can be used in Diesel-Electric Generators provided oxygen." Tags="mediumitem,reactorfuel,explosiveitem" health="50" spritecolor="1.0,0.5,0.0,1.0" scale="0.4" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" cargocontaineridentifier="metalcrate" impacttolerance="4" impactsoundtag="impact_metalcan">
     <Upgrade gameversion="0.9.6.0" scale="0.5" />
@@ -560,6 +569,7 @@
       </StatusEffect>
     </Throwable>
   </Item>
+
   <Item name="Empty Can" identifier="emptycan" Tags="mediumitem" scale="0.4" impacttolerance="4" impactsoundtag="impact_metalcan">
     <Deconstruct time="10">
       <Item identifier="plastic" outcondition="0.75" />

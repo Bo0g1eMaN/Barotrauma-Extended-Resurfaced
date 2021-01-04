@@ -1,0 +1,166 @@
+﻿<Character speciesname="Humancorpse" humanoid="True" needsair="True" genders="false" canspeak="True" blooddecal="blackblood" group="human" displayname="" husk="False" noise="100">
+  <ragdolls folder="Mods/BTE/Characters/Humancorpse/Ragdolls"/>
+  <animations folder="Mods/BTE/Characters/Humancorpse/Animations"/>
+  
+  <damageemitter particle="gib" drawontop="True" particleamount="10" velocitymin="50" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.25" scalemax="0.5" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />																																																																		   
+  <bloodemitter particle="blood" particleamount="10"/>
+  <bloodemitter particle="waterblood" particleamount="1"/>
+  <gibemitter particle="gib" particleamount="20" velocitymin="200" velocitymax="700" anglemin="0" anglemax="360"/>
+  <gibemitter particle="heavygib" particleamount="10" velocitymin="50" velocitymax="500" anglemin="0" anglemax="360"/>
+  
+  <health usehealthwindow="false" vitality="100" crushdepth="-30000" doesbleed="true">
+	<MedUISilhouette texture="Content/UI/Health/MedUI_Silhouette.png" columns="8" rows="2" sourcerect="0,0,1008,748"/>
+    <MedUIExtra texture="Content/UI/Health/MedUIExtra.png" columns="4" rows="4" sourcerect="0,0,1024,1024"/>
+    <Limb name="Head">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="1,0,126,374" highlightarea="41,0,45,54"/>
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="1,515,126,374"/>
+    </Limb>
+    <Limb name="Torso">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="631,0,126,374" highlightarea="29,56,70,134"/>
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="631,515,126,374"/>
+    </Limb>
+    <Limb name="LeftArm">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="379,0,126,374" highlightarea="1,69,27,140"/>
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="379,515,126,374"/>
+    </Limb>
+    <Limb name="RightArm">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="127,0,126,374" highlightarea="100,69,27,140"/>
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="127,515,126,374"/>
+    </Limb>
+    <Limb name="LeftLeg">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="505,0,126,374" highlightarea="3,180,57,194"/>
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="505,515,126,374"/>
+    </Limb>
+    <Limb name="RightLeg">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="253,0,126,374" highlightarea="68,180,57,194"/>
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="253,515,126,374"/>
+    </Limb>
+  </health>
+  
+  <sound file="Mods/BTE/Characters/Humancorpse/attack1.ogg" state="Attack" range="750" volume="1" gender="None"/>
+  <sound file="Mods/BTE/Characters/Humancorpse/attack2.ogg" state="Attack" range="750" volume="1" gender="None"/>
+  <sound file="Mods/BTE/Characters/Humancorpse/Idle1.ogg" state="Idle" range="750" volume="1" gender="None"/>
+  <sound file="Mods/BTE/Characters/Humancorpse/Idle2.ogg" state="Idle" range="750" volume="1" gender="None"/>
+  <sound file="Mods/BTE/Characters/Humancorpse/Idle3.ogg" state="Idle" range="750" volume="1" gender="None"/>
+  <sound file="Mods/BTE/Characters/Humancorpse/attack1.ogg" state="Damage" range="750" volume="1" gender="None"/>
+  <sound file="Mods/BTE/Characters/Humancorpse/attack2.ogg" state="Damage" range="750" volume="1" gender="None"/>
+  <sound file="Mods/BTE/Characters/Humancorpse/Death.ogg" state="Die" range="1000" volume="1" gender="None"/>
+  
+  <StatusEffect type="Always" target="This">
+    <Affliction identifier="hunger" strength="0.04"/>
+	<Affliction identifier="cold" strength="0.06"/>
+    <Affliction identifier="psychosis" strength="0.2"/>
+  </StatusEffect>
+  <StatusEffect type="InWater" target="Limb">
+	<Conditional hasstatustag="closesuit"/>
+	<ReduceAffliction identifier="waterwet" strength="60"/>
+  </StatusEffect>
+  <StatusEffect type="InWater" target="This">
+    <Affliction identifier="waterwet" strength="8"/>
+  </StatusEffect>
+  <StatusEffect type="OnFire" target="This">
+    <ReduceAffliction identifier="waterwet" strength="0.06"/>
+	<ReduceAffliction identifier="cold" strength="0.08"/>
+	<Affliction identifier="heat" strength="0.08"/>
+  </StatusEffect>
+  
+  <ai combatstrength="1" sight="0.8" hearing="0.8" aggressiveboarding="True" aggressionhurt="100" aggressiongreed="10" fleehealththreshold="0" attackonlywhenprovoked="False" avoidgunfire="True">
+    <targetpriority tag="decoy" state="Escape" priority="250"/>
+    <targetpriority tag="human" state="Attack" priority="500"/>
+    <targetpriority tag="weaker" state="Escape" priority="30"/>
+    <targetpriority tag="stronger" state="Escape" priority="60"/>
+    <targetpriority tag="door" state="Attack" priority="90"/>
+  </ai>
+  <inventory arrowslot="9" slots="Card,Headset,Head,InnerClothes,OuterClothes,LeftHand,RightHand,Any,Any,Any,Any,Any,Any,Any,Any,Any,Any" accessiblewhenalive="True" commonness="20">
+    <Item identifier="divingsuithusk" equip="true"/>
+    <Item identifier="wallet"></Item>
+    <Item identifier="stampa"/>
+    <Item identifier="stampa"/>
+  </inventory>
+  <inventory arrowslot="9" slots="Card,Headset,Head,InnerClothes,OuterClothes,LeftHand,RightHand,Any,Any,Any,Any,Any,Any,Any,Any,Any,Any" accessiblewhenalive="True" commonness="10">
+    <Item identifier="divingsuithusk" equip="true"/>
+    <Item identifier="wallet"></Item>
+    <Item identifier="stampc"/>
+    <Item identifier="stampc"/>
+    <Item identifier="clipboard"></Item>
+    <Item identifier="docNov"/>
+    <Item identifier="docbasic"/>
+  </inventory>
+  <inventory arrowslot="9" slots="Card,Headset,Head,InnerClothes,OuterClothes,LeftHand,RightHand,Any,Any,Any,Any,Any,Any,Any,Any,Any,Any" accessiblewhenalive="True" commonness="10">
+    <Item identifier="divingsuithusk" equip="true"/>
+    <Item identifier="wallet"></Item>
+    <Item identifier="stampc"/>
+    <Item identifier="clipboard"></Item>
+    <Item identifier="docMec"/>
+    <Item identifier="docbasic"/>
+    <Item identifier="drawHuskBoi"/>
+    <Item identifier="wrench"/>
+  </inventory>
+  <inventory arrowslot="9" slots="Card,Headset,Head,InnerClothes,OuterClothes,LeftHand,RightHand,Any,Any,Any,Any,Any,Any,Any,Any,Any,Any" accessiblewhenalive="True" commonness="10">
+    <Item identifier="divingsuithusk" equip="true"/>
+	<Item identifier="wallet"></Item>
+    <Item identifier="stampb"/>
+    <Item identifier="stampc"/>
+    <Item identifier="clipboard"></Item>
+    <Item identifier="docMec"/>
+    <Item identifier="docbasic"/>
+    <Item identifier="incendiumfuelrod" equip="true"></Item>
+  </inventory>
+  <inventory arrowslot="9" slots="Card,Headset,Head,InnerClothes,OuterClothes,LeftHand,RightHand,Any,Any,Any,Any,Any,Any,Any,Any,Any,Any" accessiblewhenalive="True" commonness="10">
+    <Item identifier="divingsuit" equip="true"></Item>
+    <Item identifier="wallet"></Item>
+    <Item identifier="stampa"/>
+    <Item identifier="stampe"/>
+    <Item identifier="clipboard"></Item>
+    <Item identifier="docEng"/>
+    <Item identifier="docbasic"/>
+    <Item identifier="drawMoloch"/>
+  </inventory>
+  <inventory arrowslot="9" slots="Card,Headset,Head,InnerClothes,OuterClothes,LeftHand,RightHand,Any,Any,Any,Any,Any,Any,Any,Any,Any,Any" accessiblewhenalive="True" commonness="10">
+    <Item identifier="divingsuit" equip="true"></Item>
+    <Item identifier="wallet"></Item>
+    <Item identifier="stampd"/>
+    <Item identifier="clipboard"></Item>
+    <Item identifier="docEng"/>
+    <Item identifier="docbasic"/>
+    <Item identifier="screwdriver"/>
+  </inventory>
+  <inventory arrowslot="9" slots="Card,Headset,Head,InnerClothes,OuterClothes,LeftHand,RightHand,Any,Any,Any,Any,Any,Any,Any,Any,Any,Any" accessiblewhenalive="True" commonness="10">
+    <Item identifier="divingsuit" equip="true"></Item>
+    <Item identifier="wallet"></Item>
+    <Item identifier="stampa"/>
+    <Item identifier="stampc"/>
+    <Item identifier="clipboard"></Item>
+    <Item identifier="docSecretC"/>
+    <Item identifier="docSct"/>
+    <Item identifier="docbasic"/>
+    <Item identifier="drawUnknown"/>
+  </inventory>
+  <inventory arrowslot="9" slots="Card,Headset,Head,InnerClothes,OuterClothes,LeftHand,RightHand,Any,Any,Any,Any,Any,Any,Any,Any,Any,Any" accessiblewhenalive="True" commonness="10">
+    <Item identifier="divingsuit" equip="true"></Item>
+    <Item identifier="wallet"></Item>
+    <Item identifier="stampb"/>
+    <Item identifier="stampd"/>
+    <Item identifier="clipboard"></Item>
+    <Item identifier="docSecretC"/>
+    <Item identifier="docSct"/>
+    <Item identifier="docScorpion"/>
+    <Item identifier="drawScorpionBoi"/>
+  </inventory>
+  <inventory arrowslot="9" slots="Card,Headset,Head,InnerClothes,OuterClothes,LeftHand,RightHand,Any,Any,Any,Any,Any,Any,Any,Any,Any,Any" accessiblewhenalive="True" commonness="10">
+    <Item identifier="wallet"></Item>
+    <Item identifier="stampc"/>
+    <Item identifier="stampe"/>
+    <Item identifier="clipboard"></Item>
+    <Item identifier="docNov"/>
+    <Item identifier="docbasic"/>
+    <Item identifier="flashlight" equip="true"></Item>
+    <Item identifier="batterycell"/>
+  </inventory>
+  <inventory arrowslot="9" slots="Card,Headset,Head,InnerClothes,OuterClothes,LeftHand,RightHand,Any,Any,Any,Any,Any,Any,Any,Any,Any,Any" accessiblewhenalive="True" commonness="10">
+    <Item identifier="clipboard"></Item>
+    <Item identifier="docMed"/>
+    <Item identifier="docbasic"/>
+    <Item identifier="plasticbag" equip="true"></Item>
+  </inventory>
+</Character>

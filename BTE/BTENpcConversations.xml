@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Conversations identifier="BTEConversation" Language="English">
+
+<!-- Personality traits -->
+<PersonalityTrait name="Professional" alloweddialogtags="professional,none" commonness="1"/>
+<PersonalityTrait name="Laid-back" alloweddialogtags="laid-back,none" commonness="1"/>
+<PersonalityTrait name="Rude" alloweddialogtags="rude,none" commonness="1"/>
+<PersonalityTrait name="Tough" alloweddialogtags="tough,none" commonness="1"/>
+<PersonalityTrait name="Joker" alloweddialogtags="joker,none" commonness="0.5"/>
+<PersonalityTrait name="Broken English" alloweddialogtags="brokenenglish" commonness="0.5"/>
+<PersonalityTrait name="Fearful" alloweddialogtags="fearful,none" commonness="0.5"/>
+<PersonalityTrait name="Crazy" alloweddialogtags="crazy,none" commonness="0.5"/>
+
+<Conversation line="Somebody fucking kill me." speaker="0" >
+<Conversation line="Sure!" speaker="1" speakertags="rude,crazy"/>
+</Conversation>
+
+<Override>
+<Conversation line="Ever seen what happens to a human body when it's exposed to the pressure outside?" speaker="0" speakertags="fearful" maxintensity="0.2">
+	<Conversation line="You're going to see soon." speaker="0" flags="Psychosis">
+		<Conversation line="Yes, I'm talking to you." speaker="0" flags="Psychosis"/>
+	</Conversation>
+	<Conversation line="I can imagine." speaker="1">
+		<Conversation line="Still can't get the image out of my head." speaker="0">
+			<Conversation line="A bag of meat and bones under a hydraulic press, that's the only way I can describe it." speaker="0"/>
+			<Conversation line="The loving embrace of Europa." speaker="2" speakertags="crazy"/>
+			<Conversation line="Ugh... lovely." speaker="1" />
+		</Conversation>
+	</Conversation>
+</Conversation>
+</Override>
+
+<Conversation line="Nukes use uranium, right? what if we put a fuel rod in a railgun shell?" speaker="0">
+   <Conversation line="That is not how any of that works." speaker="1" />
+</Conversation>
+
+<Conversation line="I heard rumors that husks might be infesting shuttles." speaker="0">
+   <Conversation line="I'd expect to see a lot more infected rocks if that were even remotely possible." speaker="1" />
+</Conversation>
+</Conversations>
