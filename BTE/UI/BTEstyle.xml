@@ -915,6 +915,14 @@
       <Sprite name="CharacterHealthBarSlider" texture="Content/UI/InventoryUIAtlas.png" tile="false" sourcerect="406,381,8,8" origin="0.5,0.5" />
     </Slider>
   </CharacterHealthBarSlider>
+ <CharacterHealthBar color="255,255,255,255">
+    <GUIFrame color="255,255,255,255">
+      <Sprite name="CharacterHealthBarBG" texture="Content/UI/InventoryUIAtlas.png" tile="false" sourcerect="288,366,107,67" slice="329,384,390,413" origin="0.5,0.5" />
+    </GUIFrame>
+    <Slider color="255,255,255,255">
+      <Sprite name="CharacterHealthBarSlider" texture="Content/UI/InventoryUIAtlas.png" tile="false" sourcerect="288,434,107,68" slice="330,453,390,481"  origin="0.5,0.5" />
+    </Slider>
+  </CharacterHealthBar>
   <CharacterHealthBarBG color="255,255,255,255">
     <Sprite name="CharacterHealthBarBG" texture="Content/UI/InventoryUIAtlas.png" tile="false" sourcerect="265,373,131,65" slice="329,384,389,444" origin="0.5,0.5" />
   </CharacterHealthBarBG>
