@@ -1,0 +1,102 @@
+﻿<Ragdoll type="tigerthresher" canentersubmarine="True" canwalk="False" texture="" spritesheetorientation="0" limbscale="0.5" jointscale="0.5" texturescale="1" colliderheightfromfloor="45" impacttolerance="50" draggable="True" mainlimb="Torso">
+  <collider radius="50" height="185" name="Main Collider" width="0" />
+  <!-- head -->
+  <limb id="0" radius="12" height="100" type="Head" steerforce="1" name="Limb 0" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" width="0" density="10" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" notes="" healthindex="0" friction="0.3" restitution="0.05">
+    <deformablesprite texture="Content/Characters/Legacytigerthresher/Legacytigerthresher.png" sourcerect="371,15,66,136" depth="0.02" origin="0.5,0.5"/>
+	<attack context="Outside" targettype="Character" hitdetectiontype="Distance" afterattack="Pursue" reverse="False" range="150" damagerange="150" duration="0.5" cooldown="0.3" secondarycooldown="0.3" cooldownrandomfactor="0.1" structuredamage="0.1" itemdamage="0.1" onlyhumans="False" force="40" torque="60" applyforcesonlyonce="False" targetimpulse="0" targetimpulseworld="0,0" targetforce="-50" targetforceworld="0,0" severlimbsprobability="0" priority="1" structuresoundtype="StructureSlash" targetlimbtype="None">
+      <Affliction identifier="bitewound" strength="0.6"/>
+      <Affliction identifier="damagehead" strength="0.2"/>
+	  <Affliction identifier="damagechest" strength="0.2"/>
+	  <Affliction identifier="internaldamage" strength="0.2"/>
+    </attack>
+	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,damageorgan" afflictionidentifiers="internaldamage,damagechest" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+    <damagedsprite texture="Content/Characters/Legacytigerthresher/damagedtigerthresher.png" sourcerect="371,15,66,136" origin="0.5,0.5" />
+  </limb>
+  <!-- lower yaw -->
+  <limb id="1" width="16" height="103" name="Limb 1" type="None" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="0" radius="0" density="10" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" notes="" healthindex="0" friction="0.3" restitution="0.05">
+    <deformablesprite texture="Content/Characters/Legacytigerthresher/Legacytigerthresher.png" sourcerect="391,169,28,110" depth="0.025" origin="0.5,0.5"/>
+	<attack context="NotDefined" targettype="Character" hitdetectiontype="Distance" afterattack="Pursue" reverse="False" range="50" damagerange="100" duration="0.5" cooldown="0.3" secondarycooldown="0.3" cooldownrandomfactor="0.1" structuredamage="0.1" itemdamage="0.1" onlyhumans="False" force="40" torque="60" applyforcesonlyonce="False" targetimpulse="0" targetimpulseworld="0,0" targetforce="-50" targetforceworld="0,0" severlimbsprobability="0.01" priority="0" structuresoundtype="StructureSlash" targetlimbtype="None">
+      <Affliction identifier="bitewound" strength="0.6"/>
+      <Affliction identifier="damagehead" strength="0.2"/>
+	  <Affliction identifier="damagechest" strength="0.2"/>
+	  <Affliction identifier="internaldamage" strength="0.2"/>
+    </attack>
+	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,damageorgan" afflictionidentifiers="internaldamage,damagechest" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+    <damagedsprite texture="Content/Characters/Legacytigerthresher/damagedtigerthresher.png" sourcerect="391,169,28,110" origin="0.5,0.5" />
+  </limb>
+  <!-- body front -->
+  <limb id="2" radius="50" height="185" type="Torso" steerforce="0.1" name="Limb 2" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" width="0" density="10" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" notes="" healthindex="0" friction="0.3" restitution="0.05">
+    <deformablesprite texture="Content/Characters/Legacytigerthresher/Legacytigerthresher.png" sourcerect="251,0,113,285" depth="0.016" origin="0.6,0.5" subdivisions="5,5">
+      <spritedeformation type="bendjoint" resolution="5,5" sync="-1" typename="bendjoint" blendmode="Add" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" maxrotation="30" strength="1" />
+    </deformablesprite>
+	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage," afflictionidentifiers="internaldamage,damagehead" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+    <damagedsprite texture="Content/Characters/Legacytigerthresher/damagedtigerthresher.png" sourcerect="251,0,113,285" origin="0.6,0.5" />
+  </limb>
+  <!-- body rear -->
+  <limb id="3" radius="40" height="175" type="Tail" name="Limb 3" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="0" width="0" density="10" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" notes="" healthindex="0" friction="0.3" restitution="0.05">
+    <deformablesprite texture="Content/Characters/Legacytigerthresher/Legacytigerthresher.png" sourcerect="0,180,125,261" depth="0.015" origin="0.6,0.5" subdivisions="5,5">
+      <spritedeformation type="bendjoint" resolution="5,5" sync="-1" typename="bendjoint" blendmode="Add" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" maxrotation="30" strength="1" />
+    </deformablesprite>
+	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,,damageorgan" afflictionidentifiers="damagechest,damagehead" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+    <damagedsprite texture="Content/Characters/Legacytigerthresher/damagedtigerthresher.png" sourcerect="0,180,125,261" origin="0.6,0.5" />
+  </limb>
+  <!-- tail -->
+  <limb id="4" radius="17" height="135" type="Tail" name="Limb 4" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="0" width="0" density="10" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" notes="" healthindex="0" friction="0.3" restitution="0.05">
+    <deformablesprite texture="Content/Characters/Legacytigerthresher/Legacytigerthresher.png" sourcerect="0,0,87,172" depth="0.02" origin="0.35,0.5" subdivisions="5,5">
+      <spritedeformation type="bendjoint" resolution="5,5" sync="-1" typename="bendjoint" blendmode="Add" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" maxrotation="30" strength="1" />
+    </deformablesprite>
+	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,,damageorgan" afflictionidentifiers="damagechest,damagehead" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+    <damagedsprite texture="Content/Characters/Legacytigerthresher/damagedtigerthresher.png" sourcerect="0,0,87,172" origin="0.35,0.5" />
+  </limb>
+  <!-- tail tip -->
+  <limb id="5" radius="15" height="170" type="Tail" name="Limb 5" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="0" width="0" density="10" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" notes="" healthindex="0" friction="0.3" restitution="0.05">
+    <deformablesprite texture="Content/Characters/Legacytigerthresher/Legacytigerthresher.png" sourcerect="150,222,48,211" depth="0.021" origin="0.35,0.5" subdivisions="5,5">
+      <spritedeformation type="bendjoint" resolution="5,5" sync="-1" typename="bendjoint" blendmode="Add" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" maxrotation="30" strength="1" />
+    </deformablesprite>
+	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,,damageorgan" afflictionidentifiers="damagechest,damagehead" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+    <damagedsprite texture="Content/Characters/Legacytigerthresher/damagedtigerthresher.png" sourcerect="150,222,48,211" origin="0.35,0.5" />
+  </limb>
+  <!-- front fins -->
+  <limb id="6" width="50" height="200" name="Limb 6" type="None" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="0" radius="0" density="10" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" notes="" healthindex="0" friction="0.3" restitution="0.05">
+    <deformablesprite texture="Content/Characters/Legacytigerthresher/Legacytigerthresher.png" sourcerect="120,5,90,205" depth="0.008" origin="0.7,0.5" subdivisions="5,5">
+      <spritedeformation type="noise" resolution="5,5" frequency="0.1" amplitude="0.45" changespeed="2" blendmode="Add" sync="-1" typename="noise" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" strength="1" maxrotation="90" />
+      <spritedeformation type="custom" resolution="5,5" frequency="0" amplitude="1" blendmode="Multiply" row0="0,0 0,0 0,0 0,0 0,0" row1="0.5,0 0.5,0 0.5,0 0.5,0 0,0" row2="0.75,0 0.75,0 1,0 0.75,0 0,0" row3="0,0 0.5,0 0.5,0 0.5,0 0.75,0" row4="0.1,0 0.1,0 0.1,0 0.1,0 0.25,0" sync="-1" typename="custom" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" strength="1" maxrotation="90" />
+    </deformablesprite>
+	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,,damageorgan" afflictionidentifiers="damagechest,damagehead" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+    <damagedsprite texture="Content/Characters/Legacytigerthresher/damagedtigerthresher.png" sourcerect="120,5,90,205" origin="0.7,0.5" />
+  </limb>
+  <!-- back fins -->
+  <limb id="7" width="25" height="100" name="Limb 7" type="None" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="0" radius="0" density="10" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" notes="" healthindex="0" friction="0.3" restitution="0.05">
+    <deformablesprite texture="Content/Characters/Legacytigerthresher/Legacytigerthresher.png" sourcerect="387,304,38,128" depth="0.01" origin="0.7,0.5" subdivisions="5,5">
+      <spritedeformation type="noise" resolution="5,5" frequency="0.1" amplitude="0.5" changespeed="2" blendmode="Add" sync="-1" typename="noise" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" strength="1" maxrotation="90" />
+      <spritedeformation type="custom" resolution="5,5" frequency="0" amplitude="1" blendmode="Multiply" row0="0,0 0,0 0,0 0,0 0,0" row1="0.5,0 0.5,0 0.5,0 0.5,0 0,0" row2="0.75,0 0.75,0 1,0 0.75,0 0,0" row3="0,0 0.5,0 0.5,0 0.5,0 0.75,0" row4="0.1,0 0.1,0 0.1,0 0.1,0 0.25,0" sync="-1" typename="custom" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" strength="1" maxrotation="90" />
+    </deformablesprite>
+	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,,damageorgan" afflictionidentifiers="damagechest,damagehead" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+    <damagedsprite texture="Content/Characters/Legacytigerthresher/damagedtigerthresher.png" sourcerect="387,304,38,128" origin="0.7,0.5" />
+  </limb>
+  <!-- long "fins" -->
+  <limb id="8" width="10" height="270" ignorecollisions="True" name="Limb 8" type="None" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="0" radius="0" density="10" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" notes="" healthindex="0" friction="0.3" restitution="0.05">
+    <deformablesprite texture="Content/Characters/Legacytigerthresher/Legacytigerthresher.png" sourcerect="217,10,26,275" depth="0.01" origin="0.5,0.5" subdivisions="5,5">
+      <spritedeformation type="noise" resolution="5,5" frequency="0.1" amplitude="0.5" changespeed="2" blendmode="Add" sync="-1" typename="noise" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" strength="1" maxrotation="90" />
+      <spritedeformation type="custom" resolution="5,5" frequency="0" amplitude="1" blendmode="Multiply" row0="0,0 0,0 0,0 0,0 0,0" row1="0.5,0 0.5,0 0.5,0 0.5,0 0,0" row2="0.75,0 0.75,0 1,0 0.75,0 0,0" row3="0,0 0.5,0 0.5,0 0.5,0 0.75,0" row4="0.1,0 0.1,0 0.1,0 0.1,0 0.25,0" sync="-1" typename="custom" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" strength="1" maxrotation="90" />
+    </deformablesprite>
+	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,,damageorgan" afflictionidentifiers="damagechest,damagehead" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="false"/>
+    <damagedsprite texture="Content/Characters/Legacytigerthresher/damagedtigerthresher.png" sourcerect="217,10,26,275" origin="0.5,0.5" />
+  </limb>
+  <!-- body to head -->
+  <joint limb1="0" limb1anchor="-13.63663,-57.75119" limb2="2" limb2anchor="-33.36212,90.85175" lowerlimit="-11.00002" upperlimit="10" name="Joint 0 - 2" canbesevered="True" limitenabled="True" stiffness="0.25" />
+  <!-- body to lower yaw -->
+  <joint limb1="1" limb1anchor="0,-39" limb2="2" limb2anchor="4.631289,115" lowerlimit="-1.000022" upperlimit="22" name="Joint 1 - 2" canbesevered="True" limitenabled="True" stiffness="0.25" />
+  <!-- body front to body rear -->
+  <joint limb1="2" limb1anchor="-12,-100" limb2="3" limb2anchor="0,90" lowerlimit="-10" upperlimit="30" name="Joint 2 - 3" canbesevered="True" limitenabled="True" stiffness="0.25" />
+  <!-- body rear to tail -->
+  <joint limb1="3" limb1anchor="-7,-113" limb2="4" limb2anchor="8,80" lowerlimit="-30" upperlimit="30" name="Joint 3 - 4" canbesevered="True" limitenabled="True" stiffness="0.25" />
+  <!-- tail to tail tip -->
+  <joint limb1="4" limb1anchor="0,-71" limb2="5" limb2anchor="4,95" lowerlimit="-10" upperlimit="30" name="Joint 4 - 5" canbesevered="True" limitenabled="True" stiffness="0.25" />
+  <!-- body to front fin -->
+  <joint limb1="2" limb1anchor="4,13" limb2="6" limb2anchor="6,89" lowerlimit="-50" upperlimit="0" name="Joint 2 - 6" canbesevered="True" limitenabled="True" stiffness="0.25" />
+  <!-- body to back fin -->
+  <joint limb1="3" limb1anchor="11,60" limb2="7" limb2anchor="-2,57" lowerlimit="-50" upperlimit="0" name="Joint 3 - 7" canbesevered="True" limitenabled="True" stiffness="0.25" />
+  <!-- body to long -->
+  <joint limb1="3" limb1anchor="-3,-45" limb2="8" limb2anchor="-8,132" lowerlimit="-30" upperlimit="0" name="Joint 3 - 8" canbesevered="True" limitenabled="True" stiffness="0.25" />
+</Ragdoll>

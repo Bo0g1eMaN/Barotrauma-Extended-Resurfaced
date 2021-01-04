@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Orange Jumpsuit" identifier="orangejumpsuit1" aliases="orangejumpsuit" category="Equipment" tags="smallitem,uniform"
+		cargocontaineridentifier="metalcrate" scale="0.5" fireproof="true" impactsoundtag="impact_soft">
+	<PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <Price locationtype="Research" buyprice="50" />
+    <Price locationtype="Military" buyprice="50" />
+    <Price locationtype="City" buyprice="50" />
+    <Price locationtype="Outpost" buyprice="100" />
+	<Price locationtype="Mine" buyprice="100" />
+	
+	<InventoryIcon texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="0,150,128,107" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="13,446,208,71" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="18" friction="0.8" restitution="0.01" />
+    <Deconstruct time="15">
+      <Item identifier="organicfiber"/>
+	  <Item identifier="organicfiber"/>
+    </Deconstruct>
+	<Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite texture="engineer_torso_[GENDER]_1.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_torso_[GENDER]_1.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_torso_[GENDER]_1.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_torso_[GENDER]_1.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_torso_[GENDER]_1.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_legs_[GENDER]_1.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_legs_[GENDER]_1.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_legs_[GENDER]_1.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_legs_[GENDER]_1.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_legs_[GENDER]_1.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_legs_[GENDER]_1.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_legs_[GENDER]_1.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0,360" afflictiontypes="damage" damagemultiplier="0.9"/>
+	  <damagemodifier armorsector="0,360" afflictiontypes="bleeding" damagemultiplier="0.9"/>
+      <damagemodifier armorsector="0,360" afflictiontypes="electrical" damagemultiplier="0.6"/>
+	  <damagemodifier armorsector="0,360" afflictiontypes="heat" damagemultiplier="0.7"/>
+	  <damagemodifier armorsector="0,360" afflictiontypes="cold" damagemultiplier="0.6"/>
+    </Wearable>
+	<ItemContainer capacity="3">
+      <Containable items="smallitem" excludeditems="uniform,bag"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item name="Orange Jumpsuit" identifier="orangejumpsuit2" category="Equipment" tags="smallitem,uniform"
+		cargocontaineridentifier="metalcrate" scale="0.5" fireproof="true" impactsoundtag="impact_soft">
+	<PreferredContainer primary="crewcab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <Price locationtype="Research" buyprice="50" />
+    <Price locationtype="Military" buyprice="50" />
+    <Price locationtype="City" buyprice="50" />
+    <Price locationtype="Outpost" buyprice="100" />
+	<Price locationtype="Mine" buyprice="100" />
+	
+	<InventoryIcon texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="384,27,127,101" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="227,452,202,65" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="18" friction="0.8" restitution="0.01" />
+    <Deconstruct time="15">
+      <Item identifier="organicfiber"/>
+	  <Item identifier="organicfiber"/>
+    </Deconstruct>
+	<Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite texture="engineer_torso_[GENDER]_2.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_torso_[GENDER]_2.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_torso_[GENDER]_2.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_torso_[GENDER]_2.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_torso_[GENDER]_2.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_legs_[GENDER]_2.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_legs_[GENDER]_2.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_legs_[GENDER]_2.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_legs_[GENDER]_2.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_legs_[GENDER]_2.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_legs_[GENDER]_2.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="engineer_legs_[GENDER]_2.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0,360" afflictiontypes="damage" damagemultiplier="0.9"/>
+	  <damagemodifier armorsector="0,360" afflictiontypes="bleeding" damagemultiplier="0.9"/>
+      <damagemodifier armorsector="0,360" afflictiontypes="electrical" damagemultiplier="0.6"/>
+	  <damagemodifier armorsector="0,360" afflictiontypes="heat" damagemultiplier="0.7"/>
+	  <damagemodifier armorsector="0,360" afflictiontypes="cold" damagemultiplier="0.6"/>
+    </Wearable>
+	<ItemContainer capacity="3">
+      <Containable items="smallitem" excludeditems="uniform,bag"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item name="Utility Belt" identifier="toolbox" category="Equipment" tags="smallitem" scale="0.4"
+    description="The utility tool belt offers some extra space for all the tools you might need out there."
+    fireproof="true" cargocontaineridentifier="metalcrate">
+
+    <Price locationtype="Research" buyprice="50"/>
+    <Price locationtype="Military" buyprice="50"/>
+    <Price locationtype="City" buyprice="50"/>
+    <Price locationtype="Outpost" buyprice="100"/>
+
+    <Sprite texture="Mods/BTE/Items/Jobgear/itempacks.png" sourcerect="13,170,99,56" depth="0.6"/>
+    <Body width="50" height="17" density="19" restitution="0.01"/>
+	<Deconstruct time="15">
+      <Item identifier="organicfiber"/>
+    </Deconstruct>
+    <Wearable slots="OuterClothes">
+      <sprite name="Utility Torso" texture="Mods/BTE/Items/Jobgear/itempacks.png" limb="Torso" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true"/>
+    </Wearable>
+	
+	<ItemContainer capacity="12">
+      <Containable identifiers="smallitem" excludeditems="uniform,bag"/>
+    </ItemContainer>
+  </Item>
+</Items>

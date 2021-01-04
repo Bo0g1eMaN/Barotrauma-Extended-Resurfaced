@@ -14,12 +14,12 @@
 	<Deconstruct time="15">
       <Item identifier="organicfiber"/>
     </Deconstruct>
-    <Wearable slots="OuterClothes">
+    <Wearable slots="Bag">
       <sprite name="Medical Torso" texture="Mods/BTE/Items/Jobgear/itempacks.png" limb="Torso" inherittexturescale="true" inheritorigin="true" sourcerect="121,0,119,257"/>
     </Wearable>
 	
 	<ItemContainer capacity="12">
-      <Containable items="chem,medical" excludeditems="uniform,bag"/>
+      <Containable items="chem,medical" excludeditems="uniform,bag,toolbelt"/>
     </ItemContainer>
   </Item>
 </Items>

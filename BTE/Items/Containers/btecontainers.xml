@@ -1,6 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Items>
+
+<Item name="Small Steel Cabinet" identifier="smallsteelcabinet" tags="locker,container" linkable="true" pickdistance="150" scale="0.5">
+    <Sprite texture="Mods/BTE/Items/Containers/Lockers.png" depth="0.84" sourcerect="0,0,169,259" origin="0.5,0.5" />
+    <ItemContainer capacity="9" slotsperrow="3" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+	  <GuiFrame relativesize="0.25,0.3" anchor="Center" style="ItemUI" />
+	  <RequiredItem items="idcard" type="Picked" ignoreineditor="true" msg="ItemMsgUnauthorizedAccess" />
+      <Containable items="smallitem,mediumitem" />
+    </ItemContainer>
+  </Item>
+  <Item name="Small Windowed Steel Cabinet" identifier="smallwindowedsteelcabinet" tags="locker,container" linkable="true" pickdistance="150" scale="0.5">
+    <Sprite texture="Mods/BTE/Items/Containers/Lockers.png" depth="0.84" sourcerect="173,0,169,259" origin="0.5,0.5" />
+    <ItemContainer capacity="9" slotsperrow="3" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+	  <GuiFrame relativesize="0.18,0.25" anchor="Center" style="ItemUI" />
+	  <RequiredItem items="idcard" type="Picked" ignoreineditor="true" msg="ItemMsgUnauthorizedAccess" />
+      <Containable items="smallitem,mediumitem" />
+    </ItemContainer>
+  </Item>
+
+
+
+
+ <Item name="Item Chute" identifier="itemchutevertical" description="Allows the sending of items through hulls" resizehorizontal="true" scale="0.5" spritecolor="125, 125, 125" tags="container" category="Misc">
+    <sprite texture="Content/Map/DecorativeVentilation.png" sourcerect="512,512,96,96" depth="0.92" origin="0.5,0.5" />
+<ItemContainer capacity="1" canbeselected="true" hideitems="true" msg="ItemMsgPickUpSelect"/>
+  </Item>
+ <Item name="Item Chute 90 Deg" identifier="itemchutehoriziontal" description="Allows the sending of items through hulls" resizevertical="true" scale="0.5" spritecolor="125,125,125" tags="container" category="Misc">
+    <sprite texture="Content/Map/DecorativeVentilation.png" sourcerect="608,512,96,96" depth="0.92" origin="0.5,0.5" />
+<ItemContainer capacity="1" canbeselected="true" hideitems="true" msg="ItemMsgPickUpSelect"/>
+  </Item>
+
 	
 	<Item name="Refrigerator" identifier="fridge" tags="container" linkable="true" pickdistance="150" waterproof="true">
 		<Sprite texture="Mods/BTE/Items/Containers/staticContainers.png" depth="0.84" sourcerect="140,186,71,135" />
@@ -73,6 +103,35 @@
 			<RequiredItem identifiers="crowbar" type="Picked" ignoreineditor="true" msg="ItemMsgUnauthorizedAccess" />
 		</ItemContainer>
 	</Item>
+
+<Item name="Standard Shipping Box" aliases="shippingbox" identifier="standardshippingbox" description="Requires a Utility Knife to be cut open" tags="container,bigitem" linkable="true">
+		<Sprite texture="dynamicContainers.png" sourcerect="0,2,60,60" depth="0.54" origin="0.5,0.5" />
+    <Body width="56" height="56" density="15" friction="0.95"/>
+
+<Holdable slots="RightHand+LeftHand" holdpos="0,-70" aimpos="15,-50" handle1="-25,14" handle2="25,14">
+
+		<ItemContainer capacity="20" slotsperrow="10" hideitems="true" msg="ItemMsgInteractSelect">
+			<GuiFrame relativesize="0.3,0.45" anchor="Center" style="ItemUI" />
+			<RequiredItem identifiers="utilityknife" type="Picked" ignoreineditor="true" msg="ItemMsgUnauthorizedAccess" />
+		</ItemContainer>
+
+</Holdable>
+	</Item>
+	
+	<Item name="Workshop Shipping Box" aliases="workshopbox" identifier="workshopshippingbox" description="Requires a Utility Knife to be cut open" tags="container,bigitem" linkable="true">
+		<Sprite texture="dynamicContainers.png" sourcerect="122,124,60,60" depth="0.54" origin="0.5,0.5" />
+    <Body width="56" height="56" density="15" friction="0.95"/>
+
+<Holdable slots="RightHand+LeftHand" holdpos="0,-70" aimpos="15,-50" handle1="-25,14" handle2="25,14">
+
+		<ItemContainer capacity="20" slotsperrow="10" hideitems="true" msg="ItemMsgInteractSelect">
+			<GuiFrame relativesize="0.3,0.45" anchor="Center" style="ItemUI" />
+			<RequiredItem identifiers="utilityknife" type="Picked" ignoreineditor="true" msg="ItemMsgUnauthorizedAccess" />
+		</ItemContainer>
+
+</Holdable>
+	</Item>
+
 	<Item name="Trash Bin" identifier="trashbin" tags="container" linkable="true" pickdistance="150">
 		<Sprite texture="staticContainers.png" sourcerect="104,323,40,47" depth="0.78" origin="0.5,0.5" />
 		<ItemContainer capacity="9" slotsperrow="3" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
@@ -235,4 +294,142 @@
 			<Containable items="smallitem,mediumitem"/>
 		</ItemContainer>
 	</Item>
+
+ <Item
+    name="Steel Cabinet" identifier="legacysteelcabinet" category="Legacy"
+	Tags="cntnr">
+    
+    <Sprite texture="Mods/BTE/Items/Containers/cabinets.png" sourcerect="0,0,128,128" depth="0.79"/>
+	
+	<Controller direction="None" canbepicked="true">
+	  <sound file="Mods/BTE/Items/Containers/Cabinet.ogg" type="OnUse" range="500"/>
+    </Controller>
+
+    <ItemContainer capacity="25" canbeselected="true" hideitems="true">
+	  <Containable identifier="smallitem,meditem,sawammo"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Steel Locker" identifier="legacysteellocker" category="Legacy"
+	Tags="cntnr">
+    
+    <Sprite texture="staticContainers.png" sourcerect="0,188,45,128" depth="0.78"/>
+	
+	<Controller direction="None" canbepicked="true">
+      <sound file="Mods/BTE/Items/Containers/Locker.ogg" type="OnUse" range="750"/>
+    </Controller>
+	
+    <ItemContainer capacity="15" slotsperrow="5" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+      <Containable identifier="smallitem,meditem,bigitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Secure Locker" identifier="legacysecurelocker" category="Legacy"
+	Tags="cntnr"
+	waterproof="true"
+	fireproof="true">
+    
+    <Sprite texture="staticContainers.png" sourcerect="46,188,45,128" depth="0.78"/>
+	
+	<Controller direction="None" canbepicked="true">
+      <sound file="Mods/BTE/Items/Containers/Locker.ogg" type="OnUse" range="750"/>
+    </Controller>
+	
+    <ItemContainer capacity="15" slotsperrow="5" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+      <RequiredItem identifier="ID Card" type="Picked" msg="UNAUTHORIZED ACCESS"/>
+	  <Containable identifier="smallitem,mediumitem,bigitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Small Locker" identifier="legacysmalllocker" category="Legacy"
+	Tags="cntnr">
+    
+    <Sprite texture="staticContainers.png" sourcerect="92,186,45,64" depth="0.78"/>
+	
+	<Controller direction="None" canbepicked="true">
+      <sound file="Mods/BTE/Items/Containers/Locker.ogg" type="OnUse" range="650"/>
+    </Controller>
+	
+    <ItemContainer capacity="10" slotsperrow="2" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+      <Containable identifier="smallitem,meditem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Steel Safe" identifier="legacysteelsafe" category="Legacy"
+	Tags="cntnr"
+	waterproof="true"
+	fireproof="true">
+    
+    <Sprite texture="staticContainers.png" sourcerect="92,251,45,64" depth="0.78"/>
+	
+	<Controller direction="None" canbepicked="true">
+      <sound file="Mods/BTE/Items/Containers/Locker.ogg" type="OnUse" range="650"/>
+    </Controller>
+	
+    <ItemContainer capacity="10" slotsperrow="5" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+      <RequiredItem name="ID Card" type="Picked" msg="UNAUTHORIZED ACCESS"/>
+	  <Containable identifier="smallitem,meditem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Top Cabinet" identifier="legacytopcabinet" category="Legacy"
+	aliases="Medicine Cabinet,Toxic Cabinet"
+	Tags="cntnr">
+
+    <Sprite texture="staticContainers.png" sourcerect="286,315,48,64" depth="0.78"/>
+	
+	<Controller direction="None" canbepicked="true">
+      <sound file="Mods/BTE/Items/Containers/Cabinet.ogg" type="OnUse" range="500"/>
+    </Controller>
+
+    <ItemContainer capacity="20" slotsperrow="10" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+      <Containable identifier="smallitem,medical,chem,Flour,Food Can,Frying Pan"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Secure Top Cabinet" identifier="legacysecuretopcabinet" category="Legacy"
+	Tags="cntnr"
+	waterproof="true"
+	fireproof="true">
+
+    <Sprite texture="staticContainers.png" sourcerect="335,315,48,64" depth="0.78"/>
+	
+	<Controller direction="None" canbepicked="true">
+      <sound file="Mods/BTE/Items/Containers/Cabinet.ogg" type="OnUse" range="500"/>
+    </Controller>
+
+    <ItemContainer capacity="20" slotsperrow="10" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+      <RequiredItem name="ID Card" type="Picked" msg="UNAUTHORIZED ACCESS"/>
+	  <Containable identifier="smallitem,medical,chem,Flour,Food Can,Frying Pan"/>
+    </ItemContainer>
+  </Item>
+
+ <Item
+    name="Metal Footlocker" identifier="metalfootlocker" category="Legacy"
+	Tags="container"
+	waterproof="true"
+	fireproof="true"
+	price="250">
+	
+	<Deconstruct time="10">
+      <Item identifier="steel"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTE/Items/Containers/crates2.png" sourcerect="0,0,79,35" depth="0.54"/>
+
+    <Body width="77" height="33" density="50"/>
+
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-70" aimpos="15,-50" handle1="-30,14" handle2="30,14"/>
+
+
+    <ItemContainer capacity="10" slotsperrow="5" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+      <Containable identifier="smallitem,meditem,bigitem"/>
+    </ItemContainer>
+  </Item>
 	</Items>

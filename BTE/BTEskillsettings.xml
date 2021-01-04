@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SkillSettings
+  SingleRoundSkillGainMultiplier="5.0"
+  SkillIncreasePerRepair="5.0"
+  SkillIncreasePerCprRevive="0.5"
+  SkillIncreasePerRepairedStructureDamage="0.005"
+  SkillIncreasePerSecondWhenSteering="0.005"
+  SkillIncreasePerFabricatorRequiredSkill="0.5"
+  SkillIncreasePerHostileDamage="0.1"
+  SkillIncreasePerSecondWhenOperatingTurret="0.01"
+  SkillIncreasePerFriendlyHealed="0.1"
+  AssistantSkillIncreaseMultiplier="1.50"
+  />

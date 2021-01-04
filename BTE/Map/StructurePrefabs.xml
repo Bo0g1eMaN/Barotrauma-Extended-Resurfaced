@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<prefabs>
+  <!-- BTE STUFF START -->
+  <scaffoldings name="Scaffoldings" identifier="scaffoldings" description="A platform-like structure with collision detection"
+    width="32" height="32" resizehorizontal="true" resizevertical="true" body="true" health="200">
+    <sprite texture="Mods/BTE/Map/roomstuff.png" sourcerect="960,264,64,64" depth="0.061"/>
+    <backgroundsprite texture="Mods/BTE/Map/roomstuff.png" sourcerect="960,199,64,64" depth="0.86"/>
+  </scaffoldings>
+  <steelpanelbgwall name="Steel Panel BG Wall" identifier="steelpanelbgwall" allowattachitems="true" width="64" height="64" resizehorizontal="true" resizevertical="true">
+    <sprite texture="Mods/BTE/Map/roomstuff.png" sourcerect="0,243,518,223" depth="1.0"/>
+  </steelpanelbgwall>
+  <bgglasspanel name="Glass BG Panel" identifier="bgglasspanel" allowattachitems="true" width="64" height="64" resizehorizontal="true" resizevertical="true">
+    <sprite texture="Mods/BTE/Map/roomstuff.png" sourcerect="487,0,235,235" depth="1.05"/>
+  </bgglasspanel>
+  <HazardStripes name="Hazard Stripes" identifier="hazardstripes" allowattachitems="true"
+    width="32" height="32" resizehorizontal="true" resizevertical="true">
+    <sprite texture="Mods/BTE/Map/roomstuff.png" sourcerect="521,244,215,111" depth="0.99"/>
+  </HazardStripes>
+  <CeilingChains name="Ceiling Chains" identifier="ceilingchains" width="32" height="248" resizehorizontal="true">
+    <sprite texture="Mods/BTE/Map/roomstuff.png" sourcerect="0,702,264,248" depth="0.95"/>
+  </CeilingChains>
+  <bunkwall name="Bunk Wall" identifier="bunkwall" width="161" height="72">
+    <sprite texture="Mods/BTE/Map/roomstuff.png" sourcerect="0,951,161,72" depth="0.81"/>
+  </bunkwall>
+  <!-- BTE STUFF END -->
+</prefabs>

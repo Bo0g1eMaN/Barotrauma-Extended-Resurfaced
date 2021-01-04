@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="English" nowhitespace="false" translatedname="English">
   
+<itemmsgrewirepliers>[[use]] Rewire (Plier)</itemmsgrewirepliers>
   <!-- Room names -->
   <roomname.generatorroom>Generator room</roomname.generatorroom>
   <roomname.engineroom1>Engine compartment A</roomname.engineroom1>
@@ -53,17 +54,19 @@
   <!-- Job -->
 <jobname.officer>Officer</jobname.officer>
 <jobdescription.officer>The officer is the second in command aboard the sub and normally pilots or takes charge of the crew during missions.</jobdescription.officer>
-<jobname.officer1>Crew Chief</jobname.officer1>
+<jobname.officer1>XO</jobname.officer1>
 <jobname.officer2>Enforcer</jobname.officer2>
-<jobname.officer3>XO</jobname.officer3>
-<jobdescription.officer1>Crew Chiefs make sure everything on the sub is running smoothly and efficiently.</jobdescription.officer1>
+<jobname.officer3>Crew Chief</jobname.officer3>
+<jobname.assistant>Ensign</jobname.assistant>
+<jobdescription.assistant>Ensign's are inexperienced officer's stationed on other vessels to learn how crews operate. They tend to pick up skills very quickly to earn the respect of the crew.</jobdescription.assistant>
+<jobdescription.officer3>Crew Chiefs make sure everything on the sub is running smoothly and efficiently.</jobdescription.officer3>
 <jobdescription.officer2>Enforcers are normally battle hardened security officer's promoted to make sure law and order is maintained no matter the cost.</jobdescription.officer2>
-<jobdescription.officer3>The Executive Officer otherwise known as the XO is a senior officer about to become a captain. They know how to command both a security or maintanence team effectively.</jobdescription.officer3>
+<jobdescription.officer1>The Executive Officer otherwise known as the XO is a senior officer about to become a captain. They know how to command both a security or maintanence team effectively.</jobdescription.officer1>
 <jobname.scientist>Scientist</jobname.scientist>
 <jobdescription.scientist>Science personnel are responsible for researching the various wildlife and ecosystems of Europa along with making chemicals that are used for all sorts of problems.</jobdescription.scientist>
 <jobname.scientist1>Biochemist</jobname.scientist1>
 <jobname.scientist2>Xenobiologist</jobname.scientist2>
-<jobdescription.scientist1>Biochemists specialize in making the chemicals needed for onboard experiments and in a pinch make deadly neurotoxins that even the largest beast can't stand up to</jobdescription.scientist1>
+<jobdescription.scientist1>Biochemists specialize in making the chemicals needed for onboard experiments and in a pinch make deadly neurotoxins that even the largest beast can't stand up to.</jobdescription.scientist1>
 <jobdescription.scientist2>Xenobiologists study the Europan ecosystem and wildlife to gain a greater understanding of Humanities new home.</jobdescription.scientist2>
 <jobname.cook>Cook</jobname.cook>
 <jobdescription.cook>Cooks are responsible for keeping the crews bellies full and act as the janitor aboard the sub.</jobdescription.cook>
@@ -118,4 +121,12 @@
   <entityname.iodinepills>Iodine Pills</entityname.iodinepills>
   <entitydescription.iodinepills>These pills can prevent some effects of radiation exposure.</entitydescription.iodinepills>
 
+<displayname.deadmansswitch>Deadmans Switch</displayname.deadmansswitch>
+<displayname.poisonedthresh>Threshcrawl (Poisoned)</displayname.poisonedthresh>
+<displayname.poisonedhusk>Husk Caviar (Under Prepared)</displayname.poisonedhusk>
+<displayname.mysterymeat>Seared Human (Mystery Meat)</displayname.mysterymeat>
+<loadingscreentip>Hats can give minor resistances to damage.</loadingscreentip>
+<loadingscreentip>Bloodloss can help stop poison.</loadingscreentip>
+<loadingscreentip>Eating two different foods can give you a bonus, try fried thresher and fries.</loadingscreentip>
+<loadingscreentip>Bandaging now treats gunshot wounds, animal bites, deep tissue injury and also lacerations.</loadingscreentip>
 </infotexts>

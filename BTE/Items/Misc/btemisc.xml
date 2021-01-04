@@ -1,5 +1,115 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
+<Override>
+  <Item name="" identifier="divingsuit" category="Equipment" tags="diving,deepdiving,provocative" scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy">
+    <Price baseprice="250">
+      <Price locationtype="outpost" multiplier="0.9" minavailable="2"/>
+      <Price locationtype="city" multiplier="0.85" minavailable="4"/>
+      <Price locationtype="research" multiplier="1" minavailable="3"/>
+      <Price locationtype="military" multiplier="1" minavailable="3"/>
+      <Price locationtype="mine" multiplier="1.25" minavailable="5"/>
+    </Price>
+    <PreferredContainer primary="divingsuitcontainer" spawnprobability="0.8"/>
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="rubber" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="0,256,128,128" origin="0.5,0.5" />
+    <!--
+    <Sprite name="Diving Suit" texture="DivingSuit_Item.png" sourcerect="157,0,90,307" depth="0.55" origin="0.4888889,0.5439739" />
+    -->
+    <Sprite name="Diving Suit Item" texture="Content/Items/Diving/DivingSuit_Item.png" sourcerect="0,0,146,120" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="Content/Items/Diving/DivingSuit_Item.png" sourcerect="181,0,75,193" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="Content/Items/Containers/containers.png" sourcerect="724,373,77,209" depth="0.55" origin="-0.12,-0.13" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="Content/Items/Diving/DivingSuit_Item.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
+    <Body radius="45" width="34" density="15" />
+    
+    <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true">
+      <sprite name="Diving Suit Helmet Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true" hideotherwearables="true" sourcerect="5,4,92,94" origin="0.5,0.5">
+        <LightComponent range="200.0" lightcolor="250,224,165,125" powerconsumption="10" IsOn="true">
+          <StatusEffect type="OnWearing" target="This,Character" Voltage="1" setvalue="true">
+            <Conditional IsDead="false" />
+        <RequiredItem items="loadable" type="Contained" />
+          </StatusEffect>
+          <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="1.0,1.0" />
+        </LightComponent>
+      </sprite>
+      <sprite texture="Content/Items/Diving/DivingSuit_Torso.png" limb="Torso" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Content/Items/Diving/DivingSuit_Legs.png" limb="Waist" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Content/Items/Diving/DivingSuit_Torso.png" limb="RightHand" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Content/Items/Diving/DivingSuit_Torso.png" limb="LeftHand" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Content/Items/Diving/DivingSuit_Torso.png" limb="RightArm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Content/Items/Diving/DivingSuit_Torso.png" limb="LeftArm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Content/Items/Diving/DivingSuit_Legs.png" limb="RightThigh" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Content/Items/Diving/DivingSuit_Legs.png" limb="LeftThigh" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Content/Items/Diving/DivingSuit_Legs.png" limb="RightLeg" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Content/Items/Diving/DivingSuit_Legs.png" limb="LeftLeg" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Content/Items/Diving/DivingSuit_Legs.png" limb="RightFoot" sound="footstep_armor_heavy" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Content/Items/Diving/DivingSuit_Legs.png" limb="LeftFoot" sound="footstep_armor_heavy" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" PressureProtection="100.0" SpeedMultiplier="0.6" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
+        <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" />
+        <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.3" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygentank" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-20.0" Condition="-0.5">
+        <Conditional IsDead="false" />
+        <RequiredItem items="weldingfueltank" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-20.0" Condition="-0.5">
+        <Conditional IsDead="false" />
+        <RequiredItem items="incendiumfueltank" type="Contained" />
+        <Affliction identifier="burn" amount="0.1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.3" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygeniteshard" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.1" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.2" setvalue="true" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygeniteshard" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.3" setvalue="true" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds,blunttrauma,lacerations,gunshotwound" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.5" probabilitymultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="radiationsickness" damagemultiplier="0.0" damagesound="LimbArmor"/>
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="huskinfection" damagemultiplier="0.5" probabilitymultiplier="0.5" damagesound="LimbArmor"/>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <ItemContainer capacity="2" hideitems="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,92,27" />
+      <Containable items="oxygensource,weldingfuel" />
+      <StatusEffect type="OnWearing" target="Contained">
+        <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
+        <Conditional condition="lt 5.0" />
+        <Sound file="Content/Items/WarningBeep.ogg" range="500" />
+      </StatusEffect>
+      <Containable items="batterycell" Condition="-0.75"/>
+      <Containable items="batterydie1" Condition="-0.15"/>
+      <Containable items="batterydie2" Condition="-0.25"/>
+    </ItemContainer>
+    <aitarget maxsightrange="1500" />
+  
+  </Item>
+</Override>
 	<Override>
   <Item name="" identifier="guitar" category="Misc" Tags="bigitem" scale="0.5" price="300" isshootable="true"
     description="An old acoustic guitar."
@@ -160,7 +270,8 @@
       <Containable items="docs,wllt"/>
     </ItemContainer>
   </Item>
-  
+
+
   <Item name="Top Secret Cover" identifier="docSecretA" category="Misc" tags="smallitem,docs" scale="0.5"
 		description="This is a cover sheet for classified information.">
 	<Sprite texture="Mods/BTE/Items/Misc/docSecretA.png" sourcerect="583,0,52,73" depth="0.81"/>
@@ -174,6 +285,35 @@
     <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0" msg="ItemMsgPickUpSelect"/>
 	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
   </Item>
+
+  <Item name="Classified Protocol A" identifier="huskprotocola" category="Misc" tags="smallitem,docs" scale="0.5"
+		description="This document is missing letters and words. It seems important.">
+	<Sprite texture="Mods/BTE/Items/Misc/docOutbreakA.png" sourcerect="583,0,52,73" depth="0.81"/>
+    <Body width="42" height="63" density="10.02"/>
+	<Deconstruct time="10">
+      <Item identifier="paperboat"/>
+    </Deconstruct>
+	<ItemComponent canbeselected="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.3,0.8" minsize="392,624" maxsize="581,819" absoluteoffset="0,40" anchor="TopCenter" style="huskpl1"/>
+    </ItemComponent>
+    <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0" msg="ItemMsgPickUpSelect"/>
+	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
+  </Item>
+
+  <Item name="Classified Protocol B" identifier="huskprotocolb" category="Misc" tags="smallitem,docs" scale="0.5"
+		description="This transparent sheet has some letters and loose words in it. It seems important.">
+	<Sprite texture="Mods/BTE/Items/Misc/docOutbreakB.png" sourcerect="583,0,52,73" depth="0.81"/>
+    <Body width="42" height="63" density="10.02"/>
+	<Deconstruct time="10">
+      <Item identifier="paperboat"/>
+    </Deconstruct>
+	<ItemComponent canbeselected="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.3,0.8" minsize="392,624" maxsize="581,819" absoluteoffset="0,40" anchor="TopCenter" style="huskpl2"/>
+    </ItemComponent>
+    <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0" msg="ItemMsgPickUpSelect"/>
+	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
+  </Item>
+
   
   <Item name="Top Secret Cover" identifier="docSecretB" category="Misc" tags="smallitem,docs" scale="0.5"
 		description="This is a cover sheet for classified information.">
@@ -398,7 +538,60 @@
     <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0" msg="ItemMsgPickUpSelect"/>
 	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
   </Item>
+
+   <Item name="Cook Book" identifier="cookbook" category="Misc" tags="smallitem,docs,tool" scale="0.5"
+		description="You can read these things">
+	<Sprite texture="Mods/BTE/Items/Misc/Cookbook.png" sourcerect="532,0,52,73" depth="0.81"/>
+    <Body width="42" height="63" density="10.02"/>
+	<Deconstruct time="10">
+      <Item identifier="doccook2"/>
+	  <Item identifier="doccook"/>
+    </Deconstruct>
+	<ItemComponent canbeselected="false" drawhudwhenequipped="true">
+	<GuiFrame relativesize="0.3,0.8" minsize="392,624" maxsize="581,819" absoluteoffset="0,40" anchor="Center" style="cookbook"/>
+	    </ItemComponent>
+	<ItemComponent canbeselected="false" drawhudwhenequipped="true">
+             <GuiFrame relativesize="0.3,0.8" minsize="392,624" maxsize="581,819" absoluteoffset="0,40" anchor="Left" style="doccul"/>
+			     </ItemComponent>
+			 <ItemComponent canbeselected="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.3,0.8" minsize="392,624" maxsize="581,819" absoluteoffset="0,40" anchor="Right" style="docCook2"/>
+    </ItemComponent>
+	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
+<Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0" msg="ItemMsgPickUpSelect"/>
+  </Item>
   
+  <Item name="Heath and Safety/Cooking Hazards" aliases="Credits to Vantamantacontracontomantex" identifier="docCook2" category="Misc" tags="smallitem,docs" scale="0.5"
+		description="A piece of paper from a Cook Book.">
+	<Sprite texture="Mods/BTE/Items/Misc/Cookbook.png" sourcerect="532,0,52,73" depth="0.81"/>
+    <Body width="42" height="63" density="10.02"/>
+	<Deconstruct time="10">
+      <Item identifier="paperboat"/>
+    </Deconstruct>
+	<ItemComponent canbeselected="false" drawhudwhenequipped="true">
+       
+      <GuiFrame relativesize="0.3,0.8" minsize="392,624" maxsize="581,819" absoluteoffset="0,40" anchor="TopCenter" style="docCook2"/>
+    </ItemComponent>
+    <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0" msg="ItemMsgPickUpSelect"/>
+	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
+  </Item>
+
+  <Item name="Coalition Cooks" identifier="doccook" category="Misc" tags="smallitem,docs" scale="0.5"
+		description="A piece of paper from a Cook Book.">
+	<Sprite texture="Mods/BTE/Items/Misc/Cookbook.png" sourcerect="532,0,52,73" depth="0.81"/>
+    <Body width="42" height="63" density="10.02"/>
+	<Deconstruct time="10">
+      <Item identifier="paperboat"/>
+    </Deconstruct>
+	<ItemComponent canbeselected="false" drawhudwhenequipped="true">
+       
+      <GuiFrame relativesize="0.3,0.8" minsize="392,624" maxsize="581,819" absoluteoffset="0,40" anchor="TopCenter" style="doccul"/>
+    </ItemComponent>
+    <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0" msg="ItemMsgPickUpSelect"/>
+	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
+  </Item>
+
+
+
   <Item name="A drawing of a Husk" identifier="drawHuskBoi" category="Misc" tags="smallitem,docs" scale="0.5"
 		description="A piece of paper from a notebook containing a drawing of a Husk in an exosuit.">
 	<Sprite texture="Mods/BTE/Items/Misc/drawHuskBoi.png" sourcerect="532,0,52,73" depth="0.81"/>
@@ -406,6 +599,18 @@
 	<Deconstruct time="10">
       <Item identifier="paperboat"/>
     </Deconstruct>
+    <Fabricate suitablefabricators="op_researchterminal" requiredtime="20">
+      <RequiredSkill identifier="science" level="35" />
+      <RequiredItem identifier="huskeggs" />
+<RequiredItem identifier="friedthresher" mincondition="0.5" usecondition="false" />
+    </Fabricate>
+	
+    <Fabricate suitablefabricators="op_researchterminal" requiredtime="25">
+      <RequiredSkill identifier="science" level="35" />
+      <RequiredItem identifier="huskeggs" />
+<RequiredItem identifier="humanflesh" mincondition="0.5" usecondition="false" />
+
+    </Fabricate>
 	<ItemComponent canbeselected="false" drawhudwhenequipped="true">
       <GuiFrame relativesize="0.3,0.8" minsize="392,624" maxsize="581,819" absoluteoffset="0,40" anchor="TopCenter" style="drawHuskBoi"/>
     </ItemComponent>
@@ -441,7 +646,7 @@
 	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
   </Item>
  
- <Item name="Food Can" identifier="foodcan" category="Misc" tags="mediumitem,container,foodcan" impactsoundtag="impact_foodcan" scale="0.5"
+ <Item name="Food Can" identifier="foodcan" category="Misc" tags="smallitem,container,foodcan" impactsoundtag="impact_foodcan" scale="0.5"
 		description="A container for food.">
     <Sprite texture="Mods/BTE/Items/Misc/Misc2.png" sourcerect="0,0,36,48" depth="0.55" origin="0.5,0.5"/>
     <Body width="26" height="38" density="15" friction="0.85"/>
@@ -456,13 +661,14 @@
 	</Deconstruct>
 	
 	<ItemContainer hideitems="true" capacity="1" canbeselected="false">
-      <Containable items="smallitem"/>
+      <Containable items="smallitem" excludeditems="toolbelt,toolbox,foodcan"/>
+
     </ItemContainer>
     
 	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="3.0" msg="ItemMsgPickUpSelect"/>
   </Item>
   
-  <Item name="Food Can" identifier="foodcanlead" category="Misc" tags="mediumitem,container,foodcan" impactsoundtag="impact_foodcan" scale="0.5"
+  <Item name="Food Can" identifier="foodcanlead" category="Misc" tags="smallitem,container,foodcan" impactsoundtag="impact_foodcan" scale="0.5"
 		description="A container for food.">
     <Sprite texture="Mods/BTE/Items/Misc/Misc2.png" sourcerect="0,0,36,48" depth="0.55" origin="0.5,0.5"/>
     <Body width="26" height="38" density="18" friction="0.88"/>
@@ -472,7 +678,7 @@
 	</Deconstruct>
 	
 	<ItemContainer hideitems="true" capacity="1" canbeselected="false">
-      <Containable items="smallitem"/>
+      <Containable items="smallitem" excludeditems="toolbelt,toolbox,foodcan"/>
     </ItemContainer>
     
 	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="3.0" msg="ItemMsgPickUpSelect">
@@ -552,5 +758,361 @@
 	<Body width="22" height="10" density="10.1"/>
 
 	<Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="1" aimpos="35,-10"/>
+  </Item>
+
+  <Override>
+  <Item name="" identifier="duffelbag" category="Equipment" tags="mobilecontainer,despawncontainer" fireproof="true" description="" impactsoundtag="impact_soft" scale="0.4">
+    <Deconstruct time="5"/>
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="6,240,219,109" origin="0.5,0.56" depth="0.56" />
+    <Body width="120" radius="45" density="20" friction="1.0" restitution="0.01" />
+    
+    <ItemContainer capacity="21" keepopenwhenequipped="false" movableframe="true">
+      <Containable items="smallitem" />
+    </ItemContainer>
+<Holdable slots="RightHand,LeftHand" holdpos="0,-80" handle1="0,50" handle2="0,50" aimable="false" msg="ItemMsgPickUpSelect" >
+      <StatusEffect type="Always" target="This" condition="-1.0">
+<Conditional Condition="eq 100" />
+      <SpawnItem identifiers="skull" spawnposition="ThisInventory" />
+
+      </StatusEffect>
+</Holdable>
+  </Item>
+  </Override>
+
+
+
+  <Item name="Shiv" identifier="shiv" category="Equipment" Tags="smallitem,weapon" cargocontaineridentifier="metalcrate" scale="0.2" impactsoundtag="impact_metal_light"  description="Used to butter bread if your knife breaks">
+ 
+
+    <Deconstruct time="10">
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="constructionkit" requiredtime="15">
+      <RequiredSkill identifier="weapons" level="5" />
+      <RequiredItem identifier="foodcan" />
+    </Fabricate>
+
+    <Fabricate suitablefabricators="constructionkit" requiredtime="5">
+      <RequiredSkill identifier="weapons" level="5" />
+<RequiredSkill identifier="mechanical" level="5" />
+      <RequiredItem identifier="foodcan" />
+      <RequiredItem identifier="hacksaw" mincondition="0.0" usecondition="true" />
+    </Fabricate>
+
+    
+    <Sprite texture="bteconstructionkit.png" sourcerect="375,39,181,86" depth="0.55" origin="0.5,0.5" />
+    <Body width="65" height="15" density="50" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-5,-5" holdangle="30" reload="0.75" range="50" combatPriority="20" msg="ItemMsgPickUpSelect">
+      <Attack targetimpulse="2" severlimbsprobability="0.1" itemdamage="10">
+        <Affliction identifier="lacerations" strength="5" />
+        <Affliction identifier="bleeding" strength="5" />
+        <Affliction identifier="stun" strength="0.2" />
+        <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+      </Attack>
+    </MeleeWeapon>
+    <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+
+  <Item name="Molotov Cocktail" alias="Molotov" identifier="molotov" category="Equipment" cargocontaineridentifier="explosivecrate" impacttolerance="3" tags="weapon" Scale="0.18" impactsoundtag="impact_glasshit">
+    <Fabricate suitablefabricators="constructionkit" requiredtime="5">
+      <RequiredSkill identifier="weapons" level="17" />
+      <RequiredItem identifier="vodka" mincondition="0.85"/>
+      <RequiredItem identifier="bandage" mincondition="0.25" usecondition="true" />
+      <RequiredItem identifier="cigarette" mincondition="0.01" usecondition="true" />
+    </Fabricate>
+    <Fabricate suitablefabricators="constructionkit" requiredtime="5">
+      <RequiredSkill identifier="weapons" level="17" />
+      <RequiredItem identifier="vodka" mincondition="0.85"/>
+      <RequiredItem identifier="bandage" mincondition="0.25" usecondition="true" />
+      <RequiredItem identifier="handrolled" mincondition="0.011" usecondition="true" />
+    </Fabricate>
+  <Deconstruct time="5">
+      <Item identifier="vodka" outcondition="0.85" />
+      <Item identifier="bandage" outcondition="0.25" />
+    </Deconstruct>
+    <Sprite texture="bteconstructionkit.png" sourcerect="-2,-1,93,245" depth="0.6" origin="0.5,0.5" />
+    <Body width="71" height="221" density="15" />
+
+    <Throwable slots="RightHand,LeftHand" characterusable="true" holdpos="0,0" handle1="0,0" throwforce="3" msg="ItemMsgPickUpSelect">
+ <ItemComponent characterusable="true">
+      <!-- statuseffect that explodes the grenade when used by something else than a character (e.g. a detonator) -->
+     
+
+      <StatusEffect type="OnImpact" target="This" Condition="50" setvalue="true"/>
+      <StatusEffect type="OnFire" target="This" Condition="-25" />
+      <StatusEffect type="Always" target="This,Character,Limb">
+        <Conditional Condition="eq 50" />
+ <sound file="Mods/BTE/Sounds/Impact/GlassBreak.ogg" range="2000" />
+
+        <Explosion range="23.487" stun="5" structuredamage="5" itemdamage="500" force="0.1" flames="true" severlimbsprobability="0.1" decal="explosion" decalsize="0.1">
+          <Affliction identifier="explosiondamage" strength="7" />
+          <Affliction identifier="burn" strength="35" />
+		  <Affliction identifier="bleeding" strength="17"/>
+		  		  <Affliction identifier="drunk" strength="2.31"/>
+<Affliction identifier="lacerations" strength="6"/>
+		<Affliction identifier="blunttrauma" strength="0.26"/>
+        </Explosion>
+        <Fire size="75" />
+		        <Remove />
+      </StatusEffect>
+    </ItemComponent>
+    
+	
+      <StatusEffect type="OnImpact" target="This" Condition="-100.0" delay="0" disabledeltatime="true" checkconditionalalways="true" />
+	   
+	        <StatusEffect type="Always" target="This" setvalue="true" >
+<ParticleEmitter particle="flame" particlespersecond="60" scalemin="0.07" scalemax="0.08" heightmax="92.2" heightmin="92.2" anglemin="90" anglemax="91" distancemin="0" distancemax="0.6" />
+        <ParticleEmitter particle="smoke" particlespersecond="2" scalemin="0.2" scalemax="0.78" />
+      </StatusEffect>
+
+	  		 <LightComponent LightColor="255,174,121,255" Flicker="0.7" Range="25" IsOn="true">
+        <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5" />
+      </LightComponent>
+	  
+	  <StatusEffect type="Always" target="Hull" Oxygen="-1035">
+      </StatusEffect>
+	  
+
+
+
+	  	  	  <StatusEffect type="Always" target="This,Character,Limb">
+ <Explosion range="1.2" reload="1.5" structuredamage="0" force="0.01" camerashake="0" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" underwaterbubble="false">
+		          <Affliction identifier="burn" strength="0.00026" probability="0.2" />
+		       						          </Explosion>
+      </StatusEffect>
+	  
+	        <StatusEffect type="Always" target="This,Hull" UsableIn="None">
+<Conditional OxygenPercentage="lt 5"/>
+<Remove />
+<SpawnItem identifiers="failedmolotov" spawnposition="This"/>
+
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  
+
+
+  <Item name="Vodka with rag" identifier="failedmolotov" category="Misc" Tags="mediumitem,consumable" description="Someone fucked up a molotov."
+		 
+		 cargocontaineridentifier="chemicalcrate" useinhealthinterface="true" impactsoundtag="impact_glasshit" scale="0.18">
+    <Sprite texture="bteconstructionkit.png" sourcerect="-2,-1,93,245" depth="0.6" origin="0.5,0.5"/>
+    <Body width="71" height="221" density="15"/>
+	
+	<Deconstruct time="15">
+      <Item identifier="plastic" outcondition="0.3"/>
+	  <Item identifier="ethanol" outcondition="0.9"/>
+         <Item identifier="bandage" outcondition="0.25" />
+    </Deconstruct>
+
+    <Throwable slots="Any,RightHand,LeftHand" throwforce="3.0" canBeCombined="true">  
+      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+      <StatusEffect type="OnUse" target="Character" delay="10" duration="15">
+        <Affliction identifier="drunk" amount="0.91"/>
+		<Affliction identifier="psychosisresistance" amount="8"/>
+		<ReduceAffliction identifier="internaldamage" amount="0.2"/>
+        <ReduceAffliction identifier="burn" amount="0.2"/>
+<ReduceAffliction identifier="bleeding" amount="0.2"/>
+		<Affliction identifier="durationincrease" amount="9" />
+		<ReduceAffliction identifier="radiationsickness" amount="0.1"/>
+      </StatusEffect>
+<StatusEffect type="OnFire" target="This" >
+<SpawnItem identifiers="molotov" spawnposition="This"/>
+<Remove />
+
+      </StatusEffect>
+		      </Throwable>
+
+  </Item>
+
+  <Item name="Copper Coil" identifier="coppercoil" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,handlocker" impactsoundtag="impact_metal_light" equipconfirmationtext="handcuffequipconfirmation" description="Weak handcuffs that will break over time, make sure to tie it tightly so that it will make prisoners walk slowly to avoid falling over, really uesful if you have a runner" scale="0.18">
+    <Deconstruct time="10">
+      <Item identifier="copper" outcondition="0.2" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="constructionkit" requiredtime="10">
+      <Item identifier="copper" mincondition="0.2" usecondition="true" />
+    </Fabricate>
+    <Sprite texture="bteconstructionkit.png" sourcerect="107,67,64,31" depth="0.6" />
+    <Body width="50" height="34" density="40" />
+
+ 
+    <Wearable slots="Any,RightHand+LeftHand" msg="ItemMsgPickUpSelect" autoequipwhenfull="false">
+      <sprite texture="bteconstructionkit.png" limb="RightHand" sourcerect="124,88,30,14" origin="0.5,-0.7" inherittexturescale="true" />
+      <sprite texture="bteconstructionkit.png" limb="LeftHand" sourcerect="124,88,30,14" origin="0.5,-0.7"   inherittexturescale="true"/>
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.3" lockhands="true" setvalue="true" />
+<StatusEffect type="OnWearing" target="This" Condition="-0.73"/>
+<StatusEffect type="Always" target="This" Condition="0.1"/>
+<StatusEffect type="InWater" target="This" Condition="-0.74"/>
+    </Wearable>
+  </Item>
+
+  <Item name="Plastic Bag" identifier="plasticbag" category="Misc" tags="smallitem,cntnr" scale="0.5">
+	<Deconstruct time="5">
+	  <Item identifier="plastic"/>
+    </Deconstruct>
+    <Sprite texture="PlasticBag.png" sourcerect="50,0,60,86" depth="0.6"/>
+    <Body width="12" height="28" radius="16" density="9.9"/>
+    <Wearable limbtype="Head" slots="Any,Head+Headset" msg="ItemMsgPickUpSelect">
+      <sprite texture="PlasticBag.png" limb="Head" sourcerect="0,0,31,35" origin="0.5,0.5" hidelimb="false"/>
+	  <StatusEffect type="OnWearing" target="Character" ObstructVision="true" HideFace="true" setvalue="true" disabledeltatime="true"/>
+	  <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-80"/>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="250" Condition="-0.6">
+        <RequiredItem type="Contained" identifier="liquidoxygenite"/>
+		<Affliction identifier="organdamage" strength="0.1"/>
+<Affliction identifier="oxygenlow" strength="0.1"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-60" Condition="-0.8">
+        <RequiredItem type="Contained" identifier="flashpowder"/>
+		<Affliction identifier="organdamage" strength="0.1"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-40" Condition="-0.7" delay="5">
+        <RequiredItem type="Contained" identifier="chloralhydrate"/>
+		<Affliction identifier="stun" strength="0.1"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.8" setvalue="true"/>
+    </Wearable>
+	<ItemContainer capacity="3" hideitems="true">
+      <Containable items="smallitem"/>
+    </ItemContainer>
+  </Item>
+
+
+
+  <Item name="Hogtie Set" identifier="hogtieset" alias="naughtynaughty" category="Misc" tags="smallitem,cntnr" equipconfirmationtext="handcuffequipconfirmation">
+	<Deconstruct time="5">
+	  <Item identifier="plasticbag" />
+<Item identifier="Copper Coil" copycondition="true"/>
+<Item identifier="Copper Coil" copycondition="true"/>
+    </Deconstruct>
+	    <Fabricate suitablefabricators="constructionkit" requiredtime="10">
+      <Item identifier="Copper Coil" mincondition="0.0" />
+	        <Item identifier="Copper Coil" mincondition="0.0" />
+				        <Item identifier="plasticbag" usecondition="false" mincondition="0.9"/>
+    </Fabricate>
+    <Sprite texture="bteconstructionkit.png" sourcerect="221,50,50,66" depth="0.6"/>
+    <Body width="12" height="11" radius="5" density="9.9"/>
+    <Wearable limbtype="Head,Headset" slots="Any,Head+Headset+RightHand+LeftHand" msg="ItemMsgPickUpSelect">
+      <sprite texture="PlasticBag.png" limb="Head" sourcerect="0,0,31,35" origin="0.5,0.5" hidelimb="false"/>
+<sprite texture="bteconstructionkit.png" limb="RightHand" sourcerect="124,88,30,14" origin="0.5,-0.7" inherittexturescale="true" />
+      <sprite texture="bteconstructionkit.png" limb="LeftHand" sourcerect="124,88,30,14" origin="0.5,-0.7" inheritlimbdepth="true" inherittexturescale="true"/>
+<sprite texture="bteconstructionkit.png" limb="RightFoot" sourcerect="308,42,42,76" origin= "0.3,0.6"  inherittexturescale="true" />
+<sprite texture="bteconstructionkit.png" limb="Leftfoot" sourcerect="308,42,42,76" origin= "0.3,0.6"  inherittexturescale="true" />
+	  <StatusEffect type="OnWearing" target="Character" ObstructVision="true" HideFace="true" setvalue="true" disabledeltatime="true"/>
+	  <StatusEffect type="OnWearing" target="Character" lockhands="true" SpeedMultiplier="0.0" setvalue="true">
+        <Conditional stun="lt 8" />
+	  		<Affliction identifier="stun" strength="8"/>
+			</StatusEffect>
+<StatusEffect type="OnWearing" target="This" Condition="-0.23"/>
+<StatusEffect type="Always" target="This" Condition="0.1"/>
+<StatusEffect type="InWater" target="This" Condition="-0.74">
+<ReduceAffliction identifier="stun" amount="0.5"/>
+</StatusEffect>
+    </Wearable>
+
+  </Item>
+
+ 
+
+
+ <Item name="Hot Can" identifier="hotcan" category="Misc" tags="mediumitem,container,foodcan" impacttolerance="3" impactsoundtag="impact_foodcan" scale="0.5"
+		description="A scuffed bomb igniter (or a make shift flare) made by mildly upset crewmates, be careful with this or you might blow yourself up.">
+    <Sprite texture="bteconstructionkit.png" sourcerect="7,260,54,70" depth="0.55"/>
+	<BrokenSprite texture="bteconstructionkit.png" sourcerect="7,327,54,59" depth="0.55" maxcondition="0" fadein="true"/>
+
+    <Body width="26" height="38" density="15" friction="0.85"/>
+		<Deconstruct time="15">      
+      <Item identifier="tin" outcondition="0.45"/>
+	  <Item identifier="coppercoil" outcondition="0.0"/>
+	  <Item identifier="flashpowder" outcondition="0.25"/>
+	  <Item identifier="fpgacircuit"/>
+    </Deconstruct>
+	<Fabricate suitablefabricators="constructionkit" requiredtime="25">
+	<Requiredskill identifier="Weapons" level="25"/>
+           <RequiredItem identifier="foodcan"/>
+	  <RequiredItem identifier="coppercoil" mincondition="0.0" usecondition="false"/>
+	  <RequiredItem identifier="flashpowder" mincondition="0.25" usecondition="true"/>
+	  <RequiredItem identifier="fpgacircuit"/>
+    </Fabricate>
+	
+	<ItemComponent>
+      <StatusEffect type="OnImpact" target="This,Contained" delay="1" IsOn="true">
+		<Use/>
+	  </StatusEffect>
+    </ItemComponent>
+	
+	<LightComponent LightColor="1.0,0.9,0.7,1.0" Flicker="0.5" range="100" IsOn="false">
+      <StatusEffect type="OnActive" target="This,Contained" Condition="-1.0">
+        <ParticleEmitter particle="bubbles" particlespersecond="30"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" IsOn="false"/>
+      <sound file="Content/Items/Tools/Flareloop.ogg" type="OnActive" range="800" loop="true"/>
+    </LightComponent>
+	
+	<ItemContainer capacity="1" hideitems="true">
+	  <Containable identifier="smallitem"/>
+    </ItemContainer>
+
+    <Throwable slots="RightHand,LeftHand,Any" handle1="0,0" throwforce="3" msg="ItemMsgPickUpSelect"/>
+  </Item>
+  
+  <Item name="Shock Rod" identifier="shockrod" category="Equipment" Tags="smallitem,weapon,stunner" Scale="0.5" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+    <Upgrade gameversion="0.9.2.0" scale="0.5"/>
+    <Deconstruct time="10">
+      <Item identifier="coppercoil" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="constructionkit" requiredtime="30">
+      <RequiredSkill identifier="electrical" level="40" />
+      <RequiredItem identifier="coppercoil" />
+      <RequiredItem identifier="plastic" />
+	  <RequiredItem identifier="fpgacircuit" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="770,0,58,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,0,191,63" depth="0.55" origin="0.4954025,0.7936202" />
+    <Body width="170" height="30" density="30" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="45,10" handle1="-35,-5" holdangle="45" reload="0.75" range="100" combatPriority="49" msg="ItemMsgPickUpSelect">
+      <Attack stun="0.2" targetimpulse="5" itemdamage="1">
+        <Sound file="Content/Items/Weapons/Smack1.ogg" range="800" />
+        <Affliction identifier="blunttrauma" strength="1" />
+      </Attack>
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
+        <affliction identifier="stun" strength="15"/>
+		<affliction identifier="burn" strength="25" />
+        <sound file="Content/Items/Weapons/StunBaton1.ogg" selectionmode="random" range="500" />
+        <sound file="Content/Items/Weapons/StunBaton2.ogg" range="500" />
+        <sound file="Content/Items/Weapons/StunBaton3.ogg" range="500" />
+        <sound file="Content/Items/Weapons/StunBaton4.ogg" range="500" />
+        <RequiredItem items="batterycell" type="Contained" msg="ItemMsgBatteryCellRequired" />
+        <Explosion range="100.0" force="0.1" shockwave="false" flames="false" smoke="false" underwaterbubble="false" camerashake="6.0" />
+        <Conditional mass="lt 60"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
+        <affliction identifier="stun" strength="30"/>
+		<affliction identifier="burn" strength="40" />
+        <sound file="Content/Items/Weapons/StunBaton1.ogg" selectionmode="random" range="500" />
+        <sound file="Content/Items/Weapons/StunBaton2.ogg" range="500" />
+        <sound file="Content/Items/Weapons/StunBaton3.ogg" range="500" />
+        <sound file="Content/Items/Weapons/StunBaton4.ogg" range="500" />
+        <RequiredItem items="fulguriumbatterycell" type="Contained" msg="ItemMsgBatteryCellRequired" />
+        <Explosion range="100.0" force="0.5" shockwave="false" flames="false" smoke="true" underwaterbubble="false" camerashake="6.0" />
+        <Conditional mass="lt 150"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Contained" Condition="-50.0" disabledeltatime="true">
+        <RequiredItem items="batterycell" type="Contained" msg="ItemMsgBatteryCellRequired" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Contained" Condition="-33.0" disabledeltatime="true">
+        <RequiredItem items="fulguriumbatterycell" type="Contained" msg="ItemMsgBatteryCellRequired" />
+      </StatusEffect>
+    </MeleeWeapon>
+    <ItemContainer capacity="1" hideitems="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
+      <Containable items="mobilebattery" />
+    </ItemContainer>
+    <aitarget sightrange="500" soundrange="500" fadeouttime="1" />
   </Item>
 </Items>

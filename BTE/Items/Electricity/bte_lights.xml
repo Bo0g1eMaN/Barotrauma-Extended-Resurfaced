@@ -16,4 +16,41 @@
 			<input name="set_state" displayname="connection.setstate" />
 		</ConnectionPanel>
 	</Item>
+
+<Item name="Battery Powered Emergency Light" spritecolor="125,125,152,255" identifier="emergencylight2" category="Electrical" Tags="smallitem,light" description="Power enters the emergency light powering it and recharging the battery inside. When power fails the Emergency Light uses the battery, recommended on larger ships as a way of making them more difficult" scale="0.5">
+    <Upgrade gameversion="0.10.0.0" scale="*0.5" />
+    <Sprite texture="signalcomp.png" sourcerect="0,960,96,16" depth="0.8" />
+    <!-- base texture -->
+    <LightComponent lightcolor="1.0,0.0,0.0,0.1" range="250.0" IsOn="true" castlights="false" powerconsumption="2">
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <sprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="480,960,96,16" alpha="1.0" />
+    </LightComponent>
+<Powered powerconsumption="0.5" currpowerconsumption="0.3" isactive="true">
+ <StatusEffect type="OnActive" targettype="Contained" Condition="-0.2">
+        <Conditional Voltage="eq 0.6" targetcontainer="true" targetitemcomponent="Powered"/>
+		</StatusEffect>
+ <StatusEffect type="OnActive" targettype="Contained" targets="loadable" Condition="12.2">
+        <Conditional Voltage="gt 0.6" targetcontainer="true" targetitemcomponent="Powered"/>
+</StatusEffect>
+
+</Powered>
+
+
+
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+      <input name="power" displayname="connection.power" />
+    </ConnectionPanel>
+    <ItemContainer capacity="1" canbeselected="true" hideitems="true">
+      <GuiFrame relativesize="0.2,0.2" anchor="Center" style="ItemUI" />
+ <RequiredItem items="idcard_captain" type="Picked" msg="ItemMsgUnauthorizedAccess" ignoreineditor="true" />
+      <Containable items="mobilebattery">
+    <StatusEffect type="OnContaining" targettype="This" Voltage="0.6" setvalue="true"/>
+        <Conditional Voltage="lt 0.6" targetcontainer="true" targetitemcomponent="Powered"/>
+</Containable>
+    </ItemContainer>
+  </Item>
 </Items>

@@ -31,8 +31,7 @@
 	  <damagemodifier armorsector="0,360" afflictiontypes="damage" damagemultiplier="0.9"/>
 	  <damagemodifier armorsector="0,360" afflictiontypes="bleeding" damagemultiplier="0.9"/>
       <damagemodifier armorsector="0,360" afflictiontypes="burn" damagemultiplier="0.8"/>
-	  <damagemodifier armorsector="0,360" afflictiontypes="radiationsickness" damagemultiplier="0.2"/>
-	  <StatusEffect tags="hazmatsuit" type="OnWearing" target="Character" duration="0.1" stackable="false"/>
+	  <damagemodifier armorsector="0,360" afflictiontypes="radiationsickness" damagemultiplier="0.5"/>
     </Wearable>
 	
 	<ItemContainer capacity="3">
@@ -40,8 +39,8 @@
   </ItemContainer>
   </Item>
   
-  <Item name="Utility Hood" identifier="utilityhood" category="Equipment" tags="smallitem" scale="0.66"
-		description="A hood for the utility jumpsuit with o2 filters, which turn the utility jumpsuit into a hazmat suit when used with it."
+  <Item name="Utility Hood" identifier="utilityhood" category="Equipment" tags="smallitem" scale="0.3"
+		description="A hood for the utility jumpsuit."
 		cargocontaineridentifier="metalcrate">
 	
     <Price locationtype="Research" buyprice="50" />
@@ -51,21 +50,16 @@
 	<Deconstruct time="15">
       <Item identifier="organicfiber"/>
     </Deconstruct>
-    <InventoryIcon texture="Mods/BTE/Items/Jobgear/headgears.png" sourcerect="0,0,74,97" />
-	<Sprite name="Utility Hood Icon" texture="Mods/BTE/Items/Jobgear/headgears.png" depth="0.6" sourcerect="90,0,97,41"/>
+    <InventoryIcon texture="Mods/BTE/Items/Jobgear/otherhat.png" sourcerect="0,0,74,97" />
+	<Sprite name="Utility Hood Icon" texture="Mods/BTE/Items/Jobgear/otherhat.png" depth="0.6" sourcerect="0,0,78,101"/>
     <Body width="80" height="25" density="11" />
 	
     <Wearable limbtype="Head" slots="Any,Head">
-      <sprite texture="Mods/BTE/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" hidelimb="false" hideotherwearables="false" inherittexturescale="true" inheritorigin="false" sourcerect="0,0,74,97" origin="0.5,0.6"/>
+      <sprite texture="Mods/BTE/Items/Jobgear/otherhat.png" limb="Head" inheritlimbdepth="true" hidelimb="false" hideotherwearables="true" inherittexturescale="true" inheritorigin="false" sourcerect="0,0,78,101" origin="0.5,0.6"/>
 	  <damagemodifier armorsector="0,360" afflictiontypes="damage" damagemultiplier="0.9"/>
 	  <damagemodifier armorsector="0,360" afflictiontypes="bleeding" damagemultiplier="0.9"/>
 	  <damagemodifier armorsector="0,360" afflictiontypes="burn" damagemultiplier="0.9"/>
-	  <damagemodifier armorsector="0,360" afflictiontypes="radiationsickness" damagemultiplier="0.0"/>
-	  <StatusEffect type="OnWearing" target="Character" ObstructVision="true"/>
-	  <StatusEffect type="OnWearing" target="Character">
-	    <Conditional hasstatustag="hazmatsuit"/>
-		<ReduceAffliction identifier="radiationsickness" strength="0.01"/>
-	  </StatusEffect>
+	  <damagemodifier armorsector="0,360" afflictiontypes="radiationsickness" damagemultiplier="0.5"/>
     </Wearable>
   </Item>
 </Items>

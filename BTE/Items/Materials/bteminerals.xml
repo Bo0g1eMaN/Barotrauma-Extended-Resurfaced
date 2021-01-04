@@ -13,6 +13,8 @@
     <Deconstruct time="5">
       <Item identifier="iodine" />
       <Item identifier="iodine" />
+	  <Item identifier="iodine" />
+	  <Item identifier="iodine" />
     </Deconstruct>
     <!-- TODO: sprite and inventory icon -->
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="705,515,60,60" origin="0.5,0.5" />

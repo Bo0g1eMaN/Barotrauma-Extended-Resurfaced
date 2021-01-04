@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-	<!-- dupe
+<Override>
   <Item name="Emergency Siren A" identifier="emergencysiren" category="Electrical" Tags="smallitem,sound" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true">
     <Price locationtype="Research" buyprice="80" />
     <Price locationtype="City" buyprice="100" />
@@ -30,7 +30,8 @@
       <input name="set_state" displayname="connection.setstate" />
     </ConnectionPanel>
   </Item>
-  -->
+</Override>
+
   <Item name="Emergency Siren B" identifier="emergencysiren2" category="Electrical" Tags="smallitem" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
     <Price locationtype="Research" buyprice="80" />
     <Price locationtype="City" buyprice="100" />
@@ -497,4 +498,96 @@
       </input>
     </ConnectionPanel>
   </Item>
+
+  <Item name="Music Buzzer A" identifier="musicbuzzera" category="Electrical" Tags="smallitem,sound" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" description="It plays the song Spacer Woman by Charlie." isshootable="true">
+    <Price locationtype="Research" buyprice="80" />
+    <Price locationtype="City" buyprice="100" />
+    <Price locationtype="Outpost" buyprice="100" />
+    <Price locationtype="Military" buyprice="100" />
+    <Deconstruct time="10">
+      <Item identifier="fpgacircuit" />
+      <Item identifier="steel" />
+    </Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredItem identifier="fpgacircuit"/>
+      <RequiredItem identifier="steel"/>
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="191,127,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Electricity/signalcomp.png" depth="0.8" sourcerect="75,64,42,63" origin="0.5,0.5" />
+    <Body radius="20" height="20" density="30" />
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
+      <RequiredItem items="wrench" type="Equipped" />
+    </Holdable>
+    <ItemComponent>
+      <sound file="Mods/BTE/Sounds/Alarms/CHARLIEspacerwoman.ogg" type="OnActive" range="3000" loop="true" volume="0.5" />
+    </ItemComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+
+  <Item name="Music Buzzer B" identifier="musicbuzzerb" category="Electrical" Tags="smallitem,sound" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" description="It plays the song Laser by Laser." isshootable="true">
+    <Price locationtype="Research" buyprice="80" />
+    <Price locationtype="City" buyprice="100" />
+    <Price locationtype="Outpost" buyprice="100" />
+    <Price locationtype="Military" buyprice="100" />
+    <Deconstruct time="10">
+      <Item identifier="fpgacircuit" />
+      <Item identifier="steel" />
+    </Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredItem identifier="fpgacircuit"/>
+      <RequiredItem identifier="steel"/>
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="191,127,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Electricity/signalcomp.png" depth="0.8" sourcerect="75,64,42,63" origin="0.5,0.5" />
+    <Body radius="20" height="20" density="30" />
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
+      <RequiredItem items="wrench" type="Equipped" />
+    </Holdable>
+    <ItemComponent>
+      <sound file="Mods/BTE/Sounds/Alarms/LASERlaser.ogg" type="OnActive" range="3000" loop="true" volume="0.5" />
+    </ItemComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+
+  <Item name="Music Buzzer C" identifier="musicbuzzerc" category="Electrical" Tags="smallitem,sound" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" description="It plays the song Magic Fly by Space." isshootable="true">
+    <Price locationtype="Research" buyprice="80" />
+    <Price locationtype="City" buyprice="100" />
+    <Price locationtype="Outpost" buyprice="100" />
+    <Price locationtype="Military" buyprice="100" />
+    <Deconstruct time="10">
+      <Item identifier="fpgacircuit" />
+      <Item identifier="steel" />
+    </Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredItem identifier="fpgacircuit"/>
+      <RequiredItem identifier="steel"/>
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="191,127,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Electricity/signalcomp.png" depth="0.8" sourcerect="75,64,42,63" origin="0.5,0.5" />
+    <Body radius="20" height="20" density="30" />
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
+      <RequiredItem items="wrench" type="Equipped" />
+    </Holdable>
+    <ItemComponent>
+      <sound file="Mods/BTE/Sounds/Alarms/SPACEmagicfly.ogg" type="OnActive" range="3000" loop="true" volume="0.5" />
+    </ItemComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+
+
 </Items>

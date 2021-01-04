@@ -1,0 +1,19 @@
+﻿<Character speciesname="Snailfish" humanoid="False" speciestranslationoverride="" displayname="Snailfish" group="" hasinfo="False" husk="False" usehuskappendage="False" needsair="False" needswater="True" canspeak="False" noise="0.5" visibility="100" blooddecal="blood" bleedparticleair="blooddrop" bleedparticlewater="waterblood" eatingspeed="12" pathfinderpriority="1" hideinsonar="False" sonardisruption="0">
+  <ragdolls folder="Mods/BTE/Characters/Snailfish/Ragdolls/" />
+  <animations folder="Mods/BTE/Characters/Snailfish/Animations/" />
+  <health vitality="31" doesbleed="True" crushdepth="-Infinity" usehealthwindow="False" bleedingreduction="0" burnreduction="0" constanthealthregeneration="0" healthregenerationwheneating="1.0000001" />
+  <ai combatstrength="1" sight="6.9999957" hearing="3.199999" aggressionhurt="100" aggressiongreed="10" fleehealththreshold="0" attackwhenprovoked="False" avoidgunfire="True" aggressiveboarding="False" enforceaggressivebehaviorformissions="True" targetouterwalls="True" randomattack="False">
+    <target tag="light" state="Flee" priority="16" reactdistance="75" attackdistance="0" />
+    <target tag="weaker" state="Attack" priority="14" reactdistance="150" attackdistance="150" />
+    <target tag="stronger" state="Avoid" priority="20" reactdistance="151" attackdistance="5" />
+    <target tag="human" state="PassiveAggressive" priority="15" reactdistance="150" attackdistance="1" />
+    <target tag="dead" state="Eat" priority="2" reactdistance="0" attackdistance="0" />
+    <target tag="door" state="Attack" priority="1" reactdistance="0" attackdistance="0" />
+    <target tag="sonar" state="Flee" priority="3" reactdistance="0" attackdistance="0" />
+    <target tag="decoy" state="Avoid" priority="4" reactdistance="0" attackdistance="0" />
+  </ai>
+  <inventory slots="Any, Any" accessiblewhenalive="False" commonness="1">
+    <item identifier="alienblood" />
+    <item identifier="snailfishmeat" />
+  </inventory>
+</Character>

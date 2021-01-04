@@ -10,7 +10,7 @@
     <deformablesprite texture="Mods/BTE/Characters/Scorpion/Scorpion.png" sourcerect="655,0,105,131" origin="0.4171119,0.5004655" depth="0.05" subdivisions="5,5">
       <spritedeformation type="bendjoint" resolution="5,5" sync="-1" typename="bendjoint" blendmode="Add" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" maxrotation="20" strength="1"/>
     </deformablesprite>
-    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,damagebrain,electrical" afflictionidentifiers="internaldamage,damagehead" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="False"/>
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,,electrical" afflictionidentifiers="internaldamage,damagehead" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="False"/>
 	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="cold" damagemultiplier="0.2" damagesound="LimbSlash" deflectprojectiles="false"/>
 	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="sonic" damagemultiplier="5" deflectprojectiles="False"/>
   </limb>
@@ -24,7 +24,7 @@
     <deformablesprite texture="Mods/BTE/Characters/Scorpion/Scorpion.png" sourcerect="559,0,99,131" origin="0.4975774,0.4925216" depth="0.1" subdivisions="5,5">
       <spritedeformation type="bendjoint" resolution="5,5" sync="-1" typename="bendjoint" blendmode="Add" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" maxrotation="30" strength="1"/>
     </deformablesprite>
-    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,damagebrain,electrical" afflictionidentifiers="internaldamage,damagehead" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="False"/>
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,,electrical" afflictionidentifiers="internaldamage,damagehead" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="False"/>
 	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="cold" damagemultiplier="0.2" damagesound="LimbSlash" deflectprojectiles="false"/>
 	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="sonic" damagemultiplier="5" deflectprojectiles="False"/>
   </limb>
@@ -32,7 +32,7 @@
     <deformablesprite texture="Mods/BTE/Characters/Scorpion/Scorpion.png" sourcerect="481,0,80,131" origin="0.5,0.5" depth="0.2" subdivisions="5,5">
       <spritedeformation type="bendjoint" resolution="5,5" sync="-1" typename="bendjoint" blendmode="Add" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" maxrotation="30" strength="1"/>
     </deformablesprite>
-    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,damagebrain,damageorgan,electrical" afflictionidentifiers="damagechest,damagehead" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="False"/>
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,,damageorgan,electrical" afflictionidentifiers="damagechest,damagehead" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="False"/>
 	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="cold" damagemultiplier="0.2" damagesound="LimbSlash" deflectprojectiles="false"/>
 	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="sonic" damagemultiplier="5" deflectprojectiles="False"/>
   </limb>
@@ -50,7 +50,7 @@
       <Affliction identifier="damagechest" strength="0.2" probability="0.5"/>
       <Affliction identifier="internaldamage" strength="0.2" probability="0.5"/>
     </attack>
-    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,damagebrain,damageorgan,electrical" afflictionidentifiers="damagechest,damagehead" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="False"/>
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,,damageorgan,electrical" afflictionidentifiers="damagechest,damagehead" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="False"/>
 	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="cold" damagemultiplier="0.2" damagesound="LimbSlash" deflectprojectiles="false"/>
 	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="sonic" damagemultiplier="5" deflectprojectiles="False"/>
   </limb>
@@ -71,7 +71,7 @@
     <lightsource color="215,255,220,25" range="300">
       <lighttexture texture="Content/Lights/pointlight_falloff.png" origin="0.5,0.5" size="1,1"/>
     </lightsource>
-    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,damagebrain,damageorgan,electrical" afflictionidentifiers="damagechest,damagehead" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="False"/>
+    <damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="empdamage,,damageorgan,electrical" afflictionidentifiers="damagechest,damagehead" damagemultiplier="0" damagesound="LimbSlash" deflectprojectiles="False"/>
 	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="cold" damagemultiplier="0.2" damagesound="LimbSlash" deflectprojectiles="false"/>
 	<damagemodifier isarmor="false" armorsector="0,360" afflictiontypes="sonic" damagemultiplier="5" deflectprojectiles="False"/>
   </limb>

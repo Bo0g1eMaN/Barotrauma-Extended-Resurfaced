@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Lamp" identifier="lamp" category="Electrical" Tags="smallitem,light">
+    <Sprite texture="Content/Items/Electricity/lamp.png" sourcerect="0,0,16,32" depth="0.8"/>
+
+    <LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800" powerconsumption="5" isOn="true">
+	  <sparksound file="Content/Items/Electricity/Zap1.ogg" range="500" loop="false"/>
+      <sparksound file="Content/Items/Electricity/Zap2.ogg" range="500" loop="false"/>
+      <sparksound file="Content/Items/Electricity/Zap3.ogg" range="500" loop="false"/>
+      <sparksound file="Content/Items/Electricity/Zap4.ogg" range="500" loop="false"/>
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5"/>
+      <sprite texture="Content/Items/Electricity/lamp.png" sourcerect="33,0,31,37" alpha="1.0"/>
+	  <sound file="Mods/BTE/Items/Electricity/ElectricHum2.ogg" type="OnActive" range="250" volumeproperty="Voltage" loop="true" />
+    </LightComponent>
+	<Repairable selectkey="Action" name="Replace bulb" deteriorationspeed="0" ShowRepairUIThreshold="0">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+	  <StatusEffect type="OnBroken" target="This">
+        <Explosion range="50" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true" delay="25"/>
+    </Repairable>
+
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel"/>
+      <RequiredItem items="screwdriver" type="Equipped"/>
+      <input name="power" displayname="connection.power"/>
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  
+  <Item name="Small Lamp" nameidentifier="lamp" identifier="lampsmall" category="Electrical" Tags="smallitem,light">
+    <Sprite texture="Mods/BTE/Items/Electricity/lamp.png" sourcerect="0,46,16,18" depth="0.8"/>
+
+    <LightComponent lightcolor="1.0,1.0,1.0,0.5" range="400" powerconsumption="5" isOn="true">
+	  <sparksound file="Content/Items/Electricity/Zap1.ogg" range="500" loop="false"/>
+      <sparksound file="Content/Items/Electricity/Zap2.ogg" range="500" loop="false"/>
+      <sparksound file="Content/Items/Electricity/Zap3.ogg" range="500" loop="false"/>
+      <sparksound file="Content/Items/Electricity/Zap4.ogg" range="500" loop="false"/>
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5"/>
+      <sprite texture="Mods/BTE/Items/Electricity/lamp.png" sourcerect="27,33,29,31" alpha="1.0"/>
+	  <sound file="Mods/BTE/Items/Electricity/ElectricHum2.ogg" type="OnActive" range="200" volumeproperty="Voltage" loop="true" />
+    </LightComponent>
+	<Repairable selectkey="Action" name="Replace bulb" deteriorationspeed="0" ShowRepairUIThreshold="0">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+	  <StatusEffect type="OnBroken" target="This">
+        <Explosion range="50" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true" delay="25"/>
+    </Repairable>
+
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel"/>
+      <RequiredItem items="screwdriver" type="Equipped"/>
+      <input name="power" displayname="connection.power"/>
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  
+  <Item name="Light Fluorescent M1" nameidentifier="lamp" identifier="lightfluorescentm01" category="Electrical" Tags="smallitem,light" scale="0.5">
+    <Sprite texture="Content/Items/Electricity/Lamps.png" sourcerect="18,1,85,124" depth="0.8" origin="0.5,0.5" />
+    <LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800" powerconsumption="5" isOn="true">
+      <sparksound file="Content/Items/Electricity/Zap1.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap2.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap3.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap4.ogg" range="500" loop="false" />
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <sprite texture="Content/Items/Electricity/LampsAdditive.png" sourcerect="11,1,100,118" alpha="1.0" origin="0.5,0.5"/>
+	  <sound file="Mods/BTE/Items/Electricity/ElectricHum1.ogg" type="OnActive" range="300" volumeproperty="Voltage" loop="true" />
+    </LightComponent>
+	<Repairable selectkey="Action" name="Replace bulb" deteriorationspeed="0" ShowRepairUIThreshold="0">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+	  <StatusEffect type="OnBroken" target="This">
+        <Explosion range="50" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true" delay="25"/>
+    </Repairable>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power" displayname="connection.power"/>
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="Light Fluorescent M2" nameidentifier="lamp" identifier="lightfluorescentm02" category="Electrical" Tags="smallitem,light" scale="0.5">
+    <Sprite texture="Content/Items/Electricity/Lamps.png" sourcerect="152,1,74,126" depth="0.8" origin="0.5,0.5" />
+    <LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800" powerconsumption="5" isOn="true">
+      <sparksound file="Content/Items/Electricity/Zap1.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap2.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap3.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap4.ogg" range="500" loop="false" />
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <sprite texture="Content/Items/Electricity/LampsAdditive.png" sourcerect="144,0,91,129" alpha="1.0" />
+	  <sound file="Mods/BTE/Items/Electricity/ElectricHum1.ogg" type="OnActive" range="300" volumeproperty="Voltage" loop="true" />
+    </LightComponent>
+	<Repairable selectkey="Action" name="Replace bulb" deteriorationspeed="0" ShowRepairUIThreshold="0">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+	  <StatusEffect type="OnBroken" target="This">
+        <Explosion range="50" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true" delay="25"/>
+    </Repairable>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power" displayname="connection.power"/>
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="Light Fluorescent M3" nameidentifier="lamp" identifier="lightfluorescentm03" category="Electrical" Tags="smallitem,light" scale="0.5">
+    <Sprite texture="Content/Items/Electricity/Lamps.png" sourcerect="284,2,68,124" depth="0.8" origin="0.5,0.5" />
+    <LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800" powerconsumption="5" isOn="true">
+      <sparksound file="Content/Items/Electricity/Zap1.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap2.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap3.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap4.ogg" range="500" loop="false" />
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <sprite texture="Content/Items/Electricity/LampsAdditive.png" sourcerect="269,-1,93,129" alpha="1.0" />
+	  <sound file="Mods/BTE/Items/Electricity/ElectricHum1.ogg" type="OnActive" range="300" volumeproperty="Voltage" loop="true" />
+    </LightComponent>
+	<Repairable selectkey="Action" name="Replace bulb" deteriorationspeed="0" ShowRepairUIThreshold="0">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+	  <StatusEffect type="OnBroken" target="This">
+        <Explosion range="50" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true" delay="25"/>
+    </Repairable>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power" displayname="connection.power"/>
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="Light Fluorescent M4" nameidentifier="lamp" identifier="lightfluorescentm04" category="Electrical" Tags="smallitem,light" scale="0.5">
+    <Sprite texture="Content/Items/Electricity/Lamps.png" sourcerect="406,0,85,127" depth="0.8" origin="0.5,0.5" />
+    <LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800" powerconsumption="5" isOn="true">
+      <sparksound file="Content/Items/Electricity/Zap1.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap2.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap3.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap4.ogg" range="500" loop="false" />
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <sprite texture="Content/Items/Electricity/LampsAdditive.png" sourcerect="397,3,105,120" alpha="1.0" origin="0.5,0.5" />
+	  <sound file="Mods/BTE/Items/Electricity/ElectricHum1.ogg" type="OnActive" range="300" volumeproperty="Voltage" loop="true" />
+    </LightComponent>
+	<Repairable selectkey="Action" name="Replace bulb" deteriorationspeed="0" ShowRepairUIThreshold="0">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+	  <StatusEffect type="OnBroken" target="This">
+        <Explosion range="50" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true" delay="25"/>
+    </Repairable>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power" displayname="connection.power"/>
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="Light Fluorescent L1" nameidentifier="lamp" identifier="lightfluorescentl01" category="Electrical" Tags="largeitem,light" scale="0.5">
+    <Sprite texture="Content/Items/Electricity/Lamps.png" sourcerect="18,272,346,90" depth="0.8" origin="0.5,0.5" />
+    <LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800.0" powerconsumption="5" isOn="true">
+      <sparksound file="Content/Items/Electricity/Zap1.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap2.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap3.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap4.ogg" range="500" loop="false" />
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <sprite texture="Content/Items/Electricity/LampsAdditive.png" sourcerect="5,263,372,111" alpha="1.0" />
+	  <sound file="Mods/BTE/Items/Electricity/ElectricHum1.ogg" type="OnActive" range="500" volumeproperty="Voltage" loop="true" />
+    </LightComponent>
+	<Repairable selectkey="Action" name="Replace bulb" deteriorationspeed="0" ShowRepairUIThreshold="0">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+	  <StatusEffect type="OnBroken" target="This">
+        <Explosion range="50" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true" delay="25"/>
+    </Repairable>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power" displayname="connection.power"/>
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="Light Fluorescent L2" nameidentifier="lamp" identifier="lightfluorescentl02" category="Electrical" Tags="largeitem,light" scale="0.5">
+    <Sprite texture="Content/Items/Electricity/Lamps.png" sourcerect="13,416,370,61" depth="0.8" origin="0.5,0.5" />
+    <LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800" powerconsumption="5" isOn="true">
+      <sparksound file="Content/Items/Electricity/Zap1.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap2.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap3.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap4.ogg" range="500" loop="false" />
+      <LightTexture texture="Content/Lights/light_fluorescent_L2.png" origin="0.5,0.5" />
+      <sprite texture="Content/Items/Electricity/LampsAdditive.png" sourcerect="1,408,389,81" alpha="1.0" />
+	  <sound file="Mods/BTE/Items/Electricity/ElectricHum1.ogg" type="OnActive" range="500" volumeproperty="Voltage" loop="true" />
+    </LightComponent>
+	<Repairable selectkey="Action" name="Replace bulb" deteriorationspeed="0" ShowRepairUIThreshold="0">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+	  <StatusEffect type="OnBroken" target="This">
+        <Explosion range="50" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true" delay="25"/>
+    </Repairable>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power" displayname="connection.power"/>
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="Light Halogen M1" nameidentifier="lamp" identifier="lighthalogenmm01" category="Electrical" Tags="smallitem,light" scale="0.5">
+    <Sprite texture="Content/Items/Electricity/Lamps.png" sourcerect="20,132,76,124" depth="0.8" origin="0.5,0.5" />
+    <LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800" powerconsumption="5" isOn="true">
+      <sparksound file="Content/Items/Electricity/Zap1.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap2.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap3.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap4.ogg" range="500" loop="false" />
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <sprite texture="Content/Items/Electricity/LampsAdditive.png" sourcerect="9,128,101,134" alpha="1.0" />
+	  <sound file="Mods/BTE/Items/Electricity/ElectricHum.ogg" type="OnActive" range="400" volumeproperty="Voltage" loop="true" />
+    </LightComponent>
+	<Repairable selectkey="Action" name="Replace bulb" deteriorationspeed="0" ShowRepairUIThreshold="0">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+	  <StatusEffect type="OnBroken" target="This">
+        <Explosion range="50" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true" delay="25"/>
+    </Repairable>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power" displayname="connection.power"/>
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="Light Halogen M2" nameidentifier="lamp" identifier="lighthalogenmm02" category="Electrical" Tags="smallitem,light" scale="0.5">
+    <Sprite texture="Content/Items/Electricity/Lamps.png" sourcerect="128,152,125,77" depth="0.8" origin="0.5,0.5" />
+    <LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800" powerconsumption="5" isOn="true">
+      <sparksound file="Content/Items/Electricity/Zap1.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap2.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap3.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap4.ogg" range="500" loop="false" />
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <sprite texture="Content/Items/Electricity/LampsAdditive.png" sourcerect="113,143,150,94" alpha="1.0" />
+	  <sound file="Mods/BTE/Items/Electricity/ElectricHum.ogg" type="OnActive" range="400" volumeproperty="Voltage" loop="true" />
+    </LightComponent>
+	<Repairable selectkey="Action" name="Replace bulb" deteriorationspeed="0" ShowRepairUIThreshold="0">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+	  <StatusEffect type="OnBroken" target="This">
+        <Explosion range="50" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true" delay="25"/>
+    </Repairable>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power" displayname="connection.power"/>
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="Light Halogen M3" nameidentifier="lamp" identifier="lighthalogenmm03" category="Electrical" Tags="smallitem,light" scale="0.5">
+    <Sprite texture="Content/Items/Electricity/Lamps.png" sourcerect="268,129,103,123" depth="0.8" origin="0.5,0.5" />
+    <LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800" powerconsumption="5" isOn="true">
+      <sparksound file="Content/Items/Electricity/Zap1.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap2.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap3.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap4.ogg" range="500" loop="false" />
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <sprite texture="Content/Items/Electricity/LampsAdditive.png" sourcerect="258,120,122,143" alpha="1.0" />
+	  <sound file="Mods/BTE/Items/Electricity/ElectricHum.ogg" type="OnActive" range="400" volumeproperty="Voltage" loop="true" />
+    </LightComponent>
+	<Repairable selectkey="Action" name="Replace bulb" deteriorationspeed="0" ShowRepairUIThreshold="0">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+	  <StatusEffect type="OnBroken" target="This">
+        <Explosion range="50" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true" delay="25"/>
+    </Repairable>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power" displayname="connection.power"/>
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="Light Halogen M4" nameidentifier="lamp" identifier="lighthalogenm04" category="Electrical" Tags="smallitem,light" scale="0.5">
+    <Sprite texture="Content/Items/Electricity/Lamps.png" sourcerect="388,138,124,101" depth="0.8" origin="0.5,0.5" />
+    <LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800" powerconsumption="5" isOn="true">
+      <sparksound file="Content/Items/Electricity/Zap1.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap2.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap3.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap4.ogg" range="500" loop="false" />
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <sprite texture="Content/Items/Electricity/LampsAdditive.png" sourcerect="386,130,127,117" alpha="1.0" origin="0.5,0.5" />
+	  <sound file="Mods/BTE/Items/Electricity/ElectricHum.ogg" type="OnActive" range="400" volumeproperty="Voltage" loop="true" />
+    </LightComponent>
+	<Repairable selectkey="Action" name="Replace bulb" deteriorationspeed="0" ShowRepairUIThreshold="0">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+	  <StatusEffect type="OnBroken" target="This">
+        <Explosion range="50" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true" delay="25"/>
+    </Repairable>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power" displayname="connection.power"/>
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="Light Led S1" nameidentifier="lamp" identifier="lightleds01" category="Electrical" Tags="smallitem,light" scale="0.5">
+    <Sprite texture="Content/Items/Electricity/Lamps.png" sourcerect="397,271,99,99" depth="0.8" origin="0.5,0.5" />
+    <LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800" powerconsumption="5" isOn="true">
+      <sparksound file="Content/Items/Electricity/Zap1.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap2.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap3.ogg" range="500" loop="false" />
+      <sparksound file="Content/Items/Electricity/Zap4.ogg" range="500" loop="false" />
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <sprite texture="Content/Items/Electricity/LampsAdditive.png" sourcerect="386,261,122,118" alpha="1.0" origin="0.5,0.5"/>
+	  <sound file="Mods/BTE/Items/Electricity/ElectricHum2.ogg" type="OnActive" range="250" volumeproperty="Voltage" loop="true" />
+    </LightComponent>
+	<Repairable selectkey="Action" name="Replace bulb" deteriorationspeed="0" ShowRepairUIThreshold="0">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+	  <StatusEffect type="OnBroken" target="This">
+        <Explosion range="50" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true" delay="25"/>
+    </Repairable>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power" displayname="connection.power"/>
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+
+  <Item name="Emergency Light" identifier="emergencylight" category="Electrical" Tags="smallitem,light">
+    <Sprite texture="Content/Items/Electricity/lamp.png" sourcerect="0,48,48,16" depth="0.8"/>
+    <LightComponent lightcolor="1.0,0.0,0.0,0.1" range="250" IsOn="true" castlights="false">
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5"/>
+      <sprite texture="Content/Items/Electricity/lamp.png" sourcerect="0,48,48,16" alpha="1.0"/>
+    </LightComponent>
+	<Repairable selectkey="Action" name="Replace bulb" deteriorationspeed="0" ShowRepairUIThreshold="0">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+	  <StatusEffect type="OnBroken" target="This">
+        <Explosion range="50" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true" delay="25"/>
+    </Repairable>
+    
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel"/>
+      <RequiredItem items="screwdriver" type="Equipped"/>
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+</Items>
