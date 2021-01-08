@@ -410,7 +410,7 @@
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
 
-  <Item name="Construction Kit" identifier="constructionkit" aliases="tool kit" tags="machine" pickdistance="150" scale="0.5" Description="Drop to use">
+  <Item name="Construction Kit" identifier="constructionkit" aliases="tool kit" tags="tool" pickdistance="150" scale="0.5" Description="Drop to use">
   <Price baseprice="50" >
       <Price locationtype="outpost" multiplier="1" minavailable="1" />
       <Price locationtype="city" multiplier="0.9" minavailable="2" />
