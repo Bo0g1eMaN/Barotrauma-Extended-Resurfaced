@@ -8,8 +8,8 @@
   <None file="Mods/BTE/BTEskillsettings.xml" />
   <Item file="Mods/BTE/Items/Weapons/BTErailgun.xml" />
   <Item file="Mods/BTE/BTEidcard.xml" />
-  <Item file="Mods/BTE/Items/JobGear/Diving/diving.xml" />
-  <Item file="Mods/BTE/Items/JobGear/Other/Other.xml" />
+  <Item file="Mods/BTE/Items/Jobgear/Diving/diving.xml" />
+  <Item file="Mods/BTE/Items/Jobgear/Other/Other.xml" />
   <Character file="Mods/BTE/Characters/Human/Human.xml" />
   <Character file="Mods/BTE/Characters/Husk/Husk.xml" />
   <Character file="Mods/BTE/Characters/Crawler/Crawler.xml" />
@@ -46,7 +46,6 @@
   <Item file="Mods/BTE/Items/Containers/btecontainers.xml" />
   <Character file="Mods/BTE/Characters/Teleglitch/Teleglitch.xml" />
   <Character file="Mods/BTE/Characters/Snailfish/Snailfish.xml" />
-  <None file="Mods/BTE/DefaultWorkshopPreviewImage.png" />
   <Afflictions file="Mods/BTE/BTEAfflictions.xml" />
   <None file="Mods/BTE/Items/InventoryIconAtlas.png" />
   <None file="Mods/BTE/Items/Jobgear/Security/riotgear.png" />
