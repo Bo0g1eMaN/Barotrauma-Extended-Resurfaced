@@ -33,12 +33,12 @@ Another note if you are changing seared crawler meat please do be alerted that s
 
     <Throwable slots="Any,RightHand,LeftHand" throwforce="3.0" canBeCombined="true" msg="ItemMsgPickUpSelect">   
       <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
-      <StatusEffect type="OnUse" target="Character" delay="10" duration="20">
+      <StatusEffect type="OnUse" target="Character" delay="10" duration="10">
         <Affliction identifier="drunk" amount="1.0"/>
 		<Affliction identifier="psychosisresistance" amount="10" />
 		<Affliction identifier="durationincrease" amount="10" />
-		<ReduceAffliction identifier="damage" amount="0.25"/>
-        <ReduceAffliction identifier="burn" amount="0.25"/>
+		<ReduceAffliction identifier="internaldamage" amount="0.2"/>
+        <ReduceAffliction identifier="burn" amount="0.2"/>
 	      </StatusEffect>
 
 
@@ -109,8 +109,8 @@ Another note if you are changing seared crawler meat please do be alerted that s
         <Affliction identifier="drunk" amount="1.0"/>
 		<Affliction identifier="psychosisresistance" amount="10" />
 		<Affliction identifier="durationincrease" amount="10" />
-		<ReduceAffliction identifier="damage" amount="0.25" />
-        <ReduceAffliction identifier="burn" amount="0.25"/>
+		<ReduceAffliction identifier="internaldamage" amount="0.2" />
+        <ReduceAffliction identifier="burn" amount="0.2"/>
       </StatusEffect>
 
 		      </Throwable>
@@ -143,8 +143,8 @@ Another note if you are changing seared crawler meat please do be alerted that s
         <Affliction identifier="drunk" amount="1.0"/>
 		<Affliction identifier="psychosisresistance" amount="10" />
 		<Affliction identifier="durationincrease" amount="10" />
-		<ReduceAffliction identifier="damage" amount="0.25" />
-        <ReduceAffliction identifier="burn" amount="0.25"/>
+		<ReduceAffliction identifier="internaldamage" amount="0.2" />
+        <ReduceAffliction identifier="burn" amount="0.2"/>
       </StatusEffect>
 		        <StatusEffect type="OnUse" target="Character" delay="0" duration="25">
         <ReduceAffliction identifier="damage" amount="0.25" />
@@ -178,8 +178,8 @@ Another note if you are changing seared crawler meat please do be alerted that s
       <StatusEffect type="OnUse" target="Character" delay="10" duration="15">
         <Affliction identifier="drunk" amount="1.1"/>
 		<Affliction identifier="psychosisresistance" amount="10"/>
-		<ReduceAffliction identifier="damage" amount="0.25"/>
-        <ReduceAffliction identifier="burn" amount="0.25"/>
+		<ReduceAffliction identifier="internaldamage" amount="0.2"/>
+        <ReduceAffliction identifier="burn" amount="0.2"/>
 		<Affliction identifier="durationincrease" amount="10" />
 		<ReduceAffliction identifier="radiationsickness" amount="0.2"/>
       </StatusEffect>
@@ -212,8 +212,8 @@ Another note if you are changing seared crawler meat please do be alerted that s
       <StatusEffect type="OnUse" target="Character" delay="10" duration="18">
         <Affliction identifier="drunk" amount="1.1"/>
 		<Affliction identifier="psychosisresistance" amount="10"/>
-		<ReduceAffliction identifier="damage" amount="0.25"/>
-        <ReduceAffliction identifier="burn" amount="0.25"/>
+		<ReduceAffliction identifier="internaldamage" amount="0.2"/>
+        <ReduceAffliction identifier="burn" amount="0.2"/>
 		<Affliction identifier="durationincrease" amount="10" />
 		<ReduceAffliction identifier="radiationsickness" amount="0.2"/>
       </StatusEffect>
@@ -252,12 +252,13 @@ Another note if you are changing seared crawler meat please do be alerted that s
 
     <Throwable slots="Any,RightHand,LeftHand" throwforce="3.0" canBeCombined="true" msg="ItemMsgPickUpSelect">>    
       <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
-      <StatusEffect type="OnUse" target="Character" delay="10" duration="18">
+      <StatusEffect type="OnUse" target="Character" delay="10" duration="9">
         <Affliction identifier="drunk" amount="1.0"/>
 		<Affliction identifier="psychosis" amount="1.0"/>
+		<ReduceAffliction identifier="bleeding" amount="0.2"/>
 		<Affliction identifier="durationincrease" amount="10" />
 		<ReduceAffliction identifier="damage" amount="0.1"/>
-		<ReduceAffliction identifier="burn" amount="0.2"/>
+		<ReduceAffliction identifier="internaldamage" amount="0.2"/>
 
       </StatusEffect>
 
@@ -281,13 +282,11 @@ Another note if you are changing seared crawler meat please do be alerted that s
     </Fabricate>
 	
 	<Throwable slots="Any,RightHand,LeftHand" throwforce="3.0" canBeCombined="true" msg="ItemMsgPickUpSelect">
-	 <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true" duration="25"/>
+	 <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
 	  	    <sound file="Mods/BTE/Items/Medical/FoodDrink.ogg" type="OnUse" range="500"/>
       <StatusEffect type="OnUse" target="Character">
 		<Affliction identifier="haste" strength="10"/>
-        <Affliction identifier="durationincrease" amount="1" />
-        <ReduceAffliction identifier="damage" amount="0.25"/>
-		<ReduceAffliction identifier="burn" amount="0.25"/>
+<Affliction identifier="durationincrease" amount="1" />
       </StatusEffect>
 
 		      </Throwable>
@@ -313,7 +312,11 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
 <ReduceAffliction identifier="damage" amount="0.3"/>
+<ReduceAffliction identifier="internaldamage" amount="0.2"/>
+		<Affliction identifier="organdamage" strength="0.3"/>
 <Affliction identifier="strengthen" strength="0.3"/>
+<ReduceAffliction identifier="durationincrease" amount="0.003"/>
+<Affliction identifier="psychosis" amount="0.05"/>
       </StatusEffect>
     </Holdable>
   </Item>
@@ -337,7 +340,12 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	    <sound file="Mods/BTE/Items/Medical/ChipsEat.ogg" type="OnUse" range="750"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
-<Affliction identifier="damage" strength="0.2"/>
+   <ReduceAffliction identifier="internaldamage" amount="0.2"/>
+   <ReduceAffliction identifier="bleeding" amount="0.2"/>
+   <ReduceAffliction identifier="lacerations" amount="0.2"/>
+<Affliction identifier="organdamage" strength="0.01"/>
+<Affliction identifier="durationincrease" amount="0.00005" />
+<Affliction identifier="haste" amount="0.00001" />
       </StatusEffect>
 	  
 
@@ -363,8 +371,10 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
       </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
-    <ReduceAffliction identifier="damage" amount="0.2"/>
+    <ReduceAffliction identifier="internaldamage" amount="0.2"/>
 <Affliction identifier="durationincrease" amount="5" />
+<Affliction identifier="haste" amount="1" />
+
       </StatusEffect>
     </Holdable>
   </Item>
@@ -397,7 +407,7 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
-<ReduceAffliction identifier="damage" amount="0.2"/>
+<ReduceAffliction identifier="internaldamage" amount="0.2"/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -434,7 +444,7 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
-<ReduceAffliction identifier="damage" amount="0.2"/>
+<ReduceAffliction identifier="internaldamage" amount="0.2"/>
       </StatusEffect>
 
       <StatusEffect type="OnBroken" target="This">
@@ -470,7 +480,10 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
-<ReduceAffliction identifier="damage" amount="0.1"/>
+<ReduceAffliction identifier="internaldamage" amount="0.2"/>
+<Affliction identifier="durationincrease" amount="0.5" />
+<Affliction identifier="haste" amount="0.1" />
+
       </StatusEffect>
 
       <StatusEffect type="OnBroken" target="This">
@@ -502,7 +515,9 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
-<ReduceAffliction identifier="damage" amount="0.25"/>
+<ReduceAffliction identifier="internaldamage" amount="0.3"/>
+<Affliction identifier="durationincrease" amount="0.5" />
+<Affliction identifier="haste" amount="0.1" />
       </StatusEffect>
 
       <StatusEffect type="OnBroken" target="This">
@@ -537,7 +552,13 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	  </StatusEffect>
 	  
       <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
-<ReduceAffliction identifier="damage" amount="0.4"/>
+<ReduceAffliction identifier="internaldamage" amount="0.47"/>
+
+   <ReduceAffliction identifier="bleeding" amount="0.12"/>
+   <ReduceAffliction identifier="lacerations" amount="0.12"/>
+<Affliction identifier="organdamage" strength="0.009"/>
+<Affliction identifier="durationincrease" amount="0.1" />
+<Affliction identifier="haste" amount="0.091" />
       </StatusEffect>
       <StatusEffect type="OnUse" tags="chipeat" target="Character"  HideFace="false" delay="0" duration="35" stackable="true"/>
 	  	  	        <StatusEffect type="OnUse" target="Character" delay="0" duration="5">
@@ -573,7 +594,11 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="5">
-<ReduceAffliction identifier="damage" amount="0.1"/>
+<ReduceAffliction identifier="internaldamage" amount="0.1"/>
+   <ReduceAffliction identifier="internaldamage" amount="0.17"/>
+   <ReduceAffliction identifier="bleeding" amount="0.13"/>
+   <ReduceAffliction identifier="lacerations" amount="0.13"/>
+<Affliction identifier="organdamage" strength="0.03"/>
       </StatusEffect>
 
       <StatusEffect type="OnBroken" target="This">
@@ -605,7 +630,9 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="5">
-<ReduceAffliction identifier="damage" strength="0.1"/>
+<Affliction identifier="durationincrease" amount="5" />
+<Affliction identifier="haste" amount="8" />
+<Affliction identifier="organdamage" strength="0.009"/>
       </StatusEffect>
 	  
 
@@ -667,7 +694,13 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
-<ReduceAffliction identifier="damage" amount="0.3"/>
+<ReduceAffliction identifier="internaldamage" amount="0.3"/>
+<Affliction identifier="durationincrease" amount="2" />
+<Affliction identifier="haste" amount="0.5" />
+   <ReduceAffliction identifier="bleeding" amount="0.01"/>
+   <ReduceAffliction identifier="lacerations" amount="0.01"/>
+<Affliction identifier="organdamage" strength="0.00001"/>
+
       </StatusEffect>
 	        <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -695,7 +728,9 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
-<ReduceAffliction identifier="damage" amount="0.4"/>
+<ReduceAffliction identifier="internaldamage" amount="0.4"/>
+<ReduceAffliction identifier="lacerations" amount="0.1"/>
+<ReduceAffliction identifier="burn" amount="0.1"/>
       </StatusEffect>
 	  
 	        <StatusEffect type="OnUse" target="Character" delay="40" duration="20">
@@ -731,10 +766,12 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
-<ReduceAffliction identifier="damage" amount="0.2"/>
+<ReduceAffliction identifier="internaldamage" amount="0.4"/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
+
+
       </StatusEffect>
     </Holdable>
   </Item>
@@ -763,11 +800,15 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
-<ReduceAffliction identifier="damage" amount="0.6"/>
+<ReduceAffliction identifier="internaldamage" amount="0.8"/>
 <Affliction identifier="durationincrease" amount="1.5" />
+<Affliction identifier="haste" amount="0.3" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
+
+
+
       </StatusEffect>
     </Holdable>
   </Item>
@@ -797,7 +838,9 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="21">
-<ReduceAffliction identifier="damage" amount="0.6"/>
+<ReduceAffliction identifier="internaldamage" amount="0.9"/>
+<Affliction identifier="durationincrease" amount="1.5" />
+<Affliction identifier="haste" amount="0.3" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -831,7 +874,9 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
-<ReduceAffliction identifier="damage" amount="0.6"/>
+<ReduceAffliction identifier="internaldamage" amount="0.6"/>
+<Affliction identifier="durationincrease" amount="1.5" />
+<Affliction identifier="haste" amount="0.3" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -866,7 +911,9 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
-<ReduceAffliction identifier="damage" amount="0.6"/>
+<ReduceAffliction identifier="internaldamage" amount="0.6"/>
+<Affliction identifier="durationincrease" amount="1.5" />
+<Affliction identifier="haste" amount="0.3" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -900,7 +947,8 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="22">
-<ReduceAffliction identifier="damage" amount="0.6"/>
+<ReduceAffliction identifier="internaldamage" amount="0.681"/>
+<ReduceAffliction identifier="burn" amount="0.678"/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -937,12 +985,19 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
       <StatusEffect tags="clown" type="OnUse" HideFace="false" target="Character" delay="20" duration="20">
-<ReduceAffliction identifier="damage" amount="0.3"/>
+<ReduceAffliction identifier="internaldamage" amount="0.221"/>
+         
+	  <Affliction identifier="durationincrease" amount="5" />
+<Affliction identifier="haste" amount="3" />
+
+
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
       </StatusEffect>
+	  
     </Holdable>
+	
   </Item>
   
         <Item name="Cotton Candy" identifier="cottoncandy" category="Misc" Tags="mediumitem,food"
@@ -967,12 +1022,19 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	    <sound file="Mods/BTE/Items/Medical/FoodCandyEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
       <StatusEffect tags="clown" type="OnUse" HideFace="false" target="Character" delay="20" duration="20">
-<ReduceAffliction identifier="damage" amount="0.2"/>
+<ReduceAffliction identifier="internaldamage" amount="0.1"/>
+         
+	  <Affliction identifier="durationincrease" amount="5" />
+<Affliction identifier="haste" amount="9" />
+
+
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
       </StatusEffect>
+	  
     </Holdable>
+	
   </Item>
   
   
@@ -999,7 +1061,9 @@ Another note if you are changing seared crawler meat please do be alerted that s
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="21">
-  <ReduceAffliction identifier="damage" amount="0.3"/>
+  <ReduceAffliction identifier="internaldamage" amount="0.5"/>
+
+
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -1031,7 +1095,15 @@ Another note if you are changing seared crawler meat please do be alerted that s
 
 
       <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
-		<ReduceAffliction identifier="damage" amount="0.4"/>
+  <ReduceAffliction identifier="internaldamage" amount="0.8"/>
+            <Affliction identifier="drunk" amount="0.05"/>
+		<Affliction identifier="psychosis" amount="0.02"/>
+  <ReduceAffliction identifier="internaldamage" amount="0.4"/>
+		<ReduceAffliction identifier="bleeding" amount="0.2"/>
+		<Affliction identifier="durationincrease" amount="10" />
+		<ReduceAffliction identifier="damage" amount="0.1"/>
+
+
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -1062,8 +1134,16 @@ description="Normally paired with fries, this has been claimed to be a sacred me
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
-		<ReduceAffliction identifier="damage" amount="0.3" />
+  <ReduceAffliction identifier="internaldamage" amount="0.8"/>
+        <Affliction identifier="drunk" amount="1.0"/>
+		<Affliction identifier="psychosisresistance" amount="10" />
+		<Affliction identifier="durationincrease" amount="10" />
+		<ReduceAffliction identifier="internaldamage" amount="0.2" />
+        <ReduceAffliction identifier="burn" amount="0.2"/>
+
+
       </StatusEffect>
+	  
 	        <StatusEffect type="OnUse" target="Character" delay="0" duration="5">
 			        <Conditional HasStatusTag="chipeat" />
         <Affliction identifier="huskinfectionresistance" amount="5.0"/>
@@ -1100,7 +1180,8 @@ description="Normally paired with fries, this has been claimed to be a sacred me
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Character" delay="20" duration="20">
-  <ReduceAffliction identifier="damage" amount="0.4"/>
+  <ReduceAffliction identifier="internaldamage" amount="0.4"/>
+
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -1139,7 +1220,17 @@ description="Normally paired with fries, this has been claimed to be a sacred me
 	  </StatusEffect>
 
       <StatusEffect type="OnUse" target="Character" delay="12" duration="21">
-  <ReduceAffliction identifier="damage" amount="1"/>
+  <ReduceAffliction identifier="internaldamage" amount="1.2"/>
+        <Affliction identifier="drunk" amount="1.0"/>
+		<Affliction identifier="psychosisresistance" amount="10" />
+		<Affliction identifier="durationincrease" amount="10" />
+
+        <ReduceAffliction identifier="burn" amount="0.2"/>
+				<ReduceAffliction identifier="psychosis" amount="0.2" />
+
+
+
+
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
 	  <SpawnItem identifiers="foodcan" spawnposition="This" outcondition="0.9"/>
@@ -1173,7 +1264,22 @@ description="Normally paired with fries, this has been claimed to be a sacred me
 	  </StatusEffect>
 
       <StatusEffect type="OnUse" target="Character" delay="12" duration="21">
-  <ReduceAffliction identifier="damage" amount="1"/>
+  <ReduceAffliction identifier="internaldamage" amount="1.1"/>
+        <Affliction identifier="drunk" amount="1.0"/>
+		<Affliction identifier="psychosisresistance" amount="10" />
+		<Affliction identifier="durationincrease" amount="10.5" />
+
+<Affliction identifier="haste" amount="0.5" />
+
+        <ReduceAffliction identifier="burn" amount="0.2"/>
+				<ReduceAffliction identifier="psychosis" amount="0.2" />
+<ReduceAffliction identifier="damage" amount="0.3"/>
+		<Affliction identifier="organdamage" strength="0.3"/>
+<Affliction identifier="strengthen" strength="0.3"/>
+<ReduceAffliction identifier="durationincrease" amount="0.00003"/>
+
+
+
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
 	  <SpawnItem identifiers="foodcan" spawnposition="This" outcondition="0.9"/>
@@ -1206,7 +1312,19 @@ description="Normally paired with fries, this has been claimed to be a sacred me
 	  </StatusEffect>
 
       <StatusEffect type="OnUse" target="Character" delay="12" duration="21">
-<ReduceAffliction identifier="damage" amount="2"/>
+<ReduceAffliction identifier="damage" amount="0.5"/>
+<ReduceAffliction identifier="internaldamage" amount="0.5"/>
+		<Affliction identifier="organdamage" strength="0.6"/>
+<Affliction identifier="strengthen" strength="1.13"/>
+<ReduceAffliction identifier="durationincrease" amount="0.0003"/>
+<Affliction identifier="haste" amount="1" />
+<Affliction identifier="durationincrease" amount="5" />
+   <ReduceAffliction identifier="bleeding" amount="0.12"/>
+   <ReduceAffliction identifier="lacerations" amount="0.12"/>
+
+
+
+
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
 	  <SpawnItem identifiers="foodcan" spawnposition="This" outcondition="0.9"/>
@@ -1238,10 +1356,19 @@ description="Normally paired with fries, this has been claimed to be a sacred me
 	  </StatusEffect>
 
       <StatusEffect type="OnUse" target="Character" delay="12" duration="21">
-<ReduceAffliction identifier="damage" amount="2"/>
+<ReduceAffliction identifier="damage" amount="0.5"/>
+<ReduceAffliction identifier="internaldamage" amount="0.5"/>
+
+<Affliction identifier="strengthen" strength="1.13"/>
+<ReduceAffliction identifier="durationincrease" amount="0.0003"/>
+<Affliction identifier="haste" amount="1" />
+
 <Affliction identifier="durationincrease" amount="5" />
         <Conditional huskinfection="lt 0.01" />
         <Affliction identifier="huskinfection" amount="0.01" />
+
+
+
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
 	  <SpawnItem identifiers="foodcan" spawnposition="This" outcondition="0.9"/>
@@ -1273,7 +1400,14 @@ description="Normally paired with fries, this has been claimed to be a sacred me
 	  </StatusEffect>
 
       <StatusEffect type="OnUse" target="Character" delay="12" duration="21">
-<ReduceAffliction identifier="damage" amount="0.1"/>
+<ReduceAffliction identifier="damage" amount="0.003"/>
+<ReduceAffliction identifier="internaldamage" amount="0.2"/>
+		<Affliction identifier="organdamage" strength="0.003"/>
+<Affliction identifier="strengthen" strength="0.03"/>
+<ReduceAffliction identifier="durationincrease" amount="0.0003"/>
+<Affliction identifier="psychosis" amount="0.5"/>
+
+
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
 	  <SpawnItem identifiers="foodcan" spawnposition="This" outcondition="0.9"/>
@@ -1318,8 +1452,14 @@ description="Normally paired with fries, this has been claimed to be a sacred me
 	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg" type="OnUse" range="500"/>
 	  </StatusEffect>
      <StatusEffect type="OnUse" target="Character" delay="12" duration="10">
-  <ReduceAffliction identifier="internaldamage" amount="1"/>
-	<Affliction identifier="morbusinepoisoning" strength="0.4" />
+  <ReduceAffliction identifier="internaldamage" amount="1.681"/>
+        <Affliction identifier="drunk" amount="1.0"/>
+		<Affliction identifier="psychosisresistance" amount="10" />
+		<Affliction identifier="durationincrease" strength="10" />
+
+        <ReduceAffliction identifier="burn" amount="0.878"/>
+				<ReduceAffliction identifier="psychosis" amount="0.2" />
+					  <Affliction identifier="morbusinepoisoning" strength="0.4" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
 	  <SpawnItem identifiers="foodcan" spawnposition="This" outcondition="0.9"/>
@@ -1327,4 +1467,8 @@ description="Normally paired with fries, this has been claimed to be a sacred me
       </StatusEffect>
     </Holdable>
   </Item>
+  
+  
+  
+  
 </Items>

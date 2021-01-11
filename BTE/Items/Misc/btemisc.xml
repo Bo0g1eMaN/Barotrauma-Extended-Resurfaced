@@ -1115,4 +1115,39 @@
     </ItemContainer>
     <aitarget sightrange="500" soundrange="500" fadeouttime="1" />
   </Item>
+  
+  <Item name="PDA" identifier="pda" scale="0.25" category="Equipment" tags="smallitem,logic" description="Standard issue to all Coalition sailors for personal use and on the job utility." cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="divingcab,crewcab" minamount="0" maxamount="2" spawnprobability="0.75"/>
+    <PreferredContainer primary="storagecab"/>
+    <Price baseprice="100">
+      <Price locationtype="outpost" multiplier="1" minavailable="3"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="10"/>
+      <Price locationtype="research" multiplier="1" minavailable="4"/>
+      <Price locationtype="military" multiplier="1" minavailable="6"/>
+      <Price locationtype="mine" multiplier="1" minavailable="6"/>
+    </Price>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="323,193,60,61" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Electricity/detectors.png" sourcerect="177,108,69,93" depth="0.55" origin="0.5,0.5" />
+    <Body width="60" height="90" density="8" />
+	<Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect" />
+    <Terminal canbeselected="true" msg="ItemMsgInteractSelect" AllowInGameEditing="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.35,0.35" anchor="Center" style="ItemUI" />
+    </Terminal>
+    <Deconstruct time="10">
+      <Item identifier="plastic" />
+      <Item identifier="fpgacircuit" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="mechanical" level="30" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="fpgacircuit" />
+    </Fabricate>
+    <WifiComponent range="35000.0" LinkToChat="true" MinChatMessageInterval="0.0">
+      <RequiredItems items="mobilebattery" type="Contained" />
+    </WifiComponent>
+    <ItemContainer capacity="1" hideitems="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
+      <Containable items="mobilebattery" />
+    </ItemContainer>
+  </Item>
 </Items>

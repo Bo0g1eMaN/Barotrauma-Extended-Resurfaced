@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <contentpackage name="BTE" path="Mods/BTE/filelist.xml" corepackage="false" gameversion="0.10.4.0">
   <Jobs file="Mods/BTE/bteJobs.xml" />
+  <RandomEvents file="Mods/BTE/bterandomevents.xml" />
   <UIStyle file="Mods/BTE/UI/BTEstyle.xml" />
   <Text file="Mods/BTE/Texts/EnglishBTE.xml" />
   <Sounds file="Mods/BTE/Sounds/BTEsounds.xml" />
@@ -46,6 +47,7 @@
   <Item file="Mods/BTE/Items/Containers/btecontainers.xml" />
   <Character file="Mods/BTE/Characters/Teleglitch/Teleglitch.xml" />
   <Character file="Mods/BTE/Characters/Snailfish/Snailfish.xml" />
+  <None file="Mods/BTE/DefaultWorkshopPreviewImage.png" />
   <Afflictions file="Mods/BTE/BTEAfflictions.xml" />
   <None file="Mods/BTE/Items/InventoryIconAtlas.png" />
   <None file="Mods/BTE/Items/Jobgear/Security/riotgear.png" />
