@@ -4,7 +4,7 @@
   <ragdolls folder="Mods/BTE/Characters/Teleglitch/Ragdolls"/>
   <animations folder="Mods/BTE/Characters/Teleglitch/Animations"/>
 
-  <health vitality="50" doesbleed="false" crushdepth="-Infinity" constanthealthregeneration="10"/>
+  <health vitality="1" doesbleed="false" crushdepth="-Infinity" />
   
   <sound file="Mods/BTE/Characters/Teleglitch/Voices1.ogg" state="Attack" range="500"/>
   <sound file="Mods/BTE/Characters/Teleglitch/Voices2.ogg" state="Attack" range="500"/>

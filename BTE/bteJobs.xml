@@ -60,6 +60,9 @@
         <Item identifier="revolverround"/>
       </Item>
       <Item identifier="captainspipe" equip="false"/>
+	  <Item identifier="pda" equip="false">
+        <Item identifier="batterycell"/>
+      </Item>
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
         <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
@@ -104,6 +107,9 @@
         <Item identifier="revolverround"/>
       </Item>
       <Item identifier="steroids"/>
+	  <Item identifier="pda" equip="false">
+        <Item identifier="batterycell"/>
+      </Item>
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="2,38,120,109" offset="0,0" />
         <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="121,0,76,80" offset="-20,15" />
@@ -143,6 +149,9 @@
         <Item identifier="batterycell" showpreview="false"/>
       </Item>
       <Item identifier="harmonica" equip="false"/>
+	  <Item identifier="pda" equip="false">
+        <Item identifier="batterycell"/>
+      </Item>
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_3.png" sourcerect="2,38,120,109" offset="0,0" />
         <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_3.png" sourcerect="121,0,76,80" offset="-20,15" />
@@ -217,6 +226,9 @@
        <Item identifier="stunbaton" equip="false">
 	     <Item identifier="batterycell" />
 		 </Item>
+		 <Item identifier="pda" equip="false">
+        <Item identifier="batterycell"/>
+      </Item>
       <PreviewSprites dims="120,109">
 	  <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="0,27,128,101" origin="0.5,0.5" offset="0,0" />
         <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="0,27,128,101" origin="0.5,0.5" offset="-20,15" />
@@ -255,6 +267,9 @@
       </Item>
       <Item identifier="divingknife"/>
 	  <Item identifier="antibleeding1"/>
+	  <Item identifier="pda" equip="false">
+        <Item identifier="batterycell"/>
+      </Item>
       <PreviewSprites dims="120,109">
                 <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
         <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
@@ -295,6 +310,9 @@
       </Item>
       <Item identifier="handcuffs" equip="false"/>
 	  <Item identifier="antibleeding1"/>
+	  <Item identifier="pda" equip="false">
+        <Item identifier="batterycell"/>
+      </Item>
       <PreviewSprites dims="120,109">
 	    <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="0,27,128,101" offset="0,0" />
         <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="0,27,128,101" offset="-20,15" />
@@ -346,6 +364,9 @@
       <Item identifier="headset" equip="true" showpreview="false">
         <Item identifier="batterycell" showpreview="false"/>
       </Item>
+	  <Item identifier="pda" equip="false">
+        <Item identifier="batterycell"/>
+      </Item>
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Engineer/engineer_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
         <sprite texture="Content/Items/Jobgear/Engineer/engineer_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
@@ -378,6 +399,9 @@
       <Item identifier="orangejumpsuit2" equip="true" outfit="true"/>
       <Item identifier="headset" equip="true" showpreview="false">
         <Item identifier="batterycell" showpreview="false"/>
+      </Item>
+	  <Item identifier="pda" equip="false">
+        <Item identifier="batterycell"/>
       </Item>
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Engineer/engineer_torso_[GENDER]_2.png" sourcerect="2,38,120,109" offset="0,0" />
@@ -442,6 +466,9 @@
       <Item identifier="headset" equip="true" showpreview="false">
         <Item identifier="batterycell" showpreview="false"/>
       </Item>
+	  <Item identifier="pda" equip="false">
+        <Item identifier="batterycell"/>
+      </Item>
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Mechanic/mechanic_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
         <sprite texture="Content/Items/Jobgear/Mechanic/mechanic_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
@@ -464,6 +491,9 @@
       <Item identifier="bluejumpsuit2" equip="true" outfit="true"/>
       <Item identifier="headset" equip="true" showpreview="false">
         <Item identifier="batterycell" showpreview="false"/>
+      </Item>
+	  <Item identifier="pda" equip="false">
+        <Item identifier="batterycell"/>
       </Item>
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Mechanic/mechanic_torso_[GENDER]_2.png" sourcerect="2,38,120,109" offset="0,0" />
@@ -545,6 +575,9 @@
       <Item identifier="headset" equip="true" showpreview="false">
         <Item identifier="batterycell" showpreview="false"/>
       </Item>
+	  <Item identifier="pda" equip="false">
+        <Item identifier="batterycell"/>
+      </Item>
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Security/securityofficer_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
         <sprite texture="Content/Items/Jobgear/Security/securityofficer_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
@@ -584,6 +617,9 @@
       <Item identifier="ballistichelmet3" equip="true"/>
       <Item identifier="headset" equip="true" showpreview="false">
         <Item identifier="batterycell" showpreview="false"/>
+      </Item>
+	  <Item identifier="pda" equip="false">
+        <Item identifier="batterycell"/>
       </Item>
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Security/securityofficer_torso_[GENDER]_2.png" sourcerect="2,38,120,109" offset="0,0" />
@@ -625,6 +661,9 @@
       <Item identifier="ballistichelmet2" equip="true"/>
       <Item identifier="headset" equip="true" showpreview="false">
         <Item identifier="batterycell" showpreview="false"/>
+      </Item>
+	  <Item identifier="pda" equip="false">
+        <Item identifier="batterycell"/>
       </Item>
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Security/securityofficer_torso_[GENDER]_3.png" sourcerect="2,38,120,109" offset="0,0" />
@@ -702,6 +741,9 @@
 		<Item identifier="docbasic"/>
 	  </Item>					
       <Item identifier="syringegun"/>
+	  <Item identifier="pda" equip="false">
+        <Item identifier="batterycell"/>
+      </Item>
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
         <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
@@ -736,6 +778,9 @@
       <Item identifier="antibleeding1"/>
       <Item identifier="antidama1"/>
       <Item identifier="tonicliquid"/>
+	  <Item identifier="pda" equip="false">
+        <Item identifier="batterycell"/>
+      </Item>
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_2.png" sourcerect="2,38,120,109" offset="0,0" />
         <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_2.png" sourcerect="121,0,76,80" offset="-20,15" />
@@ -803,6 +848,9 @@
       <Item identifier="sulphuricacid"/>
       <Item identifier="antibiotics"/>
       <Item identifier="stabilozine"/>
+	  <Item identifier="pda" equip="false">
+        <Item identifier="batterycell"/>
+      </Item>
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
         <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
@@ -836,6 +884,9 @@
 	  <Item identifier="divingknife"/>
       <Item identifier="antibleeding1"/>
       <Item identifier="chloralhydrate"/>
+	  <Item identifier="pda" equip="false">
+        <Item identifier="batterycell"/>
+      </Item>
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_2.png" sourcerect="2,38,120,109" offset="0,0" />
         <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_2.png" sourcerect="121,0,76,80" offset="-20,15" />
@@ -898,6 +949,9 @@
 		<Item identifier="docbasic"/>
 <Item identifier="cookbook"/>
       </Item>
+	  <Item identifier="pda" equip="false">
+        <Item identifier="batterycell"/>
+      </Item>
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
         <sprite texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
@@ -951,6 +1005,9 @@
       <Item identifier="screwdriver"/>
       <Item identifier="headset" equip="true" showpreview="false">
         <Item identifier="batterycell" showpreview="false"/>
+      </Item>
+	  <Item identifier="pda" equip="false">
+        <Item identifier="batterycell"/>
       </Item>
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />

@@ -410,7 +410,7 @@
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
 
-  <Item name="Construction Kit" identifier="constructionkit" aliases="tool kit" tags="tool" pickdistance="150" scale="0.5" Description="Drop to use">
+  <Item name="Construction Kit" identifier="constructionkit" aliases="tool kit" tags="machine" pickdistance="150" scale="0.5" Description="Drop to use">
   <Price baseprice="50" >
       <Price locationtype="outpost" multiplier="1" minavailable="1" />
       <Price locationtype="city" multiplier="0.9" minavailable="2" />
@@ -424,14 +424,12 @@
       <Item identifier="steel" />
 	  <Item identifier="plastic" />
     </Deconstruct>
- <Holdable canbeselected="false" selectkey="Select" pickkey="Use" holdpos="0,-80" handle1="-40,30" handle2="40,30" slots="RightHand+LeftHand" msg="ItemMsgDetach" PickingTime="0.001" attachable="true" aimable="true"/>
-	<Fabricator canbeselected="true" powerconsumption="0" msg="ItemMsgInteractSelect" >
+ <Holdable selectkey="Select" pickkey="Use" holdpos="0,-80" handle1="-40,30" handle2="40,30" slots="RightHand+LeftHand" msg="ItemMsgDetach" PickingTime="0.001"/>
+    <Fabricator canbeselected="true" powerconsumption="0" msg="ItemMsgInteractSelect">
       <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
       <sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="1000.0" loop="true"/>
       <poweronsound file="Content/Items/PowerOnLight1.ogg" range="600" loop="false" />
-	  </Fabricator>
-
-	  
+    </Fabricator>
 
  <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="Input" allowuioverlap="true"/>
  <ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="Output" allowuioverlap="true"/>
