@@ -31,4 +31,31 @@
     </Wearable>
   </Item>
   </Override>
+  
+  <Item name="Freelancer Gear" identifier="freelancerclothes" nameidentifier="Freelanceroutfit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="Basic combat uniform commonly used by freelancers to look the part. However due to its cheap quality it provides no protection in combat at all." scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="outpostcrewcabinet" minamount="0" maxamount="1" spawnprobability="0.5"/>
+    <Price baseprice="75">
+      <Price locationtype="outpost" multiplier="1" minavailable="1"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="1"/>
+      <Price locationtype="research" multiplier="1" minavailable="1"/>
+      <Price locationtype="military" multiplier="1" minavailable="1"/>
+      <Price locationtype="mine" multiplier="1" minavailable="1"/>
+    </Price>
+    <Sprite name="securitypatrol" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="442,376,206,63" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="securitypatrol Torso" texture="Content/Items/Jobgear/Commoner/securitypatrol_torso_[GENDER].png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="securitypatrol Right Lower Arm" texture="Content/Items/Jobgear/Commoner/securitypatrol_torso_[GENDER].png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="securitypatrol Left Lower Arm" texture="Content/Items/Jobgear/Commoner/securitypatrol_torso_[GENDER].png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="securitypatrol Right Upper Arm" texture="Content/Items/Jobgear/Commoner/securitypatrol_torso_[GENDER].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="securitypatrol Left Upper Arm" texture="Content/Items/Jobgear/Commoner/securitypatrol_torso_[GENDER].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="securitypatrol Waist" texture="Content/Items/Jobgear/Commoner/securitypatrol_legs_[GENDER].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="securitypatrol Right Thigh" texture="Content/Items/Jobgear/Commoner/securitypatrol_legs_[GENDER].png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="securitypatrol Left Thigh" texture="Content/Items/Jobgear/Commoner/securitypatrol_legs_[GENDER].png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="securitypatrol Right Leg" texture="Content/Items/Jobgear/Commoner/securitypatrol_legs_[GENDER].png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="securitypatrol Left Leg" texture="Content/Items/Jobgear/Commoner/securitypatrol_legs_[GENDER].png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="securitypatrol Left Shoe" texture="Content/Items/Jobgear/Commoner/securitypatrol_legs_[GENDER].png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="securitypatrol Right Shoe" texture="Content/Items/Jobgear/Commoner/securitypatrol_legs_[GENDER].png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+    </Wearable>
+  </Item>
 </Items>
