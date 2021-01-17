@@ -1487,4 +1487,54 @@
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
   </Override>
+  
+  <Item name="Vibroblade" identifier="vibroblade" category="Equipment" Tags="smallitem,weapon" description="A knife modified with an electrical motor that when powered acts like a small chainsaw." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="armcab" minamount="0" maxamount="3" spawnprobability="1"/>
+    <PreferredContainer secondary="wreckarmcab" minamount="0" maxamount="2" spawnprobability="0.25"/>
+    <Deconstruct time="10">
+      <Item identifier="iron" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="researchstation" requiredtime="10">
+      <RequiredSkill identifier="weapons" level="50" />
+      <RequiredItem identifier="divingknife" />
+	  <RequiredItem identifier="fpgacircuit" />
+	  <RequiredItem identifier="copper" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="835,385,64,64" origin="0.5,0.5" />
+    <Sprite texture="weapons_new.png" sourcerect="183,203,66,16" depth="0.55" origin="0.5,0.5" />
+    <Body width="65" height="15" density="50" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-5,-5" holdangle="30" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect">
+      <Attack targetimpulse="2" severlimbsprobability="0.1" itemdamage="10">
+        <Affliction identifier="lacerations" strength="10" />
+        <Affliction identifier="bleeding" strength="10" />
+        <Affliction identifier="stun" strength="0.2" />
+        <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" type="OnUse" range="500" selectionmode="Random"/>
+		<Sound file="Content/Sounds/Damage/LimbSlash2.ogg" type="OnUse" range="500"/>
+		<Sound file="Content/Sounds/Damage/LimbSlash3.ogg" type="OnUse" range="500"/>
+		<Sound file="Content/Sounds/Damage/LimbSlash4.ogg" type="OnUse" range="500"/>
+		<Sound file="Content/Sounds/Damage/LimbSlash5.ogg" type="OnUse" range="500"/>
+		<Sound file="Content/Sounds/Damage/LimbSlash6.ogg" type="OnUse" range="500"/>
+      </Attack>
+	  	  <StatusEffect type="OnUse" target="Contained" Condition="-20" disabledeltatime="true">
+        <RequiredItem identifier="mobilebattery" type="Contained"/>
+      </StatusEffect>
+	  	<StatusEffect type="OnUse" target="Limb">
+        <Sound file="Mods/BTE/Items/Weapons/Vibroblade1.ogg" selectionmode="random" range="500" />
+        <Sound file="Mods/BTE/Items/Weapons/Vibroblade2.ogg" range="500" />
+        <Sound file="Mods/BTE/Items/Weapons/Vibroblade3.ogg" range="500" />
+        <RequiredItem identifier="mobilebattery" type="Contained"/>
+	    <Affliction identifier="lacerations" strength="15"/>
+	    <Affliction identifier="bleeding" strength="30"/>
+      </StatusEffect>
+    </MeleeWeapon>
+	<ItemContainer capacity="1" hideitems="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31"/>
+      <Containable identifiers="mobilebattery">
+        <StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true"/>
+      </Containable>
+	 </ItemContainer>
+    <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+
 </Items>
