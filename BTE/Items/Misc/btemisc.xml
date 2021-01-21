@@ -31,27 +31,35 @@
     <Body radius="45" width="34" density="15" />
     
     <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true">
-      <sprite name="Diving Suit Helmet Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true" hideotherwearables="true" sourcerect="5,4,92,94" origin="0.5,0.5">
-        <LightComponent range="200.0" lightcolor="250,224,165,125" powerconsumption="10" IsOn="true">
+      <sprite name="Diving Suit Helmet Wearable" texture="Diving_suit.png" limb="Head" inheritlimbdepth="true" scale="0.15" inherittexturescale="true" hidelimb="true" hideotherwearables="true" sourcerect="143,0,116,84" origin="0.6,1">
+        <LightComponent range="400.0" lightcolor="250,224,165,125" powerconsumption="0" IsOn="true">
           <StatusEffect type="OnWearing" target="This,Character" Voltage="1" setvalue="true">
             <Conditional IsDead="false" />
         <RequiredItem items="loadable" type="Contained" />
           </StatusEffect>
-          <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="1.0,1.0" />
+          <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.065,0.465" size="1.0,1.0" />
         </LightComponent>
       </sprite>
-      <sprite texture="Content/Items/Diving/DivingSuit_Torso.png" limb="Torso" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Legs.png" limb="Waist" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Torso.png" limb="RightHand" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Torso.png" limb="LeftHand" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Torso.png" limb="RightArm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Torso.png" limb="LeftArm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Legs.png" limb="RightThigh" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Legs.png" limb="LeftThigh" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Legs.png" limb="RightLeg" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Legs.png" limb="LeftLeg" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Legs.png" limb="RightFoot" sound="footstep_armor_heavy" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Legs.png" limb="LeftFoot" sound="footstep_armor_heavy" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Diving_suit.png" limb="Torso" sourcerect="137,81,125,151" origin="0.5,0.7" depth="0.004" inheritlimbdepth="true"  inherittexturescale="true" hideotherwearables="true" hidelimb="true">
+      </sprite>
+	  
+	  <sprite texture="Diving_suit.png" limb="Waist" sourcerect="137,226,117,83" origin="0.45,0.5" depth="0.004" inheritlimbdepth="true"  inherittexturescale="true" hideotherwearables="true" hidelimb="true">
+      </sprite>
+
+      <sprite texture="Diving_suit.png" limb="RightHand" sourcerect="0,250,44,147" origin="0.5,0.6" depth="0.0" inheritlimbdepth="true" inherittexturescale="true" hideotherwearables="true" hidelimb="true"/>
+      <sprite texture="Diving_suit.png" limb="LeftHand" sourcerect="0,250,44,147" origin="0.5,0.6" depth="0.016" inheritlimbdepth="true" inherittexturescale="true" hideotherwearables="true" hidelimb="true"/>
+
+      <sprite texture="Diving_suit.png" limb="RightArm" sourcerect="0,0,63,136" origin="0.5,0.5" depth="0.001" inheritlimbdepth="true" inherittexturescale="true" hideotherwearables="true" hidelimb="true"/>
+      <sprite texture="Diving_suit.png" limb="LeftArm" sourcerect="0,0,63,136" origin="0.5,0.5" depth="0.015" inheritlimbdepth="true" inherittexturescale="true" hideotherwearables="true" hidelimb="true"/>
+
+      <sprite texture="Diving_suit.png" limb="RightThigh" sourcerect="48,150,73,166" origin="0.5,0.5" depth="0.011" inheritlimbdepth="true" inherittexturescale="true" hideotherwearables="true" hidelimb="true"/>
+      <sprite texture="Diving_suit.png" limb="LeftThigh" sourcerect="48,150,73,166"    origin="0.5,0.5" depth="0.015" inheritlimbdepth="true" inherittexturescale="true" hideotherwearables="true" hidelimb="true"/>
+
+      <sprite texture="Diving_suit.png" limb="RightLeg" sourcerect="70,0,61,142" origin="0.5,0.5" depth="0.012" inheritlimbdepth="true" inherittexturescale="true" hideotherwearables="true" hidelimb="true"/>
+      <sprite texture="Diving_suit.png" limb="LeftLeg" sourcerect="70,0,61,142" origin="0.5,0.5" depth="0.016" inheritlimbdepth="true" inherittexturescale="true" hideotherwearables="true" hidelimb="true"/>
+
+      <sprite texture="Diving_suit.png" limb="RightFoot" sourcerect="96,317,61,83" sound="footstep_armor_heavy" origin="0.5,0.5" depth="0.013" inheritlimbdepth="true" inherittexturescale="true" hideotherwearables="true" hidelimb="true"/>
+      <sprite texture="Diving_suit.png" limb="LeftFoot" sourcerect="96,317,61,83" sound="footstep_armor_heavy" origin="0.5,0.5" depth="0.013" inheritlimbdepth="true" inherittexturescale="true" hideotherwearables="true" hidelimb="true"/>
       <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" PressureProtection="100.0" SpeedMultiplier="0.6" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
         <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" />
         <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" />
@@ -1175,27 +1183,27 @@
     <Body radius="45" width="34" density="15" />
     
     <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true">
-      <sprite name="Diving Suit Helmet Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true" hideotherwearables="true" sourcerect="5,4,92,94" origin="0.5,0.5">
-        <LightComponent range="200.0" lightcolor="250,224,165,125" powerconsumption="10" IsOn="true">
+      <sprite name="Diving Suit Helmet Wearable" texture="Assault_Suit.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true" hideotherwearables="true" sourcerect="138,0,119,92" origin="0.6,0.9">
+        <LightComponent range="400.0" lightcolor="250,224,165,125" powerconsumption="0" IsOn="true">
           <StatusEffect type="OnWearing" target="This,Character" Voltage="1" setvalue="true">
             <Conditional IsDead="false" />
         <RequiredItem items="loadable" type="Contained" />
           </StatusEffect>
-          <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="1.0,1.0" />
+          <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.06,0.475" size="1.0,1.0" />
         </LightComponent>
       </sprite>
-      <sprite texture="Content/Items/Diving/DivingSuit_Torso.png" limb="Torso" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Legs.png" limb="Waist" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Torso.png" limb="RightHand" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Torso.png" limb="LeftHand" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Torso.png" limb="RightArm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Torso.png" limb="LeftArm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Legs.png" limb="RightThigh" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Legs.png" limb="LeftThigh" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Legs.png" limb="RightLeg" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Legs.png" limb="LeftLeg" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Legs.png" limb="RightFoot" sound="footstep_armor_heavy" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite texture="Content/Items/Diving/DivingSuit_Legs.png" limb="LeftFoot" sound="footstep_armor_heavy" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite texture="Assault_Suit.png" limb="Torso" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" sourcerect="131,91,138,125" origin="0.5,0.7" inherittexturescale="true" />
+      <sprite texture="Assault_Suit.png" limb="Waist" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" sourcerect="138,213,136,94" origin="0.4,0.5" inherittexturescale="true" />
+      <sprite texture="Assault_Suit.png" limb="RightHand" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" sourcerect="0,254,43,141" origin="0.5,0.5" inherittexturescale="true" />
+      <sprite texture="Assault_Suit.png" limb="LeftHand" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" sourcerect="0,254,43,141" origin="0.5,0.5" inherittexturescale="true" />
+      <sprite texture="Assault_Suit.png" limb="RightArm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" sourcerect="0,0,58,138" origin="0.5,0.5" inherittexturescale="true" />
+      <sprite texture="Assault_Suit.png" limb="LeftArm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" sourcerect="0,0,58,138" origin="0.5,0.5" inherittexturescale="true" />
+      <sprite texture="Assault_Suit.png" limb="RightThigh" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" sourcerect="49,152,73,161" origin="0.5,0.5" inherittexturescale="true" />
+      <sprite texture="Assault_Suit.png" limb="LeftThigh" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" sourcerect="49,152,73,161" origin="0.5,0.5" inherittexturescale="true" />
+      <sprite texture="Assault_Suit.png" limb="RightLeg" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" sourcerect="71,0,58,141" origin="0.5,0.5" inherittexturescale="true" />
+      <sprite texture="Assault_Suit.png" limb="LeftLeg" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" sourcerect="71,0,58,141" origin="0.5,0.5" inherittexturescale="true" />
+      <sprite texture="Assault_Suit.png" limb="RightFoot" sound="footstep_armor_heavy" inheritlimbdepth="true" hidelimb="true" sourcerect="95,319,64,82" origin="0.5,0.5" hideotherwearables="true" inherittexturescale="true" />
+      <sprite texture="Assault_Suit.png" limb="LeftFoot" sound="footstep_armor_heavy" inheritlimbdepth="true" hidelimb="true" sourcerect="95,319,64,82" origin="0.5,0.5" hideotherwearables="true" inherittexturescale="true" />
       <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" PressureProtection="100.0" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
         <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" />
         <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" />

@@ -25,25 +25,28 @@
 
     <Wearable slots="OuterClothes+InnerClothes+Bag+Head,Any">
 		    <StatusEffect tags="wetsuit" type="OnWearing" target="Character" duration="0.1" stackable="false"/>
-	  <sprite texture="Wetsuit.png" limb="Head" depth="0.039" inheritlimbdepth="true"  scale="0.1"  inherittexturescale="true" sourcerect="77,145,64,81" origin="0.55,0.5"/>
+	  <sprite texture="Wetsuit.png" limb="Head" depth="0.039" inheritlimbdepth="true"  scale="0.15"  inherittexturescale="true" sourcerect="77,145,64,81" origin="0.55,0.5"/>
 	  
-	  <sprite texture="Wetsuit.png" limb="Torso" sourcerect="-1,17,75,130" origin="0.45,0.5" depth="0.004" inheritlimbdepth="true"  inherittexturescale="true" hidelimb="true">
+	  <sprite texture="Wetsuit.png" limb="Torso" sourcerect="-1,17,75,130" origin="0.5,0.5" depth="0.004" inheritlimbdepth="true"  inherittexturescale="true" hidelimb="true">
+      </sprite>
+	  
+	  <sprite texture="Wetsuit.png" limb="Waist" sourcerect="0,151,71,69" origin="0.5,0.5" depth="0.004" inheritlimbdepth="true"  inherittexturescale="true" hidelimb="true">
       </sprite>
 
-      <sprite texture="Wetsuit.png" limb="RightHand" sourcerect="122,0,50,130" origin="0.45,0.451" depth="0.0" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
-      <sprite texture="Wetsuit.png" limb="LeftHand" sourcerect="122,0,50,130" origin="0.45,0.451" depth="0.016" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
+      <sprite texture="Wetsuit.png" limb="RightHand" sourcerect="122,27,43,95" origin="0.5,0.5" depth="0.0" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
+      <sprite texture="Wetsuit.png" limb="LeftHand" sourcerect="122,27,43,95" origin="0.5,0.5" depth="0.016" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
 
-      <sprite texture="Wetsuit.png" limb="RightArm" sourcerect="73,3,52,111" origin="0.45,0.451" depth="0.001" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
-      <sprite texture="Wetsuit.png" limb="LeftArm" sourcerect="73,3,52,111" origin="0.45,0.451" depth="0.015" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
+      <sprite texture="Wetsuit.png" limb="RightArm" sourcerect="73,3,52,111" origin="0.3,0.3" depth="0.001" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
+      <sprite texture="Wetsuit.png" limb="LeftArm" sourcerect="73,3,52,111" origin="0.3,0.3" depth="0.015" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
 
-      <sprite texture="Wetsuit.png" limb="RightThigh" sourcerect="179,3,71,130" origin="0.65,0.71" depth="0.011" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
-      <sprite texture="Wetsuit.png" limb="LeftThigh" sourcerect="179,3,71,130" origin="0.6,0.71" depth="0.015" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
+      <sprite texture="Wetsuit.png" limb="RightThigh" sourcerect="181,0,71,125" origin="0.6,0.65" depth="0.011" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
+      <sprite texture="Wetsuit.png" limb="LeftThigh" sourcerect="181,0,71,125"    origin="0.6,0.65" depth="0.015" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
 
-      <sprite texture="Wetsuit.png" limb="RightLeg" sourcerect="192,137,66,180" origin="0.6,0.71" depth="0.012" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
-      <sprite texture="Wetsuit.png" limb="LeftLeg" sourcerect="192,137,66,180" origin="0.6,0.71" depth="0.016" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
+      <sprite texture="Wetsuit.png" limb="RightLeg" sourcerect="191,144,50,114" origin="0.6,0.65" depth="0.012" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
+      <sprite texture="Wetsuit.png" limb="LeftLeg" sourcerect="191,144,50,114" origin="0.6,0.65" depth="0.016" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
 
-      <sprite texture="Wetsuit.png" limb="RightFoot" sourcerect="117,126,32,72" origin="0.7,0.3" depth="0.013" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
-      <sprite texture="Wetsuit.png" limb="LeftFoot" sourcerect="117,126,32,72" origin="0.3,0.3" depth="0.013" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
+      <sprite texture="Wetsuit.png" limb="RightFoot" sourcerect="146,154,44,67" origin="0.56,0.6" depth="0.013" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
+      <sprite texture="Wetsuit.png" limb="LeftFoot" sourcerect="146,154,44,67" origin="0.56,0.6" depth="0.013" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true"/>
 	  
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.85"/>
       <damagemodifier damagetype="Damage" armorsector="0.0,360.0" damagemultiplier="0.75" bleedingmultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true"/>
