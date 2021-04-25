@@ -13,7 +13,7 @@
       <sprite texture="Content/UI/CommandUIAtlas.png" sourcerect="612,669,28,28" origin="0.5,0.5"/>
     </JobiconSmall>
     <Skills>
-      <Skill identifier="helm" level="40,50" primary="true"/>
+      <Skill identifier="helm" level="55,70" primary="true"/>
       <Skill identifier="weapons" level="25,35"/>
       <Skill identifier="mechanical" level="15,25"/>
       <Skill identifier="electrical" level="15,25"/>
@@ -45,11 +45,6 @@
 		<Item identifier="stampe"/>
       </Item>
 	  <Item identifier="clipboard" equip="false">
-        <Item identifier="docSecretA"/>
-		<Item identifier="docCom"/>
-		<Item identifier="docbasic"/>
-<Item identifier="huskprotocola"/>
-<Item identifier="huskprotocolb"/>
       </Item>					 
       <Item identifier="revolver" equip="false">
         <Item identifier="revolverround"/>
@@ -92,11 +87,6 @@
 		<Item identifier="stampe"/>
       </Item>
 	  <Item identifier="clipboard" equip="false">
-        <Item identifier="docSecretA"/>
-		<Item identifier="docCom"/>
-		<Item identifier="docbasic"/>
-<Item identifier="huskprotocola"/>
-<Item identifier="huskprotocolb"/>
       </Item>
       <Item identifier="revolver" equip="false">
         <Item identifier="revolverround"/>
@@ -139,11 +129,6 @@
 		<Item identifier="stampe"/>
       </Item>
 	  <Item identifier="clipboard" equip="false">
-        <Item identifier="docSecretA"/>
-		<Item identifier="docCom"/>
-		<Item identifier="docbasic"/>
-<Item identifier="huskprotocola"/>
-<Item identifier="huskprotocolb"/>
       </Item>					 
       <Item identifier="stunbaton">
         <Item identifier="batterycell" showpreview="false"/>
@@ -216,9 +201,6 @@
 		<Item identifier="stampe"/>
       </Item>
 	  <Item identifier="clipboard" equip="false">
-        <Item identifier="docSecretA"/>
-		<Item identifier="docCom"/>
-		<Item identifier="docbasic"/>
       </Item>
        <Item identifier="wrench" equip="false"/>
        <Item identifier="screwdriver" equip="false"/>
@@ -258,9 +240,6 @@
 		<Item identifier="stampe"/>
       </Item>
 	  <Item identifier="clipboard" equip="false">
-        <Item identifier="docSecretA"/>
-		<Item identifier="docCom"/>
-		<Item identifier="docbasic"/>
       </Item>
       <Item identifier="pistol" equip="true">
         <Item identifier="pistolmag"/>
@@ -299,11 +278,6 @@
 		<Item identifier="stampe"/>
       </Item>
 	  <Item identifier="clipboard" equip="false">
-        <Item identifier="docSecretA"/>
-		<Item identifier="docCom"/>
-		<Item identifier="docbasic"/>
-<Item identifier="huskprotocola"/>
-<Item identifier="huskprotocolb"/>
       </Item>
       <Item identifier="stunbaton">
         <Item identifier="batterycell" showpreview="false"/>
@@ -345,7 +319,7 @@
       <sprite texture="Content/UI/CommandUIAtlas.png" sourcerect="612,727,28,28" origin="0.5,0.5"/>
     </JobiconSmall>
     <Skills>
-      <Skill identifier="electrical" level="40,50" primary="true"/>
+      <Skill identifier="electrical" level="55,70" primary="true"/>
       <Skill identifier="mechanical" level="25,35"/>
       <Skill identifier="weapons" level="15,25"/>
       <Skill identifier="medical" level="15,25"/>
@@ -383,9 +357,6 @@
 		<Item identifier="stampc"/>
       </Item>
 	  <Item identifier="clipboard" equip="false">
-		<Item identifier="docEng"/>
-		<Item identifier="docbasic"/>
-		<Item identifier="docPowerGrid"/>
       </Item>
       <Item identifier="toolbelt">
         <Item identifier="screwdriver"/>
@@ -441,7 +412,7 @@
       <sprite texture="Content/UI/CommandUIAtlas.png" sourcerect="641,640,28,28" origin="0.5,0.5"/>
     </JobiconSmall>
     <Skills>
-      <Skill identifier="mechanical" level="40,50" primary="true"/>
+      <Skill identifier="mechanical" level="55,70" primary="true"/>
       <Skill identifier="electrical" level="25,35"/>
       <Skill identifier="weapons" level="15,25"/>
       <Skill identifier="medical" level="15,25"/>
@@ -533,7 +504,7 @@
       <sprite texture="Content/UI/CommandUIAtlas.png" sourcerect="612,640,28,28" origin="0.5,0.5"/>
     </JobiconSmall>
     <Skills>
-      <Skill identifier="weapons" level="40,50" primary="true"/>
+      <Skill identifier="weapons" level="55,70" primary="true"/>
       <Skill identifier="medical" level="25,35"/>
       <Skill identifier="mechanical" level="15,25"/>
       <Skill identifier="electrical" level="15,25"/>
@@ -556,11 +527,6 @@
 		<Item identifier="stampe"/>
       </Item>
 	  <Item identifier="clipboard" equip="false">
-		<Item identifier="docSecretB"/>
-		<Item identifier="docSec"/>
-		<Item identifier="docbasic"/>
-<Item identifier="huskprotocola"/>
-<Item identifier="huskprotocolb"/>
 	  </Item>					 
         <Item identifier="smgmagazine" showpreview="false"/>
       <Item identifier="divingknife" equip="false"/>
@@ -598,11 +564,6 @@
 		<Item identifier="stampe"/>
       </Item>
 	  <Item identifier="clipboard" equip="false">
-		<Item identifier="docSecretB"/>
-		<Item identifier="docSec"/>
-		<Item identifier="docbasic"/>
-<Item identifier="huskprotocola"/>
-<Item identifier="huskprotocolb"/>
       </Item>				 
       <Item identifier="stungun">
         <Item identifier="stungundart"/>
@@ -641,11 +602,6 @@
 		<Item identifier="stampe"/>
       </Item>
 	  <Item identifier="clipboard" equip="false">
-		<Item identifier="docSecretB"/>
-		<Item identifier="docSec"/>
-		<Item identifier="docbasic"/>
-<Item identifier="huskprotocola"/>
-<Item identifier="huskprotocolb"/>
 	  </Item>
       <Item identifier="revolver" equip="false">
         <Item identifier="revolverround"/>
@@ -701,7 +657,7 @@
       <sprite texture="Content/UI/CommandUIAtlas.png" sourcerect="612,698,28,28" origin="0.5,0.5"/>
     </JobiconSmall>
     <Skills>
-      <Skill identifier="medical" level="40,50" primary="true"/>
+      <Skill identifier="medical" level="55,70" primary="true"/>
       <Skill identifier="weapons" level="15,25"/>
       <Skill identifier="mechanical" level="15,25"/>
       <Skill identifier="electrical" level="15,25"/>
@@ -737,8 +693,6 @@
 		<Item identifier="stampd"/>
       </Item>
 	  <Item identifier="clipboard" equip="false">
-		<Item identifier="docMed"/>
-		<Item identifier="docbasic"/>
 	  </Item>					
       <Item identifier="syringegun"/>
 	  <Item identifier="pda" equip="false">
@@ -761,8 +715,6 @@
 		<Item identifier="stampd"/>
       </Item>
 	  <Item identifier="clipboard" equip="false">
-		<Item identifier="docMed"/>
-		<Item identifier="docbasic"/>
 	  </Item>				 
       <Item identifier="idcard_medicaldoctor" equip="true" showpreview="false"/>
       <Item identifier="doctorsuniform2" equip="true" outfit="true">
@@ -818,9 +770,9 @@
       <Skill identifier="medical" level="30,40" primary="true"/>
       <Skill identifier="weapons" level="15,25"/>
       <Skill identifier="mechanical" level="15,25"/>
-      <Skill identifier="electrical" level="20,30"/>
+      <Skill identifier="electrical" level="45,50"/>
       <Skill identifier="helm" level="1,5"/>
-	  <Skill identifier="science" level="40,50"/>
+	  <Skill identifier="science" level="55,70"/>
 	  <Skill identifier="cooking" level="5,10"/>
     </Skills>
     <ItemSet>
@@ -841,9 +793,6 @@
 		<Item identifier="stampd"/>
       </Item>
 	  <Item identifier="clipboard" equip="false">
-		<Item identifier="docSecretC"/>
-		<Item identifier="docSct"/>
-		<Item identifier="docbasic"/>
 	  </Item>
       <Item identifier="sulphuricacid"/>
       <Item identifier="antibiotics"/>
@@ -874,9 +823,6 @@
 		<Item identifier="stampd"/>
       </Item>
 	  <Item identifier="clipboard" equip="false">
-		<Item identifier="docSecretC"/>
-		<Item identifier="docSct"/>
-		<Item identifier="docbasic"/>
 	  </Item>
       <Item identifier="sonarbeacon">
 	    <Item identifier="batterycell"/>
@@ -926,7 +872,7 @@
       <Skill identifier="medical" level="25,35"/>
       <Skill identifier="helm" level="12.5,15"/>
 	  <Skill identifier="science" level="5,15"/>
-	  <Skill identifier="cooking" level="40,50"/>
+	  <Skill identifier="cooking" level="55,70"/>
     </Skills>
     <ItemSet>
       <Item identifier="idcard_cook" equip="true" showpreview="false"/>
@@ -946,8 +892,6 @@
 		<Item identifier="stampc"/>
       </Item>
 	  <Item identifier="clipboard" equip="false">
-		<Item identifier="docbasic"/>
-<Item identifier="cookbook"/>
       </Item>
 	  <Item identifier="pda" equip="false">
         <Item identifier="batterycell"/>

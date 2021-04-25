@@ -229,10 +229,6 @@
     </RepairTool>
 	
 	<LightComponent LightColor="1.0,0.5,0.5,0.2" Flicker="0.4" range="50" IsOn="false">
-	  <StatusEffect type="OnUse" target="Character" duration="25" stackable="false">
-		<ReduceAffliction identifier="psychosis" amount="0.0006"/>
-<ReduceAffliction identifier="pain" amount="0.6"/>
-      </StatusEffect>
       <StatusEffect type="OnUse" target="This" IsOn="true"/>
 	  <StatusEffect type="OnActive" target="This,Hull" Condition="-1.0" oxygen="-50">
         <ParticleEmitter particle="swirlysmoke" particlespersecond="1" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
@@ -286,10 +282,6 @@
     </RepairTool>
 	
 	<LightComponent LightColor="1.0,0.5,0.5,0.2" Flicker="0.4" range="50" IsOn="false">
-	  <StatusEffect type="OnUse" target="Character" duration="20" stackable="false">
-		<ReduceAffliction identifier="psychosis" amount="0.0004"/>
-<ReduceAffliction identifier="pain" amount="0.4"/>
-      </StatusEffect>
       <StatusEffect type="OnUse" target="This" IsOn="true"/>
 	  <StatusEffect type="OnActive" target="This,Hull" Condition="-1.1" oxygen="-75">
         <ParticleEmitter particle="swirlysmoke" particlespersecond="1" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
@@ -493,7 +485,6 @@
       <Price locationtype="military" multiplier="1" minavailable="8" />
       <Price locationtype="mine" multiplier="0.75" minavailable="6" />
     </Price>
-    <SuitableTreatment identifier="pain" suitability="50" />
     <SuitableTreatment identifier="damage" suitability="5" />
     <SuitableTreatment identifier="blunttrauma" suitability="5" />
     <SuitableTreatment identifier="lacerations" suitability="5" />
@@ -525,16 +516,17 @@
       <RequiredSkill identifier="medical" level="30" />
       <StatusEffect tags="medical" type="OnUse" target="Character" duration="10">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="pain" amount="9" />
+        <ReduceAffliction identifier="bleeding" amount="2" />
+		<ReduceAffliction identifier="damage" amount="1" />
         <Affliction identifier="oxygenlow" amount="2" />
-
         <Affliction identifier="opiateaddiction" amount="0.5" />
         <Affliction identifier="opiateoverdose" amount="1.0" />
         <ReduceAffliction identifier="opiatewithdrawal" amount="3.0" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnFailure" target="Character" duration="10">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="pain" amount="7" />
+        <ReduceAffliction identifier="bleeding" amount="2" />
+		<ReduceAffliction identifier="damage" amount="1" />
         <Affliction identifier="oxygenlow" amount="3" />
         <Affliction identifier="opiateaddiction" amount="2.5" />
         <Affliction identifier="opiateoverdose" amount="2.0" />
@@ -550,7 +542,7 @@
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnImpact" target="Character" duration="10">
-        <ReduceAffliction identifier="pain" amount="2" />
+        <ReduceAffliction identifier="bleeding" amount="2" />
         <Affliction identifier="oxygenlow" amount="3" />
         <Affliction identifier="opiateaddiction" amount="2.5" />
         <Affliction identifier="opiateoverdose" amount="2.0" />
@@ -627,7 +619,7 @@
 	
     <Deconstruct time="20">
       <Item identifier="stabilozine" copycondition="true" mincondition="0.1" />
-      <Item identifier="chloralhydrate" copycondition="true" mincondition="0.1" />
+      <Item identifier="antidama2" copycondition="true" mincondition="0.1" />
     </Deconstruct>
 	
     <Sprite texture="Medicines.png" sourcerect="0,0,37,69" depth="0.6" origin="0.5,0.5" />
@@ -815,7 +807,8 @@
       <RequiredSkill identifier="medical" level="72" />
       <StatusEffect tags="medical" type="OnUse" target="Character" duration="5">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="pain" amount="15" />
+        <ReduceAffliction identifier="bleeding" amount="4" />
+		<ReduceAffliction identifier="damage" amount="4" />
         <Affliction identifier="oxygenlow" amount="6" />
         <Affliction identifier="opiateaddiction" amount="1.5" />
         <Affliction identifier="opiateoverdose" amount="4.5" />
@@ -823,7 +816,8 @@
       </StatusEffect>
       <StatusEffect tags="medical" type="OnFailure" target="Character" duration="5">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="pain" amount="9.75" />
+        <ReduceAffliction identifier="bleeding" amount="4" />
+		<ReduceAffliction identifier="damage" amount="4" />
         <Affliction identifier="oxygenlow" amount="8" />
         <Affliction identifier="opiateaddiction" amount="6" />
         <Affliction identifier="opiateoverdose" amount="6" />
@@ -837,7 +831,7 @@
       <StatusEffect type="OnImpact" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect tags="medical" type="OnImpact" target="Character" duration="5">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="pain" amount="5.75" />
+        <ReduceAffliction identifier="bleeding" amount="4" />
         <Affliction identifier="oxygenlow" amount="8" />
         <Affliction identifier="opiateaddiction" amount="6" />
         <Affliction identifier="opiateoverdose" amount="6" />
@@ -865,10 +859,8 @@
     <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
       <StatusEffect tags="medical" type="OnUse" target="This,Character" Condition="-50.0" disabledeltatime="true">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-<ReduceAffliction identifier="pain" strength="1.0"/>
 <Affliction identifier="Adrenaline" strength="1.0"/>
       </StatusEffect>
-      <!-- TODO: some effect for adrenaline -->
       <!-- Remove the item when fully used -->
       <StatusEffect tags="medical" type="OnBroken" target="This">
         <Remove />
@@ -877,12 +869,10 @@
     <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" launchrotation="-90">
       <StatusEffect type="OnImpact" target="This,character" Condition="-100.0" disabledeltatime="true">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-<ReduceAffliction identifier="pain" strength="0.005"/>
 <Affliction identifier="Adrenaline" strength="0.5"/>
       </StatusEffect>
       <StatusEffect tags="medical" type="OnUse" target="This,Character" Condition="-50.0" disabledeltatime="true">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-<ReduceAffliction identifier="pain" strength="1.0"/>
 <Affliction identifier="Adrenaline" strength="35"/>
 
       </StatusEffect>
@@ -903,7 +893,6 @@
       <Price locationtype="military" multiplier="1.1" sold="false"/>
       <Price locationtype="mine" multiplier="1.1" sold="false"/>
     </Price>
-    <SuitableTreatment identifier="pain" suitability="20" />
     <SuitableTreatment identifier="opiateoverdose" suitability="-8.75" />
     <SuitableTreatment identifier="oxygenlow" suitability="-17.5" />
     <SuitableTreatment identifier="opiatewithdrawal" suitability="15" />
@@ -916,7 +905,7 @@
       <StatusEffect type="OnUse" target="This" Condition="-50.0" disabledeltatime="true" />
       <StatusEffect tags="medical" type="OnUse" target="Character" duration="5">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="pain" amount="4" />
+        <ReduceAffliction identifier="bleeding" amount="1" />
         <Affliction identifier="opiateaddiction" amount="1" />
         <Affliction identifier="opiateoverdose" amount="1.75" />
         <Affliction identifier="oxygenlow" amount="3.5" />
@@ -928,7 +917,7 @@
         <Affliction identifier="oxygenlow" amount="6" />
         <Affliction identifier="opiateoverdose" amount="3" />
         <Affliction identifier="opiateaddiction" amount="3" />
-        <ReduceAffliction identifier="pain" amount="2" />
+        <ReduceAffliction identifier="bleeding" amount="1" />
       </StatusEffect>
       <!-- Remove the item when fully used -->
       <StatusEffect type="OnBroken" target="This">
@@ -973,7 +962,6 @@
       <StatusEffect type="OnFailure" target="This" Condition="-25.0" disabledeltatime="true" />
       <StatusEffect tags="medical" type="OnUse" target="Character" duration="120" disabledeltatime="true">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="pain" amount="0.05" />
         <ReduceAffliction identifier="oxygenlow" amount="0.05" />
         <ReduceAffliction identifier="stun" amount="0.75" />
         <Affliction identifier="psychosis" amount="0.4" />
@@ -989,7 +977,6 @@
         <Affliction identifier="meth" amount="100" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnFailure" target="Character" duration="120.0">
-        <ReduceAffliction identifier="pain" amount="0.03" />
         <ReduceAffliction identifier="oxygenlow" amount="0.03" />
         <ReduceAffliction identifier="stun" amount="0.75" />
         <Affliction identifier="psychosis" amount="0.8" />
@@ -1009,7 +996,6 @@
       </StatusEffect>
       <StatusEffect tags="medical" type="OnImpact" target="Character" duration="120.0">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="pain" amount="0.03" />
         <ReduceAffliction identifier="oxygenlow" amount="0.03" />
         <ReduceAffliction identifier="stun" amount="0.75" />
         <Affliction identifier="psychosis" amount="0.8" />
@@ -1094,7 +1080,6 @@
 	  
 	  <StatusEffect type="OnUse" target="This" Condition="-20" disabledeltatime="true"/>
       <StatusEffect type="OnUse" target="Limb">
-		<Affliction identifier="pain" amount="9"/>
 		<ReduceAffliction identifier="bleeding" amount="8"/>
 		<ReduceAffliction identifier="organdamage" amount="12"/>
 		<ReduceAffliction identifier="damage" amount="16"/>
@@ -1103,7 +1088,6 @@
 	  
       <StatusEffect type="OnFailure" target="this" Condition="-20" disabledeltatime="true"/>
 	  <StatusEffect type="OnFailure" target="Limb">
-		<Affliction identifier="pain" amount="16"/>
 		<Affliction identifier="bleeding" amount="8"/>
 		<Affliction identifier="organdamage" amount="6"/>
 		<Affliction identifier="lacerations" amount="8"/>

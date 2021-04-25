@@ -78,10 +78,8 @@
   <!-- Items -->
   <entityname.plasticbag>Plastic Bag</entityname.plasticbag>
   <entitydescription.plasticbag>It's commonly found inside cargo crates. Usually used to carry small items but sometimes used in other, questionable activities.</entitydescription.plasticbag>
-  
   <entityname.revolverround2>Revolver Bull Round</entityname.revolverround2>
   <entitydescription.revolverround2>Custom hand-loaded revolver ammunition. More stopping power but less penetration.</entitydescription.revolverround2>
-  
   <entityname.flashbang>Flashbang Payload</entityname.flashbang>
   <entitydescription.flashbang>A non-lethal explosive designed to disorient targets instead of killing them.</entitydescription.flashbang>
   <entityname.breachbomb>Breach Payload</entityname.breachbomb>
@@ -122,13 +120,8 @@
   <entitydescription.caliche>Caliche is a mineral that contains large amounts of iodine</entitydescription.caliche>
   <entityname.iodinepills>Iodine Pills</entityname.iodinepills>
   <entitydescription.iodinepills>These pills can prevent some effects of radiation exposure.</entitydescription.iodinepills>
-
-<displayname.deadmansswitch>Deadmans Switch</displayname.deadmansswitch>
-<displayname.poisonedthresh>Threshcrawl (Poisoned)</displayname.poisonedthresh>
-<displayname.poisonedhusk>Husk Caviar (Under Prepared)</displayname.poisonedhusk>
-<displayname.mysterymeat>Seared Human (Mystery Meat)</displayname.mysterymeat>
-<loadingscreentip>Hats can give minor resistances to damage.</loadingscreentip>
-<loadingscreentip>Bloodloss can help stop poison.</loadingscreentip>
-<loadingscreentip>Eating two different foods can give you a bonus, try fried thresher and fries.</loadingscreentip>
-<loadingscreentip>Bandaging now treats gunshot wounds, animal bites, deep tissue injury and also lacerations.</loadingscreentip>
+  <displayname.deadmansswitch>Deadmans Switch</displayname.deadmansswitch>
+  <displayname.poisonedthresh>Threshcrawl (Poisoned)</displayname.poisonedthresh>
+  <displayname.poisonedhusk>Husk Caviar (Under Prepared)</displayname.poisonedhusk>
+  <displayname.mysterymeat>Seared Human (Mystery Meat)</displayname.mysterymeat>
 </infotexts>

@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <contentpackage name="BTE" path="Mods/BTE/filelist.xml" corepackage="false" gameversion="0.10.4.0">
   <Jobs file="Mods/BTE/bteJobs.xml" />
-  <RandomEvents file="Mods/BTE/bterandomevents.xml" />
-  <UIStyle file="Mods/BTE/UI/BTEstyle.xml" />
   <Text file="Mods/BTE/Texts/EnglishBTE.xml" />
+  <UIStyle file="Mods/BTE/UI/style.xml" />
   <Sounds file="Mods/BTE/Sounds/BTEsounds.xml" />
   <NPCConversations file="Mods/BTE/BTENpcConversations.xml" />
   <None file="Mods/BTE/BTEskillsettings.xml" />
@@ -14,7 +13,6 @@
   <Item file="Mods/BTE/Items/Jobgear/Other/Other.xml" />
   <Character file="Mods/BTE/Characters/Human/Human.xml" />
   <Character file="Mods/BTE/Characters/Husk/Husk.xml" />
-  <Character file="Mods/BTE/Characters/Crawler/Crawler.xml" />
   <Item file="Mods/BTE/Items/Materials/btematerials.xml" />
   <Item file="Mods/BTE/Items/Materials/bteminerals.xml" />
   <Item file="Mods/BTE/Items/Jobgear/Hats.xml" />
