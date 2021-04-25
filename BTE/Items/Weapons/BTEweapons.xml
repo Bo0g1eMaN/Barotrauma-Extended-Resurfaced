@@ -186,7 +186,7 @@
 	
   
 	
-	 <Item name="Shotgun Slug Shell" identifier="shotgunslug" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.28" impactsoundtag="impact_metal_light" description="Leaves a massive bullet hole with one big pellet but at the cost of bleeding">
+	 <Item name="Shotgun Slug Shell" identifier="shotgunslug" category="Equipment" maxstacksize="4" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.28" impactsoundtag="impact_metal_light" description="Leaves a massive bullet hole with one big pellet but at the cost of bleeding">
     <Price baseprice="50" soldeverywhere="false">
       <Price locationtype="outpost" multiplier="1.5" sold="false"/>
       <Price locationtype="city" multiplier="1.25" minavailable="4" />
@@ -221,7 +221,7 @@
       </StatusEffect>
     </Projectile>
   </Item>
-  <Item name="Shotgun Rubber-Slug Shell" identifier="shotgunrubberslug" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.28" impactsoundtag="impact_metal_light" description="Used for croud control or as a cheap alternative to actual rounds">
+  <Item name="Shotgun Rubber-Slug Shell" identifier="shotgunrubberslug" category="Equipment" maxstacksize="4" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.28" impactsoundtag="impact_metal_light" description="Used for croud control or as a cheap alternative to actual rounds">
     <Price baseprice="25" soldeverywhere="false">
       <Price locationtype="outpost" multiplier="1.5" minavailable="0"/>
       <Price locationtype="city" multiplier="1.25" minavailable="4" />
@@ -319,7 +319,7 @@
   </Item>											 
   
 <Override>
-<Item name="Revolver Round" identifier="revolverround" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,revolverammo" impactsoundtag="impact_metal_light">
+<Item name="Revolver Round" identifier="revolverround" category="Equipment" maxstacksize="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,revolverammo" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="revolver" minamount="6" maxamount="6" spawnprobability="1"/>
     <PreferredContainer primary="secarmcab" minamount="0" maxamount="10" spawnprobability="0.25"/>
     <PreferredContainer primary="wrecksecarmcab" minamount="0" maxamount="3" spawnprobability="0.25"/>
@@ -355,7 +355,7 @@
   </Item>
 </Override>
 
-<Item name="Revolver Flare Round" identifier="flareround" aliases="revolverflareround" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,revolverammo" impactsoundtag="impact_metal_light">
+<Item name="Revolver Flare Round" identifier="flareround" aliases="revolverflareround" category="Equipment" maxstacksize="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,revolverammo" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="revolver" minamount="6" maxamount="6" spawnprobability="1"/>
     <PreferredContainer primary="secarmcab" minamount="0" maxamount="10" spawnprobability="0.25"/>
     <PreferredContainer primary="wrecksecarmcab" minamount="0" maxamount="3" spawnprobability="0.25"/>
@@ -390,7 +390,7 @@
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
 
-  <Item name="Revolver Bull Round" description="Packs more of a punch but sacrifices pentration power." category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" preferredcontainers="locker" Scale="0.32" tags="smallitem,revolverammo,revolverround" identifier="revolverround2" impactsoundtag="impact_metal_light">
+  <Item name="Revolver Bull Round" description="Packs more of a punch but sacrifices pentration power." category="Equipment" maxstacksize="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" preferredcontainers="locker" Scale="0.32" tags="smallitem,revolverammo,revolverround" identifier="revolverround2" impactsoundtag="impact_metal_light">
     <Price baseprice="25" soldeverywhere="false">
       <Price locationtype="outpost" multiplier="1.5" minavailable="6" />
       <Price locationtype="city" multiplier="1.25" minavailable="12" />
@@ -468,7 +468,7 @@
       <RequiredItems items="shotgunammo" type="Contained" msg="ItemMsgAmmoRequired" />
       <RequiredSkill identifier="weapons" level="60" />
     </RangedWeapon>
-    <ItemContainer capacity="4" itempos="27,10" iteminterval="0,-4" hideitems="true">
+    <ItemContainer capacity="1" itempos="27,10" iteminterval="0,-4" hideitems="true">
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="2,121,53,22" />
       <Containable items="shotgunammo" />
     </ItemContainer>
@@ -477,7 +477,7 @@
   </Item>
 </Override>
 <Override>
-<Item name="Shotgun Buckshot Shell" identifier="shotgunshell" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light" description="Fires multiple pellets which allows for more bleeindg but less general damage">
+<Item name="Shotgun Buckshot Shell" identifier="shotgunshell" category="Equipment" maxstacksize="4" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light" description="Fires multiple pellets which allows for more bleeindg but less general damage">
     <PreferredContainer primary="shotgun" minamount="3" maxamount="4" spawnprobability="1"/>
     <PreferredContainer primary="secarmcab" minamount="0" maxamount="10" spawnprobability="0.25"/>
     <PreferredContainer primary="wrecksecarmcab" minamount="0" maxamount="3" spawnprobability="0.33"/>
@@ -542,7 +542,7 @@
       <RequiredItems items="revolverround,revolverround2,flareround" type="Contained" msg="ItemMsgAmmoRequired" />
       <RequiredSkill identifier="weapons" level="40" />
     </RangedWeapon>
-    <ItemContainer capacity="6" hideitems="true">
+    <ItemContainer capacity="1" hideitems="true">
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="2,121,53,22" />
       <Containable items="revolverammo" />
     </ItemContainer>
@@ -631,7 +631,7 @@
     </ItemContainer>
   </Item>
   
-  <Item name="Reflex Scatter Shell" identifier="reflexround" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,reflexammo" Scale="0.25" impactsoundtag="impact_metal_light" description="Fires multiple pellets which allows for more bleeindg but less general damage">
+  <Item name="Reflex Scatter Shell" identifier="reflexround" category="Equipment" maxstacksize="4" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,reflexammo" Scale="0.25" impactsoundtag="impact_metal_light" description="Fires a unstable slug that breaks apart in flight allowing the reflex cannon to act like a shotgun.">
   <Fabricate suitablefabricators="researchstation">
 	 <RequiredSkill identifier="science" level="5" />
 	  <RequiredItem identifier="iron" mincondition=".5" />
@@ -655,7 +655,7 @@
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
   
-  <Item name="Reflex Slug Shell" identifier="reflexround2" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,reflexammo" Scale="0.25" impactsoundtag="impact_metal_light" description="Fires multiple pellets which allows for more bleeindg but less general damage">
+  <Item name="Reflex Slug Shell" identifier="reflexround2" category="Equipment" maxstacksize="4" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,reflexammo" Scale="0.25" impactsoundtag="impact_metal_light" description="Fires one large slug at factions of the speed of light. If you want power you found it.">
   <Fabricate suitablefabricators="researchstation">
 	 <RequiredSkill identifier="science" level="5" />
 	  <RequiredItem identifier="iron" mincondition=".5" />
@@ -679,7 +679,7 @@
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
  
-  <Item name="Reflex Cannon" identifier="reflexcannon" category="Equipment" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun" Scale="0.35" impactsoundtag="impact_metal_light">
+  <Item name="Reflex Cannon" identifier="reflexcannon" category="Equipment" description="This rifle uses magnetic forces to fire metal slugs at fractions of the speed of light to devastate anything downrange." cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun" Scale="0.35" impactsoundtag="impact_metal_light">
     <Fabricate suitablefabricators="researchstation">
 	<RequiredSkill identifier="science" level="60" />
 	  <RequiredItem identifier="gaussresearch" mincondition="0" />
@@ -708,7 +708,7 @@
       <RequiredItems items="reflexround,reflexround2" type="Contained" msg="ItemMsgAmmoRequired" />
       <RequiredSkill identifier="weapons" level="60" />
     </RangedWeapon>
-    <ItemContainer capacity="4" itempos="27,10" iteminterval="0,-4" hideitems="true">
+    <ItemContainer capacity="1" itempos="27,10" iteminterval="0,-4" hideitems="true">
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="2,121,53,22" />
       <Containable items="reflexround,reflexround2" />
     </ItemContainer>
@@ -1070,8 +1070,8 @@
         <Affliction identifier="blunttrauma" strength="4" />
       </Attack>
       <!-- normal batteries cause 15 seconds of stun to anything with a mass smaller than 60 -->
-      <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
-        <affliction identifier="stun" strength="15"/>
+       <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
+        <affliction identifier="stun" strength="35"/>
         <sound file="Content/Items/Weapons/StunBaton1.ogg" selectionmode="random" range="500" />
         <sound file="Content/Items/Weapons/StunBaton2.ogg" range="500" />
         <sound file="Content/Items/Weapons/StunBaton3.ogg" range="500" />
@@ -1082,7 +1082,7 @@
       </StatusEffect>
       <!-- fulgurium batteries cause 30 seconds of stun to anything with a mass smaller than 150 -->
       <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
-        <affliction identifier="stun" strength="30"/>
+        <affliction identifier="stun" strength="55"/>
         <sound file="Content/Items/Weapons/StunBaton1.ogg" selectionmode="random" range="500" />
         <sound file="Content/Items/Weapons/StunBaton2.ogg" range="500" />
         <sound file="Content/Items/Weapons/StunBaton3.ogg" range="500" />

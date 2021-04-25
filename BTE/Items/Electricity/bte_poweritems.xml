@@ -20,12 +20,11 @@
 		<ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
 			<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel"/>
 			<RequiredSkill identifier="electrical" level="50"/>
-			<StatusEffect type="OnFailure" target="Character">
-				<Explosion range="100" force="3.0" flames="false" shockwave="false" underwaterbubble="false">
-					<Affliction identifier="burn" strength="15"/>
-					<Affliction identifier="stun" strength="10"/>
-				</Explosion>
-			</StatusEffect>
+	<StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Items/Weapons/ElectricalDischarger.ogg" range="1000" />
+        <Affliction identifier="stun" strength="5" />
+        <Affliction identifier="burn" strength="3" />
+      </StatusEffect>
 			<RequiredItem identifier="screwdriver" type="Equipped"/>
 			<output name="power" displayname="connection.power"/>
 		</ConnectionPanel>
@@ -40,9 +39,6 @@
 		</Repairable>
 		<PowerTransfer canbeselected="true" OverloadVoltage="1.5" FireProbability="0.0">
 			<GuiFrame relativesize="0.2,0.15" minsize="350,160" maxsize="420,190" anchor="Center" style="ItemUI"/>
-			<StatusEffect type="InWater" target="This" condition="-0.2">
-				<Conditional currPowerConsumption="lt -10"/>
-			</StatusEffect>
 		</PowerTransfer>
 		<ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
 			<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel"/>
@@ -78,22 +74,11 @@
     </LightComponent>
     <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
       <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-      <RequiredSkill identifier="electrical" level="70" />
+      <RequiredSkill identifier="electrical" level="55" />
       <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
         <Sound file="Content/Items/Weapons/ElectricalDischarger.ogg" range="1000" />
         <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
         <Affliction identifier="stun" strength="5" />
-      </StatusEffect>
-	  <StatusEffect type="OnBroken" target="This">
-<Explosion range="235.5" structuredamage="5" itemdamage="1000" stun="3.278" force="15.5215" severlimbsprobability="0.12345" decal="explosion" decalsize="0.123">
-<sound file="Content/Items/Weapons/ExplosionMedium3.ogg" type="OnBroken" range="10000" selectionmode="Random" />
-<sound file="Content/Items/Weapons/ExplosionMedium2.ogg" type="OnBroken" range="10000"  />
-<sound file="Content/Items/Weapons/ExplosionMedium1.ogg" type="OnBroken" range="10000"  />
-<sound file="Content/Items/Weapons/ExplosionSmall2.ogg" type="OnBroken" range="10000" />
-<sound file="Content/Items/Weapons/ExplosionSmall3.ogg" type="OnBroken" range="10000" />
-         <Affliction identifier="burn" strength="5" />
-          <Affliction identifier="explosiondamage" strength="2.12345" />
-        </Explosion>
       </StatusEffect>
       <RequiredItem items="screwdriver" type="Equipped" />
       <output name="power" displayname="connection.power" />
@@ -109,7 +94,7 @@
       <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
         <Sound file="Content/Items/Weapons/ElectricalDischarger.ogg" range="1000" />
         <Affliction identifier="stun" strength="5" />
-        <Affliction identifier="burn" strength="9" />
+        <Affliction identifier="burn" strength="3" />
       </StatusEffect>
       <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
       <ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2"  scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
